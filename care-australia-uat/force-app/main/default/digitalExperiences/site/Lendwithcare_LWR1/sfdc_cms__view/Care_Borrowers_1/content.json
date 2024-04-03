@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Lendwithcare - Borrowers",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"b7f9bd72-4cfd-426c-8d7d-be5bef864c87\",\"columns\":[{\"UUID\":\"fb32013a-ec75-4588-845f-c493921db937\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "fb32013a-ec75-4588-845f-c493921db937",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "b7f9bd72-4cfd-426c-8d7d-be5bef864c87",
+          "type" : "component"
+        } ],
+        "id" : "2849fadd-674e-4292-b15c-54a6283363e8",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Lendwithcare - Borrowers",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "113792c6-aba4-43f7-b877-d50151a7dea9",
+          "type" : "component"
+        } ],
+        "id" : "12e1f72d-7052-4d2c-adf6-8423eace51f7",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "0fdd891b-f923-4db3-8153-96eab95bfd8d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "PgVyXMuQcOjeEVd4nVkMI3RDQW6MYG",
+    "viewType" : "custom-care-borrowers"
+  }
+}

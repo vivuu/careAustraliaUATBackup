@@ -1,0 +1,141 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Become A Change Champion",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"c0b1e64e-e342-4c46-af44-1f1f36394e5f\",\"columns\":[{\"UUID\":\"bd60ad2e-8c17-4ff2-9f1a-cd10d8a32045\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "bd60ad2e-8c17-4ff2-9f1a-cd10d8a32045",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c0b1e64e-e342-4c46-af44-1f1f36394e5f",
+          "type" : "component"
+        } ],
+        "id" : "5a17758b-2594-4a0b-98f4-292cd64a8387",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"170c6006-8b8b-4a26-a281-8c6bd416ba85\",\"columns\":[{\"UUID\":\"49b09e2e-cf81-4483-b9b3-550878d80b23\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "49b09e2e-cf81-4483-b9b3-550878d80b23",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "170c6006-8b8b-4a26-a281-8c6bd416ba85",
+          "type" : "component"
+        } ],
+        "id" : "6959d770-3782-4e03-a91c-d3916e7a322f",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_becomeChangeChampionHeader",
+          "id" : "a1a74085-1475-4cb5-ba9b-807a9b54e2b4",
+          "type" : "component"
+        } ],
+        "id" : "46441785-da3a-4197-8278-f4c9f0f579aa",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_whyWeNeedChangeChampions",
+          "id" : "e05a2185-47a1-4003-85c2-0d2c19654b09",
+          "type" : "component"
+        } ],
+        "id" : "5370ae17-6706-49ec-87b7-6db8fee4a028",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_aboutYourDonationChampion",
+          "id" : "747ffe27-4614-4c2d-8934-581577093452",
+          "type" : "component"
+        } ],
+        "id" : "dba88bed-4a96-4dce-bb3c-711affbe643e",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_championWithLendcare",
+          "id" : "2f3456f0-a95e-408b-86ca-b59621662920",
+          "type" : "component"
+        } ],
+        "id" : "639cf800-86d1-4592-9652-65ea88f79b0a",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "27e5e237-31c7-4c80-9d81-59ff9e3641e1",
+          "type" : "component"
+        } ],
+        "id" : "d9c002d7-5e4d-4712-93aa-fe3143d6d05d",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "acb3e340-0d46-447c-8e31-fa966bf76dc8",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "164c2e49-8f3f-4752-bab2-3c6314642758",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "9a54cccd-a1dd-4099-b42c-b6fc1eb8596b",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "ad6aa9fd-9704-47a4-b96a-90a4c6cd4879",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "13b7e0e7-53c5-49cf-b97d-4076c9d52ade",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "436717f6-a6f0-4268-93d6-6e3d6e3f8fdc",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeBecomeAChangeChampion",
+      "id" : "81a48692-65aa-4bb4-8b52-4ac11a86f9b8",
+      "type" : "component"
+    }
+  }
+}

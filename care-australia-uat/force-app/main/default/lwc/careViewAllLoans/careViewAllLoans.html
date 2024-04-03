@@ -1,0 +1,521 @@
+<template>
+  
+ <div class="headers">
+
+    <!--<img src={banner} alt="banner">-->
+
+
+
+
+  <div class="wrapper">
+        <c-care-nav-bar onfromnavbar={fromNavBar} onstopscroll={stopScroll} onresetscroll={resetScroll}
+    carecart={checkout} loanidfromparent={loanIdsToChild} amounttocart={amountAddedToCart} loanids={loanIdsToCart}
+    ondelete={handleDelete} onclearloans={clearLoans} ondeleteallloans={handleDeletesAllAfterTimeout} ></c-care-nav-bar>
+
+<lightning-layout multiple-rows class="slds-p-bottom_xx-large pad">
+  <!--<lightning-layout-item size="12" class="slds-p-around_small" small-device-size="6" medium-device-size="6" 
+  large-device-size="3" >
+    <a href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/homepage" style="color:white;font-family: 'Helvetica Neue';">&#60; <u>Home</u></a>
+  </lightning-layout-item>-->
+  <lightning-layout-item size="12" class="slds-p-horizontal_small" small-device-size="12" medium-device-size="12" 
+  large-device-size="12">
+    <h3 class="section-heading center-align-text">View All Loans</h3>
+  </lightning-layout-item>
+  <lightning-layout-item size="12" class="slds-p-horizontal_small" small-device-size="12" medium-device-size="12" 
+  large-device-size="12">
+    <div class="button-line">
+            <button class="button-filter buttonfilter" onclick={openFilter}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
+  <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z"/>
+</svg>
+
+             &nbsp; Filter
+            </button>
+            <button class="button-sort buttonSort" onclick={openSort}>
+              <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true" 
+              xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M3 9l4 -4l4 4m-4 -4v14" /> <path d="M21 15l-4 4l-4 -4m4 4v-14" />
+              </svg>
+             &nbsp; Sort
+            </button>
+          </div>
+  </lightning-layout-item>
+  <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+    
+  </lightning-layout-item>
+</lightning-layout>
+
+
+</div>
+<div class="featuredLoan pad">
+  <lightning-layout multiple-rows>
+
+
+	<lightning-layout-item class="slds-p-top_x-large" size="12" small-device-size="12" medium-device-size="12" 
+  large-device-size="12" padding="around-small"><!-- padding="vertical-small" -->
+		<h3 class="featuredloanHeading">Featured<span style="color:#FEBE10;"> loan</span></h3>
+	</lightning-layout-item>
+
+
+    
+      <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+      medium-device-size="6" large-device-size="6">
+        <img src={flImg} width="100%" style="margin:10px 0px 0px 0px">
+      </lightning-layout-item>
+
+
+      <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+      medium-device-size="6" large-device-size="6">
+
+      <div style="display:grid">
+      <h3 style="display:inline;margin:10px;" class="sectionHeadingTitle"> {Loan_Title__c}</h3>
+      <div class="locastions" >
+                  <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 3px;" width="16" height="16" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+               <h3 class="vietnam">{loc}</h3>   
+     </div>
+     <div class="BottomDivh ">
+                <div style="display:block;width:100%;">
+                <div class="progressBar">
+                  <div class="progressBarInner" data-value={progress}></div>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 98%;">
+
+                  <template if:false={isFullyFunded}>
+                
+                  <p style="color:white;margin-left:10px;font-family: 'Helvetica Neue Bold Pro';font-size:12px;line-height:12px;font-weight:800;margin-top:7.5px;">$ {Funded__c} Lent</p>
+                  <p style="color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-size:12px;line-height:12px;font-weight:800;margin-top:7.5px;">$ {Published_Amount_AUD__c} Goal</p>
+                  </template>
+                  <template if:true={isFullyFunded}>
+                    <p style="color:white;margin-left:10px;font-family: 'Helvetica Neue Bold Pro';font-size:12px;line-height:12px;font-weight:800;margin-top:7.5px;"></p>
+                     <p style="color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-size:12px;line-height:12px;font-weight:800;margin-top:7.5px;">$ {Published_Amount_AUD__c} Goal reached!</p>
+                  </template>
+                </div>
+                </div>            
+              </div>
+              <h3 class="sectionHeading" style="color:white;margin:10px">{Loan_Description__c}</h3>  
+       
+    </div>
+    <div style="padding:10px;">
+          <button class="catogory1">{Loan_Type__c}</button>
+      </div>
+      <a style="padding:10px;color:white;text-decoration: none;font-family: 'Helvetica Neue Bold Pro';font-weight:800;" 
+      onclick={gotoBorrowersPageFL} class="link">Read more &#10095;</a> 
+			<div class="slds-grid slds-wrap" ><!-- style="margin:0px 10px 0px 10px" -->
+				<div style="padding: 8px;" class="slds-p-right_small slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+					<!--<button class="Carouselvaluebottom slds-align_absolute-center">$25<div class="dropdown-arrow"></div></button>-->
+          <div class="custom-combobox1">
+                    <select name="progress" class="custom-select" onchange={handleChangeSelectFL}  disabled={disabledButton}>
+                      <option value="0" >Select Amount</option>
+                      <!--<option value="25" >$25</option>
+                      <option value="30">$30</option>
+                      <option value="35">$35</option>
+                      <option value="40">$40</option>
+                      <option value="45">$45</option>
+                      <option value="50">$50</option>
+                      <option value="75">$75</option>
+                      <option value="100">$100</option>
+                      <option value="125">$125</option>
+                      <option value="150">$150</option>
+                      <option value="175">$175</option>
+                      <option value="200">$200</option>
+                      <option value="225">$225</option>-->
+                      <template for:each={fundingOptions} for:item="option">
+                        <option key={option.value} value={option.value}  selected={option.selected}>{option.label}</option>
+                      </template>
+                    </select>
+                  </div>
+				</div>
+				<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+					<template if:true={addToCartButton}>
+					<button class="CarouselAddtocartButton" onclick={addToCartFL} disabled={disabledButton} >
+			                      <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+			                      viewBox="0 0 16 16">
+			  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+			</svg>-->
+			             <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>         &nbsp; Add to cart</button>
+          </template>
+
+           <template if:true={checkOutButton}>
+					<button class="CarouselAddtocartButton" onclick={checkOutToCart}>
+			                      <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+			                      viewBox="0 0 16 16">
+			  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+			</svg>-->
+			              <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>        &nbsp; Check out</button>
+          </template>
+				</div>
+			</div>
+        
+      </lightning-layout-item>
+      
+   
+
+
+   </lightning-layout>
+	
+
+  
+  
+      
+
+</div>
+<div class="headers1" >
+<div class="pad">
+<lightning-layout multiple-rows>
+  <lightning-layout-item size="12" class="slds-p-top_small slds-p-bottom_small" small-device-size="12" medium-device-size="12" large-device-size="12">
+    <h3 class="heading-results">Showing {NoOfLoans} Results</h3>
+  </lightning-layout-item>
+  
+
+  <template for:each={objdata} for:item="item" data-id="container" for:index="index"> <!--objdata loanRecords-->
+    
+      <lightning-layout-item  key={item.Id} data-id={index} size="12" small-device-size="12" medium-device-size="6" 
+      large-device-size="4" class="containerDiv" >
+      <div class="layout-items">
+        <div class="CardImageSection"> 
+          <img width="100%" src={item.imageUrl} alt="Image is unavailable for this Loan" class="styleloadncardimage">
+        </div>
+      
+      <div class="BottomDiv">
+                <div style="display:block;width:100%;">
+                <div class="progressBar">
+                  <div class="progressBarInner" data-value={item.progress}></div>
+                </div>
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+                
+                  <template if:false={item.fullyFunded}>
+                  <p style="margin-top:5px;color:white;width:100%;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">$ {item.Funded__c} Lent</p>
+                  <p style="margin-top:5px;color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">$ {item.Published_Amount_AUD__c} Goal</p>
+                </template>
+                <template if:true={item.fullyFunded}>
+                  <p style="margin-top:5px;color:white;width:100%;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;"></p>
+                  <p style="margin-top:5px;color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">$ {item.Published_Amount_AUD__c} Goal reached</p>
+                </template>
+                </div>
+                </div>
+                <!--<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+                  <p style="color:white;">{item.Lent}</p>
+                  <p style="color:white;display:flex;justify-content:right;">{item.Goal}</p>
+                </div>-->
+
+                
+              </div>
+              <div style="padding:10px;"><!-- min-height: 146px;-->
+      <h3 style="padding-bottom:10px;font-family: 'Sketchetik Fill Bold';min-height:50px;font-weight:800;font-size:17px;line-height:19px;" class="heading">{item.Loan_Title__c}</h3>
+      <div class="locastionsImpact" >
+											<div><svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;" width="16" height="16" fill="#002A3A" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg></div>
+											<div>
+												<p class="Plocations">{item.Country__c}</p>
+											</div>
+										</div>
+      <p  class="carParaImpact">{item.Loan_Description__c}</p>
+              </div>
+      <div style="padding:10px;">
+          <button class="catogory">{item.Loan_Type__c}</button>
+      </div>
+      
+
+      <a onclick={gotoBorrowersPage} class="link1" data-id={item.Id}>Read more &#62;</a> 
+      <div class="box2">
+      </div>
+      <!--<div class="slds-p-around_medium messages">
+        {item.message}
+      </div>
+					<div class="custom-container">
+						<div class="custom-grid-container">
+							<div class="custom-grid-item">
+								<div style="background:white; border-radius:2px;">
+									<select name="progress" onchange={handleChange} value={value} style="border:none;padding:10px;">
+					    <template for:each={comboboxOptions} for:item="option">
+					        <option key={option.value} value={option.value}>{option.label}</option>
+					    </template>
+					</select>
+								</div>
+							</div>
+							<div class="custom-grid-item">
+								<button class="custom-button" >
+					          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="custom-icon" viewBox="0 0 16 16">
+					            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+					          </svg>
+					          &nbsp; {item.Button}
+					        </button>
+							</div>
+						</div>
+					</div>-->
+
+          <div class="grid-containerButtons">
+						<div class="custom-combobox">
+							<select name="progress" class="custom-select Carouselvaluebottom slds-align_absolute-center"
+						                  onchange={handleChangeSelect} data-recordid={item.Id} data-id={index} disabled={item.disabledButton}  data-index={index}> <!-- data-id={item.Id} -->
+						                    <option value="0" >Select Amount</option>
+						                    <!--<option value="25" >$25</option>
+						                    <option value="30">$30</option>
+						                    <option value="35">$35</option>
+						                    <option value="40">$40</option>
+						                    <option value="45">$45</option>
+						                    <option value="50">$50</option>
+						                    <option value="75">$75</option>
+						                    <option value="100">$100</option>
+						                    <option value="125">$125</option>
+						                    <option value="150">$150</option>
+						                    <option value="175">$175</option>
+						                    <option value="200">$200</option>
+						                    <option value="225">$225</option>-->
+						                    <template for:each={item.fundingOptions} for:item="option">
+						                      <option key={option.value} value={option.value} selected={option.selected}>{option.label}</option>
+						                  </template>
+						                  </select>
+						</div>
+            <div class=""> 
+              <template if:false={item.isButtonVisible}>
+                <!-- if:true={addToCartButton} -->
+                <button class="CarouselAddtocartButton"  data-recordid={item.Id} data-id={index} onclick={addToCart} disabled={item.disabledButton} data-value={item.disabledButton}>
+                                                <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                                viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                          </svg>-->
+                                          <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>       &nbsp; Add to cart</button>
+                <!-- {buttonMessage} -->
+              </template>
+            
+              <template if:true={item.isButtonVisible}>
+                <!-- if:true={checkOutButton} -->
+                <button class="CarouselAddtocartButton" onclick={checkOutToCart} >
+                                                <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                                viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                          </svg>-->
+                                      <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>   &nbsp; Checkout</button>
+                <!-- {buttonMessage} -->
+            
+              </template>
+            </div>
+          </div>
+
+
+
+      
+      </div>
+        </lightning-layout-item>
+   
+  </template>
+
+  
+  
+  
+</lightning-layout>
+<div class="slds-align_absolute-center" style="margin:20px 0px 20px 0px">
+    <button class="LoadMoreButton" if:true={canLoadmore}  onclick={loadMore}>Load more</button>
+  </div>
+</div>
+  <c-care-footer-dev></c-care-footer-dev>
+</div>
+  </div>
+
+  <template if:true={isFilter}>
+  <div class="search-overlay">
+    <div class="search">
+      <div style="display:flex" class="slds-p-around_small">
+        <div class="slds-float_left">
+          <a onclick={closeFilterMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+</svg>
+          </a>
+        </div>
+        <div class="slds-align_absolute-center ">
+          <h3 class="popupTitle">Filter</h3>
+        </div>
+        <a onclick={resetFilter} class="reset-button slds-float-right" style="font-size:16px;color:#002A3A">
+          <u>Reset</u>
+        </a>
+      </div>
+      <div class="box3">
+      </div>
+      <div class="loanType slds-p-around_medium">
+
+      <h3 class="popupHeading">Loan Type</h3>
+        <!--<div style="justify-content: space-between;">
+            <button class={allTypesClass} name="All types" onclick={handleButtonClick} data-id="allTypesBtn">All types</button>
+            <button class={artHandicraftsClass} name="Art/Handicrafts" onclick={handleButtonClick}>Art/Handicrafts</button>
+            <button class={cafeRestaurantClass} name="Cafe/Restaurant" onclick={handleButtonClick}>Cafe/Restaurant</button>
+            <button class={garmentfactory} name="Garment factory" onclick={handleButtonClick}>Garment factory</button>
+            <button class={farming} name="Farming" onclick={handleButtonClick}>Farming</button>
+            <button class={educationtraining} name="Education/training" onclick={handleButtonClick}>Education/training</button>
+
+        </div>-->
+			<div style="justify-content: space-between;">
+        <button class="catogory" name="All types" onclick={handleButtonClick} data-id="allTypesButton">All types</button>
+				<template for:each={loanTypes} for:item="loanType">
+					<button key={loanType.value}
+			                    class="catogory"
+			                    name={loanType.value}
+                          data-id={loanType.value}
+			                    onclick={handleButtonClick}>{loanType.label}</button>
+				</template>
+			</div>
+      </div>
+      <div class="box3">
+      </div>
+      <div class="location slds-p-around_medium">
+
+      <h3 class="popupHeading">Location</h3>
+      <!--<lightning-combobox
+                class="custom-combobox"
+                name="progress"
+                
+                value={value}
+                options={combobox1Options}
+                onchange={handleChange} >
+                </lightning-combobox>-->
+<div class="custom-combobox">
+  <select name="progress" class="custom-select filterLocations" onchange={BusinessLocationChange} value={selectedLocationValue}>
+    <option value="">All Locations</option>
+    <option value="Urban" class="styleOptions">Urban</option>
+    <option value="Rural" class="styleOptions">Rural</option>
+    <option value="Peri Urban" class="styleOptions">Peri Urban</option>
+  </select>
+</div>
+      </div>
+      <div class="box3">
+      </div>
+  <div class="showmorebutton slds-p-around_medium">
+<button class="carButtonImpact1" style="border:none;" onclick={getFilteredLoans}>
+                      
+                      Show {TotalNoOfLoans} results</button>
+  </div>  
+
+      
+      
+      
+    </div>
+  </div>
+</template>
+
+<template if:true={isSort}>
+  <div class="search-overlay" >
+    <div class="search">
+      <div style="display:fex" class="slds-p-around_small">
+        <div class="slds-float_left">
+          <a onclick={closeSortMenu}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+</svg>
+          </a>
+        </div>
+        <div class="slds-align_absolute-center">
+          <h3 class="popupTitle">Sort By</h3>
+        </div>
+        
+      </div>
+      <div class="box3">
+      </div>
+      
+      <lightning-layout multiple-rows class="slds-m-around_small">
+        <lightning-layout-item size="12" padding="around-small" small-device-size="6" medium-device-size="6" 
+        large-device-size="6" >
+          <h3 class="popupHeading">Least To Complete</h3>
+        </lightning-layout-item>
+
+        
+        <lightning-layout-item size="12" class="slds-float_right" padding="around-small" small-device-size="6" 
+        medium-device-size="6" 
+        large-device-size="6">
+        
+          <lightning-radio-group name="radioGroup"
+                          style="display: flex;justify-content: right;"
+                          options={LeastToCompleteOption}
+                          value={value}
+                          data-id="LeastToComplete"
+                          type="radio"
+                          onchange={LeastToCompleteChange}></lightning-radio-group>
+        
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="6" medium-device-size="6" 
+        large-device-size="6">
+          <h3 class="popupHeading">Most To Complete</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="slds-float_right" padding="around-small" small-device-size="6" 
+        medium-device-size="6" 
+        large-device-size="6">
+          <lightning-radio-group name="radioGroup"
+                          style="display: flex;justify-content: right;"
+                          options={MostToCompleteOption}
+                          value={value}
+                          type="radio"
+                          data-id="MostToComplete"
+                          onchange={MostToCompleteChange}></lightning-radio-group>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="6" medium-device-size="6" 
+        large-device-size="6">
+          <h3 class="popupHeading">Oldest Loan</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="slds-float_right" padding="around-small" small-device-size="6" 
+        medium-device-size="6" 
+        large-device-size="6">
+          <lightning-radio-group name="radioGroup"
+                          style="display: flex;justify-content: right;"
+                          options={OldestLoanOption}
+                          value={value}
+                          type="radio"
+                          data-id="OldestLoanOption"
+                          onchange={OldestLoanChange}></lightning-radio-group>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="6" medium-device-size="6" 
+        large-device-size="6">
+          <h3 class="popupHeading">Most Recent Loan</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="slds-float_right" padding="around-small" small-device-size="6" 
+        medium-device-size="6" 
+        large-device-size="6">
+          <lightning-radio-group name="radioGroup"
+                          style="display: flex;justify-content: right;"
+                          options={MostRecentLoanOption}
+                          value={value}
+                          type="radio"
+                          data-id="MostRecentLoan"
+                          onchange={MostRecentLoanChange}></lightning-radio-group>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="slds-float_right" padding="around-small" small-device-size="12" 
+        medium-device-size="12" 
+        large-device-size="12">
+
+        <div class="showmorebutton">
+<button if:true={isSorted} class="carButtonImpact1" style="border:none;" onclick={getSortedLoans}>
+                      
+                      Show sorted results</button>
+  </div>
+        </lightning-layout-item>
+      </lightning-layout>
+      
+      
+      
+    </div>
+  </div>
+</template>
+
+<template if:true={errorTransaction}>
+  <section role="dialog" tabindex="-1" aria-modal="true" aria-label="Meaningful description of the modal content"
+    class="slds-modal slds-fade-in-open">
+    <div ><!-- class="slds-modal__container" -->
+      
+      <div style="width:75%;border-radius:5px;display:block;" class="slds-modal__content slds-p-around_medium slds-modal__content_headless slds-align_absolute-center" id="modal-content-id-1">
+        <p class="slds-align_absolute-center">{errorMessageOnTransaction}</p>
+        <button style="max-width:75%;margin-top: 20px;background:#FEBE10;color:#002A3A;font-weight:bold;" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse slds-align_absolute-center" onclick={closeErrorPopup}>
+  
+  close
+  </button>
+      </div>
+
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open " role="presentation"></div>
+</template>
+
+</template>

@@ -1,0 +1,86 @@
+<template>
+    <lightning-spinner style="height: 800px;" if:true={spin}></lightning-spinner>
+    <template if:true={header}>
+        <div class="headers" style={backgroundImage}>
+            <div class="navss sticky-nav">
+                <!-- <c-care-nav-bar onfromnavbar={fromNavBar}></c-care-nav-bar> -->
+                <c-lwr_care-nav-bar onfromnavbar={fromNavBar}></c-lwr_care-nav-bar>
+            </div>
+            <div class="grid-container">
+                <div class="ImgBannerClass1 no-visibility"><img src={BnGrid1} width="100px"></div>
+                <div class="header-img-2"><img src={BnGrid2} width="150px" style="margin-top:10px;"></div>
+                <div class="BannerImageClass3 header-img-3"><img src={BnGrid3} width="150px" style="margin-bottom:30px;" class="BottomBannerImgae"></div>  
+                <div class="slds-align_absolute-center header-img-4" style="margin-top:30px;"><img src={BnGrid4} width="350px"></div>
+            </div>
+            <div class="ImagesMob">
+                <img src={MobileBannerPng}>
+            </div>
+            <div class="Image Image1">
+                <img src={image1}>
+            </div>
+            <div class="Image Image2">
+                <img src={image2}>
+            </div>
+            <div class="Image Image3">
+                <img src={image3}>
+            </div>
+            <div class="Image Image4">
+                <img src={image4}>
+            </div>
+            <div class="Image Image5">
+                <img src={image5}>
+            </div>
+            <div class="Image Image6">
+                <img src={image6}>
+            </div>
+            <div class="Image Image7">
+                <img src={image7}>
+            </div>
+            <div class="Image Image8">
+                <img src={image8}>
+            </div>
+            <div class="Image Image9">
+                <img src={image9}>
+            </div>
+            <div class="Image Image10">
+                <img src={image10}>
+            </div>
+            <div class="Image Image11">
+                <img src={image11}>
+            </div>
+            <div class="Image Image12">
+                <img src={image12}>
+            </div>
+            <div class="Image Image13">
+                <img src={image13}>
+            </div>
+            <div class="Image Image14">
+                <img src={image14}>
+            </div>
+            <div class="slds-align_absolute-left bannerHeading">
+                <template for:each={titles} for:item="title">
+                    <h3 key={title.white} class="section-heading-Banner"> {title.white} <span class="violet"> {title.violet}</span> </h3>
+                </template>
+                <button class="custombuttom" onclick={openViewAllloans}>{header.btn}</button>
+            </div>
+            <p class="work-section-meta violet SmallHeading1 smallHeading-text" 
+                style="padding:10px 40px 40px 20px;margin-top: 380px;width:75%;z-index:4;position:absolute;">
+                <lightning-formatted-rich-text
+                    value={header.body}
+                ></lightning-formatted-rich-text>
+                <br>
+                <button class="custombuttom1 box-shadow0" onclick={openViewAllloans} 
+                    style="margin-top: 15px;background-color: rgb(47, 13, 116);border-style: none;color: white;font-family: 'Helvetica Neue Bold Pro';width: 50%;z-index:4;position:absolute;" >
+                        {header.btn}
+                </button>
+            </p>
+        </div>
+        <div style="background-color:#F3F0ED; margin-top:0px;" class="headers1 pad">
+            <p style="padding:45px 90px 45px 90px;" class="work-section-meta violet SmallHeading">
+              <lightning-formatted-rich-text
+                    value={header.body}
+                ></lightning-formatted-rich-text>
+            </p>
+        </div>
+    </template>
+  </template>

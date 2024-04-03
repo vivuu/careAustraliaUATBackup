@@ -1,0 +1,56 @@
+<template>
+    
+	<p class="CartParagraph"
+		style="color:#002A3A;margin-top:10px;">
+		<!--<span style="color:#E4761E">$1</span> that you donate<br>can generate
+		<span style="color:#E4761E">$5</span> in loans.</p>-->
+		<template for:each={nboxTitle} for:item="nt">
+
+			<template if:true={nt.changeColor}>
+				<span key={nt.body} style="color:#E4761E">{nt.body}</span>
+			</template>
+			<template if:false={nt.changeColor}>
+				<span key={nt.body}>{nt.body}</span>
+			</template>
+	<!-- <span style="color:#E4761E">{nt.yellow}</span> {nt.black}<br>{nt.black}
+	<span style="color:#E4761E">{nt.yellow}</span> {nt.black}</p> -->
+		</template>
+	</p>
+
+	<div class="slds-align_absolute-center"
+		style={innercurrencybg}>
+		<template for:each={currsplit} for:item="currency" for:index="idx">
+
+			<button onclick={handleCurrClickEvent} data-idx={idx} data-curr={currency} key={currency} class="voldonaButtons">{currency}</button>
+							
+
+		</template>
+	</div>
+	<template if:true={showCurrInput}>
+		<!-- <lightning-input type="number" value={selectedCurr} variant="label-hidden" onchange={handleCurrChangeEvent} style="color:black;"></lightning-input> -->
+		<lightning-input class="championInput" value={selectedCurr} variant="label-hidden" onchange={handleCurrChangeEvent} ></lightning-input> 
+		<template if:true={showError}>
+			<p style="color:red;">The minimum amount to become a change champion is ${minOtherCurrency}</p>
+		</template>
+	</template>
+	<p class="CartParagraph"
+		style="color:#002A3A;margin-top:5px;font-size:14px;line-height:17px;">
+		<template for:each={changeChampionWindowBody} for:item="cc">
+			<template if:true={cc.changeColor}>
+				<span key={cc.body} style="color:#E4761E">
+					<lightning-formatted-rich-text value={cc.body}>
+					</lightning-formatted-rich-text>
+				</span>
+			</template> 
+			<template if:false={cc.changeColor}>
+				<span key={cc.body}>
+					<lightning-formatted-rich-text value={cc.body}>
+					</lightning-formatted-rich-text>
+				</span>
+			</template>
+		</template>
+	</p>
+	<button style="width:100%;" if:false={CchampionButton} onclick={handleBecomeAChampion} class="custombuttomwithdraw">&#x2606; {boxButton}</button>
+	<button style="width:100%;" if:true={CchampionButton} onclick={openCheckout} class="custombuttomwithdraw">Checkout</button>
+
+</template>

@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Loan Schedule (Full)",
+  "contentBody" : {
+    "activeViewId" : "Care_All_Loan_Schedules_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-care-all-loan-schedules",
+    "urlPrefix" : "careallloanschedules"
+  }
+}

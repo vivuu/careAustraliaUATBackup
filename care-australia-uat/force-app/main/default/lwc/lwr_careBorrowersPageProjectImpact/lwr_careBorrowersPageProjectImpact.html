@@ -1,0 +1,27 @@
+<template>
+	<lightning-spinner style="height: 800px;" if:true={spin}></lightning-spinner>
+
+	<div>
+		<lightning-layout class="slds-m-top_large pad" multiple-rows="true">
+
+			<lightning-layout-item size="12" large-device-size="12" medium-device-size="12" small-device-size="12">
+				<h3 class="projectImpact">
+					{val1} <span class="clr_orange ">&nbsp;{val2}</span></h3>
+			</lightning-layout-item>
+
+			<template for:each={projectImpact} for:item="pImpact">
+				<lightning-layout-item key={pImpact.idx} class="nums text-center slds-m-top_x-large" size="12"
+					large-device-size="3" medium-device-size="6" small-device-size="12">
+					<h4 class="clr_orange bynumber-head">{pImpact.title}</h4>
+					<h4 class="bynumber-content">
+						<lightning-formatted-rich-text value={pImpact.body}>
+						</lightning-formatted-rich-text>
+						<!--{pImpact.body}-->
+					</h4>
+				</lightning-layout-item>
+			</template>
+		</lightning-layout>
+	</div>
+
+
+</template>

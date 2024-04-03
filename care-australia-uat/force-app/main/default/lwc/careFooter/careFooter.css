@@ -1,0 +1,401 @@
+@font-face {
+    font-family: 'Sketchetik Fill Bold';
+    src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/fontSk.woff') format('woff');   
+  }
+  @font-face {
+      font-family: 'Helvetica Neue Bold';
+      src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+      
+    }
+    @font-face {
+      font-family: 'Helvetica Neue Regular';
+      src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+      
+    }
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+      
+    }
+    @font-face {
+      font-family: 'Helvetica Neue Bold Pro';
+      src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueProBold.woff') format('woff');
+      
+    }
+    .grid-item a{
+        font-family: 'Helvetica';
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: bold;
+    }
+    .logo{
+        margin-top: 10px;
+        margin-left: 20px;
+        width: 30%;
+    }
+    .lend{
+        height:20px;
+        width: auto;
+        color: white;
+        font-size: large;
+    }
+    .withcare{
+        height: 20px;
+        width: auto;
+        color: white;
+        font-size: large;
+    }
+    
+        
+        
+    .pPolicy{
+      text-decoration: none;
+      transition: color .1s linear;
+    }
+    .pPolicy:hover{
+      text-decoration: underline;
+    }
+    .social{
+        width: 70%;
+        display: flex;
+    }
+    .logos{
+        display: flex;
+    }
+    .links{
+        color: white;
+        margin-left: 20px;
+    }
+    .flags{
+        align-items: left;
+        height: 40px;
+        width: 100px;
+    }
+    .flagsnew{
+        align-items: center;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .para{
+        text-align: left;
+        color:#ffffff;
+        font-size: 10px;
+        line-height: 13px;
+        font-family:'Helvetica Neue Regular';
+    }
+    .paranew{
+        width: auto;
+    }
+    .infos{
+        color:#ffffff;
+        font-size: 12px;
+    }
+    
+    .li{
+        display: inline-flex;
+    }
+    .CustomLinks{
+        display: grid;
+    }
+    .Whitecolor{
+        color: #ffffff;
+    }
+    .paddingcontainer{
+        padding-top: 25px;
+    }
+    .paddingfooter{
+        padding-bottom: 50px;
+        margin-bottom: -50px;
+    }
+    
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+        .logosIcons{
+            display: grid;
+        }
+        
+    
+        /*Media Queries - Mobile Responsive-Starts*/
+    
+    @media only screen and (max-width: 600px) {
+          .paddings{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+        .logosIcons{
+            display: inline-flex;
+        }
+        .social{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 40px;
+    }
+    .careLogo{
+        align-items: left;
+    }
+    .FooterDesktopLogo{
+      display: none;
+    }
+    .FooterMobileLogo{
+        display: flex;
+        justify-content: left;
+    }
+    .fooDesktop{
+        display: none;
+    }
+     .fooMobile{
+         display: flex;
+         justify-content: left;
+         font-size: 10px;
+         line-height: 13px;
+         font-family: 'Helvetica';
+     }  
+     .footer2{
+         display: none;
+     }
+     .footer1{
+         display: block;
+         background: transparent linear-gradient(210deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+     }
+    }
+    @media only screen and (min-width: 600px) {
+          .paddings{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+        .logosIcons{
+            display: inline-flex;
+        }
+        .social{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        margin-left: 40px;
+    }
+    .careLogo{
+        align-items: left;
+    }
+    .FooterDesktopLogo{
+      display: none;
+    }
+    .FooterMobileLogo{
+        display: flex;
+        justify-content: left;
+    }
+    .fooDesktop{
+        display: none;
+    }
+     .fooMobile{
+         display: flex;
+         justify-content: left;
+         font-size: 10px;
+         line-height: 13px;
+         font-family: 'Helvetica';
+     } 
+     .footer2{
+         display: none;
+     }
+     .footer1{
+         display: block;
+         background: transparent linear-gradient(210deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+     }
+    }
+    @media only screen and (min-width: 768px) {
+          .paddings{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+         .social{
+        width: 40%;
+        display: block;
+    
+        
+         }
+    
+        .logosIcons{
+            display: inline-flex;
+        }
+        .careLogo{
+        align-items: center;
+    }
+    .FooterMobileLogo{
+        display: none;
+    }
+     .FooterDesktopLogo{
+         display: flex;
+         justify-content: right;
+     }  
+     .fooMobile{
+         display: none;
+     } 
+     .fooDesktop{
+         display: flex;
+         justify-content: center;
+         font-size: 10px;
+         line-height: 13px;
+         font-family: 'Helvetica';
+     }
+      /*.fooMobile{
+         display: flex;
+         justify-content: left;
+         margin-left: 50px;
+     } */
+     .footer2{
+         display: block;
+         background: transparent linear-gradient(210deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+     }
+     .footer1{
+         display: none;
+     }
+    }
+    /* Large devices (laptops/desktops, 992px and up) */
+    @media only screen and (min-width: 992px) {
+          .paddings{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 100px;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+        .logosIcons{
+            display: grid;
+        }
+         .careLogo{
+        align-items: center;
+    }
+    .FooterMobileLogo{
+        display: none;
+    }
+     .FooterDesktopLogo{
+         display: flex;
+         justify-content: right;
+     } 
+      .fooMobile{
+         display: none;
+     }   
+      .fooDesktop{
+         display: flex;
+         justify-content: center;
+         font-size: 10px;
+         line-height: 13px;
+         font-family: 'Helvetica';
+     }
+      .social{
+        width: 70%;
+        display: block;
+        margin: 0;
+        
+         }
+          .footer2{
+         display: block;
+         background: transparent linear-gradient(210deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+     }
+     .footer1{
+         display: none;
+     }
+    }
+    @media only screen and (min-width: 1200px) {
+          .paddings{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .grid-container {
+            display: inline-grid;
+            grid-template-columns: auto auto;
+            grid-gap: 100px;
+            margin-left: 50px;
+            margin-right: 100px;
+        }
+    
+        .grid-item {
+            display: grid;
+        }
+        .logosIcons{
+            display: grid;
+        }
+        
+         .careLogo{
+        align-items: center;
+    }
+    .FooterMobileLogo{
+        display: none;
+    }
+     .FooterDesktopLogo{
+         display: flex;
+         justify-content: right;
+     }  
+      .fooMobile{
+         display: none;
+     }  
+      .fooDesktop{
+         display: flex;
+         justify-content: center;
+         font-size: 10px;
+         line-height: 13px;
+         font-family: 'Helvetica';
+     }
+      .social{
+        width: 70%;
+        display: block;
+        margin: 0;
+        
+         }
+          .footer2{
+         display: block;
+         background: transparent linear-gradient(210deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+     }
+     .footer1{
+         display: none;
+     }
+    }
+      @media only screen and (min-width: 1480px){
+         .paddings{
+      padding-left: 10%;
+      padding-right: 10%;
+      }
+      }
+    /*Media Queries - Mobile Responsive-Ends*/

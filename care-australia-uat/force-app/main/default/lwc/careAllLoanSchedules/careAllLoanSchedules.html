@@ -1,0 +1,65 @@
+<template>
+	<div class="headers">
+		<!--<img src={banner} alt="banner">-->
+		<c-care-nav-bar></c-care-nav-bar>
+		<lightning-layout multiple-rows class="slds-p-bottom_x-large pad">
+			<lightning-layout-item size="12" class="slds-p-around_small" small-device-size="6" medium-device-size="6"
+				large-device-size="3">
+				<a href={borrowerspage} style="color:white;font-family: 'Helvetica Neue Bold';">&#10094;
+					<u>Borrowers page</u></a>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-horizontal_small" small-device-size="12"
+				medium-device-size="12" large-device-size="12">
+				<h3 class="section-heading center-align-text">Loan <span style="color:#FEBE10">Schedule</span></h3>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="para2 pad slds-p-around_small">
+		<lightning-layout-item size="12" padding="around-small">
+
+      <div class="slds-grid tableTitleContentPurple">
+        <lightning-layout-item size="4" class=" slds-align_absolute-center">
+          <h3 class="tableHeadingsContentPurple">Date</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class=" slds-align_absolute-center">
+          <h3 class="tableHeadingsContentPurple">Expected repayments</h3>
+      
+        </lightning-layout-item>
+        <lightning-layout-item size="4" class=" slds-align_absolute-center">
+          <h3 class="tableHeadingsContentPurple">Actual repayments Date</h3>
+        </lightning-layout-item>
+      </div>
+
+			<!--<div class="slds-grid tableTitle">
+				<div class="slds-col slds-align_absolute-center">
+					<h3 class="tableHeadings">Date</h3>
+				</div>
+				<div class="slds-col slds-align_absolute-center">
+					<div class="vertical-line"></div>
+					<h3 class="tableHeadings">Expected repayments</h3>
+
+				</div>
+				<div class="slds-col slds-align_absolute-center">
+					<div class="vertical-line"></div>
+					<h3 class="tableHeadings">Actual repayments Date</h3>
+				</div>
+			</div>-->
+		</lightning-layout-item>
+		<lightning-layout-item size="12" padding="around-small">
+			<template for:each={repaymentSchedules} for:item="repay">
+				<div key={repay.dueDate} class={repay.classes}>
+					<lightning-layout-item size="4" class=" slds-align_absolute-center">
+						<h3 class="tableHeadingsContent">{repay.dueDate}</h3>
+					</lightning-layout-item>
+					<lightning-layout-item size="4" class=" slds-align_absolute-center">
+						<h3 class="tableHeadingsContent">${repay.expectedAmount}</h3>
+
+					</lightning-layout-item>
+					<lightning-layout-item size="4" class=" slds-align_absolute-center">
+						<h3 class="tableHeadingsContent">{repay.repayDate}</h3>
+					</lightning-layout-item>
+				</div>
+			</template>
+		</lightning-layout-item>
+	</div>
+</template>

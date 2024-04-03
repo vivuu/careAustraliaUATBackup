@@ -1,0 +1,158 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Care Borrowers",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"76d39003-44ea-4053-9925-d6e3ea06d05b\",\"columns\":[{\"UUID\":\"2df7ad5b-081c-4c6d-b72e-be6f5af03682\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "2df7ad5b-081c-4c6d-b72e-be6f5af03682",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "76d39003-44ea-4053-9925-d6e3ea06d05b",
+          "type" : "component"
+        } ],
+        "id" : "5c72d8f4-1e4f-4067-b074-5474b97788f9",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"17a26fdb-fb3b-43b9-b437-d094db5049b7\",\"columns\":[{\"UUID\":\"439966cb-900f-41ed-8aa8-1722d8e62dc2\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "439966cb-900f-41ed-8aa8-1722d8e62dc2",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "17a26fdb-fb3b-43b9-b437-d094db5049b7",
+          "type" : "component"
+        } ],
+        "id" : "628d07fc-349c-4219-a85d-fd1c0bbb7d63",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBorrowersPageHeader",
+          "id" : "226637df-5247-44e7-96b6-158a53df9f44",
+          "type" : "component"
+        } ],
+        "id" : "eda36a4b-4d3e-46f0-9630-8ec6aa61bc39",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBorrowersPageAbout",
+          "id" : "2542d32f-b543-400b-b0b2-061f7d721052",
+          "type" : "component"
+        } ],
+        "id" : "cd78c85e-bdba-4252-9d8d-691733634696",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBorrowersPageProjectImpact",
+          "id" : "1fc4ce03-866a-403d-983b-fddacbf3b4e0",
+          "type" : "component"
+        } ],
+        "id" : "6a134ffd-1918-45ad-95ee-ae7997355860",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { },
+            "strTitle" : "The loan schedule does not include buffer repayments"
+          },
+          "definition" : "c:lwr_careBorrowersPageLoanSchedule",
+          "id" : "84c10821-962a-448f-aa70-548a2547d396",
+          "type" : "component"
+        } ],
+        "id" : "0a139aff-53e9-4c7c-babd-4020458e4e58",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBorrowersPageProjectContributors",
+          "id" : "6fa07efe-e948-4283-b258-28623f2b3ae2",
+          "type" : "component"
+        } ],
+        "id" : "6531a529-5048-4972-ad29-f92b323e534f",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBorrowersPageRelatedLoans",
+          "id" : "7ebe989d-aea8-4b73-a2e7-908f22f0ebb2",
+          "type" : "component"
+        } ],
+        "id" : "6e2cf2b2-5832-4d4a-bd1e-63c5fa9d4718",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "8f73e7a2-fcdf-4494-9bf9-d6864188732f",
+          "type" : "component"
+        } ],
+        "id" : "33fa18a6-a4f7-4a22-9552-d87e4b037257",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "b8cdad59-b045-40a8-bc43-3ead82bb5816",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "dc91adbd-6015-4498-a80a-bfd44bc64d45",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "9c5c426b-099c-4a78-aee2-c140e5930cca",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "c363bbad-ac2b-4516-8e2e-eefc82909325",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeCareBorrowers",
+      "id" : "87acf79d-4a6e-42fe-8c3b-8efc5239ddf3",
+      "type" : "component"
+    }
+  }
+}

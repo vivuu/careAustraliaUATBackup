@@ -1,0 +1,6 @@
+.THIS .newHeader{
+    background: repeating-linear-gradient(45deg, rgb(84,105,141), rgb(84,105,141) 20px, rgba(84,105,141,.97) 20px, rgba(84,105,141,.97) 40px);
+    color: white;
+    font-size: 20px;
+    padding : 4px;
+}

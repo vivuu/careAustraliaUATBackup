@@ -1,0 +1,64 @@
+<!--
+  @description       : 
+  @author            : SUMEDH WASNIK
+  @group             : GERENT
+  @last modified on  : 01-22-2024
+  @last modified by  : SUMEDH WASNIK
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   01-22-2024   SUMEDH WASNIK   Initial Version
+-->
+<template>
+    <lightning-card>
+
+        <div if:true={hasError} class="field">
+            <div style="font-size:16px; color: red;">
+                {errorMsg}
+            </div>
+        </div>
+
+        <div if:false={otpScreen}>
+            <div class=" field">
+                <label style="font-size:16px;color:white">UserName<span style="color:red">*</span></label>
+                <lightning-input style="border-radius:4px; border-style:none;" class="username" type="text"
+                    name="Username" value={username} onchange={handleUsernameInput}></lightning-input>
+            </div>
+            <div class=" field">
+                <label style="font-size:16px;color:white">Password<span style="color:red">*</span></label>
+                <lightning-input style="border-radius:4px; border-style:none;" class="password" type="password"
+                    name="Password" value={password} onchange={handlePasswordInput}></lightning-input>
+            </div>
+            <div class="field slds-align_absolute-center">
+                <button class="submitbutton" onclick={userLogin}>Log In</button>
+            </div>
+            <div class="slds-border_top">
+                <div class="forgotPassword">
+                    <button onclick={handleForgotPassword}>{forgotPasswordLabel}</button>
+                    <label style="font-size:16px;">{forgotPasswordLabel}</label>
+                </div>
+                <div class="createAccount">
+                    <button onclick={handleCreateAccountPassword}>{createAccountLabel}</button>
+                    <label style="font-size:16px;">{createAccountLabel}</label>
+                </div>
+            </div>
+        </div>
+
+        <div if:true={otpScreen}>
+            <div class=" field">
+                <label style="font-size:16px;color:white">OTP<span style="color:red">*</span></label>
+                <lightning-input style="border-radius:4px; border-style:none;" class="otp" type="password"
+                    name="otp" value={confirmOTP} onchange={handleOtpVerification}></lightning-input>
+            </div>
+            <div class="slds-border_top">
+                <div class="resendOtp">
+                    <button onclick={resendOTP}>{resendOTPLabel}</button>
+                    <label style="font-size:16px;">{resendOTPLabel}</label>
+                </div>
+                <div class="Verify">
+                    <button onclick={VerifyOTP}>Verify</button>
+                </div>
+            </div>
+        </div>
+
+    </lightning-card>
+</template>

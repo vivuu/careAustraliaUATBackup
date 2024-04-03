@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Help Centre",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"68d80f0e-ac7c-40ad-8c83-c7ac40921ec7\",\"columns\":[{\"UUID\":\"c0d93db4-37ef-44ee-a45c-9ab840a1f8a6\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "c0d93db4-37ef-44ee-a45c-9ab840a1f8a6",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "68d80f0e-ac7c-40ad-8c83-c7ac40921ec7",
+          "type" : "component"
+        } ],
+        "id" : "9dd78e1c-63c5-4b72-b6a4-7b000b98428b",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"4a153975-06ab-444d-aa31-bcbce80fb96b\",\"columns\":[{\"UUID\":\"a5e57c3a-755d-487a-9c1c-7441f5c7aed0\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "a5e57c3a-755d-487a-9c1c-7441f5c7aed0",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "4a153975-06ab-444d-aa31-bcbce80fb96b",
+          "type" : "component"
+        } ],
+        "id" : "d6f03781-b678-42ad-8236-fa349dec83e9",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careHelpCentre",
+          "id" : "22aa0506-801d-4867-a906-d60198000bd6",
+          "type" : "component"
+        } ],
+        "id" : "a0a80b34-5691-439c-9c3d-434ed8c63b66",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "4328ec03-1bac-4cec-816a-3b08d813cee0",
+          "type" : "component"
+        } ],
+        "id" : "f3ebd833-38f6-4761-ac24-1e7874e67708",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "4677e41d-8b89-4792-8d95-b38a87cc6b8f",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "50b6f9f9-1f5a-4f8c-962b-d4a99704e003",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "72c870be-e5bf-4c24-9bac-8b1e8eb319d3",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "2e5fc167-0b91-4b26-9142-5cec13802898",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "4c81a65d-6037-4e0a-ac19-7d1456ee0c65",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "96dc27a3-6c9c-4674-9af0-db72303a67c9",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "2e62a064-41d5-432f-89f1-a68ad07e867f",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "63deb755-b1c7-4230-aa99-319b2d4627de",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "3fc22f3d-5dc4-4587-9085-50a73af1a470",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeHelpCentre",
+      "id" : "1e3dff56-d8c4-4bce-b7fb-2740e5e52e0e",
+      "type" : "component"
+    }
+  }
+}

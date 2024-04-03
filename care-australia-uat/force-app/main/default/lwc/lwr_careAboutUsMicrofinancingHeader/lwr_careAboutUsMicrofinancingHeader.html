@@ -1,0 +1,46 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="headers">
+
+		<!--<img src={banner} alt="banner">-->
+
+		<c-lwr_care-nav-bar></c-lwr_care-nav-bar>
+
+		<lightning-layout multiple-rows="true">
+			
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6"
+				class="headerPad item1">
+				<div class="slds-align_absolute-center bannerHeading" style="display:block;">
+					<lightning-layout multiple-rows="true" style="color:white" class="slds-m-around_small">
+
+						<!--<template for:each={titles} for:item="title"> key={title.white}</template>{title.white}{title.yellow}-->
+
+							<lightning-layout-item size="12" padding="around-small"
+								small-device-size="12" medium-device-size="12" large-device-size="12">
+								<h3 style="display:inline" class="section-heading">{val1}<span style="color:#FEBE10"> {val2}</span></h3>
+							</lightning-layout-item>
+						
+
+						<!--<template for:each={aboutmicrofinancebody} for:item="amb"></template>key={amb}{amb}-->
+							<lightning-layout-item size="12"  padding="around-small" small-device-size="12"
+								medium-device-size="12" large-device-size="12">
+								<h3 class="section-contenth">
+									<lightning-formatted-rich-text value={aboutmicrofinancebody}>
+									</lightning-formatted-rich-text>
+								</h3>
+							</lightning-layout-item>
+
+					</lightning-layout>
+				</div>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6"
+				large-device-size="6" class="item2 slds-align_absolute-center">
+
+				<div style="float:right"><img src={backgroundImage} ></div><!-- class="HeaderBannerImage" -->
+
+			</lightning-layout-item>
+
+		</lightning-layout>
+	</div>
+</template>

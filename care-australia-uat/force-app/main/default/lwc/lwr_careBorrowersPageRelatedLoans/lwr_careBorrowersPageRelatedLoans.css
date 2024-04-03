@@ -1,0 +1,1096 @@
+@font-face {
+    font-family: 'Helvetica';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Sketchetik Fill Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/fontSK.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Bold Pro';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueProBold.woff') format('woff');
+    
+  }
+  .dropdown-arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    margin: 5px;
+  }
+  
+  
+  .relatedLoans{
+  display:inline;
+  font-size:26px;
+  line-height:32px;
+  font-weight:bold;
+  color:#002A3A;
+  font-family: 'Sketchetik Fill Bold';
+  }
+  
+  .closeBtn{
+    background: #FEBE10;
+    border-radius: 4px;
+    padding: 12px 0px;
+    width: 380px;
+    font-family: 'Sketchetik Fill Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #163B54;
+  }
+  .loanSchedule{
+    display:inline;
+    font-size:30px;
+    line-height:37px;
+    font-weight:bold;
+    color:#002A3A;
+    font-family: 'Sketchetik Fill Bold';
+  }
+  .projectImpact{
+  display:inline;
+  font-size:26px;
+  line-height:32px;
+  font-weight:800;
+  color:#002A3A;
+  font-family: 'Sketchetik Fill Bold';
+  }
+  
+   p {
+     font-family: 'Helvetica Neue Regular';
+     color:#002A3A;
+  }
+  a {
+     font-family: 'Helvetica Neue Regular';
+     color:#002A3A;
+  }
+  .catogory1{
+    background: none;
+    border-radius: 20px;
+    width:auto;
+    padding:10px;
+    color:white;
+    border-color: white;
+    font-family: 'Helvetica Neue Regular';
+    font-weight: 800;
+  }
+  .catogory1 :hover{
+    background: none;
+    border-radius: 20px;
+    width:auto;
+    padding:10px;
+    color:white;
+    border-color: white;
+    font-family: 'Helvetica Neue Regular';
+    font-weight: 800;
+  }
+  .projectheading{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #472175;
+  }
+  .moreButton{
+    width: 100%;
+    color: #002A3A;
+    font-family: 'Helvetica Neue Regular';
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border-style: none;
+    background: white;
+    padding: 15px;
+  }
+  .tableHeadings{
+    font-family: 'Helvetica Neue Regular';
+    padding: 15px;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+  }
+  .tableHeadingsContent{
+    font-family: 'Helvetica Neue Regular';
+    padding: 15px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #002A3A;
+  }
+  .tableTitle{
+    background: #472175;
+    border-radius: 4px;
+    display: flex;
+    color: white;
+  }
+  .tableTitleContent{
+    background: #FFFFFF;
+    border-radius: 4px;
+    display: flex;
+    color: #002A3A;
+  }
+  .tableTitleContentSecond{
+    background: transparent;
+    border-radius: 4px;
+    display: flex;
+    color: #002A3A;
+  }
+  .loanScheduleSection{
+    background: #F3F0ED;
+  }
+  .bynumber-content{
+    font-family: 'Helvetica Neue Regular';
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #002A3A; 
+    margin-left:20px;
+    margin-right: 20px;
+    text-align: left;
+  }
+  .bynumber-head{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 35px;
+    color: #E4761E; 
+    margin-left:20px;
+    margin-right: 20px;
+    text-align: left;
+  }
+  .loanTitle{
+    font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    color: white;
+  }
+  
+  .vietnam{
+    color: white;
+    font-size: 16px;
+    line-height: 21px;
+  }
+  .header{
+      background: transparent linear-gradient(206deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+  }
+  .example-accordion {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .section-content{
+    font-family: 'Helvetica Neue Regular';
+    
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sectionSubHeadingTitle{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff; 
+  }
+  .sectionHeadingTitle{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #ffffff; 
+  }
+  .text-center {
+      text-align: center!important;
+      margin-bottom: 20px;
+  }
+  .clr_navyblue {
+      color: #002A3A;
+  }
+  .clr_orange {
+      color: #E4761E;
+  }
+  
+  .section-heading1 {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 32px;
+      
+      color: #002A3A;
+  }
+  
+  .section-heading {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 40px;
+      color:#002A3A;
+  }
+  .ImageDiv{
+    background-color: #472175;
+    margin: 0;
+    top: 0;
+    height: 100px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  .CarContent{
+    margin: 15px;
+  }
+  .carTitle{
+      font-size: 16px;
+      font-weight: 800;
+      font-family: 'Sketchetik Fill Bold';
+      color: #002A3A;
+  }
+  .locastions{
+    display: inline-flex;
+    margin: 10px 0px 10px 0px;
+  }
+  .carPara{
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue Regular';
+    font-weight: 800;
+  }
+  .carButton{
+    font-family: 'Helvetica Neue Bold Pro';
+    background: none;
+    border-radius: 23px;
+    border-width: 2px;
+    width: 145px;
+    font-size: 12px;
+    padding: 2px;
+    border-style: solid;
+    color: #002A3A;
+    border-color: #002A3A;
+  }
+
+  .CarButtons:hover{
+    color: #002A3A;
+    background:none;
+    border:none;
+    width: 2px;
+  }
+  .CarButtons{
+    color: #002A3A;
+    background:none;
+    border:none;
+    width: 2px;
+  }
+  .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .WithoutBackgroundcolor {
+    background: transparent;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .progressBar {
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding-top: 2px;
+  }
+  .progressBar1 {
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  .progressBarInner {
+    height: 60%;
+    background-color: #ffd700; 
+    border-radius: 5px;
+    width: 30%; 
+    margin: 0.7px;
+  }
+  .progressBarInner1 {
+    height: 50%;
+    background-color: #ffd700; 
+    border-radius: 5px;
+    width: 30%; 
+    margin: 2.5px;
+  }
+  .shoppingCart {
+    margin-right: 10px;
+    color: #ffffff;
+    width: 24px;
+  }
+  .dots {
+      display: inline-flex;
+      justify-content: center;
+  }
+  
+  .dots button {
+      width: 0px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #bbb;
+      margin: 0 5px;
+      cursor: pointer;
+  }
+  
+  .dots button.active {
+      background-color: #333;
+  }
+  .catogory{
+    background: none;
+    border-radius: 20px;
+    width:auto;
+    padding:5px;
+  }
+  @media only screen and (max-width: 600px){
+    .pad{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+    .vertical-line {
+      width: 1px;
+      height: 100px;
+      background-color: white; 
+  }
+  .AddLoanClass{
+    position: sticky;
+    bottom: 0;
+    z-index: 7;
+    float: right;
+    background-color: #F3F0ED;
+    width: 100%;
+      border-radius:10px 10px 0px 0px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+    .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: auto;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 350%;
+  }
+  .loanDescription{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+  }
+  }
+  
+  @media only screen and (min-width: 600px){
+        .pad{
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+    .AddLoanClass{
+      position: sticky;
+      bottom: 0;
+      z-index: 7;
+      float: right;
+      background-color: #F3F0ED;
+      width: 100%;
+        border-radius:10px 10px 0px 0px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 100px;
+      background-color: white; 
+  }
+  .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: auto;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 350%;
+  }
+  .loanDescription{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    color: white;
+    text-align: right;
+  }
+  }
+  
+  @media only screen and (min-width: 768px){
+        .pad{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+    .AddLoanClass{
+      position: sticky;
+      bottom: 0;
+      z-index: 7;
+      float: right;
+        background-color: #F3F0ED;
+        width: 100%;
+          border-radius:10px 10px 0px 0px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 50px;
+      background-color: white; 
+  }
+    .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: auto;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .loanDescription{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  }
+  
+  @media only screen and (min-width: 992px){
+            .pad{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+    .AddLoanClass{
+      position: sticky;
+      bottom: 0;
+      z-index: 7;
+      float: right;
+        background-color: #F3F0ED;
+        width: 100%;
+          border-radius:10px 10px 0px 0px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 50px;
+      background-color: white; 
+  }
+    .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: auto;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .loanDescription{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  }
+  
+  @media only screen and (min-width: 1200px){
+            .pad{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+    .AddLoanClass{
+      position: sticky;
+      bottom: 0;
+      z-index: 7;
+      float: right;
+        background-color: #F3F0ED;
+        width: 100%;
+          border-radius:10px 10px 0px 0px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    }
+    .vertical-line {
+      width: 1px;
+      height: 50px;
+      background-color: white; 
+  }
+    .BottomDiv {
+    background: #472175;
+    margin: 0;
+    height: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 10px;
+  }
+  .BottomDiv1 {
+    background: #472175;
+    margin: 0;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    margin-top: 10px;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: auto;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .loanDescription{
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+    line-height: 19px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  }
+  
+  @media only screen and (min-width: 1500px){
+            .pad{
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+        .AddLoanClass{
+  position: sticky;
+  bottom: 0;
+  z-index: 7;
+  float: right;
+    background-color: #F3F0ED;
+    width: 100%;
+      border-radius:10px 10px 0px 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px;
+    margin: 20px 0px 20px 0px;
+  }
+  }
+  
+  /* media queries ends here */
+  .slide {
+      flex: 0 0 calc(1128px / 4); /* Adjust the percentage value based on the number of visible cards */
+      min-width: calc(1128px / 4); /* Adjust the percentage value based on the number of visible cards */
+      background-color: #F3F0ED;
+      border-radius: 5px;
+      margin-right: 10px;
+    height:fit-content;
+  }
+  
+  .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  .prev,
+  .next {
+      padding: 10px;
+      margin: 0 5px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+  }
+  
+  .dots {
+      display: inline-flex;
+      justify-content: center;
+  }
+  
+  .dots button {
+      width: 0px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #bbb;
+      margin: 0 5px;
+      cursor: pointer;
+  }
+  
+  .dots button.active {
+      background-color: #333;
+  }
+  .CarButtons{
+    color: #002A3A;
+    background:none;
+    border:none;
+    width: 2px;
+  }
+  .CarButtons:hover{
+    color: #002A3A;
+    background:none;
+    border:none;
+    width: 2px;
+  }
+  
+  .BottomDiv {
+    margin: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .locastions{
+    display: inline-flex;
+    margin: 10px 0px 10px 0px;
+  }
+  .carButton{
+    font-family: 'Helvetica Neue Bold Pro';
+    background: none;
+    border-radius: 23px;
+    border-width: 2px;
+    width: 145px;
+    font-size: 12px;
+    padding: 2px;
+    border-style: solid;
+    color: #002A3A;
+    border-color: #002A3A;
+  }
+
+  .CarContent{
+    margin: 15px;
+  }
+  .carTitle{
+      font-size: 16px;
+      font-weight: 800;
+      font-family: 'Sketchetik Fill Bold';
+      color: #002A3A;
+  }
+  .carPara{
+    margin-bottom: 10px;
+    font-family: 'Helvetica Neue Regular';
+  }
+  .progressBar {
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  .progressBar1 {
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  .shoppingCart {
+    margin-right: 10px;
+    color: #ffffff;
+    width: 24px;
+  }
+  .progressBarInner {
+    height: 60%;
+    background-color: #ffd700; 
+    border-radius: 5px;
+    
+    margin: 0.7px;
+  }
+  .progressBarInner1 {
+    height: 50%;
+    background-color: #ffd700; 
+    border-radius: 5px;
+    width: 50%; 
+    margin: 2.5px;
+  }
+  
+  
+  
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+  }
+  
+  .slide {
+      flex: 0 0 calc(1128px / 4); /* Adjust the percentage value based on the number of visible cards */
+      min-width: calc(1128px / 4); /* Adjust the percentage value based on the number of visible cards */
+      background-color: #F3F0ED;
+      border-radius: 5px;
+      margin-right: 10px;
+  }
+  
+  .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  
+  .prev,
+  .next {
+      padding: 10px;
+      margin: 0 5px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+  }
+  
+  .dots {
+      display: inline-flex;
+      justify-content: center;
+  }
+  
+  .dots button {
+      width: 0px;
+      height: 10px;
+      border-radius: 50%;
+      border: none;
+      background-color: #bbb;
+      margin: 0 5px;
+      cursor: pointer;
+  }
+  
+  
+  
+  .dots button.active {
+      background-color: #333;
+  }
+  .HeadImageImpact{
+      height: 150px;
+      margin: 5px;
+      border-radius: 5px;
+  }
+  .CarContentImpact{
+    margin: 15px;
+  }
+  .carTitleImpact{
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 10px;
+  }
+  .carParaImpact{
+    padding-bottom: 50px;
+    font-family: 'Helvetica Neue Regular';
+  }
+  .locastionsImpact{
+    display: inline-flex;
+    margin: 10px;
+  }
+  .carButtonImpact{
+      background: #FEBE10;
+      border-radius: 4px;
+      width: 20%;
+      font-size: 13px;
+      height: 35px;
+      margin-bottom: 20px;
+      bottom: 0;
+      position: absolute;
+      border-Style: None;
+      
+  }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+    }
+  
+  
+  
+    .grid-item {
+      border: none;
+    }
+    .Carouselvaluebottom{
+      background-color:white;
+      padding:8px;
+      border-style: none;
+      border-radius: 4px;
+      width: -webkit-fill-available;
+      margin: 10px 0px 10px 0px;
+      font-size:12px;
+      font-weight:800;
+    }
+    .CarouselAddtocartButton{
+      border:none;
+      background: #FEBE10;
+      border-style: none;
+      border-radius: 4px;
+      margin: 10px 0px 10px 0px;
+      padding:10px;
+      width: -webkit-fill-available;
+      font-size:12px;
+      font-weight:800;
+      color:#002A3A;
+      font-family: 'Helvetica Neue Bold Pro';
+    }
+    .CarouselAddtocartButton:hover{
+      border:none;
+      background: #472175;
+      border-style: none;
+      border-radius: 4px;
+      margin: 10px 0px 10px 0px;
+      padding:10px;
+      width: -webkit-fill-available;
+      font-size:12px;
+      font-weight:800;
+      color:#ffffff;
+      font-family: 'Helvetica Neue Bold Pro';
+      }
+    .ProjectsBack{
+      color: white;
+      font-weight: 800;
+      font-family: 'Helvetica Neue Regular';
+      font-size: 10px;
+    }
+    .sticky-wrapper{
+      position: fixed;
+      bottom: 70px;
+      right: 0;
+      margin-right: 10px; /* You can adjust the z-index value as needed */
+    }
+    .dotClass {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #7F949C;
+    margin: 0 5px;
+    display: inline-block;
+  }
+  
+  .dotClass.active {
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: rgb(31, 33, 34);
+    margin: 0 5px;
+    display: inline-block;
+  }
+  
+  .dots .NaviButton {
+    width: 22px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    margin: -6px 30px;
+    cursor: pointer;
+  }
+  
+  .dots button {
+    width: 22px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    margin: -6px 30px;
+    cursor: pointer;
+  }
+  .custom-select {
+    border: 2px solid #002A3A; /* Adjust the color and width as needed */
+    width: 100%; /* Adjust the width as needed */
+    padding: 8px;
+    font-family: 'Helvetica Neue Bold Pro';
+    
+    font-size: 16px;
+    line-height: 21px;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  .Carouselvaluebottom{
+    background-color:white;
+    padding:10px;
+    border-style: none;
+    border-radius: 4px;
+    width: -webkit-fill-available;
+    margin: 10px 0px 10px 0px;
+    font-size:15px;
+    
+    line-height: 21px;
+    color: #002A3A;
+    font-family: 'Helvetica Neue Bold Pro';
+  }
+  .Carouselvaluebottom:hover{
+    background-color:white;
+    padding:10px;
+    border-style: none;
+    border-radius: 4px;
+    width: -webkit-fill-available;
+    margin: 10px 0px 10px 0px;
+    font-size:15px;
+    
+    line-height: 21px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #002A3A;
+  }
+  .dots button:hover {
+    width: 22px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #bbb;
+    margin: -6px 30px;
+    cursor: pointer;
+  }
+  
+  .dots button.active {
+    background-color: #333;
+  }
+
+  .carouselCustom::-webkit-scrollbar {
+    width: 0.1rem;
+    background-color: transparent;
+}
+.carouselCustom::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

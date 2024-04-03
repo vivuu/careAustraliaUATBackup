@@ -1,0 +1,6 @@
+<aura:documentation>
+	<aura:description>This component is used on the Care Australia Batch Suite's Tab.
+		This component allow a user to manually execute batch processes.
+		Server side controller used for this component is CareAustraliaBatchSuiteController.
+	</aura:description>
+</aura:documentation>

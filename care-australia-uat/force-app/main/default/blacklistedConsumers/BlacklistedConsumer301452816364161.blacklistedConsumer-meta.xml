@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlacklistedConsumer xmlns="http://soap.sforce.com/2006/04/metadata">
+    <blockedByApiWhitelisting>false</blockedByApiWhitelisting>
+    <consumerKey>3MVG91ftikjGaMd8N5dTfkjxhxMAE17N7RTMlUTv1kf4i2Dm0eWuWfdTnIvLko5_CnmpPmSi6sURr_OiCWdv0</consumerKey>
+    <consumerName>AutomateIO</consumerName>
+    <masterLabel>BlacklistedConsumer301452816356833</masterLabel>
+</BlacklistedConsumer>

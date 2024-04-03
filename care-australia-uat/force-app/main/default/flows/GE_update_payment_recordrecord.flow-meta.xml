@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>55.0</apiVersion>
+    <decisions>
+        <description>if opportunity is from giveeasy, update payment record</description>
+        <name>Update_payment_record_for_giveeasy</name>
+        <label>If opportunity eq GE</label>
+        <locationX>182</locationX>
+        <locationY>311</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>if_lead_source_is_GE</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.npe01__Opportunity__r.LeadSource</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>GiveEasy</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>GE_Update_payment_record</targetReference>
+            </connector>
+            <label>if lead source is GE</label>
+        </rules>
+    </decisions>
+    <description>Update payment record when an opportunity with lead source is GiveEasy</description>
+    <environments>Default</environments>
+    <interviewLabel>GE update payment recordrecord {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GE update payment recordrecord</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>GE_Update_payment_record</name>
+        <label>GE Update payment record</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <inputAssignments>
+            <field>Merchant_Category__c</field>
+            <value>
+                <stringValue>GiveEasy</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Receipt_Status__c</field>
+            <value>
+                <stringValue>Emailed</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>npe01__Check_Reference_Number__c</field>
+            <value>
+                <elementReference>$Record.npe01__Opportunity__r.Gateway_receipt__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_payment_record_for_giveeasy</targetReference>
+        </connector>
+        <object>npe01__OppPayment__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

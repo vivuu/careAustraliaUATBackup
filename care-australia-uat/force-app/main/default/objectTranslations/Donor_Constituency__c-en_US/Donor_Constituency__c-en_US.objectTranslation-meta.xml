@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Donor Constituency</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Donor Constituencies</value>
+    </caseValues>
+    <layouts>
+        <layout>CA Donor Constituency Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Either_Account_or_Contact_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>end_date_less_than_start_date</name>
+    </validationRules>
+</CustomObjectTranslation>

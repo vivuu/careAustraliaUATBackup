@@ -1,0 +1,147 @@
+<template>
+	<lightning-layout multiple-rows="true">
+		<lightning-layout-item size="12"
+			class="slds-p-bottom_xx-large slds-p-top_xx-large impact-section-heading pad bodyBackground1">
+			<h3 class="section-heading ourImpactHeading">{val1} <span class="clr_gold ">{val2}</span></h3>
+			<p class="section-discription ourImpactHeading slds-p-bottom_large">
+				<lightning-formatted-rich-text
+									value={description}
+                    ></lightning-formatted-rich-text>
+			</p>
+		</lightning-layout-item>
+	<lightning-layout-item size="12" class="pad slds-p-bottom_xx-large">	
+
+
+	<div class="carouselImpact">
+		<div class="sliderImpact" style={sliderStylesImpact}>
+			<template for:each={carouselItems} for:item="item" for:index="index">
+				<div key={item.id} class="slide">
+					<div class="slide-content">
+						<div class="HeadImageImpact" style={item.img}></div>
+						<div class="CarContentImpact">
+							<h3 class="carTitleImpact">
+							<lightning-formatted-rich-text
+								value={item.title}
+							></lightning-formatted-rich-text></h3>
+							<div class="locastionsImpact">
+								<div>
+									<svg xmlns="http://www.w3.org/2000/svg" style="margin: 0px 4px 0 0;" width="16"
+										height="16" fill="#002A3A" class="bi bi-geo-alt" viewBox="0 0 16 16">
+										<path
+											d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+										<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+									</svg></div>
+								<div>
+									<p
+										style="color: #002A3A;font-family:'Helvetica Neue Bold Pro';font-size:12px;line-height:16px;margin-top:6px">
+										{item.location}</p>
+								</div>
+							</div>
+							<p class="carParaImpact">
+								<lightning-formatted-rich-text
+									value={item.body}
+                                ></lightning-formatted-rich-text>
+							</p>
+							<div style="width: 100%; text-align: center;">
+								<a href={item.buttonlink}>
+								<button class="carButtonImpact">{item.button}</button></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</template>
+		</div>
+
+	</div>
+	<div class="displayNavigation slds-align_absolute-center">
+		<!--<template if:true={displayPreviousButtom}>-->
+			<span class="NaviButton" style="background:none;padding-right:25px; cursor: pointer;font-size:18px;"  onclick={previousSlideImpact} >&#10094;</span>
+		<!--</template>-->
+		<div class="dots">
+			<template for:each={carouselItems} for:item="item" for:index="index">
+				<span key={item.img} class="dotClass" onclick={handleDotClickImpact} data-index={index}></span>
+			</template>
+		</div>
+		<!--<template if:true={displayNextButtom}>-->
+			<span class="NaviButton" style="background:none;padding-left:25px; cursor: pointer;font-size:18px;" onclick={nextSlideImpact}>&#10095;</span>
+		<!--</template>-->
+	</div>
+	</lightning-layout-item>
+	</lightning-layout>
+
+	<!-- <lightning-layout class="carouselImpact" multiple-rows="true">
+		<lightning-layout-item  class="sliderCustom" style={sliderStyles}>
+			<template for:each={carouselItems} for:item="item" for:index="index">
+				<lightning-layout-item  key={item.img} class="slide slide-content" size="12" large-device-size={item.size} medium-device-size="6" small-device-size="6">
+                        <div  class="CarImages">
+                            <img src={item.img}>
+                        </div>
+						<div class="CarContentImpact">
+                                <h3 class="carTitleImpact">{item.title}</h3>
+							<div class="locastionsImpact">
+								<div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+										<path
+											d="M12 2C8.13 2 5 5.13 5 9c0 4.25 6.75 12 7 12s7-7.75 7-12c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z" />
+									</svg></div>
+								<div>
+									<p>{item.location}</p>
+								</div>
+							</div>
+                            <div class="carParaImpact">
+                                <p>{item.body}</p>
+                            </div>
+							
+							<div class="slds-align_absolute-center">
+								<button class="carButtonImpact">Read More</button>
+							</div>
+						</div>
+				</lightning-layout-item >
+			</template>
+		</lightning-layout-item >
+		<lightning-layout-item class="slds-align_absolute-center">
+			<div class="dots">
+				<template for:each={carouselItems} for:item="item" for:index="index">
+					<button key={item.img} class={dotClass} onclick={handleDotClick} data-index={index}></button>
+				</template>
+			</div>
+			<div style="margin-top:5px;margin-left:20px">
+				<button class="CarButtons"  onclick={previousSlide}>&lt;</button>
+				<button class="CarButtons" style="margin-left:20px" onclick={nextSlide}>&gt;</button>
+			</div>
+		</lightning-layout-item >
+    </lightning-layout>    -->
+</template>
+
+
+
+
+<!---
+        <div class="carouselCustom">
+        <div class="sliderCustom" style={sliderStyles}>
+            <template for:each={carouselItems} for:item="item" for:index="index">
+                <div key={item.img} class="slide">
+                    <div class="demo-content">
+                        <div class="CarImages">
+                            <img src={item.img} />
+                        </div>
+                        <div class="CarContentImpact">
+                            <div class="carTitleImpact">
+                                <h3>{item.title}</h3>
+                            </div>
+                            <div class="locastionsImpact">
+                                
+                                <p>{item.location}</p>
+                            </div>
+                            <div class="CarDescription">
+                                <p>{item.body}</p>
+                            </div>
+                            <div  class="slds-align_absolute-center">
+                                <button class="carButtonImpact">Read More</button>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </template>
+        </div>
+        </div> 
+        ----->

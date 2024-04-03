@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "verifyOTP",
+  "contentBody" : {
+    "activeViewId" : "verifyOTP",
+    "configurationTags" : [ ],
+    "pageAccess" : "RequiresLogin",
+    "routeType" : "custom-verify-o-t-p",
+    "urlPrefix" : "verifyOTP"
+  }
+}

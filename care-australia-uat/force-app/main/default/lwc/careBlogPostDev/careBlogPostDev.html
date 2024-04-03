@@ -1,0 +1,66 @@
+<template>
+	<div class="whitecolor">
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="headers">
+
+		<!--<img src={banner} alt="banner">-->
+
+		<c-care-nav-bar></c-care-nav-bar>
+	</div>
+	<div class="bg pad slds-align_absolute-center" style="display:block">
+       
+		<lightning-layout multiple-rows>
+			<!-- class="slds-p-around_x-large" -->
+			<lightning-layout-item size="12" class="slds-p-top_small slds-p-bottom_small" small-device-size="12" medium-device-size="12"
+				large-device-size="12">
+
+				<div class="bannerHeading">
+
+					<lightning-layout multiple-rows="true" style="color:white">
+						<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+							large-device-size="12">
+							<h3 style="display:inline" class="section-heading2">
+								<lightning-formatted-rich-text
+								value={careblogposttitle}></lightning-formatted-rich-text> 
+							</h3>
+							
+						</lightning-layout-item>
+						<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+							large-device-size="12" class="slds-p-top_small">
+							<h3 style="display:inline;" class="section-heading3"> By CARE Australia - {PublishedDatenew}
+							</h3>
+						</lightning-layout-item>
+					</lightning-layout>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows="true">
+			<!-- class="slds-p-horizontal_x-large" -->
+
+			<lightning-layout-item size="12" class="slds-p-top_small slds-p-bottom_small">
+				<img src={careblogpostimage} style="border-radius:10px">
+            </lightning-layout-item>
+
+		</lightning-layout>
+
+		<h3 class="section-content">
+			<lightning-formatted-rich-text
+                 value={bodycareblogpost}></lightning-formatted-rich-text>
+		</h3>
+		<!-- 
+		<lightning-layout multiple-rows>
+            <template for:each={bodycareblogpost} for:item="cbp">
+			<! class="slds-p-top_x-large slds-p-left_x-large slds-p-right_x-large" 
+			<lightning-layout-item size="12" key={cbp} padding="around-small" small-device-size="12" medium-device-size="12"
+				large-device-size="12">
+				<h3 class="section-content">{cbp}</h3>
+			</lightning-layout-item>
+        </template> 
+		</lightning-layout>
+        -->
+
+		
+	</div>
+	</div>
+</template>

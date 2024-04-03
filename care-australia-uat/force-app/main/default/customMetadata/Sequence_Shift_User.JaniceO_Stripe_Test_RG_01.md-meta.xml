@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>JaniceO_Stripe_Test_RG_01</label>
+    <protected>false</protected>
+    <values>
+        <field>FirstName__c</field>
+        <value xsi:type="xsd:string">Janice</value>
+    </values>
+    <values>
+        <field>Instance4Object__c</field>
+        <value xsi:type="xsd:string">Opportunity</value>
+    </values>
+    <values>
+        <field>Instance__c</field>
+        <value xsi:type="xsd:string">QA-AWS-Connect-02-Cash</value>
+    </values>
+    <values>
+        <field>LastName__c</field>
+        <value xsi:type="xsd:string">Ooi</value>
+    </values>
+    <values>
+        <field>Token__c</field>
+        <value xsi:type="xsd:string">b109dc89e85624ca101b4f9c23cf24ebab24babc</value>
+    </values>
+    <values>
+        <field>Username__c</field>
+        <value xsi:type="xsd:string">janiceo</value>
+    </values>
+</CustomMetadata>

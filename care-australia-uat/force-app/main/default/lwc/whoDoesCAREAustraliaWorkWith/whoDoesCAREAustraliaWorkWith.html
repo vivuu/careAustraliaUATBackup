@@ -1,0 +1,42 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	
+
+	<div class="para4 pad">
+        <template if:true={para4section}>
+			<lightning-layout multiple-rows="true" class="paraPad"><!-- class="slds-p-left_x-large slds-p-right_x-large slds-p-bottom_x-large" -->
+   
+				<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6"
+					large-device-size="6">
+		
+					<div class=" slds-p-top_medium slds-align_absolute-center"><img src={para4section.image} alt="para4" style="max-width:95%;border-radius:10px"></div>
+		
+				</lightning-layout-item>
+		
+				<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6"
+					large-device-size="6">			
+					 
+					<lightning-layout multiple-rows="true" >
+						<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+							large-device-size="12">
+							<h3 class="section-heading1">{para4section.title}</h3>
+						</lightning-layout-item>
+						<!--<template for:each={para4section.body} for:item="para4obj"></template>key={para4obj}{para4obj}-->
+							<lightning-layout-item  size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+							large-device-size="12">
+								<h3 class="section-content">
+									<lightning-formatted-rich-text value={para4section.body}>
+									</lightning-formatted-rich-text>
+								</h3>
+							</lightning-layout-item>
+						
+					</lightning-layout>
+		
+				</lightning-layout-item>
+		
+			</lightning-layout>
+		</template>
+   </div>
+
+   
+</template>

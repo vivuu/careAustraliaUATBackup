@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Lendwithcare - Dashboard",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"f7c256d7-067e-4d2d-8b28-30ea85548e5e\",\"columns\":[{\"UUID\":\"bc5c5e25-7217-477f-98a5-7c71d42d98f0\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "bc5c5e25-7217-477f-98a5-7c71d42d98f0",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f7c256d7-067e-4d2d-8b28-30ea85548e5e",
+          "type" : "component"
+        } ],
+        "id" : "fcaea0b3-9d43-49a0-a870-093ad80454c9",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Lendwithcare - Dashboard",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "3274295c-1b85-468d-969e-2b98bdaf68cc",
+          "type" : "component"
+        } ],
+        "id" : "3868b24a-0c7e-4a3c-b3da-23a6c4f4fb17",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "4067baf2-59ee-4538-be61-6605f8b2a515",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "RVhjIvhX7NQE8SnrVt1nwetNazYYuY",
+    "viewType" : "custom-caredashboard"
+  }
+}

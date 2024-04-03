@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>card_not_supported</label>
+    <protected>false</protected>
+    <values>
+        <field>DESCRIPTION__c</field>
+        <value xsi:type="xsd:string">The card does not support this type of purchase.</value>
+    </values>
+    <values>
+        <field>NEXT_STEPS__c</field>
+        <value xsi:type="xsd:string">The customer needs to contact their card issuer to make sure their card can be used to make this type of purchase.</value>
+    </values>
+    <values>
+        <field>PAYMENT_RESULT__c</field>
+        <value xsi:type="xsd:string">Fail Hard</value>
+    </values>
+</CustomMetadata>

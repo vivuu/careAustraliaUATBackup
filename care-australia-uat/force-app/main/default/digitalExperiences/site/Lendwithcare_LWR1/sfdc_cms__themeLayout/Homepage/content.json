@@ -1,0 +1,148 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "A2",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"14793814-0daa-4f0e-8c3f-ce86950d8545\",\"columns\":[{\"UUID\":\"0c2b49fc-3e08-41a6-85ab-8cf104ebd2a8\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { },
+                "richTextValue" : "<div style=\"text-align: center; padding: 50px; background-color: orange;\">\n        <h1>Hello, Background Color!</h1>\n        <p>This is a simple example with inline styles.</p>\n    </div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "6e80f4d3-f6e5-48e7-980d-c491c73d82ca",
+              "type" : "component"
+            } ],
+            "id" : "0c2b49fc-3e08-41a6-85ab-8cf104ebd2a8",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "14793814-0daa-4f0e-8c3f-ce86950d8545",
+          "type" : "component"
+        } ],
+        "id" : "5ba47509-da0c-4152-97ad-be241e93b39b",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"1ba762a8-ca7e-4519-9037-518f3026c9e0\",\"columns\":[{\"UUID\":\"9d5b45f2-714e-493a-bea0-1f5ac305d3a4\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "9d5b45f2-714e-493a-bea0-1f5ac305d3a4",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "1ba762a8-ca7e-4519-9037-518f3026c9e0",
+          "type" : "component"
+        } ],
+        "id" : "84f86a44-15df-4e70-97e9-66995e067e63",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "id" : "0ee419d7-9272-4f4c-a241-bb1756d75e8e",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "id" : "b9bce7f9-01d3-4124-a77a-6bf5a396e52f",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "c1b414ae-5c27-4851-8759-3df7835ca84d",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : {
+              "isVisible" : true,
+              "padding" : {
+                "bottom" : "4%",
+                "left" : "10%",
+                "right" : "10%",
+                "top" : "1%"
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"506c7e71-b08d-432d-b72d-1628b89aae7a\",\"columns\":[{\"UUID\":\"265a27e6-3efd-4005-ae24-96901a72b103\",\"columnName\":\"Column 1\",\"columnKey\":\"4ae1b\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "265a27e6-3efd-4005-ae24-96901a72b103",
+            "name" : "4ae1b",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "dxp_layout:columns",
+          "id" : "506c7e71-b08d-432d-b72d-1628b89aae7a",
+          "type" : "component"
+        } ],
+        "id" : "147e875e-b97f-4e6c-89ea-08856d5d5597",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "a80f28a1-5fe4-434c-8845-9e2541ab4669",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "dbb51688-56a2-445e-abe2-b98392a1e713",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "columnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"d8b5d2e6-3767-4a56-bd5d-ff4224764f8f\",\"columns\":[{\"UUID\":\"1e930541-fb85-44d2-ab3d-fb41479a2291\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "1e930541-fb85-44d2-ab3d-fb41479a2291",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "dxp_layout:columns",
+          "id" : "d8b5d2e6-3767-4a56-bd5d-ff4224764f8f",
+          "type" : "component"
+        } ],
+        "id" : "b903deeb-4a87-4e5b-87c1-3ebb3d956019",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "1080a7ec-84ee-4d36-bf08-6d4b4cd89967",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "0a4ee66f-d2d2-42c2-a810-a0f013600c62",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "a16e53ca-ca94-475b-a87f-beb70fec0f3d",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "686982ed-1598-4b41-a1c3-bf6d2a91ea74",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:simpleThemeLayout",
+      "id" : "bcf27ade-0edc-4e26-84bd-a3f6c27187d3",
+      "type" : "component"
+    }
+  }
+}

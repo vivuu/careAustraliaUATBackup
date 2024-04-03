@@ -1,0 +1,20 @@
+<template>
+	<div class="para2 pad">
+		<lightning-layout multiple-rows="true" class="PadTop50">
+			<!-- class="slds-m-around_x-large" -->
+
+			<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12" medium-device-size="12"
+				large-device-size="12">
+				<h3 class="section-heading1">{val1} {val2}</h3>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-top_small slds-p-bottom_small" small-device-size="12"
+				medium-device-size="12" large-device-size="12">
+				<h3 class="section-content1">
+					<lightning-formatted-rich-text value={empowerbody}>
+					</lightning-formatted-rich-text>
+				</h3>
+			</lightning-layout-item>
+
+		</lightning-layout>
+	</div>
+</template>

@@ -1,0 +1,33 @@
+<template>
+	<lightning-card variant="Narrow" title="Repayment Schedule" icon-name="standard:budget_period">
+		<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+			<thead>
+				<tr>
+					<th>Loan Repayment Number</th>
+					<th>Amount Due</th>
+					<th>Due Date</th>
+					<th>Status</th>
+					<th>Principal Repaid</th>
+					<th>Repayment Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<template if:true={relatedRepaymentSchedules}>
+					<template for:each={relatedRepaymentSchedules} for:item="repayment">
+						<tr key={repayment.Id}>
+							<td>{repayment.Loan_Repayment_Number__c}</td>
+							<td>{repayment.Amount_Due__c}</td>
+							<td>{repayment.Due_Date__c}</td>
+							<td>{repayment.Status__c}</td>
+							<td>{repayment.Principal_Repaid__c}</td>
+							<td>{repayment.Repayment_Date__c}</td>
+						</tr>
+					</template>
+				</template>
+				<template if:true={errors}>
+					<p>No Repayment Schedule Records Found</p>
+				</template>
+			</tbody>
+		</table>
+	</lightning-card>
+</template>

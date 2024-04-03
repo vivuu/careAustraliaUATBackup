@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "News and Updates",
+  "contentBody" : {
+    "activeViewId" : "News_and_Updates_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-news-and-updates",
+    "urlPrefix" : "newsandupdates"
+  }
+}

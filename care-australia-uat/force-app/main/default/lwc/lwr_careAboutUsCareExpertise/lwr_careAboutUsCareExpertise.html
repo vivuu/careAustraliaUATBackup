@@ -1,0 +1,41 @@
+<template>
+	<!-- <c-google-analysis></c-google-analysis>
+    <c-woopra-analytics></c-woopra-analytics> -->
+	<lightning-spinner if:true={spin}></lightning-spinner>
+
+
+	<!--<img src={banner} alt="banner">-->
+
+
+	<template if:true={ourexpertisesection}>
+		<div class="para3 pad">
+
+			<div class="grid-container" style="padding-top:25px">
+			<div > <!-- class="item1" -->
+				<img src={ourexpertisesection.image} alt="para2img" style="border-radius:10px">
+			</div>
+
+			
+				<div ><!-- class="item2" -->
+					<h3 class="section-heading1">{val1} {val2}</h3>
+		
+					<h3 class="section-content" style="padding-top: 20px;">
+								<lightning-formatted-rich-text value={ourexpertisesection.body}>
+								</lightning-formatted-rich-text>
+								<!--<template if:true={oeobj.showHere}><span class="hereCl"></span>
+								</template>-->
+							</h3>
+					<div class="buttonAllign">	
+					<button onclick={handleMicroFinance} class="MoreMicrofinance">{ourexpertisesection.btn}</button>
+					</div>
+				</div>
+			</div>
+
+
+
+			
+
+		</div>
+	</template>
+
+</template>

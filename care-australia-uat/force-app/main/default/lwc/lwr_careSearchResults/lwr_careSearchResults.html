@@ -1,0 +1,140 @@
+<template>
+    <div class="headers">
+       <c-lwr_care-nav-bar></c-lwr_care-nav-bar>
+   <!--<lightning-layout multiple-rows="true">
+       <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+       medium-device-size="12" large-device-size="6" >
+       <img src={backgroundImage}>     
+       </lightning-layout-item>
+       <lightning-layout-item size="12" padding="around-small" small-device-size="6" 
+       medium-device-size="12" large-device-size="6" >
+       <div class="slds-align_absolute-center bannerHeading">
+       </div>
+       </lightning-layout-item>
+   </lightning-layout>-->
+   </div>
+   <div class="pad slds-align_absolute_center" >
+   
+           <!--<lightning-card title="Loan Results">
+               <template if:true={loanResults}>
+                   <lightning-datatable data={loanResults} columns={columns} key-field="Id"></lightning-datatable>
+               </template>
+           </lightning-card>-->
+   
+   
+   <div class=" slds-align_absolute_center">
+       <lightning-layout multiple-rows="true" > <!-- class="slds-m-around_medium" -->
+           <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12" >
+       <h3  class="section-heading1" style="margin-top:15px; margin-bottom:15px">Search results for: {currentId}</h3>
+           </lightning-layout-item>
+           <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12">
+               <div class="line"></div>
+               </lightning-layout-item>
+           
+       </lightning-layout>
+       
+   </div>
+   
+       <div>
+   
+       <!--<lightning-card title="Search Results">
+           <div class="slds-m-around_medium">
+               <lightning-datatable
+                   key-field="Id"
+                   data={data}
+                   columns={columns}
+                   hide-checkbox-column="true">
+               </lightning-datatable>
+           </div>
+       </lightning-card>-->
+   
+           <template for:each={data} for:item="loan">
+           <lightning-layout key={loan.Id} multiple-rows="true"> 
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <h3 class="section-heading2" style="margin-top: 25px;">{loan.LoanType}</h3>
+               </lightning-layout-item>
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12" style="max-width: 700px">
+                   <h3 class="section-content">{loan.LoanDescription}</h3>    
+               </lightning-layout-item>  
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <a href={loan.LoanUrl}  rel="noopener noreferrer">
+                       <button class="carButtonImpact" style="box-shadow: none">View Page</button>
+                   </a>
+               </lightning-layout-item>
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <div class="line"></div>
+               </lightning-layout-item>
+           </lightning-layout>
+       </template>
+   
+       <template for:each={cmsdata} for:item="cms">
+           <lightning-layout key={cms.Id} multiple-rows="true"> 
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <h3 class="section-heading2" style="margin-top: 25px;">{cms.cmsTitle}</h3>
+               </lightning-layout-item>
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12" style="max-width: 700px">
+                   <h3 class="section-content">{cms.cmsDescription}</h3>    
+               </lightning-layout-item>  
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <a href={cms.cmsUrl}  rel="noopener noreferrer">
+                       <button class="carButtonImpact" style="box-shadow: none">View Page</button>
+                   </a>
+               </lightning-layout-item>
+   
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+                   medium-device-size="12" large-device-size="12">
+                   <div class="line"></div>
+               </lightning-layout-item>
+           </lightning-layout>
+       </template>
+   
+          <!--<lightning-layout multiple-rows="true">
+           <template for:each={loanResults.searchResults} for:item="loan">
+               <lightning-layout-item key={loan.Id} size="12" padding="around-small"
+                                      small-device-size="12" medium-device-size="12"
+                                      large-device-size="12">
+                   <h3 class="section-heading2" style="margin-top: 25px;">{loan.Loan_Type__c}</h3>
+               </lightning-layout-item>
+           </template>
+       </lightning-layout>-->
+   
+   
+        <!--<template for:each={loanResults} for:item="loan">
+       <lightning-layout key={loan.Id} multiple-rows="true" > 
+           <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12" >
+           <h3 class="section-heading2" style="margin-top:25px;">{loan.Loan_Type__c}</h3>
+           </lightning-layout-item>
+   
+           <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12" style="max-width:700px">
+               <h3 class="section-content">{loan.Loan_Title__c}</h3>    
+           </lightning-layout-item>  
+           <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12">
+               <button class="carButtonImpact" style="box-shadow: none">View page</button>
+               </lightning-layout-item>
+               <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+           medium-device-size="12" large-device-size="12">
+               <div class="line"></div>
+               </lightning-layout-item>
+       </lightning-layout>
+       </template>-->
+   </div>
+   
+   </div>
+   </template>

@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Big Impact With Small Loans | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"90aa5a84-2a05-4a96-86f3-ef8b666f8a15\",\"columns\":[{\"UUID\":\"e1f750b3-f1af-44cd-b237-8bcc8b5a60bc\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "e1f750b3-f1af-44cd-b237-8bcc8b5a60bc",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "90aa5a84-2a05-4a96-86f3-ef8b666f8a15",
+          "type" : "component"
+        } ],
+        "id" : "bdd08787-b795-4430-aba9-e27053208045",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Explore Lendwithcare's powerful impact in empowering communities with sustainable microfinance solutions that break the cycle of poverty and promote gender equality.",
+            "dxpStyle" : { },
+            "pageTitle" : "Big Impact With Small Loans | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "80b842ea-01d1-4cb2-8df1-bebf779b5b11",
+          "type" : "component"
+        } ],
+        "id" : "5a9741c3-8883-4870-9d0f-ba097057b2ad",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c76d34fb-c749-49ad-af86-816d629eea91",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "YxpEJvTQP2p3D32xQFV2zY86eNGbiW",
+    "viewType" : "custom-our-impact"
+  }
+}

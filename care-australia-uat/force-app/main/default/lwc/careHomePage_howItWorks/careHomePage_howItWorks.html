@@ -1,0 +1,60 @@
+<template>
+  <lightning-layout  class="slds-p-top_xx-large bodyBackground pad" multiple-rows="true">
+    
+    <lightning-layout-item size="12">
+     
+      <h3 class="section-heading HowItWorksHeading">{val1}<span class="clr_gold "> {val2}</span></h3>
+     
+    </lightning-layout-item>
+
+    <template for:each={descriptions} for:item="des">
+        <lightning-layout-item key={des.img} style={des.style} size="12" large-device-size="3" medium-device-size="6" small-device-size="6"
+          class="HowItWorksHeading slds-p-top_large slds-p-bottom_large"> <!--slds-p-around_small-->
+              <img src={des.img}>
+              <h4 class="clr_gold work-section-head">{des.title}</h4>
+              <p class={des.class}>
+								<lightning-formatted-rich-text value={des.body}>
+								</lightning-formatted-rich-text>
+							</p>
+              <!--<p class={des.class}>{des.body}</p>-->
+        </lightning-layout-item>
+    </template>
+    <div class="grid-containerVideo slds-align_absolute-center">
+      <div>
+   <lightning-layout multiple-rows="true" class="slds-align_absolute-center slds-p-top_large slds-p-bottom_large"> <!--slds-p-around_xx-large -->
+        <div class=" slds-align_absolute-center slds-p-top_large slds-p-bottom_large">
+          <lightning-layout-item size="12" large-device-size="12" medium-device-size="12" small-device-size="12">
+             <iframe class="youtubevideo" src='https://www.youtube.com/embed/D5j6FXAzpYw?si=0VdC3Whr4IBlrFKJ'
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							allowfullscreen></iframe>
+             
+          </lightning-layout-item>
+          
+        </div>
+      </lightning-layout>
+</div>
+
+
+<div>
+    <template if:true={btn}>
+      <lightning-layout multiple-rows="true" class="slds-align_absolute-center slds-p-top_large slds-p-bottom_large"> <!--slds-p-around_xx-large -->
+        <div class="designhomepageimpact">
+          <lightning-layout-item size="12" large-device-size="12" medium-device-size="12" small-device-size="12">
+             <p class="browse-project-detail slds-m-bottom_medium">
+								<lightning-formatted-rich-text value={btn.body}>
+								</lightning-formatted-rich-text>
+							</p>
+              <!--<p class="browse-project-detail slds-m-bottom_medium">{btn.body}</p>-->
+          </lightning-layout-item>
+          <lightning-layout-item size="12" large-device-size="12" medium-device-size="12" small-device-size="12" class="slds-align_absolute-center">
+              <button type="button" class="btn slds-m-top_medium slds-align_absolute-center FindaBorrower" onclick={openViewAllloans}>{btn.btnName}</button>
+          </lightning-layout-item>
+        </div>
+      </lightning-layout>
+    </template>
+</div>
+    </div>
+
+  </lightning-layout>
+</template>

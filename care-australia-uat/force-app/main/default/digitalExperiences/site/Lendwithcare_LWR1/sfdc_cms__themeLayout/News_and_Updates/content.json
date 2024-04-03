@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "News and Updates",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"e5bc0335-99d5-4f8c-9daa-ccde10879524\",\"columns\":[{\"UUID\":\"b9f78b5f-a64f-4b4d-acdc-77a5771a94ea\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "b9f78b5f-a64f-4b4d-acdc-77a5771a94ea",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "e5bc0335-99d5-4f8c-9daa-ccde10879524",
+          "type" : "component"
+        } ],
+        "id" : "1beee6b9-9828-4792-b262-f5a616105692",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"ae6a4e1d-1426-4bfe-b38c-acdeab1630f6\",\"columns\":[{\"UUID\":\"a8206935-ab78-4c37-8664-675a41590609\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "a8206935-ab78-4c37-8664-675a41590609",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "ae6a4e1d-1426-4bfe-b38c-acdeab1630f6",
+          "type" : "component"
+        } ],
+        "id" : "d643a7a7-b7c6-49df-8542-f3dad13eef7b",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careNewsAndUpdates",
+          "id" : "85a46bd0-cb9a-4784-9edc-4a2699ddb937",
+          "type" : "component"
+        } ],
+        "id" : "bb5898fa-e99f-4b70-ad3c-d7f0214adf48",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "3bdf2226-56d6-4d34-8888-8d1cfd2d49bd",
+          "type" : "component"
+        } ],
+        "id" : "49a6721b-7b01-44a3-b923-7d49da836741",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "f17d2a0f-667c-4745-bb8b-d46b79de8531",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "e53945a8-dfdf-462e-b362-93f6d9dcaa41",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "80767911-0d56-448f-af18-1ba2a3d2069b",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "8945ccff-9c1a-4474-86a9-a4c91d21f6b3",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "2fe09f6b-4623-4898-9ae5-0848a83d187a",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "52607ac3-6b5a-4755-8081-3b47b9790a97",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "1acdb30f-29b6-4c86-abc2-50ef44343499",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "983f2266-8a91-4f18-9387-5360b1bd6f3d",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "1b5edc26-989c-47d0-b465-b75e7f3f24f9",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeNewsandUpdates",
+      "id" : "d5b5fb5e-cbba-49b9-bc04-e6e998fb8d06",
+      "type" : "component"
+    }
+  }
+}

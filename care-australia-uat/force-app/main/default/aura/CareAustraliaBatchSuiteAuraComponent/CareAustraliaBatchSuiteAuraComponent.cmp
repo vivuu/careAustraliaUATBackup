@@ -1,0 +1,84 @@
+<!--
+  @description       : 
+  @author            : Borath En
+  @group             : 
+  @last modified on  : 10-11-2021
+  @last modified by  : Borath En
+-->
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global"
+    controller="CareAustraliaBatchSuiteController">
+    
+    <aura:attribute name="asyncapexjobs" 
+                    type="List"
+                    description="List of records from AsyncApexJobs object. Used to show the list of apex jobs executed"/>
+    <aura:attribute name="columns" 
+                    type="List"
+                    description="List of columns to display for apex jobs"/>
+    <aura:attribute name="showSpinner" 
+                    type="Boolean" 
+                    default="false"
+                    description="To show/hide spinner"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner alternativeText="Please wait..." variant="brand" size="medium" class="showSpinner" />
+    </aura:if>
+
+    <lightning:card title="Regular Donation Batch Process">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="ProcessPaymentCCBatch" onclick="{!c.executeBatchJS}"
+                    label="1. Payment Credit Card Batch" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="ProcessPaymentDDBatch" onclick="{!c.executeBatchJS}"
+                    label="2. Payment Direct Debit Batch" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="AuthorizePaymentBatch" onclick="{!c.executeBatchJS}"
+                    label="3. Authorised Payment Batch" title="Use AuthorizePaymentBatch instead of validation batch"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="RetrievePaymentBatch" onclick="{!c.executeBatchJS}"
+                    label="4. Retrieve Payment Batch" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="RDSchedulableBatch " onclick="{!c.executeBatchJS}"
+                    label="5. RD Schedule" />
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    <lightning:card title="Telemarketing Batch Process">
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="TM_ConversionSelectionCriteriaBatch" onclick="{!c.executeBatchJS}"
+                    label="1. Conversion" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="TM_SelectionCriteriaBatch" onclick="{!c.executeBatchJS}"
+                    label="2. Upgrades" />
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="TM_ReactivatesSelectionCriteriaBatch" onclick="{!c.executeBatchJS}"
+                    label="3. Reactivates" title="Use AuthorizePaymentBatch instead of validation batch"/>
+            </lightning:layoutItem>
+            <lightning:layoutItem size="2" class="slds-m-around_xx-small buttonWidth">
+                <lightning:button variant="brand" name="TM_DeclineSelectionCriteriaBatch" onclick="{!c.executeBatchJS}"
+                    label="4 Declined" />
+            </lightning:layoutItem>
+        </lightning:layout>
+    </lightning:card>
+    <lightning:card title="">
+        <p class="slds-p-horizontal_small">
+            <lightning:buttonIcon variant="brand" iconName="utility:refresh" title="refresh jobs"
+                alternativeText="Refresh Jobs" onclick="{!c.doInit}" />
+            <a href="/lightning/setup/AsyncApexJobs/home" target="blank">Click here to check apex jobs..</a>
+            <br />
+        </p>
+    </lightning:card>
+    <div class="slds-m-top_x-small">
+        <lightning:datatable keyField="id" data="{! v.asyncapexjobs }" columns="{! v.columns }" hideCheckboxColumn="true"
+                            class="slds-table_bordered slds-table_col-bordered slds-table_striped" />
+    </div>
+    
+</aura:component>

@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Dashboard - Full transactions list",
+  "contentBody" : {
+    "activeViewId" : "Care_Dashboard_Transactions_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "RequiresLogin",
+    "routeType" : "custom-care-dashboard-transactions",
+    "urlPrefix" : "caredasboardtransactions"
+  }
+}

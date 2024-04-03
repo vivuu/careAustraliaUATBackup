@@ -1,0 +1,37 @@
+<template>
+    <!-- <c-google-analysis></c-google-analysis> -->
+   <!--<c-woopra-analytics></c-woopra-analytics> -->
+   <lightning-spinner if:true={spin}></lightning-spinner>
+   <!--<img src={banner} alt="banner">-->
+   <!-- <c-care-nav-bar></c-care-nav-bar>-->
+   <template if:true={careaustraliasection}>
+       <div class="para2 pad">
+
+
+           
+
+       <div class="grid-container" style="padding-top:25px">
+           
+               <div class="item1">
+                   <h3 class="section-heading2" style="margin-bottom:15px">{val1} {val2}</h3>
+       
+                   <h3 class="section-content">
+                               <lightning-formatted-rich-text value={careaustraliasection.body}>
+                               </lightning-formatted-rich-text>
+                           </h3>
+               </div>
+
+
+               <div class="item2">
+               <div class="image1"><iframe class="youtubevideo" src={careaustraliasection.link}
+                           title="YouTube video player" frameborder="0"
+                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                           allowfullscreen></iframe>
+                   </div>
+                                               </div>
+           </div>
+
+           
+       </div>
+   </template>
+</template>

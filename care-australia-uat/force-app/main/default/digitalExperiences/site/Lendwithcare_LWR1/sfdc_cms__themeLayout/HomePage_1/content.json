@@ -1,0 +1,191 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "HomePage",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "isVisible" : true
+            },
+            "sectionConfig" : "{\"UUID\":\"880e8f9c-99fb-4a24-9726-aece55ea0196\",\"columns\":[{\"UUID\":\"6b605661-7228-4de4-9d17-f99e9f105e1a\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "6b605661-7228-4de4-9d17-f99e9f105e1a",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "880e8f9c-99fb-4a24-9726-aece55ea0196",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "c8ba4967-4411-4e8a-ab8a-31cc3e6b0dc9",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "isVisible" : true,
+              "padding" : {
+                "bottom" : "0%",
+                "left" : "",
+                "right" : "",
+                "top" : ""
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"5e9aaec1-edff-4137-a763-909d21c59c63\",\"columns\":[{\"UUID\":\"72083cb4-b376-4ff8-844a-be1fb1b0ca84\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "3%",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "3%"
+                  }
+                },
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "x-large",
+                "text" : "© 2023 CARE Australia. ABN 46 003 380 890. All rights reserved.",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"body-small\",\"headingTag\":\"p\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "705dca90-c259-441d-aa6f-679da9622ae1",
+              "type" : "component"
+            } ],
+            "id" : "72083cb4-b376-4ff8-844a-be1fb1b0ca84",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "5e9aaec1-edff-4137-a763-909d21c59c63",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "c1dacef8-57f8-4809-bdc3-51815f80a67e",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_header",
+          "id" : "195d846d-f97d-4cf4-a2bf-135a3abe09e3",
+          "type" : "component"
+        } ],
+        "id" : "753fd047-0f69-4c00-8f65-af3dd1be6b3d",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_ourLoans",
+          "id" : "a8f18446-e790-4235-9159-0f60bdb1cf32",
+          "type" : "component"
+        }, {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_howItWorks",
+          "id" : "3d68d35a-b3f7-4491-a8f6-a9e1659f8046",
+          "type" : "component"
+        } ],
+        "id" : "3232aefe-2c7b-467f-b51c-2d1001dd13b8",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePageOurImpact",
+          "id" : "d7f4a908-4631-4fc5-a9af-1b21bc187e29",
+          "type" : "component"
+        } ],
+        "id" : "bd44fb5d-c9b6-4bde-acfc-ffbf1bb25d94",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_CareHomePage_byTheNumber",
+          "id" : "acf0fa66-0c08-4206-a915-d7430b23110a",
+          "type" : "component"
+        } ],
+        "id" : "8a1cba87-7c3e-4b5e-9105-317bb83d6aa9",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "144982fc-48c6-41b1-94ae-345090e7488b",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_testimonials",
+          "id" : "0951e627-b75f-4a0c-9448-622804b6db3c",
+          "type" : "component"
+        } ],
+        "id" : "d8596fb5-9b9c-4358-8748-28897b55fc63",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_aboutUs",
+          "id" : "27d92029-7fe9-4210-90a8-9460fb895545",
+          "type" : "component"
+        } ],
+        "id" : "ab4d10c9-7465-40f9-bcf0-f78347176674",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careHomePage_whyLWC",
+          "id" : "b513caf2-c29f-43ac-a03d-705aed2a052e",
+          "type" : "component"
+        } ],
+        "id" : "b7d69131-de91-4b2b-a646-76361da42d80",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careFooter",
+          "id" : "8f6212bb-b3f1-4548-9db5-f39f8f4c3a64",
+          "type" : "component"
+        } ],
+        "id" : "03032be1-da7c-4832-9189-9894c693d926",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_woopraTrackingCode",
+          "id" : "325e59d5-4372-457d-ac1b-6ea3a73b88f7",
+          "type" : "component"
+        } ],
+        "id" : "62c53bde-e3a8-43b5-9b65-1e22d3d1288e",
+        "name" : "region10",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeHomepage",
+      "id" : "583996e8-5f41-46fd-8965-8e58a43898a0",
+      "type" : "component"
+    }
+  }
+}

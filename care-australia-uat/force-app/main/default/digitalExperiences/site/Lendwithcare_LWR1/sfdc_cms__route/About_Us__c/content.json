@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "About Us",
+  "contentBody" : {
+    "activeViewId" : "About_Us_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-about-us",
+    "urlPrefix" : "aboutus"
+  }
+}

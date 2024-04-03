@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "About Us | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"2160559c-65f8-47e6-b85e-cad86a39e6e5\",\"columns\":[{\"UUID\":\"4a0a1624-62ad-420f-988b-79b5f534bae9\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "4a0a1624-62ad-420f-988b-79b5f534bae9",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2160559c-65f8-47e6-b85e-cad86a39e6e5",
+          "type" : "component"
+        } ],
+        "id" : "e31a3c6b-e394-4847-98dd-688a0e7d0a0b",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Lendwithcare is a sustainable way to help communities, creating big change from small loans. Make a lifechanging loan today.",
+            "dxpStyle" : { },
+            "pageTitle" : "About Us | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "68ba3445-b6c2-4394-8c8e-8ff326f0c977",
+          "type" : "component"
+        } ],
+        "id" : "9de396fc-078d-4b13-8420-ec56a1f7f09e",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6193ae24-0d29-4cb4-8993-e2ff6b73817d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "NDoevIBRNZm02ZR26OSfSLM1QZP73w",
+    "viewType" : "custom-about-us"
+  }
+}

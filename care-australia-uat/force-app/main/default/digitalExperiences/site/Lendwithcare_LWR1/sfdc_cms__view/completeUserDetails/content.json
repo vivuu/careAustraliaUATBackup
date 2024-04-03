@@ -1,0 +1,61 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "completeUserDetails",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"3aa4ea34-0040-4158-9bb4-23ca6d684d33\",\"columns\":[{\"UUID\":\"ac11e9b4-ebaf-42bd-a8ad-1f8fd67d6399\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:lwr_careLoginPage",
+              "id" : "00ca6c4f-ab34-4ccb-814f-bc395865ce8c",
+              "type" : "component"
+            } ],
+            "id" : "ac11e9b4-ebaf-42bd-a8ad-1f8fd67d6399",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "3aa4ea34-0040-4158-9bb4-23ca6d684d33",
+          "type" : "component"
+        } ],
+        "id" : "228bb742-b3c7-48e5-9095-a0c950ebf812",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "completeUserDetails",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "5fce461f-6982-4479-90ad-b9f5deb6c808",
+          "type" : "component"
+        } ],
+        "id" : "e43bdc10-b221-4bcb-a638-6d3213f9c27d",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c95b1b01-5581-49ea-af2e-a413f3c09f8d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-completeuserdetails"
+  }
+}

@@ -1,0 +1,41 @@
+<template>
+    <lightning-spinner style="height: 800px;" if:true={spin}></lightning-spinner>
+      
+           <div class="projectContributor">
+      
+      <lightning-layout class="slds-m-top_large slds-m-bottom_xx-large pad" multiple-rows>
+        
+            <lightning-layout-item size="12" class="slds-p-top_small slds-p-bottom_large" large-device-size="12" medium-device-size="12" small-device-size="12" >
+                <h3 class="projectheading">{val1} {val2}</h3>
+            </lightning-layout-item>
+            <template if:true={showContributorsSection}>
+              <template for:each={showContributors} for:item="contributor">
+                <lightning-layout-item key={contributor} size="12"  large-device-size="6" medium-device-size="6" small-device-size="12" >
+                 <template if:false={contributor.avatar}>
+                    <img style="border-radius: 24px; width:40px; height:40px;" src={contributor.ProfilePic} alt="profilepic" class="image1" width="30px"/>
+                 </template>
+                 <template if:true={contributor.avatar}>
+                    <lightning-icon icon-name="action:user" size="small" alternative-text="user" ></lightning-icon>
+                 </template>
+                  <h3 style="display:inline-block;" class="tableHeadingsContent">{contributor.Name}</h3>
+                 <!-- <p style="color:#002A3A;padding: 10px 0px 10px 0px;font-family: 'Helvetica';">{contributor.Name}</p> -->
+                </lightning-layout-item>
+              </template>
+            </template>
+            <template if:false={showContributorsSection}>
+              <p style="text-align: center; width: 100%; font-size: 1.5rem;font-family: 'Sketchetik Fill Bold';">There are no Project Contributors</p>
+            </template>
+            <lightning-layout-item size="12" class="slds-p-top_large slds-p-top_bottom" large-device-size="12" medium-device-size="12" small-device-size="12" >
+              <template if:true={view14}>
+                <p onclick={viewMoreContributors} style="cursor: pointer; text-decoration:underline;font-size:16px;font-weight:800;color:#002A3A;font-family: 'Helvetica';"><img src={Plus} width="16px">&nbsp;View more individual contributors</p>
+              </template>
+              <!-- <template if:false={view14}>
+                <p style=" text-decoration:underline;font-size:16px;font-weight:800;color:#002A3A;font-family: 'Helvetica';">No more individual contributors</p>
+              </template> -->
+            </lightning-layout-item>
+        
+      </lightning-layout>
+    </div>
+    
+    
+    </template>

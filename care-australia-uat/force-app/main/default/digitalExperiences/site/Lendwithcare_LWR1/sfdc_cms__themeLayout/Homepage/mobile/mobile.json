@@ -1,0 +1,9 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Homepage",
+  "contentBody" : {
+    "component" : {
+      "children" : [ ]
+    }
+  }
+}

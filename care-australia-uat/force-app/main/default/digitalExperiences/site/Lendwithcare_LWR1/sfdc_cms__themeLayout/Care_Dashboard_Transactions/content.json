@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Care Dashboard Transactions",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"3c02fbb4-f16a-4158-8ae4-573af92bb474\",\"columns\":[{\"UUID\":\"dbdcbd59-830d-45bd-b313-c5da2c0398d8\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "dbdcbd59-830d-45bd-b313-c5da2c0398d8",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "3c02fbb4-f16a-4158-8ae4-573af92bb474",
+          "type" : "component"
+        } ],
+        "id" : "9398d19b-4656-46c2-bff7-5fd958949634",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"8d34305c-bf9f-489d-9b1a-f229e33ec283\",\"columns\":[{\"UUID\":\"1143b84f-43b5-43f8-bee2-75981b298fa1\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "1143b84f-43b5-43f8-bee2-75981b298fa1",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "8d34305c-bf9f-489d-9b1a-f229e33ec283",
+          "type" : "component"
+        } ],
+        "id" : "6a0b2d92-6d44-43e5-83cb-ea0b7d7bafae",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careDasboardtransactions",
+          "id" : "77cff2d2-8726-4c89-9f8a-babf7fce7dab",
+          "type" : "component"
+        } ],
+        "id" : "52d80032-0ebf-435e-9f8b-42ff48590564",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "0734eb4d-973f-4c29-b52f-824df83e12a8",
+          "type" : "component"
+        } ],
+        "id" : "ceaeff6d-7d01-4251-8956-612c8250b0e6",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "b03131bd-1971-4e5c-aecd-bf32cfceae92",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "3306112c-4c7a-4406-8573-5b163ced93ba",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "09901f3b-ed54-4b4e-9507-7befd0034eb5",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "dd53b98c-c2cc-4cfd-beaf-b239880a8ab5",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "f82dd4b0-5809-42da-897e-299103479ad8",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "0c9f9996-01a0-4a88-82bb-3c10333ab71e",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "7d371a21-f7ea-4d73-a5c3-cae9ba89c332",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "00d1a59b-4643-4064-98b5-992830aac098",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "0a766240-8672-4697-8c7b-b3919331b375",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeCareDashboardTransactions",
+      "id" : "4bcffa03-c06d-4d5e-888f-41b0d87a1841",
+      "type" : "component"
+    }
+  }
+}

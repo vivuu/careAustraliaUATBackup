@@ -1,0 +1,91 @@
+<template>
+    <lightning-spinner style="height: 800px;" if:true={spin}></lightning-spinner>
+      <div class="header">
+      <c-care-nav-bar loanidfromparent={loanidfromparent}></c-care-nav-bar>	
+    
+      
+    
+      <lightning-layout multiple-rows ><!--class="pad"-->
+      <lightning-layout-item size="12" small-device-size="6" medium-device-size="12" 
+      large-device-size="3" class="slds-p-left_small slds-p-right_small">
+        <a href={allLoansPage} class="ProjectsBack">&#60; <u>All Loans</u></a>
+      </lightning-layout-item>
+      </lightning-layout>
+    
+    <lightning-layout multiple-rows class="pad">
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6" >
+            <div class="BorrowerspageHeader"><img src={coverImage} width="500px" class="slds-align_absolute-center"></div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6" >
+            <div style="display:grid">
+          <h3 style="display:inline;margin:10px 10px 10px 0px;" class="sectionHeadingTitle">{Loan_Title__c}</h3>
+          <div class="locastions" style="margin:10px 10px 10px 0px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 3px;" width="16" height="16" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
+  <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+</svg>
+                   <h3 class="vietnam">{loc}</h3>   
+         </div>
+         <div class="BottomDiv " style="background:transparent;">
+                    <div style="display:block;width:100%;">
+                    <div class="progressBar">
+                      <div class="progressBarInner" style={progressStyle}></div>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;">
+                    
+                      <p style="color:white;margin:10px 10px 10px 0px;font-family:'Helvetica Neue Bold Pro';">${Amount_Funded__c} Lent</p>
+                      <p style="color:white;display:flex;justify-content:right;font-family:'Helvetica Neue Bold Pro';margin:10px 0px 10px 10px">{Published_Amount_AUD__c}</p>
+                    
+                    </div>
+                    </div>            
+                  </div>
+                  <h3 class="section-content" style="color:white;margin:10px 10px 10px 0px">{Loan_Description__c}</h3>  
+           <lightning-layout multiple-rows style="margin:0px">
+              <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" 
+        large-device-size="12" >
+          <button class="catogory1">{Loan_Type__c}</button>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" 
+        large-device-size="12" >
+          <h3 class="sectionSubHeadingTitle slds-p-top_medium slds-p-bottom_small"> Loan details</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" 
+        large-device-size="12">
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3 class="loanTitle slds-p-bottom_small">Loan length</h3>
+        </div>
+        <div class="grid-item">
+          <h3 class="loanDescription slds-p-bottom_small">{Loan_Term_Months__c}</h3>
+        </div>
+      </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" 
+        large-device-size="12">
+           <div class="grid-container slds-p-bottom_large">
+        <div class="grid-item">
+          <h3 class="loanTitle slds-p-bottom_small">Repayment schedule</h3>
+        </div>
+        <div class="grid-item">
+          <h3 class="loanDescription slds-p-bottom_small">{Loan_Schedule__c}</h3>
+        </div>
+      </div>
+        </lightning-layout-item>
+        
+      </lightning-layout>
+        </div>
+        </lightning-layout-item>
+    </lightning-layout>
+    
+    
+      </div>
+      
+      <template if:true={showCart}>
+        <div class="AddLoanClass" style="position: fixed; bottom: 0; width: 100%;">
+          <!--<div class="topupIcon"><a href="#"><img src={BorrowerUpIcon} width="50px"></a></div>-->
+          <c-add-loan oncurrprogresschange={handleProgressChange} onaddloan={handleAddLoan} 
+          loanamt={loanAmounts} contactid={contactid} loan-id={loanId} 
+          currentloandetails={currentloandetails}></c-add-loan>
+          </div>
+      </template>
+    </template>

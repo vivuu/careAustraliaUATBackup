@@ -1,0 +1,46 @@
+<aura:component implements="force:appHostable,lightning:hasPageReference,flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader,force:hasRecordId"  controller="RDTokenizationController" access="global" >
+    <aura:html tag="style">     
+        .slds-modal__content{  
+        overflow-y: hidden !important;  
+        } 
+    </aura:html>
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="iframeLink" type="String" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="recurringDonation" type="SObject"/>
+    <aura:attribute name="initMethodCompleted" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.initMethodCompleted}">
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate newHeader">
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                <span style="margin-left: 30%;">Credit Card Authorization</span>
+                            </h2>
+                        </div>
+                    </header>
+                </div>
+                <div class="slds-card__body slds-card__body_inner">
+                    <iframe src="{! v.iframeLink}" width="100%" height="500px;" frameBorder="0" />
+                        <!--loading spinner start-->
+                        <aura:if isTrue="{!v.showSpinner}">
+                            <div aura:id="spinnerId" class="slds-spinner_container">
+                                <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                                    <span class="slds-assistive-text">Loading...</span>
+                                    <div class="slds-spinner__dot-a"></div>
+                                    <div class="slds-spinner__dot-b"></div>
+                                </div>
+                            </div>
+                        </aura:if>
+                        <!-- Loading spinner end--> 
+                </div>
+                
+            </article>
+    </aura:if>
+    
+    
+    
+</aura:component>

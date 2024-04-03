@@ -1,0 +1,38 @@
+<template>
+    <div class="">
+<div class="DefineTestimonialSize">
+    <template for:each={slidesData} for:item="slide">
+        <div class={slide.cardClasses} key={slide.image} >
+            
+        <div class="TestiCustom">
+            <!--<img src={slide.image} width="400px" height="400px" style="border-radius:3px"/>-->
+            <h3 class="slds-text-heading_large classTestimonials">{slide.heading}</h3>
+            <div style="display:inline-flex;"><img src={slide.image} style="width:60px;height:60px;" />
+                <div class="slds-text-heading_small LenderNameStyle">
+                <lightning-formatted-rich-text value={slide.description}>
+				</lightning-formatted-rich-text>
+                <!--<p style="color:white;font-style:italic;font-weight:100">&nbsp;&nbsp;Borrower</p>-->
+                </div>
+            </div>
+        </div>
+        <!--<div class="slideNumbers">{slide.slideIndex}/{slidesData.length}</div>-->
+
+			<div class="slds-align_absolute-left TestiCustom1" style="display:inline-flex">
+				<a class="prev" onclick={backSlide}>&#10094;</a>
+				<div class="slds-align_absolute-center" style="width:-webkit-fill-available">
+					<template for:each={slidesData} for:item="slide">
+						<span class= {slide.dotClasses} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+					</template>
+				</div>
+				<a class="next" onclick={forwardSlide}>&#10095;</a>
+			</div>
+        
+    </div>
+    </template>
+
+    
+
+
+</div>
+</div>
+</template>

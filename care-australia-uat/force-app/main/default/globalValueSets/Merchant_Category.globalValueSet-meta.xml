@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>None</fullName>
+        <default>true</default>
+        <label>None</label>
+    </customValue>
+    <customValue>
+        <fullName>Braintree</fullName>
+        <default>false</default>
+        <label>Braintree</label>
+    </customValue>
+    <customValue>
+        <fullName>PayPal</fullName>
+        <default>false</default>
+        <label>PayPal</label>
+    </customValue>
+    <customValue>
+        <fullName>Offline</fullName>
+        <default>false</default>
+        <label>Offline</label>
+    </customValue>
+    <customValue>
+        <fullName>EverydayHero</fullName>
+        <default>false</default>
+        <label>EverydayHero</label>
+    </customValue>
+    <customValue>
+        <fullName>GiveEasy</fullName>
+        <default>false</default>
+        <label>GiveEasy</label>
+    </customValue>
+    <customValue>
+        <fullName>Cardly</fullName>
+        <default>false</default>
+        <label>Cardly</label>
+    </customValue>
+    <customValue>
+        <fullName>Good2Give</fullName>
+        <default>false</default>
+        <label>Good2Give</label>
+    </customValue>
+    <customValue>
+        <fullName>Shopify</fullName>
+        <default>false</default>
+        <label>Shopify</label>
+    </customValue>
+    <customValue>
+        <fullName>Bambora</fullName>
+        <default>false</default>
+        <label>Bambora</label>
+    </customValue>
+    <customValue>
+        <fullName>Benevity</fullName>
+        <default>false</default>
+        <label>Benevity</label>
+    </customValue>
+    <customValue>
+        <fullName>General Community Fundraising</fullName>
+        <default>false</default>
+        <label>General Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>GoFundraise</fullName>
+        <default>false</default>
+        <label>GoFundraise</label>
+    </customValue>
+    <customValue>
+        <fullName>Good Company</fullName>
+        <default>false</default>
+        <label>Good Company</label>
+    </customValue>
+    <customValue>
+        <fullName>Grassrootz</fullName>
+        <default>false</default>
+        <label>Grassrootz</label>
+    </customValue>
+    <customValue>
+        <fullName>MyCause</fullName>
+        <default>false</default>
+        <label>MyCause</label>
+    </customValue>
+    <customValue>
+        <fullName>PayPal Giving Fund</fullName>
+        <default>false</default>
+        <label>PayPal Giving Fund</label>
+    </customValue>
+    <customValue>
+        <fullName>Stripe</fullName>
+        <default>false</default>
+        <label>Stripe</label>
+    </customValue>
+    <customValue>
+        <fullName>Catalyser</fullName>
+        <default>false</default>
+        <label>Catalyser</label>
+    </customValue>
+    <customValue>
+        <fullName>LWC Transaction</fullName>
+        <default>false</default>
+        <label>LWC Transaction</label>
+    </customValue>
+    <masterLabel>Merchant Category</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

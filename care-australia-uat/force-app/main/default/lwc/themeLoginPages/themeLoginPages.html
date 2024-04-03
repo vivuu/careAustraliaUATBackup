@@ -1,0 +1,22 @@
+<!--
+  @description       : 
+  @author            : SUMEDH WASNIK
+  @group             : GERENT
+  @last modified on  : 01-16-2024
+  @last modified by  : SUMEDH WASNIK
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   01-16-2024   SUMEDH WASNIK   Initial Version
+-->
+<template>
+    <main style="height:100%" class="pagebackground">
+        <div class="slds-size_12-of-12 center">
+            <header data-f6-region class='slds-col_padded slds-p-vertical_small'>
+                <slot name="headerRegion"></slot>
+            </header>
+            <section data-f6-region>
+                <slot></slot>
+            </section>
+        </div>
+    </main>
+</template>

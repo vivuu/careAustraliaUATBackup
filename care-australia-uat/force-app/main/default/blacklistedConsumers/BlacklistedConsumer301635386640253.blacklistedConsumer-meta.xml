@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlacklistedConsumer xmlns="http://soap.sforce.com/2006/04/metadata">
+    <blockedByApiWhitelisting>false</blockedByApiWhitelisting>
+    <consumerKey>3MVG9Rd3qC6oMalUxZ6vQVH8SQMg1019zH8asZoTrj_IjpcXz9H_qalh1P82BBcF5lCGJSQjC0EU86W.IP_48</consumerKey>
+    <consumerName>Tray.io</consumerName>
+    <masterLabel>BlacklistedConsumer301635386631700</masterLabel>
+</BlacklistedConsumer>

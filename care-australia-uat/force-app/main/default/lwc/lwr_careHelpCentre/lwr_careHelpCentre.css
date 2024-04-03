@@ -1,0 +1,200 @@
+@font-face {
+    font-family: 'Sketchetik Fill Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/fontSk.woff') format('woff');   
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Bold Pro';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueProBold.woff') format('woff');
+    
+  }
+  .section-heading{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    
+    
+  }
+  .header{
+      background: transparent linear-gradient(206deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+  }
+  .example-accordion {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .section-content{
+    font-family: 'Helvetica Neue Regular';
+    
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .sectionHeading{
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 32px;
+    color: #002A3A;
+  }
+  .acc{
+    background: #F3F0ED;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #002A3A;
+    font-family: 'Sketchetik Fill Bold';
+  
+  }
+  .tit{
+    font-size: 16px;
+    line-height: 21px;
+    color: #002A3A;
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: bold;
+  }
+  .des{
+    font-family: 'Helvetica Neue Regular';
+    
+    font-size: 14px;
+    line-height: 19px;
+    color: #002A3A;
+  }
+  @media only screen and (max-width: 600px) {
+    .headerPad{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  .pad{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .item1 {
+      order: 2;
+    }
+    .item2 {
+      order: 1;
+    }
+  }
+  @media only screen and (min-width: 600px) {
+    .headerPad{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .pad{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .item1 {
+      order: 2;
+    }
+    .item2 {
+      order: 1;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .headerPad{
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    .pad{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .item1 {
+      order: 1;
+    }
+    .item2 {
+      order: 2;
+    }
+  }
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+    .headerPad{
+      padding-right: 0%;
+    }
+    .pad{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .item1 {
+      order: 1;
+    }
+    .item2 {
+      order: 2;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .imgMinWidth{
+      max-width: 450px;
+    }
+    .headerPad{
+      padding-left: 10%;
+    }
+    .pad{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .item1 {
+      order: 1;
+    }
+    .item2 {
+      order: 2;
+    }
+  }
+  @media only screen and (min-width: 1400px) {
+    .imgMinWidth{
+      max-width: 450px;
+    }
+  }
+  
+  .custom-accordion-section {
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      background-color: #F3F0ED;
+      /*max-width: 700px;*/
+  }
+  
+  .custom-accordion-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      line-height: 21px;
+      color: #002A3A;
+      font-family: 'Sketchetik Fill Bold';
+      margin-top: 5px;
+  }
+  
+  .arrow-icon {
+      font-size: 18px;
+      font-weight: bold;
+      width: 24px; /* Adjust width as needed */
+      display: inline-block;
+      text-align: center;
+  }
+  
+  .custom-accordion-section-content{
+    margin-top: 10px;
+      font-size: 14px;
+      line-height: 19px;
+      color: #002A3A;
+      font-family: 'Helvetica Neue Regular';
+  }

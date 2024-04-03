@@ -1,0 +1,163 @@
+<!--
+  @description       : 
+  @author            : SUMEDH WASNIK
+  @group             : GERENT
+  @last modified on  : 01-17-2024
+  @last modified by  : SUMEDH WASNIK 
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   01-17-2024   SUMEDH WASNIK   Initial Version
+-->
+<template>
+	<template if:true={showTerm}> 
+		<template if:true={isCreateAnAccount}>
+			<div class="totalpage">
+				<div class="slds-align_absolute-center">
+					<img src={lendLogo} width="125" height="250" alt="logo">
+				</div>
+					<div class="slds-align_absolute-center totalpage2">
+						<div class="field">
+							<div class="custom-combobox">
+								<label style="font-size:16px; margin-bottom:15px; color:white">Title</label>
+								<div class="custom-combobox-input">
+									<input style="border-radius:4px; height: 32px; border-style:none;" type="text" value={selectedValue} readonly onclick={handleClick} />
+									<ul class="custom-combobox-options" if:true={isOpen}>
+										<template for:each={salutationValues} for:item="option">
+											<li key={option.value} onclick={handleOptionClick}
+												data-value={option.value}>
+												{option.label}</li>
+										</template>
+									</ul>
+								</div>
+							</div>
+
+						</div>
+						<div class=" field">
+							<label style="font-size:16px;color:white">First Name<span style="color:red">*</span></label>
+							<lightning-input style="border-radius:4px; border-style:none;" class="firstname" type="text" name="FirstName" value={Firstname} onchange={handleInputChange} ></lightning-input>
+						</div>
+						<div class=" field">
+							<label style="font-size:16px;color:white">Last Name<span style="color:red">*</span></label>
+							<lightning-input style="border-radius:4px; border-style:none;" class="lastname" type="text" name="LastName" value={Lastname} onchange={handleInputChange} ></lightning-input>
+						</div>
+						<div class=" field">
+							<label style="font-size:16px;color:white">Email<span style="color:red">*</span></label>
+							<lightning-input style="border-radius:4px; border-style:none;" class="email" type="text" name="Email" value={Email} onchange={handleInputChange} disabled={emailAvailable}></lightning-input>
+						</div>
+						<div class="field">
+							<label class="work-section-meta" style="font-size:16px;color:white">Postcode<span style="color:red">*</span></label>
+							<lightning-input style="border-radius:4px; border-style:none;" class="postcode" type="text" name="MailingPostalCode" value={MailingPostalCode} onchange={handleInputChange}></lightning-input>
+						</div>
+						<div class="field">
+							<label class="work-section-meta" style="font-size:16px;color:white">Birthdate<span style="color:red">*</span></label> <!--(dd mmm yyyy- 00 Jan 0000)-->
+							<lightning-input style="border-radius:4px; border-style:none;" class="birthdate customDate" type="date" name="Birthdate" value={Birthdate} onchange={handleInputChange}></lightning-input>
+						</div>
+						<div class="field">
+							<label class="work-section-meta" style="font-size:16px;color:white">Mobile (Please start with +61)<span style="color:red" >*</span></label>
+							<lightning-input style="border-radius:4px; border-style:none;" class="Phone customDate" type="text" name="MobilePhone" value={MobilePhone} onchange={handleInputChange} disabled={MobileNumberAvailable}></lightning-input>
+						</div>
+						<div class="field">
+							<div style="display:inline-flex">
+								<input type='checkbox' class="checkbox" name="Terms_and_conditions__c" onchange={handleInputChange} value={TermsAndCondition}></input>
+								<label class="work-section-meta " style="font-size:14px;color:white;margin-left:10px"> <span style="color:red" >*</span> I
+				                have read and agree to the <a style="font-size:14px;color:white" href={openTCpdfDoc} target="_blank"> <u>Terms of Use</u></a><span> and </span>
+								<a style="font-size:14px;color:white" href={openPrivPolicy} target="_blank"> <u>Privacy Policy</u></a></label>
+							</div>
+							</div>
+						</div>
+						<div class="field slds-align_absolute-center">
+							<button class="submitbutton" onclick={createAccount}>Submit</button>
+						</div>
+					</div>
+
+				<!--</div>-->
+		</template>
+
+		<!--PopUp Design Starts-->
+
+		<template if:true={CartModules}>
+			<div class="search-overlay">
+
+				<div class="search ">
+					<div style="margin-top:10px;margin-bottom:10px; align-items:center">
+						<ul class="slds-list_dotted">
+							<li>
+								For Registration, an image with the label ‘Register’ will be created and on clicking the
+								image it navigates to the Registration Form.
+							</li>
+							<li>
+								A Lightning Web Component will be used to accomplish the following tasks:
+							</li>
+							<li>
+								To display the following text on click of the ‘Register’ button. “Only one BAA per site
+								is necessary. If your practice has multiple sites, we can affiliate all locations to one
+								BAA. Please complete the BAA with the parent site account information. The signed BAA
+								with a list of all other site locations can be emailed to 'HCP Portal Admin Email ID'.
+								The list should include Practice Name, Practice Address, Practice Phone Number,
+								Signee’s Title, Date“
+							</li>
+							<li>
+								The user will be presented with the question “Do you have a BAA signed?“
+							</li>
+							<li>
+								If the user answers “Yes”, the user will be navigated to the registration screen to
+								continue the registration process.
+							</li>
+							<li>
+								If the user answers “No”, the user will be able to select the practice for which the BAA
+								is signed
+							</li>
+							<li>
+								Practice - lookup of all parent provider accounts with the status “BAA - Unverified, BAA
+								- Verified, None“
+							</li>
+							<li>
+								Submitter Email ID - This should be an email field
+							</li>
+							<li>
+								A canvas will be designed with ‘Save’, ‘Download’, ‘Clear’ and ‘Hyperlink’ button for
+								receiving the e-sign and on clicking the ‘Save’ button the following message will be
+								displayed. “The signed BAA will be sent to all parties.“
+							</li>
+							<li>
+								A File Upload component will be created and the BAA document will be uploaded.
+							</li>
+							<li>
+								For login, Salesforce Out of Box functionality (log in) will be customized and used.
+							</li>
+							<li>
+								For Patient Enrollment, a menu will be created on the page with the label ‘Enroll a
+								Patient’.
+							</li>
+							<li>
+								A Record Triggered Flow will be initiated on creation of Account record and the
+								following tasks are accomplished.
+							</li>
+							<li>
+								An email notification will be sent to MAH.
+							</li>
+							<li>
+								An email notification will be sent to the submitter with the following content “Thank
+								you for submitting your BAA. Your BAA is under verification. You will be notified when
+								the BAA is verified and approved“
+							</li>
+							<li>
+								The ‘BAA Status’ field will be updated to “BAA - Unverified“
+							</li>
+
+						</ul>
+
+						<button class="slds-align_absolute-center" style="width:auto;height:30px;border-style:none;background:#FEBE10;border-radius:4px" onclick={closeModal}>Close</button>
+
+					</div>
+
+				</div>
+			</div>
+		</template>
+
+		<!--PopUp Design Ends-->
+	</template>
+
+
+
+</template>

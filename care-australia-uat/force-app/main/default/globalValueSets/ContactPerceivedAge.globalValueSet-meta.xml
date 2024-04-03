@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>18 to 24</fullName>
+        <default>false</default>
+        <label>18 to 24</label>
+    </customValue>
+    <customValue>
+        <fullName>25 to 29</fullName>
+        <default>false</default>
+        <label>25 to 29</label>
+    </customValue>
+    <customValue>
+        <fullName>30 to 34</fullName>
+        <default>false</default>
+        <label>30 to 34</label>
+    </customValue>
+    <customValue>
+        <fullName>35 to 39</fullName>
+        <default>false</default>
+        <label>35 to 39</label>
+    </customValue>
+    <customValue>
+        <fullName>40 to 44</fullName>
+        <default>false</default>
+        <label>40 to 44</label>
+    </customValue>
+    <customValue>
+        <fullName>45 to 49</fullName>
+        <default>false</default>
+        <label>45 to 49</label>
+    </customValue>
+    <customValue>
+        <fullName>50 to 54</fullName>
+        <default>false</default>
+        <label>50 to 54</label>
+    </customValue>
+    <customValue>
+        <fullName>55 to 59</fullName>
+        <default>false</default>
+        <label>55 to 59</label>
+    </customValue>
+    <customValue>
+        <fullName>60 to 64</fullName>
+        <default>false</default>
+        <label>60 to 64</label>
+    </customValue>
+    <customValue>
+        <fullName>65 to 69</fullName>
+        <default>false</default>
+        <label>65 to 69</label>
+    </customValue>
+    <customValue>
+        <fullName>70 to 74</fullName>
+        <default>false</default>
+        <label>70 to 74</label>
+    </customValue>
+    <customValue>
+        <fullName>75 to 79</fullName>
+        <default>false</default>
+        <label>75 to 79</label>
+    </customValue>
+    <customValue>
+        <fullName>80 to 84</fullName>
+        <default>false</default>
+        <label>80 to 84</label>
+    </customValue>
+    <customValue>
+        <fullName>85 to 89</fullName>
+        <default>false</default>
+        <label>85 to 89</label>
+    </customValue>
+    <customValue>
+        <fullName>90 to 94</fullName>
+        <default>false</default>
+        <label>90 to 94</label>
+    </customValue>
+    <customValue>
+        <fullName>95 to 99</fullName>
+        <default>false</default>
+        <label>95 to 99</label>
+    </customValue>
+    <customValue>
+        <fullName>100+</fullName>
+        <default>false</default>
+        <label>100+</label>
+    </customValue>
+    <customValue>
+        <fullName> 45 to 49</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 45 to 49</label>
+    </customValue>
+    <customValue>
+        <fullName> 25 to 29</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 25 to 29</label>
+    </customValue>
+    <customValue>
+        <fullName> 30 to 34</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 30 to 34</label>
+    </customValue>
+    <customValue>
+        <fullName> 35 to 39</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 35 to 39</label>
+    </customValue>
+    <customValue>
+        <fullName> 40 to 44</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 40 to 44</label>
+    </customValue>
+    <customValue>
+        <fullName> 75 to 79</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 75 to 79</label>
+    </customValue>
+    <customValue>
+        <fullName> 50 to 54</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 50 to 54</label>
+    </customValue>
+    <customValue>
+        <fullName> 55 to 59</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 55 to 59</label>
+    </customValue>
+    <customValue>
+        <fullName> 60 to 64</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 60 to 64</label>
+    </customValue>
+    <customValue>
+        <fullName> 65 to 69</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 65 to 69</label>
+    </customValue>
+    <customValue>
+        <fullName> 70 to 74</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label> 70 to 74</label>
+    </customValue>
+    <description>Created for Perceived age field under Contact</description>
+    <masterLabel>ContactPerceivedAge</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

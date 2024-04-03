@@ -1,0 +1,214 @@
+<template>
+    <!-- <c-google-analysis></c-google-analysis> -->
+    <!-- <c-woopra-analytics></c-woopra-analytics> -->
+      <div class="ff2"></div>
+    
+      <div class="footer1 paddingfooter paddings">
+    
+    
+        <lightning-layout multiple-rows="true" class="paddingcontainer">
+          <lightning-layout-item size="12" class="slds-p-top_x-large logosIcons" 
+            small-device-size="12" medium-device-size="12" large-device-size="3">
+            <div>
+              <!--<p class="lend">Lend</p>
+                    <p class="withcare">withCare</p>-->
+              <img src={lendLogo} alt="logo" style="width:100px;">
+            </div>
+            <br>
+            <!--</lightning-layout-item>
+            <lightning-layout-item class="slds-large-size_2-of-8 slds-medium-size_4-of-12 slds-small-size_1-of-2">-->
+            <div class="social">
+              <template for:each={socialMediaIcons} for:item="smIcon">
+                <a href={smIcon.link} key={smIcon.idx} aria-label="Instagram" rel="noopener noreferrer"
+                  style='--color: #ffffff; --background-color: transparent;width: 25px;'
+                  class="ast-builder-social-element ast-inline-flex footer-social-item">
+    
+                  <!-- <template if:true={smIcon.showSpan}>
+                              <span class="ahfb-svg-iconset ast-inline-flex svg-baseline">
+                                  <img src={smIcon.img}>
+                             </span>
+                            </template>
+                            <template if:false={smIcon.showSpan}> -->
+                  <img src={smIcon.img}>
+                  <!-- </template> -->
+                </a>
+              </template>
+            </div>
+    
+          </lightning-layout-item>
+    
+          <div class="grid-container slds-m-top_x-large">
+            <div class="grid-item fItems1">
+              <!-- <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/careviewallloans">Lend</a>
+            <a style="color:white;margin-bottom:12px; text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/ourimpact">Impact</a>
+            <a style="color:white;margin-bottom:12px; text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carenewsandupdates">News & Updates</a>
+            <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/aboutus">About Lendwithcare</a> -->
+            </div>
+            <div class="grid-item fItems2">
+              <!-- <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/login/">Register/Login</a>
+            <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carecart">Cart</a>
+            <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carehelpcentre">Help Centre</a>
+            <a style="color:white;margin-bottom:12px;text-decoration: none;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';" href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carecontactus">Contact Us</a> -->
+            </div>
+          </div>
+          <template if:true={showCmp}>
+            <lightning-layout-item size="12" class="slds-m-top_x-large" small-device-size="12"
+              medium-device-size="12" large-device-size="3">
+              <div class="flags">
+                <img src={footerDes.img} alt="flags">
+    
+              </div>
+    
+              <div class="para">
+                {footerDes.body}
+              </div>
+            </lightning-layout-item>
+          </template>
+    
+    
+    
+    
+        </lightning-layout>
+    
+    
+        <template if:true={showCmp}>
+          <div class="FooterDesktopLogo">
+            <img src={copyright.img} alt="care logo">
+          </div>
+          <div class="FooterMobileLogo">
+            <img src={copyright.img} alt="care logo" width="127px" style="margin: 20px 20px 20px 0px">
+          </div>
+          <br>
+          <div class="fooDesktop" style="margin-top:-15px">
+            <a href={copyright.link} class="pPolicy"
+              style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">{copyright.title}
+              &nbsp; </a><span style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';"> |
+            </span>
+            <p style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">&nbsp;
+              {copyright.body}</p><br><br>
+          </div>
+          <div class=" fooMobile" style="margin-top:-15px">
+            <a href={copyright.link} class="pPolicy"
+              style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">{copyright.title}
+              &nbsp;</a><span style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';"> |
+            </span>
+            <p style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">&nbsp;
+              {copyright.body}</p><br><br>
+          </div>
+          <div class="slds-align_absolute-center fooDesktop">
+            <p style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">{copyright.resv}</p>
+          </div>
+          <div class=" fooMobile">
+            <p style="color:white;font-size:10x;line-height:13px;font-family:'Helvetica Neue Regular';">{copyright.resv}</p>
+          </div>
+        </template>
+      </div>
+      <!-- Footer ends here -->
+    
+      <div class="footer2 paddingfooter paddings">
+    
+        <!-- Row 1 -->
+        <lightning-layout multiple-rows class="slds-p-top_xx-large ">
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3"
+            padding="horizontal_large">
+    
+            <div class="grids-item fItems1" style="display:grid;width: 200px;">
+              <!-- <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/careviewallloans">Lend</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/ourimpact">Impact</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carenewsandupdates">News &
+                Updates</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/aboutus">About Lendwithcare</a> -->
+            </div>
+    
+          </lightning-layout-item>
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="3" large-device-size="3"
+            padding="horizontal-large">
+    
+            <div class="grids-item fItems2" style="display:grid;width: 200px;">
+              <!-- Filled from JS -->
+              <!-- <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/login/">Register/Login</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carecart">Cart</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carehelpcentre">Help Centre</a>
+              <a style="color:white; text-decoration: none;margin-bottom:10px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Bold Pro';"
+                href="https://careaustralia--mfadev.sandbox.my.site.com/LendwithCare/s/carecontactus">Contact Us</a> -->
+            </div>
+    
+          </lightning-layout-item>
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="2" large-device-size="2"
+            padding="horizontal-small">
+    
+          </lightning-layout-item>
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="4"
+            padding="horizontal-small">
+            <template if:true={showCmp}>
+              <div class="FooterDesktopLogo">
+                <img src={copyright.img} alt="care logo" width="244px">
+              </div>
+            </template>
+          </lightning-layout-item>
+        </lightning-layout>
+        <!-- Row 2 -->
+        <template if:true={showCmp}>
+          <lightning-layout multiple-rows class="slds-m-top_xx-large">
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+              padding="horizontal-small">
+              <div class="slds-align_absolute-center" style="display:grid;width:80%">
+                <div class="flagsnew">
+                  <img src={footerDes.img} alt="flagsnew">
+    
+                </div>
+    
+                <div class="paranew slds-align_absolute-center">
+                  <p class="slds-align_absolute-center"
+                    style="color:white;width:80%;text-align:center;margin:20px;font-size:18px;line-height:20px;font-family:'Helvetica Neue Regular';font-weight:100;">
+                    {footerDes.body}</p>
+    
+                </div>
+              </div>
+            </lightning-layout-item>
+          </lightning-layout>
+        </template>
+        <!-- Row 3 -->
+        <template if:true={showCmp}>
+          <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+              padding="horizontal-small">
+              <div class="slds-align_absolute-center" style="display:grid;width:80%;margin-top:30px;margin-bottom:-45px">
+                <div class="slds-align_absolute-cente" style="width:auto;margin:5px;display:flex;justify-content:center;">
+                  <template for:each={socialMediaIcons} for:item="smIcon">
+                    <a href={smIcon.link} key={smIcon.idx} aria-label="Instagram" rel="noopener noreferrer"
+                      style={smIcon.style} class="ast-builder-social-element ast-inline-flex footer-social-item">
+                      <!-- <template if:true={smIcon.showSpan}>
+                                  <span class="ahfb-svg-iconset ast-inline-flex svg-baseline">
+                                      <img src={smIcon.img}>
+                                 </span>
+                                </template>
+                                <template if:false={smIcon.showSpan}> -->
+                      <img src={smIcon.img}>
+                      <!-- </template> -->
+                    </a>
+                  </template>
+    
+                </div>
+                <div class="slds-align_absolute-center" style="margin-top:15px;margin-bottom:40px;padding-top: 2%;">
+                  <p
+                    style="color:white;display:inline-flex;font-size:14px;line-height:18px;font-family:'Helvetica Neue Regular';">
+     <!--{copyright.link}--> <a href={TermsandConditionsFile} target="_blank" class="pPolicy"
+                      style="color:white;font-size:14px;line-height:18px;font-family:'Helvetica Neue Regular';">{copyright.title}
+                      &nbsp; </a><span style="color:white;font-size:14px;"> | </span>
+                    &nbsp; {copyright.body} &nbsp;{copyright.resv}</p>
+                  <!-- <p style="color:white;font-size:14px;margin-top:-3%;" class="slds-align_absolute-center">&nbsp;{copyright.resv}</p><br><br> -->
+                </div>
+              </div>
+            </lightning-layout-item>
+          </lightning-layout>
+        </template>
+      </div>
+    </template>

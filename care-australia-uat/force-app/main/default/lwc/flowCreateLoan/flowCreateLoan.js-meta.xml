@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+	<apiVersion>57.0</apiVersion>
+	<isExposed>true</isExposed>
+	<targets>
+		<target>lightning__RecordPage</target>
+		<target>lightning__AppPage</target>
+		<target>lightning__HomePage</target>
+		<target>lightning__Tab</target>
+		<target>lightning__FlowScreen</target>
+	</targets>
+	<targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+		 
+		<property type="string" name="countloanterms" label="Pass Loan terms After Update"/>
+		<property type="string" name="Priorcountloanterms" label="Pass Loan terms Before Update"/>
+		<property type="String" name="varLoanName" label="Pass Loan Name"/> 
+		<property type="string" name="Store_CreatedLoanID" label="Pass Loan ID"/>
+		<property type="string" name="recordID" label="Pass Update Loan ID"/>
+		<property type="string" name="LoanPrincipalDisbursed" label="Pass Loan Principal Disbursed"/>
+		<property type="string" name="LoanDisbursementDate" label="Pass Loan Principal Disbursed Date"/>
+		<property type="string" name="LoanSchedule" label="Pass Loan Schedule"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

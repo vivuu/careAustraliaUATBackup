@@ -1,0 +1,260 @@
+<template>
+	<lightning-spinner if:true={isLoading}></lightning-spinner>
+<div class="bg">
+	<div class="header">
+		<c-lwr_care-nav-bar lender-topup={LenderTopup} carecart={carecart} onfromnavbar={fromNavBar}></c-lwr_care-nav-bar>
+	</div>
+
+<div class="pad" >
+   <template if:true={withdrawCC}>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw "><!-- slds-p-left_xx-large slds-p-right_xx-large -->
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+				class="slds-p-bottom_medium slds-p-top_medium withdrawimgae" flexibility="auto" >
+				<div class="slds-align_absolute-center">
+					<img src={WithdrawImg} width="500px" style="border-radius:10px"/>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+				class="slds-p-bottom_medium slds-p-top_medium padLeft" flexibility="auto">
+				<div class="" style="display:grid">
+        <a onclick={handleGoToDashboard} style="color:#002A3A;font-family:'Helvetica Neue';font-size:10px;line-height:10px;">&#60; <u>Dashboard</u></a>
+        <h3 class="mainHeading">Money <span style="color:#E4761E">withdrawal</span></h3>
+        <div class="containsAmt">
+          <div class="Values">
+            <h2 class="amount" style="display:inline-flex">${wholeLenderBalance}<span class="decimal" style="margin-top:18px;margin-left:5px">.{precisionLenderBalance}</span></h2>
+			<p class="subMessage" style="font-family: 'Helvetica Neue Bold Pro';color:#002A3A">Money Available in your account</p>
+          </div>
+        </div>
+        <div style="display:grid;margin-top:20px">
+			<h3 class="withdrawMessage" style="font-family: 'Helvetica Neue Bold Pro'">Amount to withdraw</h3>
+			<lightning-input type="number" min="0" step=".01" placeholder={amountWithdrawalPlaceholder} value={amountToWithdraw} variant="label-hidden" onchange={handleWithdrawAmountChange}></lightning-input>
+			<span if:true={checkWithdrawAmountValidity} class="ErrorMessage">Amount should be less than total of withdraw amount and donation amount.</span>
+        </div>
+      </div>
+			</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw "><!-- slds-p-left_xx-large slds-p-right_xx-large -->
+		<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+				class="slds-p-bottom_medium slds-p-top_medium" flexibility="auto">	
+		<hr style="margin: 0px 0px 0px 0px">
+		</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw "><!-- slds-p-left_xx-large slds-p-right_xx-large -->
+			
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+							class="slds-p-bottom_medium slds-p-top_medium" flexibility="auto">
+							<div class="slds-align_absolute-center" style="display:grid">
+								<h3 style="font-weight:800;font-size:16px;line-height:21px;font-family:'Helvetica Neue Bold Pro';color:#002A3A">Donate to Lendwithcare</h3>
+								<h3 style="margin-top:15px;font-size:16px;line-height:21px;font-family:'Helvetica Neue Regular';color:#002A3A">
+									CARE Australia works to fight poverty and respond to disasters around the world.
+									Donations from people like you make this work possible.
+								</h3>
+								<h3 style="margin-top:15px;font-size:16px;line-height:21px;font-family:'Helvetica Neue Regular';color:#002A3A">Before withdrawing you credit, please consider making a donation to help our
+									life-changing work around the
+									world.</h3>
+							</div>
+			</lightning-layout-item>
+
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+							class="slds-p-bottom_medium slds-p-top_medium padLeft" flexibility="auto">
+							<div class="" style="display:grid">
+								<h3 style="margin-top:15px;font-weight:800;font-size:16px;line-height:21px;font-family:'Helvetica Neue Bold Pro';color:#002A3A">Donation amount</h3>
+								<div style="display:grid">
+									<lightning-input type="number" min="0" step=".01" placeholder={amountWithdrawalPlaceholder} value={amountToDonate} variant="label-hidden" onchange={handleDonationAmountChange}></lightning-input>
+									<span if:true={checkDonationAmountValidity} class="ErrorMessage">Amount should be less than total of withdraw amount and donation amount.</span>
+									<div style="margin-top:15px">
+										<div style="display:inline-flex">
+				  <div class="checkbox-container">
+                        <input type="checkbox" id="checkbox2" class="slds-input" checked={includeDonation}  name="includeDonation" onchange={handleIncludeDonationChange} />
+                        <label for="checkbox2"></label>
+                    </div>
+                <p style="font-size:12px;line-height:14px;font-family:'Helvetica Neue Regular';color:#002A3A;padding-top:5px;margin-left: 5px;margin-bottom: 3px;">Tick here to apply donation amount.</p>
+				  </div>
+				</div>
+						
+				</div>
+			</div>
+			</lightning-layout-item>
+
+		</lightning-layout>
+		<lightning-layout multiple-rows class="MoneyWithdraw  slds-p-bottom_xx-large"> <!-- slds-p-left_xx-large slds-p-right_xx-large -->
+			
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+				class="slds-p-bottom_medium slds-p-top_medium" flexibility="auto">
+					<div class="slds-align_absolute-center" style="display:grid">
+						<button class="custombuttomwithdraw" onclick={OpenWithdrawCCPopUp}>Withdraw</button>
+						<h3 style="margin-top:15px;font-size:16px;line-height:20px;font-family:'Helvetica Neue Regular';color:#002A3A">Withdrawals typically take 1-2 weeks to be processed after being requested.</h3>
+						<div style="margin-top:15px;display:grid">
+							<button class="custombuttomwithdraw" onclick={OpenContactUsPage}>Contact customer support</button>
+						</div>
+					</div>
+			</lightning-layout-item>
+
+			
+
+		</lightning-layout>
+
+
+    </template>
+
+
+    <template if:true={withdrawCCPopup}>
+    
+    <div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:15px;">
+					<div>
+						<a class="closes-button" style="padding-left:20px" onclick={BacktoWithdrawCCpage}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+							</svg>
+						</a>
+					</div>
+					<div style="flex: 1; text-align: center;padding-right:20px">
+						<h3 style="font-weight: 800; margin: 0;font-size:16px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">Review Withdrawal</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px;">
+            <h3 style="font-size:16px;line-height:20px;font-family:'Helvetica Neue Regular';color:#002A3A;">{reviewMessage}</h3>
+          <h3 if:true={amountToWithdraw} style="margin-top:15px;font-size:16px;line-height:20px;font-family:'Helvetica Neue Regular';color:#002A3A;">${amountToWithdraw} will be credited to your credit card in the next 7-10 business days.</h3>
+          <h3 style="font-weight:800;margin-top:15px;font-size:16px;line-height:21px;font-family:'Helvetica Neue Bold Pro';color:#002A3A;">Is this the last 4 digits of the credit card you used to make payment:</h3>
+          <p if:true={cardNumber} style="margin-top:15px;font-size:16px;line-height:21px;font-family:'Helvetica Neue Regular';color:#002A3A;">{cardNumber}</p>
+          <h3 style="font-weight:800;margin-top:15px;font-size:16px;line-height:21px;font-family:'Helvetica Neue Bold Pro';color:#002A3A;">Is the number correct?</h3>
+          
+		  <div class="custom-combobox">
+                    <select name="progress" class="custom-select slds-align_absolute-center" onchange={comboBoxChange}  disabled={disabledButton}>
+                      
+                      <option value="" >Yes</option>
+                      <option value="">No</option>
+                    </select>
+                  </div>
+
+		 <!-- <lightning-combobox
+            name="progress"
+            value={value}
+            placeholder="Yes"
+            options={comboboxOptions}
+            onchange={comboBoxChange} ></lightning-combobox>-->
+            <h3 style="margin-top:15px;font-size:16px;line-height:20px;font-family:'Helvetica Neue';color:#002A3A;">If the above card is no longer valid, please press the <span style="font-weight:800">contact customer support</span> button and we will contact you to update your details.</h3>
+            <h3 style="margin-top:15px;font-size:16px;line-height:20px;font-family:'Helvetica Neue Regular';color:#002A3A;">Click <span style="font-weight:800;font-family:'Helvetica Neue Bold Pro';">confirm withdrawal</span> to proceed.</h3>
+            <button class="custombuttomwithdraw" style="width: -webkit-fill-available;" onclick={OpenThankYou}>Confirm withdrawal</button>
+            <button class="custombuttomwithdraw" style="width: -webkit-fill-available;" onclick={CloseWithdrawCCpopUp}>Make a change to this withdrawal</button>
+            <button class="custombuttomwithdraw" style="width: -webkit-fill-available;" onclick={OpenContactUsPage}>Contact customer support</button>
+			  </div>
+				</div>
+			</div>
+
+    </template>
+
+
+    <template if:true={withdrawBoth}>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw "><!-- slds-p-left_xx-large slds-p-right_xx-large -->
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+				class="slds-p-bottom_medium slds-p-top_medium withdrawimgae" flexibility="auto" >
+				<div class="slds-align_absolute-center">
+					<img src={WithdrawImg} width="500px" style="border-radius:10px"/>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="6"
+				class="slds-p-bottom_medium slds-p-top_medium padLeft" flexibility="auto">
+						<div class="" style="display:grid">
+							<a onclick={handleGoToDashboard} style="color:#002A3A;font-family:'Helvetica Neue Regular';font-size:10px;line-height:10px;">&#60; <u>Dashboard</u></a>
+							<h3 class="mainHeading">Money <span style="color:#E4761E">withdrawal</span></h3>
+							<div class="containsAmt">
+								<div class="Values">
+									<h2 class="amount" style="display:inline-flex">${wholeLenderBalance}<span class="decimal" style="margin-top:18px;margin-left:5px">.{precisionLenderBalance}</span></h2>
+									<p class="subMessage" style="font-family: 'Helvetica Neue Bold Pro';">Money Available in your account</p>
+								</div>
+							</div>
+						</div>
+			</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw "> <!-- slds-p-left_xx-large slds-p-right_xx-large -->
+		<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+				padding="around-small" flexibility="auto">	
+		<hr style="margin: 0px 0px 0px 0px">
+		</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows class="MoneyWithdraw  slds-p-bottom_xx-large"><!-- slds-p-left_xx-large slds-p-right_xx-large -->
+			
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+				class="slds-p-bottom_medium slds-p-top_medium" flexibility="auto">
+					<div class="slds-align_absolute-center" style="display:grid">
+					
+						<h3 class="suggestion" style="font-family: 'Helvetica Neue Regular';color:#002A3A;">
+							Would you like to make this withdrawal and/or donation using your credit card?
+						</h3>
+						<div style="margin-top:15px;display:grid">
+							<button class="custombuttomwithdraw" onclick={truewithdrawCC}>Withdraw with credit card</button>
+							<button class="custombuttomwithdraw" onclick={OpenContactUsPage}>Contact customer support</button>
+						</div>
+					</div>
+			</lightning-layout-item>
+		</lightning-layout>
+
+
+    </template>
+
+    <template if:true={ThankYou}>
+      <div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div style="flex: 1; text-align: center;">
+						<h3 style="font-weight: 800; margin: 0;font-family:'Sketchetik Fill Bold';color:#002A3A;">Thank You</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px;">
+            <h3 style="font-family: 'Helvetica Neue Regular';color:#002A3A;"><span if:true={amountToWithdraw}>Payment will be with you in the next 2-3 business days.</span> <span if:true={amountToDonate}> ${amountToDonate} has been donated to our life-changing work.</span> </h3>
+            <button class="custombuttomwithdraw1" style="width: -webkit-fill-available;" onclick={CloseThankYou}>Close window</button>
+			  </div>
+				</div>
+			</div>
+    </template>
+
+    <template if:true={RequestReceived}>
+      <div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div style="flex: 1; text-align: center;">
+						<h3 style="font-weight: 800; margin: 0;font-family:'Sketchetik Fill Bold';color:#002A3A;">Request Received</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px;">
+            <h3 style="font-family:'Helvetica Neue Regular';color:#002A3A;">We have created a case for your request, a team member will be in touch soon.</h3>
+            <button class="custombuttomwithdraw1" style="width: -webkit-fill-available;" onclick={CloseReceivedRequest}>Close window</button>
+			  </div>
+				</div>
+			</div>
+    </template>
+
+	<template if:true={UnabletoWithdraw}>
+      <div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div style="flex: 1; text-align: center;">
+						<h3 style="font-weight: 800; margin: 0;font-family:'Sketchetik Fill Bold';color:#002A3A;">Unable to withdraw</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px;">
+            <h3 style="font-family:'Helvetica Neue Regular';color:#002A3A;">You have not money sitting in your account yet, to get started select the ‘top up’ button.</h3>
+            <button class="custombuttomwithdraw1" style="width: -webkit-fill-available;" onclick={CloseThankYou}>Top up</button>
+			<button class="custombuttomwithdraw1" style="width: -webkit-fill-available;" onclick={CloseThankYou}>Close window</button>
+			  </div>
+				</div>
+			</div>
+    </template>
+
+</div>
+</div>
+</template>

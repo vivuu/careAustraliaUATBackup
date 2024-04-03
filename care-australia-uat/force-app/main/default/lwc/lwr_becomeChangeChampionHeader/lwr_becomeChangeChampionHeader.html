@@ -1,0 +1,55 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="testOverflow">
+		<div class="headers">
+
+			<!--<img src={banner} alt="banner">-->
+
+			<c-lwr_care-nav-bar></c-lwr_care-nav-bar>
+
+			<lightning-layout multiple-rows="true">
+				<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+					large-device-size="6">
+
+					<img src={desktopimage} width="530px" class="slds-align_absolute-center">
+
+                </lightning-layout-item>
+					<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+						medium-device-size="12" large-device-size="6" class="headerPad">
+						<div class="slds-align_absolute-center bannerHeading" style="display:block">
+							<lightning-layout multiple-rows="true" style="color:white">
+								<!-- class="slds-m-around_small" -->
+								<!--<template for:each={titles} for:item="title"></template>key={title.white}(title.yellow)-->
+									<lightning-layout-item size="12"  padding="around-small"
+										small-device-size="12" medium-device-size="12" large-device-size="12">
+										<h3 style="display:inline" class="section-heading">
+											{val1}<span style="color:#FEBE10">&nbsp;{val2}</span></h3>
+									</lightning-layout-item>
+								
+								<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+									medium-device-size="12" large-device-size="12">
+									<h3 class="section-content3">
+                                        <lightning-formatted-rich-text value={changeChampionHeaderBody}>
+										</lightning-formatted-rich-text>
+										<!--Lendwithcare's small staff and volunteers work hard to ensure that every penny
+										raised is used effectively and cost-efficiently.-->
+
+									</h3>
+									<div class="changeChampionTile">
+									<div style="background:#F3F0ED;" class="ClassVolDonation slds-m-around_x-small">
+									<c-lwr_become-Change-Champion-Box innercurrencybg="white"
+									onfromchangechampionbox={fromChangeChampionBox}
+									onopencart={openCart}></c-lwr_become-Change-Champion-Box>
+								</div>
+									</div>
+								</lightning-layout-item>
+								
+							</lightning-layout>
+						</div>
+
+					</lightning-layout-item>
+			</lightning-layout>
+		</div>
+
+	</div>
+</template>

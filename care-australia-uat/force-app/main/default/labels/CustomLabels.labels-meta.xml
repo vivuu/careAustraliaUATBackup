@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Account_EOFY_Historical_PDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account EOFY Historical PDF</shortDescription>
+        <value>a165g000000wimzAAA</value>
+    </labels>
+    <labels>
+        <fullName>Account_EOFY_Statement_Previous_PDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account EOFY Statement Previous PDF</shortDescription>
+        <value>a165g000000win8AAA</value>
+    </labels>
+    <labels>
+        <fullName>Account_EOFY_statement_current</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account EOFY statement current</shortDescription>
+        <value>a165g000000win0AAA</value>
+    </labels>
+    <labels>
+        <fullName>AmazonChatInstance</fullName>
+        <categories>AWS_ChatInstance</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AmazonChatInstance</shortDescription>
+        <value>amazon-connect-b739603bd1c9/connect/careaustralia-prod</value>
+    </labels>
+    <labels>
+        <fullName>Bequest_Receipt</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Estate Receipt</shortDescription>
+        <value>a165g000000winDAAQ</value>
+    </labels>
+    <labels>
+        <fullName>Care_Gift_Receipt</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Care Gift Receipt</shortDescription>
+        <value>a165g000000winIAAQ</value>
+    </labels>
+    <labels>
+        <fullName>Contact_EOFY_Statement_Current</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact EOFY Statement Current</shortDescription>
+        <value>a165g000000wimyAAA</value>
+    </labels>
+    <labels>
+        <fullName>Contact_EOFY_Statement_Historical</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact EOFY Statement Historical</shortDescription>
+        <value>a165g000000win4AAA</value>
+    </labels>
+    <labels>
+        <fullName>Contact_EOFY_Statement_Previous</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact EOFY Statement Previous</shortDescription>
+        <value>a165g000000win3AAA</value>
+    </labels>
+    <labels>
+        <fullName>LWC_FSP_Portal_Url</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LWC FSP Portal Url</shortDescription>
+        <value>https://careaustralia--uat.sandbox.my.site.com</value>
+    </labels>
+    <labels>
+        <fullName>LWC_FX_GetGeoAPIKey</fullName>
+        <categories>FX</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LWC_FX_GetGeoAPIKey</shortDescription>
+        <value>6b814cda72d2ead4a525e9a86b4362d00b1247e5</value>
+    </labels>
+    <labels>
+        <fullName>LWC_OrganizationWideEmailAddress</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LWC_OrganizationWideEmailAddress</shortDescription>
+        <value>CARE Australia</value>
+    </labels>
+    <labels>
+        <fullName>Lender_Contact_Owner</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lender Contact Owner</shortDescription>
+        <value>00598000000I7S8AAK</value>
+    </labels>
+    <labels>
+        <fullName>Logout_URL_of_Lender</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Logout URL of Lender</shortDescription>
+        <value>https://careaustralia--uat.sandbox.my.site.com/LendwithCare/secur/logout.jsp?retUrl=https://careaustralia--uat.sandbox.my.site.com/LendwithCare/s/login</value>
+    </labels>
+    <labels>
+        <fullName>NBMessage</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NBMessage</shortDescription>
+        <value>Please call CARE to donate at 061 01 12345678</value>
+    </labels>
+    <labels>
+        <fullName>NBVersion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NodeJS Version</shortDescription>
+        <value>1.0.0</value>
+    </labels>
+    <labels>
+        <fullName>PartnerAccountName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PartnerAccountName</shortDescription>
+        <value>Partner Account</value>
+    </labels>
+    <labels>
+        <fullName>PartnerProfile</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PartnerProfile</shortDescription>
+        <value>Lender</value>
+    </labels>
+    <labels>
+        <fullName>PrivacyPolicyURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PrivacyPolicyURL</shortDescription>
+        <value>https://careaustralia--uat--c.sandbox.vf.force.com/resource/1697404517000/PrivacyPolicyCA?</value>
+    </labels>
+    <labels>
+        <fullName>Shopify_Default_Campaign_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Shopify Default Campaign Name</shortDescription>
+        <value>FY24 CAREGifts</value>
+    </labels>
+    <labels>
+        <fullName>StartUrl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StartUrl</shortDescription>
+        <value>https://test.lwc.org.au/securitycheck</value>
+    </labels>
+    <labels>
+        <fullName>StripeLexUrl</fullName>
+        <categories>Stripe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StripeLexUrl</shortDescription>
+        <value>https://careaustralia--uat.sandbox.lightning.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>StripePublisherKey</fullName>
+        <categories>Stripe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StripePublisherKey</shortDescription>
+        <value>pk_test_51LIkLGGGWgtqSxG4cRH6iYe1YhS3yFvRtDiJWV6p3bn0yW7frcQy9E4wWH3EkrTaK3WCEpaV9AkzCSwWhPANh4nd00zdRikbTT</value>
+    </labels>
+    <labels>
+        <fullName>StripeVfUrl</fullName>
+        <categories>Stripe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>StripeVfUrl</shortDescription>
+        <value>https://careaustralia--uat--c.sandbox.vf.force.com</value>
+    </labels>
+    <labels>
+        <fullName>Stripe_Payment_Methods</fullName>
+        <categories>Stripe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Stripe Payment Methods</shortDescription>
+        <value>Credit Card;Direct Debit</value>
+    </labels>
+    <labels>
+        <fullName>TermsAndConditionsURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TermsAndConditionsURL</shortDescription>
+        <value>https://careaustralia--uat--c.sandbox.vf.force.com/resource/1698133917000/TermsandConditionsFile?</value>
+    </labels>
+    <labels>
+        <fullName>fsc_AccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AccessLevel</shortDescription>
+        <value>Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Back</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ButtonIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ButtonIsNotSupportedMessage</shortDescription>
+        <value>Following buttons are note supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ConditionLogicHelpText</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConditionLogicHelpText</shortDescription>
+        <value>Use parentheses, AND, OR, and NOT to customize the logic. For example, if you enter “(1 AND 2 AND 3) OR 4”, the flow evaluates whether the first three conditions are true or only the fourth condition is true.</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Delete</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldIsNotSupportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldIsNotSupportedMessage</shortDescription>
+        <value>Following fields are not supported:</value>
+    </labels>
+    <labels>
+        <fullName>fsc_FieldTypeNotSuportedMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>fsc_FieldTypeNotSuportedMessage</shortDescription>
+        <value>You provided an unsupported value for the DataTypeFilter input on Object and Field Picker. Currently the only supported value is ’picklist’</value>
+    </labels>
+    <labels>
+        <fullName>fsc_For</fullName>
+        <categories>Buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>For</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Key_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Key Label</shortDescription>
+        <value>Key</value>
+    </labels>
+    <labels>
+        <fullName>fsc_LackingPermissions</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>LackingPermissions</shortDescription>
+        <value>You don\&apos;t have the proper permissions for ths action</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ManagerEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ManagerEmptyMessage</shortDescription>
+        <value>&quot;Manager APEX Class&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_MultipleGroupsForRole</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MultipleGroupsForRole</shortDescription>
+        <value>There are multiple groups for that role</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Name</fullName>
+        <categories>quicklinks, Labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Name</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>fsc_NonePicklistValueLabel</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NonePicklistValueLabel</shortDescription>
+        <value>-- None --</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OWDReadWrite</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OWDReadWrite</shortDescription>
+        <value>Sharing Settings must be private or public read/write to enable manual sharing</value>
+    </labels>
+    <labels>
+        <fullName>fsc_OwnerAdminModify</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OwnerAdminModify</shortDescription>
+        <value>Only the record owner or administrators can modify permissions</value>
+    </labels>
+    <labels>
+        <fullName>fsc_PublicGroups</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroups</shortDescription>
+        <value>Public Groups</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Queues</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queues</shortDescription>
+        <value>Queues</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Read</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Read</shortDescription>
+        <value>Read</value>
+    </labels>
+    <labels>
+        <fullName>fsc_ReadWrite</fullName>
+        <categories>labels, buttons</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReadWrite</shortDescription>
+        <value>Read / Write</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Reason</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reason</shortDescription>
+        <value>Reason</value>
+    </labels>
+    <labels>
+        <fullName>fsc_RelatedUsers</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RelatedUsers</shortDescription>
+        <value>Related Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Roles</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Roles</shortDescription>
+        <value>Roles</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Search</fullName>
+        <categories>Actions,Buttons,quicklinks</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Search in</shortDescription>
+        <value>Search in</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SearchFor</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SearchFor</shortDescription>
+        <value>For</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SetAccessLevel</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SetAccessLevel</shortDescription>
+        <value>Set Access Level</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedAddCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedAddCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Add Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedButtonsEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedButtonsEmptyMessage</shortDescription>
+        <value>&quot;Supported Buttons&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_SupportedEditCapabilitiesEmptyMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SupportedEditCapabilitiesEmptyMessage</shortDescription>
+        <value>&quot;Edit Capabilities&quot; can not be empty</value>
+    </labels>
+    <labels>
+        <fullName>fsc_TooManyResultsMessage</fullName>
+        <categories>messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TooManyResultsMessage</shortDescription>
+        <value>Your search found more than 200 results.  Keep typing to make it more specific</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Type</fullName>
+        <categories>Buttons,Filters,Title</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Type</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>fsc_UserOrGroup</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>UserOrGroup</shortDescription>
+        <value>User Or Group</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Users</fullName>
+        <categories>labels</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Users</shortDescription>
+        <value>Users</value>
+    </labels>
+    <labels>
+        <fullName>fsc_Value_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Value Label</shortDescription>
+        <value>Value</value>
+    </labels>
+    <labels>
+        <fullName>youtubelink_lwrsite</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>youtubelink_lwrsite</shortDescription>
+        <value>https://www.youtube.com/embed/MwCaGn3JDLk</value>
+    </labels>
+</CustomLabels>

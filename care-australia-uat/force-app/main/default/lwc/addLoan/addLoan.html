@@ -1,0 +1,51 @@
+<template>
+
+<div class="container slds-align_absolute-center">
+  <!-- <button class="slds-align_absolute-center valueSticky">
+    $25<div class="dropdown-arrow"></div>
+  </button> -->
+  <select class="custom-select Carouselvaluebottom slds-select slds-align_absolute-center valueSticky" name = "optionSelect" onchange={handleChangeSelect} >
+    <template for:each={loanamt} for:item="loanAmt">
+      <option selected={loanAmt.selected} value={loanAmt.label} key={loanAmt.label}>$ {loanAmt.label}</option>
+    </template>
+</select>
+  <!-- <button class="addtocartSticky" onclick={addToCart}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2" viewBox="0 0 16 16">
+      <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+    </svg>
+    &nbsp; Add to cart
+  </button> -->
+  <template if:false={isButtonVisible}> <!-- if:true={addToCartButton} -->
+      <button class="CarouselAddtocartButton" onclick={addToCart} >
+      <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+          viewBox="0 0 16 16">
+          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+      </svg>--><img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>
+      &nbsp; Add to cart</button> <!-- {buttonMessage} -->
+  </template>
+  <template if:true={isButtonVisible}> <!-- if:true={checkOutButton} -->
+      <button class="CarouselAddtocartButton" onclick={checkOutToCart}>
+          <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+          viewBox="0 0 16 16" style="margin-bottom:4px">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+          </svg>--><img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>
+          &nbsp; Checkout</button><!-- {buttonMessage} -->
+  </template>
+</div>
+<template if:true={errorTransaction}>
+  <section role="dialog" tabindex="-1" aria-modal="true" aria-label="Meaningful description of the modal content"
+    class="slds-modal slds-fade-in-open">
+    <div class="slds-modal__container">
+      <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeErrorPopup}>
+  
+  close
+  </button>
+      <div class="slds-modal__content slds-p-around_medium slds-modal__content_headless" id="modal-content-id-1">
+        <p>{errorMessageOnTransaction}</p>
+      </div>
+
+    </div>
+  </section>
+  <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+</template>
+</template>

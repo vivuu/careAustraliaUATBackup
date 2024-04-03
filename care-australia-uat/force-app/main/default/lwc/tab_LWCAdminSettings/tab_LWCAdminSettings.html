@@ -1,0 +1,18 @@
+<template>
+    <lightning-spinner if:true={spin}></lightning-spinner>
+    <template if:true={isVisible}>
+        <lightning-card>
+            <h1 slot="title">Offset Process</h1>
+        <lightning-button label="Run Offset Calculation" class="slds-m-left_small slds-button_brand-outline" onclick={handleOffsetCalculation}></lightning-button>
+        <lightning-button label="Update FX Rates" class="slds-m-left_small slds-button_brand-outline" onclick={handleUpdateFXRates}></lightning-button>
+        </lightning-card>
+    <!--<div class="tile-container">
+        <div class="tile">
+            <button style="margin-left:145px;" onclick={handleOffsetCalculation}>Run Offset Calculation</button>
+        </div>
+        <div class="tile">
+            <button style="margin-left:160px;" onclick={handleUpdateFXRates}>Update FX Rates</button>
+        </div>
+    </div> !-->
+    </template>
+</template>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Prospect</fullName>
+        <default>false</default>
+        <label>Prospect</label>
+    </customValue>
+    <customValue>
+        <fullName>Acquisition</fullName>
+        <default>false</default>
+        <label>Acquisition</label>
+    </customValue>
+    <customValue>
+        <fullName>Considering</fullName>
+        <default>false</default>
+        <label>Considering</label>
+    </customValue>
+    <customValue>
+        <fullName>Intending</fullName>
+        <default>false</default>
+        <label>Intending</label>
+    </customValue>
+    <customValue>
+        <fullName>Confirmed</fullName>
+        <default>false</default>
+        <label>Confirmed</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Interested</fullName>
+        <default>false</default>
+        <label>Not Interested</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed Lost</label>
+    </customValue>
+    <customValue>
+        <fullName>Closed Won</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>Closed Won</label>
+    </customValue>
+    <description>Values in GiW Status field</description>
+    <masterLabel>GiW Status Values</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "careSearchResults",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"6038e7fe-bd14-4ee0-9f2d-250f696fcdaa\",\"columns\":[{\"UUID\":\"ed00f32c-1c42-4b93-8ad6-f2c522f75b18\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "ed00f32c-1c42-4b93-8ad6-f2c522f75b18",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "6038e7fe-bd14-4ee0-9f2d-250f696fcdaa",
+          "type" : "component"
+        } ],
+        "id" : "8d28380c-5eeb-4465-9e5e-2ca010c29fd2",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"2e63e108-854d-4d30-a739-54a02335ddda\",\"columns\":[{\"UUID\":\"1e5fa7d3-d911-42e7-b33d-30f7267d187a\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "1e5fa7d3-d911-42e7-b33d-30f7267d187a",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "2e63e108-854d-4d30-a739-54a02335ddda",
+          "type" : "component"
+        } ],
+        "id" : "32c7e134-44b1-4c6a-86e9-a1afef29df23",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careSearchResults",
+          "id" : "e60f768c-e3b8-487c-a79b-25514d5239a5",
+          "type" : "component"
+        } ],
+        "id" : "a8153d6b-95a5-44e3-8c85-ab4bddb30218",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "75880eee-0a42-4fed-9789-657efa94c40a",
+          "type" : "component"
+        } ],
+        "id" : "de7c276f-bfb8-4df4-aced-50a05e07c057",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "6d3ab7bd-a18c-4f38-9a51-27a50fca5c12",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "94a68b85-fb59-43e8-86cb-5781b596303e",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "41a79159-af94-4744-ac56-c4e4795417e1",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "6c3d65b5-2460-4783-b9fa-1c3b0a38e2dd",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "883f6d4a-05a9-4c9f-b600-307b99290be4",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "5e95fb6d-e16f-4977-84da-22fd285916dc",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "a66676e3-0220-4b31-8390-71498b9e2882",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "4516d624-b8e8-4fd1-83f8-3c91650c7dc8",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "cc8f6d8c-6ff6-4ded-8411-f52b28527c24",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themecareSearchResults",
+      "id" : "cdfef08d-adb5-4420-a744-fe19978b6a37",
+      "type" : "component"
+    }
+  }
+}

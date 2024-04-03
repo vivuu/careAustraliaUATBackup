@@ -1,0 +1,71 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+
+	<div class="para2 pad">
+		<template if:true={newslettersection}>
+
+			<div class="grid-container" style="padding-top:25px">
+			
+				
+					<div class="form-container">
+						<div class="content-container slds-p-top_medium">
+							<!-- slds-p-around_small -->
+
+							<!--<template for:each={ntitles} for:item="ntitle"></template> key={ntitle.black}{ntitle.black}{ntitle.yellow}-->
+							<h3 class="section-heading3" style="text-align:left;">
+								<span  style="color:#002A3A;">{val1}</span><br>
+								<span  style="color:#E4761E;">{val2}</span>
+							</h3>
+
+							<div>
+								<lightning-layout multiple-rows="true" class="slds-p-top_medium">
+									<h4 class="section-heading1" style="text-align: left;">
+										<lightning-formatted-rich-text value={newslettersection.body}>
+										</lightning-formatted-rich-text>
+									</h4>
+								</lightning-layout>
+							</div>
+
+						</div>
+						<template for:each={carecontactuslabels} for:item="clabels">
+							<div key={clabels} class="field">
+								<label style="font-size:16px;line-height:21px;color:#002A3A;font-family: 'Helvetica Neue Bold Pro';padding-bottom:9px;">{clabels}</label>
+								<input data-label={clabels} class="italic-placeholder labelBox" type="text" onchange={handleInputChange} placeholder="&nbsp;eg: jane"></input>
+							</div>
+							<!---
+    <div class="field">
+      <label style="font-size:16px;line-height:21px;color:#002A3A;font-family: 'Helvetica Neue Bold Pro';padding-bottom:9px;">Last name</label>
+      <input class="italic-placeholder" style="width:100%;height:40px;border-radius:4px;border-color:#163B5480;font-famijanely: 'Helvetica Oblique';font-size:16px;line-height:21px;" type="text" onchange={handleInputChange} placeholder="&nbsp;eg: smith" ></input>
+    </div>
+
+    <div class="field">
+      <label style="font-size:16px;line-height:21px;color:#002A3A;font-family: 'Helvetica Neue Bold Pro';padding-bottom:9px;">Email</label>
+      <input class="italic-placeholder" style="width:100%;height:40px;border-radius:4px;border-color:#163B5480;font-family: 'Helvetica Oblique';font-size:16px;line-height:21px;" type="text" onchange={handleInputChange} placeholder="&nbsp;eg: janesmith@gmail.com" ></input>
+    </div>
+-->
+						</template>
+						<template if:true={showError}>
+							<p style="color: red;font-weight: bold;">Please fill all the required fields</p>
+						</template>
+						<div class="field" style="text-align: center;">
+							<button disable={btnDisable} onclick={handleSubscribe} class="clr_gold no-shadow subscribeBox">{newslettersection.btn}</button>
+						</div>
+
+					</div>
+				
+
+
+				<div class="slds-p-top_medium"> <!-- slds-align_absolute-center -->
+				<img src={newslettersection.image} alt="para2img" class="imageAlign">
+												</div>
+			</div>
+
+
+
+			
+		</template>
+
+
+	</div>
+
+</template>

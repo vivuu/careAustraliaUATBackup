@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Lendwithcare Australia - Big change from small loans",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"aed316a9-ef86-43ca-b323-d503f5e05159\",\"columns\":[{\"UUID\":\"b6eec024-9d56-43f7-9e0b-f44c2b636ba2\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "b6eec024-9d56-43f7-9e0b-f44c2b636ba2",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "aed316a9-ef86-43ca-b323-d503f5e05159",
+          "type" : "component"
+        } ],
+        "id" : "d5c15866-56e5-4aeb-a232-3319664060bb",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Lendwithcare is a sustainable way to help communities, creating big change from small loans. Make a lifechanging loan today.",
+            "dxpStyle" : { },
+            "pageTitle" : "Lendwithcare Australia - Big change from small loans",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "76ce1220-1fe7-4d08-ad69-4c1f83b0c173",
+          "type" : "component"
+        } ],
+        "id" : "beea2fa0-1a58-4f08-a8fb-cdbba5904875",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "926cbea8-a088-4877-b80d-e8b4a7d27051",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "934udEjhI3NcGokHgaNUWu9JQS23YI",
+    "viewType" : "home"
+  }
+}

@@ -1,0 +1,14 @@
+<template>
+	<lightning-card variant="Narrow" title="Contact Details">
+		<div class="slds-border_bottom" style="height: 200px;">
+			<template if:true={data}>
+				<lightning-datatable key-field="id" data={data} columns={columns} hide-checkbox-column
+					onrowaction={handleupdatetask}>
+				</lightning-datatable>
+			</template>
+			<template if:true={error}>
+				<div class="error" style="color:red;text-align:center;font-size: 15px">{error}</div>
+			</template>
+		</div>
+	</lightning-card>
+</template>

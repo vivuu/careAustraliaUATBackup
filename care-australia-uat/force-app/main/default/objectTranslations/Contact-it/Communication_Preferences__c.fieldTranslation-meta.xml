@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Communication_Preferences__c</name>
+    <picklistValues>
+        <masterLabel>Lend With Care</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unsubscribe From All Emails</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

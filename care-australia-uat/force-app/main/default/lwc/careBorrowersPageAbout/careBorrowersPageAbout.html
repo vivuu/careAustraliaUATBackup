@@ -1,0 +1,36 @@
+<template>
+    <lightning-spinner style="height: 800px;" if:true={spin}></lightning-spinner>
+     
+    
+    
+     
+      
+        <lightning-layout multiple-rows class="pad marginTop50">
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" >
+              <div class="para2 slds-p-bottom_large">
+                    <h3 style="display:inline;font-size:26px;line-height:32px;font-weight:bold;color:#002A3A;font-family:'Sketchetik Fill Bold';">About &nbsp;
+                      <span style="color:#E4761E">{borrowerName}</span></h3>
+               
+                  
+                    <lightning-layout multiple-rows class="slds-p-top_medium">
+                      <template for:each={borrowerDescription} for:item="bDes">
+                          <lightning-layout-item key={bDes} size="12" small-device-size="12" medium-device-size="12"
+                          large-device-size="12">
+                          <h3 class="section-content">
+                            {bDes} </h3>
+                        </lightning-layout-item>
+                       </template>
+                    </lightning-layout>
+                  
+              </div>
+          </lightning-layout-item>
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6" >
+            <div>
+            <c-carousel-component slides-data={slides} enable-auto-scroll slide-timer="5000"></c-carousel-component>
+            </div>
+          </lightning-layout-item>
+        </lightning-layout>
+    
+    
+     
+    </template>

@@ -1,0 +1,86 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="header">
+		<c-care-nav-bar></c-care-nav-bar>
+		<lightning-layout multiple-rows="true" class=" pad">
+
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6"
+				class=" item1"><!-- headerPad -->
+				<!-- padding="around-small" -->
+				<div class="slds-align_absolute-center bannerHeading">
+
+					<lightning-layout multiple-rows="true" style="color:white">
+						<lightning-layout-item size="12"  small-device-size="12"
+							medium-device-size="12" large-device-size="12">
+							<h3 style="display:inline" class="section-heading">
+								<span style="color:#FEBE10">{val2}</span>&nbsp;{val1}</h3>
+						</lightning-layout-item>
+
+						<lightning-layout-item size="12"  small-device-size="12"
+							medium-device-size="12" large-device-size="12">
+							<h3 class="section-content">
+								<lightning-formatted-rich-text value={helpcenterbody}></lightning-formatted-rich-text>
+							</h3>
+						</lightning-layout-item>
+						<!-- <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+        medium-device-size="12" large-device-size="12" class="slds-m-bottom_x-large">
+            <h3 class="section-content">
+                <span class="contactUsBody"></span>
+            </h3>
+        </lightning-layout-item>    -->
+					</lightning-layout>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6"
+				large-device-size="6" class="item2  slds-align_absolute-center">
+				<img src={desktopimage}  class="slds-align_absolute-center imgMinWidth">
+
+    </lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<template for:each={allContent} for:index="outIdx" for:item="content">
+		<div key={content.category} class="para1 pad">
+			<lightning-layout multiple-rows class="slds-p-top_small slds-p-bottom_large"><!--class=" slds-p-top_medium"-->
+				<lightning-layout-item size="12" class="slds-p-bottom_medium" small-device-size="12" medium-device-size="12"
+					large-device-size="12">
+					<h3 class="sectionHeading">
+						<lightning-formatted-rich-text value={content.category}></lightning-formatted-rich-text>
+					</h3>
+				</lightning-layout-item>
+				<lightning-layout-item size="12"  small-device-size="12" medium-device-size="12"
+					large-device-size="12">
+					<template for:each={content.items} for:item="loanlending" for:index="idx">
+						<div class="custom-accordion-section" key={loanlending.idx} data-outidx={outIdx}
+							data-index={idx} onclick={handleToggle}>
+							<div class="custom-accordion-section-header">
+								<span class="custom-accordion-section-label">
+                <lightning-formatted-rich-text
+                  value={loanlending.title}
+              ></lightning-formatted-rich-text></span>
+								<span class="arrow-icon">{loanlending.arrowIcon}</span>
+							</div>
+							<div class="custom-accordion-section-content" if:true={loanlending.toggleopen}>
+								<p class="des" style="font-weight:normal">
+									<lightning-formatted-rich-text value={loanlending.body}>
+									</lightning-formatted-rich-text>
+								</p>
+							</div>
+						</div>
+					</template>
+				</lightning-layout-item>
+			</lightning-layout>
+		</div>
+	</template>
+
+	<!--<div class="pad">
+		<lightning-layout multiple-rows="true">
+			<lightning-layout-item size="12" class=" slds-p-top_medium slds-p-bottom_medium" small-device-size="12" medium-device-size="12"
+				large-device-size="12">
+				<h3 class="section-content" style="font-weight: 800;">
+					If you didn’t find your answer you are looking for, <a onclick={gotoContactUsPage}> contact us </a>
+					and our team will happily answer all your questions.
+				</h3>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>-->
+</template>

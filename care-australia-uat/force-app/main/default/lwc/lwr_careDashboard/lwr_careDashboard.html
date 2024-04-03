@@ -1,0 +1,1377 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="header ">
+		<c-lwr_care-nav-bar lender-topup={LenderTopup} carecart={carecart}
+		onfromnavbar={fromNavBar}
+		></c-lwr_care-nav-bar>
+		<lightning-layout multiple-rows class="pad">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6"
+				>
+				<div class="grid-container1">
+					<div>
+						<div class="proContainer item1">
+							<template if:true={Champion}>
+								<img src={dasAvatarpic} alt="profilepic" class="image1" />
+							</template>
+							<div class="image2" style={backAvatarImage}></div>
+						</div>
+					</div>
+					<div>
+
+						<div class="item2 MobSizes">
+							<h3 class="H3headsMob">Welcome back</h3>
+							<h3 class="H3headsMob1">{UserName}</h3>
+							<a style="color: white; text-decoration: underline;" onclick={OpenFileModel}>Upload a Profile Picture</a><span style="color: white;"> | </span><a style="color: white; text-decoration: underline;" onclick={HandleLogout}>Logout</a>
+     						<input type="file" id="fileInput" accept=".jpeg,.png,.jpg" onchange={handleFileSelection} style="display: none;" />
+						</div>
+					</div>
+					<div>
+						<div class="AmountValues">
+							<p
+								style="font-size:16px;line-height:16px;color:white;margin-top:10px;text-align:right;font-family:'Helvetica Neue Bold Pro';">
+								${AmountValues}</p>
+						</div>
+					</div>
+				</div>
+
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+
+			</lightning-layout-item>
+		</lightning-layout>
+
+		<lightning-layout multiple-rows class="pad">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+
+				<button class="UpdateButtonMakAnotherloan" onclick={gotoViewAllLoansPage}>Make another loan</button>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+
+
+	<div class="grid-containerLayoutImpact pad">
+		<div>
+			<div class="yourimpact ">
+				<div style="width:100%" class="">
+					<h3 class="section-headings">{section1val1}
+						<span style="color:#E4761E">&nbsp;{section1val2}</span>
+					</h3>
+				</div>
+				<div class="chartback">
+					<div>
+						<h3 class="ChartTypeLoans">
+							Types of loans funded
+						</h3>
+					</div>
+					<div class="slds-align_absolute-center" style="display:grid">
+						<div class="slds-align_absolute-center" style="padding-bottom:20px;">
+							<!-- <c-donut-chart contactid={contactid}></c-donut-chart> -->
+							<c-lwr_donut-chart contactid={contactid}></c-lwr_donut-chart>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="OnlyShowInDesktop" style="width:100%">
+				<h3 class="section-headings">
+				</h3>
+			</div>
+			<!-- Row 1 -->
+			<lightning-layout multiple-rows class="OnlyShowInDesktop MobBreakdown slds-p-top_xx-large">
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+					<h3 class="StyleBreakdown">
+						Breakdown
+					</h3>
+				</lightning-layout-item>
+			
+			</lightning-layout>
+			
+			<!-- Row 2 -->
+			<lightning-layout multiple-rows class="OnlyShowInDesktop ">
+				<div class="grid-containerDashB">
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{TotalLoans}</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';padding-top:10px;">Number of loans
+						</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">
+							${Totalamountlent}
+							<span style="font-size:12px;color:#E4761E">
+																			<!--.00-->
+																		</span>
+						</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">Total amount lent</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{JobsCreated}</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">Jobs created</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{Peoplehelped}</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">People helped</p>
+					</div>
+				</div>
+				<template if:false={Champion}>
+					<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+						<button onclick={navigateTocarebecomechangechampionURL} class="untill992BecomeaCC">
+							<span style="font-size:35px;margin:2px 8px 0px 0px;">&#x2606;</span>
+										Become a Change Champion</button>
+					</lightning-layout-item>
+				</template>
+			</lightning-layout>
+			
+			<div class="Onlyshowinmobile">
+									<div class="headingcar">
+										<h3 class="StyleBreakdown">
+											Breakdown</h3>
+									</div>
+				<div class="carouselImpact">
+
+					<div class="sliderImpact" style={sliderStylesImpact}>
+						<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+							<div key={item.id} class="slides">
+								<div class="slide-content">
+									<div class="CarContentImpact">
+										<h3 style="height:50px" class="carTitleImpact">{item.title}</h3>
+										<p class="carParaImpact">{item.description}</p>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+
+				</div>
+				<div style="display:flex;justify-content:center">
+					<div class="dots">
+						<a class="NaviButton" style="background:none;"
+															onclick={previousSlideImpact}>&#10094;</a>
+						<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+							<span key={item.id} class="dotClass" onclick={handleDotClickImpact}
+																data-index={index}></span>
+						</template>
+						<a class="NaviButton" style="background:none;"
+															onclick={nextSlideImpact}>&#10095;	</a>
+					</div>
+				</div>
+				<template if:false={Champion}>
+					<div class="" style="margin:30px 0px 0px 0px;width:-webkit-fill-available;">
+						<button onclick={navigateTocarebecomechangechampionURL} class="becomeacahngechampion"><span style="font-size:35px;margin:2px 8px 0px 0px;">&#x2606;</span> Become a Change Champion</button>
+					</div>
+				</template>
+			</div>
+		</div>
+	</div>
+
+
+	<lightning-layout class="backloanscolor pad" multiple-rows="true">
+		<lightning-layout-item size="12" class="slds-p-top_small">
+			<h3 class="section-headings yourloanheading">
+				<!-- section-heading section-heading-num-->
+				<span class="clr_navyblue">{section2val1}</span><span class="clr_orange ">&nbsp;{section2val2}</span>
+			</h3>
+		</lightning-layout-item>
+		<lightning-layout-item size="12" small-device-size="5" large-device-size="12" class="slds-p-bottom_small">
+			<div class="custom-combobox">
+				<select name="progress" class="custom-select" onchange={handleChange}>
+					<option value="All">All</option>
+					<option value="Fundraising">Fundraising</option>
+					<option value="Active">Active</option>
+					<option value="Repaid">Repaid</option>
+				</select>
+			</div>
+		</lightning-layout-item>
+
+		<lightning-layout-item size="12" class="slds-p-top_small">
+			<div class="carouselCustom">
+				<!-- <c-carouselcmp_-homepage></c-carouselcmp_-homepage> -->
+				<c-lwr_carouselcmp_-homepage></c-lwr_carouselcmp_-homepage>
+
+			</div>
+		</lightning-layout-item>
+	</lightning-layout>
+	<div class="OnlyShowInDesktopAccount">
+		<h3 class="section-headings text-left pad" style="line-height:60px">{section3val1}<br><span
+					style="color:#E4761E">{section3val2}</span></h3>
+		<div class="grid-containerLayoutImpact pad">
+			<div>
+				<div class="MoneyAvailable">
+					<div class="TextStyle">
+						<template if:true={lendAmt}>
+							<h3 style="font-size:60px;color:#E4761E;line-height:69px;font-family: 'Sketchetik Fill Bold';">
+								${lendAmt.Number}
+								<span
+								style="color: #E4761E;font-size: 40px;line-height: 57px;font-family: 'Sketchetik Fill Bold';">.{lendAmt.Decimal}</span>
+							</h3>
+							<p style="font-family: 'Helvetica Neue Bold Pro';font-size:20px;line-height:27px;">Money
+								available in your lender account balance</p>
+						</template>
+					</div>
+				</div>
+			</div>
+			<div>
+				<h3
+					style="font-size:30px;font-weight:800;color:#002A3A;line-height:38px;font-family: 'Sketchetik Fill Bold';">
+					Breakdown
+				</h3>
+				<div class="grid-containerDashBYourAccount">
+					<div class="CarContentImpact">
+						<template if:true={Repaidbyborrower}>
+							<h3 class="carTitleImpact">${Repaidbyborrower.Number}<span class="carPArPoints">.{Repaidbyborrower.Decimal}</span></h3>
+							<p class="carParaImpact">Repaid by borrower</p>
+
+						</template>
+					</div>
+					<div class="CarContentImpact">
+						<template if:true={Donated}>
+							<h3 class="carTitleImpact">${Donated.Number}<span class="carPArPoints">.{Donated.Decimal}</span></h3>
+							<p class="carParaImpact">Donated</p>
+						</template>
+					</div>
+					<div class="CarContentImpact">
+						<template if:true={Addedtoyouraccount}>
+							<h3 class="carTitleImpact">${Addedtoyouraccount.Number}<span class="carPArPoints">.{Addedtoyouraccount.Decimal}</span></h3>
+							<p class="carParaImpact">Added to your account</p>
+						</template>
+					</div>
+					<div class="CarContentImpact">
+						<template if:true={Withdrawnfromyouraccount}>
+							<h3 class="carTitleImpact">${Withdrawnfromyouraccount.Number}<span class="carPArPoints">.{Withdrawnfromyouraccount.Decimal}</span>
+							</h3>
+							<p class="carParaImpact">Withdrawn from your account</p>
+						</template>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr>
+
+		<lightning-layout multiple-rows class="pad">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="4">
+				<div class="withdraw">
+					<a onclick={handleRedirectWithdraw} style="color:#002A3A;font-weight:800;"><span
+							style="font-size:25px;font-weight:bold;display:flex;float:left;">&rarr;</span>&nbsp;
+						Withdraw</a>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="4">
+				<div class="Donate">
+					<a onclick={openDonatePopup} style="color:#002A3A;font-weight:800;"><span
+							style="font-size:25px;font-weight:bold;display:flex;float:left;">&rarr;</span>&nbsp;
+						Donate</a>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="4" large-device-size="4">
+				<div class="TopUpAcc">
+					<a onclick={topupLenderBalance} style="color:#002A3A;font-family:''Helvetica Neue Bold Pro';"><span
+							style="font-size:25px;font-weight:bold;display:flex;float:left;">&rarr;</span>&nbsp;
+						Top up lender account balance</a>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+				padding="horizontal-small" class="">
+				<div style="display:inline-flex;" class="">
+					<lightning-input data-id="relendCheckbox" onchange={handleAutoReLend} checked={relendCheckbox} type="checkbox"
+						variant="standard" name="name" class="CheckboxACCMargin"></lightning-input>
+					<p style="font-size:18px;line-height:18px;color:#002A3A;font-family: 'Helvetica Neue Regular';">
+						I would like my payments to be set to auto-relend. To view more information about auto-relend
+						payments view our<a href={TermsandConditionsCAFile} target="_blank"> Terms & Conditions</a>.
+					</p>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<template if:true={donatePopup}>
+		<div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div>
+						<a class="closes-button" style="padding-left:20px" onclick={CloseDonatePopup}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+								viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+							</svg>
+						</a>
+					</div>
+					<div style="flex: 1; text-align: center;padding-right:20px">
+						<h3
+							style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+							Donate</h3>
+					</div>
+				</div>
+
+				<template if:true={zeroBalanceofLender}>
+					<hr style="margin: 10px 0px 0px 0px">
+					<div class="search-header" style="padding: 0px 20px 0px 20px">
+						<button class="UpdateButtonMakAnotherloanPersonal" style="width: -webkit-fill-available;margin:20px 0px 20px 0px;"
+							onclick={handlezerobalanceDonatebutton}>Please top up to donate</button>
+					</div>
+				</template>
+				<template if:false={zeroBalanceofLender}>
+					<hr style="margin: 10px 0px 0px 0px">
+					<div class="search-header" style="padding: 0px 20px 0px 20px">
+						<h3 class="donateMessage"> How much would you like to donate? </h3>
+						<div class="field">
+							
+							<input class="donationInput ClassInputFields italic-placeholder" type="text"
+							step="0.01" onpaste={preventPaste} oninput={handleDonationchange} placeholder={PlaceholderAmountValues} 
+							value={donationAmount}></input>
+						</div>
+						<hr style="margin: 10px 0px 0px 0px">
+						<button class="UpdateButtonMakAnotherloanPersonal" style="width: -webkit-fill-available;margin:20px 0px 20px 0px;"
+							onclick={handleDonate} disabled={canDonate}>Donate</button>
+					</div>
+				</template>
+			</div>
+		</div>
+	</template>
+	<template if:true={thankyouPopup}>
+		<div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div>
+						<a class="closes-button" style="padding-left:20px" onclick={CloseThankyouPopup}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+								viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+							</svg>
+						</a>
+					</div>
+					<div style="flex: 1; text-align: center;padding-right:20px">
+						<h3
+							style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+							Thank you</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px">
+					<h3 class="donateMessage"> Thank you for you donation. </h3>
+					<hr style="margin: 10px 0px 0px 0px">
+					<button class="UpdateButtonMakAnotherloanPersonal" style="width: -webkit-fill-available;margin:20px 0px 20px 0px;"
+						onclick={CloseThankyouPopup}>Close window</button>
+				</div>
+			</div>
+		</div>
+	</template>
+
+	<template if:true={withdrawPopup}>
+		<div class="search-overlay">
+			<div class="search">
+				<div style="display: flex; align-items: center;padding-top:10px">
+					<div>
+						<a class="closes-button" style="padding-left:20px" onclick={closePopup}>
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+								viewBox="0 0 16 16">
+								<path fill-rule="evenodd"
+									d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+							</svg>
+						</a>
+					</div>
+					<div style="flex: 1; text-align: center;padding-right:20px">
+						<h3
+							style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+							Unable to withdraw</h3>
+					</div>
+				</div>
+				<hr style="margin: 10px 0px 0px 0px">
+				<div class="search-header" style="padding: 0px 20px 0px 20px">
+					<h3 class="donateMessage"> You have no money sitting in your account yet, to get started select the
+						‘top up’ button. </h3>
+					<hr style="margin: 10px 0px 0px 0px">
+					<button class="UpdateButtonMakAnotherloanPersonal" style="width: -webkit-fill-available;margin-bottom:10px;"
+						onclick={closePopup}>Close window</button>
+				</div>
+			</div>
+		</div>
+	</template>
+
+
+	<div class="Onlyshowinmobile">
+		<lightning-layout multiple-rows class="pad">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+				<!--  padding="around-small" -->
+				<h3 class="section-headings text-left">Your <span
+						style="color:#E4761E">Account</span></h3>
+				<lightning-layout multiple-rows>
+					<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+						large-device-size="12">
+						<!-- padding="horizontal-small" -->
+						<div class="MoneyAvailableMobile slds-m-bottom_small">
+							<div class="TextStyleMobile">
+								<template if:true={lendAmt}>
+								<h3 style="font-size:60px;color:#E4761E;line-height:69px;font-family: 'Sketchetik Fill Bold';">
+									${lendAmt.Number}<span
+										style="color: #E4761E;font-size: 40px;line-height: 57px;font-family: 'Sketchetik Fill Bold';">.{lendAmt.Decimal}</span>
+								</h3>
+								<p style="font-weight:800">Money available in your lender account balance</p>
+								</template>
+							</div>
+						</div>
+						<div class="container" style="padding:0px 0px 0px 0px;">
+							<button style="background-color:#F3F0ED;font-family: 'Helvetica Neue Bold Pro';font-size: 16px;line-height: 16px;" onclick={handleRedirectWithdraw}>
+								<span style="font-size:25px;font-weight:bold;display:flex;float:left">&rarr;</span>
+								&nbsp; Withdraw
+							</button>
+							<button style="background-color:#F3F0ED;font-family: 'Helvetica Neue Bold Pro';font-size: 16px;line-height: 16px;" onclick={openDonatePopup}>
+								<span style="font-size:25px;font-weight:bold;display:flex;float:left">&rarr;</span>
+								&nbsp; Donate
+							</button>
+						</div>
+						<div class="withdrawMobile">
+							<a onclick={topupLenderBalance} style="color:#002A3A;font-size:16px;line-height:16px;font-family:'Helvetica Neue Bold Pro';"><span
+									style="font-size:25px;font-weight:bold;display:flex;float:left">&rarr;</span>&nbsp;
+								Top up lender account balance</a>
+						</div>
+						<div style="margin:10px 10px 10px 0px" class="slds-align_absolute-center">
+							<div style="min-height:120px;margin-right:-21px;"><lightning-input checked={relendCheckbox} onchange={handleAutoReLend} type="checkbox" variant="standard" name="name"></lightning-input></div>
+						<div><p
+								style="font-size:18px;line-height:18px;color:#002A3A;margin-left:12px;font-family: 'Helvetica Neue Regular';min-height:120px;">
+								I would like my payments to be set to auto-relend. To view more information about
+								auto-relend payments view our<a href={TermsandConditionsCAFile} target="_blank"> Terms & Conditions.</a>
+							</p></div>
+						</div>
+					</lightning-layout-item>
+				</lightning-layout>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" class="slds-p-top_large" small-device-size="12" medium-device-size="6"
+				large-device-size="6">
+				<div class="headingcar ">
+					<h3 style="font-size:30px;font-weight:800;color:#002A3A;line-height:38px;font-family: 'Sketchetik Fill Bold';">
+						Breakdown</h3>
+				</div>
+				<div class="carouselImpact">
+					<div class="sliderImpact" style={sliderStylesImpactBreak}>
+						<template for:each={carouselItemsImpactBreak} for:item="item" for:index="index">
+							<div key={item.id} class="slides">
+								<div class="slide-content">
+									<div class="CarContentImpact">
+										<h3 style="height:50px" class="carTitleImpact">${item.title}</h3>
+										<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">
+											{item.description}</p>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+				</div>
+				<div style="display:flex;justify-content:center">
+					<div class="dots">
+						<a class="NaviButton" style="background:none;"
+												onclick={previousSlideImpactBreak}>&#10094;</a>
+						<template for:each={carouselItemsImpactBreak} for:item="item" for:index="index">
+							<span key={item.id} class="dotClass" onclick={handleDotClickImpactBreak}
+													data-index={index}></span>
+						</template>
+						<a class="NaviButton" style="background:none;"
+												onclick={nextSlideImpactBreak}>&#10095;</a>
+					</div>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="Acc pad">
+		<lightning-layout multiple-rows class="displaygridsys">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div style="margin:10px 10px 30px 0px;">
+					<h3 class="section-headingsAccSett">{section4val1}<span style="color:#E4761E">&nbsp;{section4val2}</span></h3>
+				</div>
+			</lightning-layout-item>
+			<template if:true={CommunicationsPreferences}>
+				<div class="search-overlay">
+					<div class="search">
+						<div style="display: flex; align-items: center;padding-top:10px">
+							<div>
+								<a class="closes-button" style="padding-left:20px" onclick={CloseCommunicationsPreferences}>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+										viewBox="0 0 16 16">
+										<path fill-rule="evenodd"
+											d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+									</svg>
+								</a>
+							</div>
+							<div style="flex: 1; text-align: center;padding-right:20px">
+								<h3
+									style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+									Communications Preferences</h3>
+							</div>
+						</div>
+						<hr style="margin: 10px 0px 0px 0px">
+						<div class="search-header" style="padding: 0px 20px 0px 20px">
+							<div class="grid-containerToggle">
+								<div class="field1"  style="float:left;">
+									<label class="classFieldLabel">Lendwithcare emails</label>
+									
+								</div>
+								<div style="padding: 13px;display: flex;justify-content: right;">
+									<lightning-input type="toggle" onchange={LendwithcareEmails} checked={LendwithcareEmailsChecked}>
+    								</lightning-input> <!-- label="Toggle value" -->
+									</div>
+							</div>
+							<div class="grid-containerToggle">
+								<div class="field1" style="float:left;">
+									<label class="classFieldLabel">All CARE emails</label>
+									
+								</div>
+								<div style="padding: 13px;display: flex;justify-content: right;">
+									<lightning-input type="toggle"  onchange={AllCAREemails} checked={AllCAREemailsChecked}>
+    								</lightning-input> <!-- label="Toggle value" -->
+									</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</template>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div class="withdrawComPre">
+					<a onclick={openCommunicationsPreferences} style="color:#002A3A;font-weight:800"><span style="font-size:20px;float:left;">&#8594;</span>&nbsp;
+						Communications preferences</a>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<!-- <div class="withdraw">
+				<a href="#" style="color:#002A3A;font-weight:800"><span style="font-size:20px">&#8594;</span>&nbsp;
+				Update password</a>
+			 </div> -->
+			</lightning-layout-item>
+			<template if:true={PersonalDetails}>
+				<div class="search-overlay">
+					<div class="search">
+						<div style="display: flex; align-items: center;padding-top:10px">
+							<div>
+								<a class="closes-button" style="padding-left:20px" onclick={ClosePersonalDetails}>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+										viewBox="0 0 16 16">
+										<path fill-rule="evenodd"
+											d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+									</svg>
+								</a>
+							</div>
+							<div style="flex: 1; text-align: center;padding-right:20px">
+								<h3
+									style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+									Update personal details</h3>
+							</div>
+						</div>
+						<hr style="margin: 10px 0px 0px 0px">
+						<div class="search-header" style="padding: 0px 20px 0px 20px">
+							<div class="form-container">
+								<div class="field">
+									
+									<label class="classFieldLabel">Remain Anonymous</label><span><input class="slds-checkbox" alignment="left" style="width:20px;height:20px" type="checkbox"
+										onchange={handleRemainAnonymous} checked={RemainAnonymous}></input></span>
+									
+								</div>
+								<div class="field">
+									<label class="classFieldLabel">Title</label>
+									<input class="ClassInputFields italic-placeholder" type="text"
+										onchange={handleTitle} placeholder="&nbsp; eg: jane" value={Title}></input>
+								</div>
+								<div class="field">
+									<label class="classFieldLabel">First name</label>
+									<input class="ClassInputFields italic-placeholder" type="text"
+										onchange={handleFirstName} placeholder="&nbsp; eg: jane" value={FirstName}></input>
+								</div>
+								<div class="field">
+									<label class="classFieldLabel">Last name</label>
+									<input class="ClassInputFields italic-placeholder" type="text"
+										onchange={handleLastName} placeholder="&nbsp; eg: smith" value={LastName}></input>
+								</div>
+								
+								<div class="field">
+									<label class="classFieldLabel">Date of Birth</label>
+									<input class="ClassInputFields italic-placeholder" type="date"
+										onchange={handleDateofBirth} placeholder="&nbsp; eg: jane" value={DateOfBirth}></input>
+								</div>
+								
+								<!-- <div class="field">
+							<label class="classFieldLabel">Change password</label>
+							<input class="ClassInputFields italic-placeholder" type="text" onchange={handleInputChange} placeholder="&nbsp; eg: janesmith@gmail.com" ></input>
+						 </div>
+						 <div class="field">
+							<label class="classFieldLabel">Confirm new password</label>
+							<input class="ClassInputFields" type="text" onchange={handleInputChange} ></input>
+						 </div> -->
+							</div>
+							<button class="UpdateButtonMakAnotherloanPersonal"
+								style="width: -webkit-fill-available;"
+								onclick={confirmChanges}>Confirm changes</button>
+						</div>
+					</div>
+				</div>
+			</template>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div class="withdrawComPre">
+					<a onclick={updatePersonalDetails} style="color:#002A3A;font-weight:800"><span
+							style="font-size:20px;float:left;">&#8594;</span>&nbsp;
+						Update personal information</a>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="AccShowinDesktop pad">
+		<lightning-layout multiple-rows class="displaygridsys">
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div style="margin:10px 10px 30px 0px;">
+					<h3 class="section-headingsAccSett">Account<span style="color:#E4761E">&nbsp;Settings</span></h3>
+				</div>
+			</lightning-layout-item>
+			<template if:true={CommunicationsPreferences}>
+				<div class="search-overlay">
+					<div class="search">
+						<div style="display: flex; align-items: center;padding-top:10px">
+							<div>
+								<a class="closes-button" style="padding-left:20px" onclick={CloseCommunicationsPreferences}>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+										viewBox="0 0 16 16">
+										<path fill-rule="evenodd"
+											d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+									</svg>
+								</a>
+							</div>
+							<div style="flex: 1; text-align: center;padding-right:20px">
+								<h3
+									style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+									Communications Preferences</h3>
+							</div>
+						</div>
+						<hr style="margin: 10px 0px 0px 0px">
+						<div class="search-header" style="padding: 0px 20px 0px 20px">
+							<div class="grid-containerToggle">
+								<div class="field1"  style="float:left;">
+									<label class="classFieldLabel">Lendwithcare emails</label>
+									
+								</div>
+								<div style="padding: 13px;display: flex;justify-content: right;">
+									<lightning-input type="toggle" onchange={LendwithcareEmails} checked={LendwithcareEmailsChecked}>
+    								</lightning-input> <!-- label="Toggle value" -->
+									</div>
+							</div>
+							<div class="grid-containerToggle">
+								<div class="field1" style="float:left;">
+									<label class="classFieldLabel">All CARE emails</label>
+									
+								</div>
+								<div style="padding: 13px;display: flex;justify-content: right;">
+									<lightning-input type="toggle"  onchange={AllCAREemails} checked={AllCAREemailsChecked}>
+    								</lightning-input> <!-- label="Toggle value" -->
+									</div>
+								
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</template>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div class="withdrawComPre">
+					<a onclick={openCommunicationsPreferences} style="color:#002A3A;font-weight:800"><span style="font-size:20px;float:left;">&#8594;</span>&nbsp;
+						Communications preferences</a>
+				</div>
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<!-- <div class="withdraw">
+				<a href="#" style="color:#002A3A;font-weight:800"><span style="font-size:20px">&#8594;</span>&nbsp;
+				Update password</a>
+			 </div> -->
+			</lightning-layout-item>
+			<template if:true={PersonalDetails}>
+				<div class="search-overlay">
+					<div class="search">
+						<div style="display: flex; align-items: center;padding-top:10px">
+							<div>
+								<a class="closes-button" style="padding-left:20px" onclick={ClosePersonalDetails}>
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black"
+										viewBox="0 0 16 16">
+										<path fill-rule="evenodd"
+											d="M5.646 8l4.95-4.95a.5.5 0 0 0-.708-.708L4.04 7.646a.5.5 0 0 0 0 .708L9.888 13.95a.5.5 0 0 0 .708-.708L5.646 8z" />
+									</svg>
+								</a>
+							</div>
+							<div style="flex: 1; text-align: center;padding-right:20px">
+								<h3
+									style="font-weight: 800; margin: 0;font-size:20px;line-height:20px;font-family:'Sketchetik Fill Bold';color:#002A3A;">
+									Update personal details</h3>
+							</div>
+						</div>
+						<hr style="margin: 10px 0px 0px 0px">
+						<div class="search-header" style="padding: 0px 20px 0px 20px">
+							<div class="form-container">
+								<div class="field">
+									<label class="classFieldLabel">First name</label>
+									<input class="ClassInputFields italic-placeholder" type="text"
+										onchange={handleFirstName} placeholder="&nbsp; eg: jane"></input>
+								</div>
+								<div class="field">
+									<label class="classFieldLabel">Last name</label>
+									<input class="ClassInputFields italic-placeholder" type="text"
+										onchange={handleLastName} placeholder="&nbsp; eg: smith"></input>
+								</div>
+								<!-- <div class="field">
+							<label class="classFieldLabel">Change password</label>
+							<input class="ClassInputFields italic-placeholder" type="text" onchange={handleInputChange} placeholder="&nbsp; eg: janesmith@gmail.com" ></input>
+						 </div>
+						 <div class="field">
+							<label class="classFieldLabel">Confirm new password</label>
+							<input class="ClassInputFields" type="text" onchange={handleInputChange} ></input>
+						 </div> -->
+							</div>
+							<button class="UpdateButtonMakAnotherloanPersonal"
+								style="width: -webkit-fill-available;"
+								onclick={confirmChanges}>Confirm changes</button>
+						</div>
+					</div>
+				</div>
+			</template>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="4">
+				<!-- padding="horizontal-small" -->
+				<div class="withdrawComPre">
+					<a onclick={updatePersonalDetails} style="color:#002A3A;font-weight:800"><span
+							style="font-size:20px;float:left;">&#8594;</span>&nbsp;
+						Update personal information</a>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+	</div>
+	<div class="yourtransaction OnlyShowInDesktopAccountTransaction pad">
+		<!-- Row 1 -->
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+				<div class="" style="margin:30px 0px 0px 0px">
+					<h3 class="section-headingsAccSett">{section5val1}<span style="color:#E4761E">&nbsp;{section5val2}</span></h3>
+				</div>
+			</div>
+		</div>
+		<!-- Row 2 -->
+		<div class="slds-grid slds-wrap styletransactionmodule" style="margin:30px 0px 30px 0px">
+			<div class="grid-containerTransactions slds-align_absolute-center">
+				<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyle">
+					<button class={getButtonClasses} style="font-family: 'Helvetica Neue Regular';" data-type="All"
+							onclick={handleButtonClick}>All</button>
+				</div>
+				<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyle">
+					<button class={getButtonClasses} style="font-family: 'Helvetica Neue Regular';" data-type="Topup"
+							onclick={handleButtonClick}>Top up</button>
+				</div>
+				<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyle">
+					<button class={getButtonClasses} style="font-family: 'Helvetica Neue Regular';" data-type="Loan"
+							onclick={handleButtonClick}>Loan</button>
+				</div>
+				<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyle">
+					<button class={getButtonClasses} style="font-family: 'Helvetica Neue Regular';" data-type="Repayment"
+							onclick={handleButtonClick}>Repayment</button>
+				</div>
+				<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyle">
+					<button class={getButtonClasses} style="font-family: 'Helvetica Neue Regular';" data-type="Donation"
+							onclick={handleButtonClick}>Donation</button>
+				</div>
+			</div>
+		</div>
+		<!-- Row 3 -->
+		<div class="slds-grid slds-wrap slds-align_absolute-center">
+		</div>
+		<!-- Row 4 -->
+		<div class="para2  -p-around_small">
+			<!--<lightning-layout-item size="12" padding="around-small">
+
+				<div class="slds-grid tableTitle">
+					<div class="slds-col slds-align_absolute-center">
+						<h3 class="tableHeadings">Date</h3>
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Type</h3>
+
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Amount</h3>
+					</div>
+
+				</div>
+			</lightning-layout-item>-->
+			<template if:true={showTransaction}>
+				<template if:true={transactions}>
+					<table>
+						<!-- <thead>
+						  <tr>
+							  <th style="width: 150px;text-align: center;">Date</th>
+							  <th style="width: 50px;text-align: Left;">Type</th>
+							  <th style="width: 50px;text-align: center;">Amount</th>
+							  <th style="width: 50px;text-align: center;"></th>
+						  </tr>
+					  </thead> -->
+					  <tr style="background-color:#472175;">
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 100px;text-align: center;"><p>Date</p></td>
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 50px;text-align: center;">Type</td>
+									<td style="font-family: 'Helvetica';
+								  padding: 15px;
+								  font-size: 16px;
+								  line-height: 19px;
+								  color: white;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">Amount</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								  padding: 15px;
+								  font-size: 16px;
+								  line-height: 19px;
+								  color: white;width: 10%;text-align: center;">
+	
+									</td>
+							</tr>
+						<tbody>
+							<template for:each={transactions} for:item="transaction" for:index="index">
+								<tr key={transaction.Id}>
+									<td style="font-family: 'Helvetica';
+								 padding: 15px;
+								 font-size: 16px;
+								 line-height: 19px;
+								 color: #002A3A;width: 100px;text-align: center;"><lightning-formatted-date-time
+											value={transaction.Completed_Date__c} year="numeric" month="2-digit"
+											day="2-digit" time-zone="UTC">
+										</lightning-formatted-date-time></td>
+									<td style="font-family: 'Helvetica';
+								  padding: 15px;
+								  font-size: 16px;
+								  line-height: 19px;
+								  color: #002A3A;width: 50px;text-align: center;">{transaction.Type__c}</td>
+									<td style="font-family: 'Helvetica';
+								  padding: 15px;
+								  font-size: 16px;
+								  line-height: 19px;
+								  color: #002A3A;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">${transaction.Amount__c}</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								  padding: 15px;
+								  font-size: 16px;
+								  line-height: 19px;
+								  color: #002A3A;width: 10%;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton} data-template="LWC Donation PDF"
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownload}
+													style="background-color:#FEBE10;width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</template>
+						</tbody>
+					</table>
+				</template>
+			</template>
+			<template if:false={showTransaction}>
+				<div class="slds-text-color_weak slds-m-around_medium" style="text-align: center; font-size: 2rem; font-weight: bold;">
+					No transactions found.
+				</div>
+			</template>
+		</div>
+		<!-- Row 5 -->
+		<template if:true={showTransaction}>
+			<lightning-layout multiple-rows>
+				<template if:true={viewMoreTransacions}>
+					<lightning-layout-item size="12" class="slds-p-top_small slds-p-right_small" small-device-size="12" medium-device-size="6" large-device-size="6" >
+							<div class="widthstyle">
+								<button class="PillsButtonEnd" onclick={handleViewTransactionsClick} if:true={showButton}>View more
+												transactions</button>
+							</div>
+					</lightning-layout-item>
+				</template>
+				<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12" medium-device-size="6" large-device-size="6">
+						<div class="widthstyleDonate">
+							<button class="PillsButtonEnd" data-template="LWC Transaction PDF" onclick={handleDownload}>Download statement</button>
+						</div>
+				</lightning-layout-item>
+			</lightning-layout>
+		</template>
+		<!--<div class="slds-grid slds-wrap slds-align_absolute-center" style="margin:30px 0px 30px 0px">
+			<div class="widthstyle">
+				<button class="PillsButtonEnd" onclick={handleViewTransactionsClick} if:true={showButton}>View more
+					transactions</button>
+			</div>
+			<div class="widthstyle">
+				<button class="PillsButtonEnd" data-template="LWC Transaction PDF" onclick={handleDownload}>Download statement</button>
+			</div>
+		</div>-->
+	</div>
+	<div class="yourtransaction OnlyshowinmobileTransaction pad">
+		<!-- Row 1 -->
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+				<div class="" style="margin:30px 0px 30px 0px">
+					<h3 class="section-headingsAccSett">Your <span style="color:#E4761E">Transactions </span></h3>
+				</div>
+			</div>
+		</div>
+		<!-- Row 2 -->
+		<div class="slds-grid slds-wrap slds-align_absolute-center">
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="All"
+							onclick={handleButtonClick}>All</button>
+			</div>
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Topup"
+							onclick={handleButtonClick}>Top up</button>
+			</div>
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Loan"
+							onclick={handleButtonClick}>Loan</button>
+			</div>
+		</div>
+		<!-- Row 3 -->
+		<div class="slds-grid slds-wrap slds-align_absolute-center">
+			<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Repayment"
+							onclick={handleButtonClick}>Repayment</button>
+			</div>
+			<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Donation"
+							onclick={handleButtonClick}>Donation</button>
+			</div>
+		</div>
+		<!-- Row 4 -->
+		<!--<div class="slds-grid slds-wrap" style="margin:30px 0px 30px 0px">
+			<div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+				<lightning-datatable data={data} columns={columns} key-field="Id" onrowselection={getSelectedName}>
+				</lightning-datatable>
+			</div>
+		</div>-->
+		<!-- Row 5 -->
+		<!--<div class="slds-align_absolute-center" style="display:block;">
+			<div class="widthstyle">
+				<button class="PillsButtonEnd">View more transactions</button>
+			</div>
+			<div class="widthstyle">
+				<button data-template="LWC Transaction PDF" onclick={handleDownload} class="PillsButtonEnd">Download statement</button>
+			</div>
+		</div>-->
+		<!-- Row 4 -->
+		<template if:true={showTransaction}>
+		<div class="para2  slds-p-top_small">
+			<!--<lightning-layout-item size="12" padding="around-small">
+
+				<div class="slds-grid tableTitle">
+					<div class="slds-col slds-align_absolute-center">
+						<h3 class="tableHeadings">Date</h3>
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Type</h3>
+
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Amount</h3>
+					</div>
+
+				</div>
+			</lightning-layout-item>-->
+			
+				<template if:true={transactions}>
+					<table>
+						<!-- <thead>
+						<tr>
+							<th style="width: 150px;text-align: center;">Date</th>
+							<th style="width: 50px;text-align: Left;">Type</th>
+							<th style="width: 50px;text-align: center;">Amount</th>
+							<th style="width: 50px;text-align: center;"></th>
+						</tr>
+					</thead> -->
+					<tr style="background-color:#472175;">
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 100px;text-align: center;"><p>Date</p></td>
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 50px;text-align: center;">Type</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: white;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">Amount</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: white;width: 10%;text-align: center;">
+
+									</td>
+							</tr>
+						<tbody>
+							<template for:each={transactions} for:item="transaction" for:index="index">
+								<tr key={transaction.Id}>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 100px;text-align: center;"><lightning-formatted-date-time
+											value={transaction.Completed_Date__c} year="numeric" month="2-digit"
+											day="2-digit" time-zone="UTC">
+										</lightning-formatted-date-time></td>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 50px;text-align: center;">{transaction.Type__c}</td>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">${transaction.Amount__c}</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: fit-content;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div>
+												<button disabled={transaction.disableDownloadButton} data-template="LWC Donation PDF"
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownload}
+													style="background-color:#FEBE10;width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</template>
+						</tbody>
+					</table>
+				</template>
+		</div>
+		<lightning-layout multiple-rows>
+			<template if:true={viewMoreTransacions}>
+				<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12"
+					medium-device-size="6" large-device-size="6">
+					<div class="widthstyle">
+						<button class="PillsButtonEnd" onclick={handleViewTransactionsClick} if:true={showButton}>View more
+												transactions</button>
+					</div>
+				</lightning-layout-item>
+			</template>
+			<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12" medium-device-size="6"
+				large-device-size="6">
+				<div class="widthstyle">
+					<button data-template="LWC Transaction PDF" onclick={handleDownload} class="PillsButtonEnd">Download statement</button>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+		</template>
+		<template if:false={showTransaction}>
+			<div class="slds-text-color_weak slds-m-around_medium" style="text-align: center; font-size: 2rem; font-weight: bold;">
+				No transactions found.
+			</div>
+		</template>
+	</div>
+	<div class="yourtransaction OnlyshowinTabTransaction pad">
+		<!-- Row 1 -->
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+				<div class="" style="margin:30px 0px 30px 0px">
+					<h3 class="section-headingsAccSett">Your <span style="color:#E4761E">Transactions </span></h3>
+				</div>
+			</div>
+		</div>
+		<!-- Row 2 -->
+		<div class="slds-grid slds-wrap slds-align_absolute-center">
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="All"
+							onclick={handleButtonClick}>All</button>
+			</div>
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Topup"
+							onclick={handleButtonClick}>Top up</button>
+			</div>
+			<div class="slds-col slds-small-size_4-of-12 slds-medium-size_4-of-12 slds-large-size_4-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Loan"
+							onclick={handleButtonClick}>Loan</button>
+			</div>
+		</div>
+		<!-- Row 3 -->
+		<div class="slds-grid slds-wrap slds-align_absolute-center">
+			<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Repayment"
+							onclick={handleButtonClick}>Repayment</button>
+			</div>
+			<div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12 widthstyleMobile">
+				<button class={getButtonClasses} style="font-family: 'Helvetica Neue Bold';" data-type="Donation"
+							onclick={handleButtonClick}>Donation</button>
+			</div>
+		</div>
+		<!-- Row 4 -->
+		<!--<div class="slds-grid slds-wrap" style="margin:30px 0px 30px 0px">
+			<div class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+				<lightning-datatable data={data} columns={columns} key-field="Id" onrowselection={getSelectedName}>
+				</lightning-datatable>
+			</div>
+		</div>-->
+		<!-- Row 5 -->
+		<!--<div class="slds-align_absolute-center" style="display:block;">
+			<div class="widthstyle">
+				<button class="PillsButtonEnd">View more transactions</button>
+			</div>
+			<div class="widthstyle">
+				<button data-template="LWC Transaction PDF" onclick={handleDownload} class="PillsButtonEnd">Download statement</button>
+			</div>
+		</div>-->
+		<!-- Row 4 -->
+		<template if:true={showTransaction}>
+		<div class="para2  slds-p-top_small">
+			<!--<lightning-layout-item size="12" padding="around-small">
+
+				<div class="slds-grid tableTitle">
+					<div class="slds-col slds-align_absolute-center">
+						<h3 class="tableHeadings">Date</h3>
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Type</h3>
+
+					</div>
+					<div class="slds-col slds-align_absolute-center">
+						<div class="vertical-line"></div>
+						<h3 class="tableHeadings">Amount</h3>
+					</div>
+
+				</div>
+			</lightning-layout-item>-->
+			
+				<template if:true={transactions}>
+					<table>
+						<!-- <thead>
+						<tr>
+							<th style="width: 150px;text-align: center;">Date</th>
+							<th style="width: 50px;text-align: Left;">Type</th>
+							<th style="width: 50px;text-align: center;">Amount</th>
+							<th style="width: 50px;text-align: center;"></th>
+						</tr>
+					</thead> -->
+					<tr style="background-color:#472175;">
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 100px;text-align: center;"><p>Date</p></td>
+								<td style="font-family: 'Helvetica';
+															padding: 15px;
+															font-size: 16px;
+															line-height: 19px;
+															color: white;width: 50px;text-align: center;">Type</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: white;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">Amount</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: white;width: fit-content;text-align: center;">
+
+									</td>
+							</tr>
+						<tbody>
+							<template for:each={transactions} for:item="transaction" for:index="index">
+								<tr key={transaction.Id}>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 100px;text-align: center;"><lightning-formatted-date-time
+											value={transaction.Completed_Date__c} year="numeric" month="2-digit"
+											day="2-digit" time-zone="UTC">
+										</lightning-formatted-date-time></td>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 50px;text-align: center;">{transaction.Type__c}</td>
+									<td style="font-family: 'Helvetica';
+								padding: 15px;
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: 50px;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div style="flex: 1;">${transaction.Amount__c}</div>
+											<!--<div style="margin-left: 20px;">
+												<button disabled={transaction.disableDownloadButton}
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+													style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>-->
+										</div>
+									</td>
+									<td style="font-family: 'Helvetica';
+								font-size: 16px;
+								line-height: 19px;
+								color: #002A3A;width: fit-content;text-align: center;">
+										<div style="display: flex;align-items: center;">
+											<div>
+												<button disabled={transaction.disableDownloadButton} data-template="LWC Donation PDF"
+													class={transaction.downloadButtonClass} title="Download"
+													data-transaction-id={transaction.Id} onclick={handleDownload}
+													style="background-color:#FEBE10;width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+													<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+														stroke="currentColor" width="16" height="16">
+														<path stroke-linecap="round" stroke-linejoin="round"
+															stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+													</svg>
+												</button>
+											</div>
+										</div>
+									</td>
+								</tr>
+							</template>
+						</tbody>
+					</table>
+				</template>
+		</div>
+		<lightning-layout multiple-rows>
+			<template if:true={viewMoreTransacions}>
+				<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12"
+					medium-device-size="6" large-device-size="6">
+					<div class="widthstyle">
+						<button class="PillsButtonEnd" onclick={handleViewTransactionsClick} if:true={showButton}>View more
+												transactions</button>
+					</div>
+				</lightning-layout-item>
+			</template>
+			<lightning-layout-item size="12" class="slds-p-top_small" small-device-size="12" medium-device-size="6"
+				large-device-size="6">
+				<div class="widthstyle">
+					<button data-template="LWC Transaction PDF" onclick={handleDownload} class="PillsButtonEnd">Download statement</button>
+				</div>
+			</lightning-layout-item>
+		</lightning-layout>
+		</template>
+		<template if:false={showTransaction}>
+			<div class="slds-text-color_weak slds-m-around_medium" style="text-align: center; font-size: 2rem; font-weight: bold;">
+				No transactions found.
+			</div>
+		</template>
+	</div>
+	<!--Spinner Template-->
+	<template if:true={isLoading}>
+		<div class="slds-spinner_container">
+			<div role="status" class="slds-spinner slds-spinner_medium">
+				<span class="slds-assistive-text">Loading</span>
+				<div class="slds-spinner__dot-a"></div>
+				<div class="slds-spinner__dot-b"></div>
+			</div>
+		</div>
+	</template>
+</template>

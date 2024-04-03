@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Already Donated</fullName>
+        <default>false</default>
+        <label>Already Donated</label>
+    </customValue>
+    <customValue>
+        <fullName>Bad Data</fullName>
+        <default>false</default>
+        <label>Bad Data</label>
+    </customValue>
+    <customValue>
+        <fullName>Cancellation</fullName>
+        <default>false</default>
+        <label>Cancellation</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Pledge</fullName>
+        <default>false</default>
+        <label>Cash Pledge</label>
+    </customValue>
+    <customValue>
+        <fullName>Confirmed</fullName>
+        <default>false</default>
+        <label>Confirmed</label>
+    </customValue>
+    <customValue>
+        <fullName>Considerer</fullName>
+        <default>false</default>
+        <label>Considerer</label>
+    </customValue>
+    <customValue>
+        <fullName>Contacted Successfully</fullName>
+        <default>false</default>
+        <label>Contacted Successfully</label>
+    </customValue>
+    <customValue>
+        <fullName>Deceased</fullName>
+        <default>false</default>
+        <label>Deceased</label>
+    </customValue>
+    <customValue>
+        <fullName>Decrease Gift</fullName>
+        <default>false</default>
+        <label>Decrease Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>Disaster Response</fullName>
+        <default>false</default>
+        <label>Disaster Response</label>
+    </customValue>
+    <customValue>
+        <fullName>Disconnected</fullName>
+        <default>false</default>
+        <label>Disconnected</label>
+    </customValue>
+    <customValue>
+        <fullName>Donation</fullName>
+        <default>false</default>
+        <label>Donation</label>
+    </customValue>
+    <customValue>
+        <fullName>Do Not Call</fullName>
+        <default>false</default>
+        <label>Do Not Call</label>
+    </customValue>
+    <customValue>
+        <fullName>Existing Regular Giver</fullName>
+        <default>false</default>
+        <label>Existing Regular Giver</label>
+    </customValue>
+    <customValue>
+        <fullName>Form Requested</fullName>
+        <default>false</default>
+        <label>Form Requested</label>
+    </customValue>
+    <customValue>
+        <fullName>Incorrect Number</fullName>
+        <default>false</default>
+        <label>Incorrect Number</label>
+    </customValue>
+    <customValue>
+        <fullName>Increase Gift</fullName>
+        <default>false</default>
+        <label>Increase Gift</label>
+    </customValue>
+    <customValue>
+        <fullName>Inquirer</fullName>
+        <default>false</default>
+        <label>Inquirer</label>
+    </customValue>
+    <customValue>
+        <fullName>Instant Refusal</fullName>
+        <default>false</default>
+        <label>Instant Refusal</label>
+    </customValue>
+    <customValue>
+        <fullName>Maximum Attempts</fullName>
+        <default>false</default>
+        <label>Maximum Attempts</label>
+    </customValue>
+    <customValue>
+        <fullName>No Answer</fullName>
+        <default>false</default>
+        <label>No Answer</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Available</fullName>
+        <default>false</default>
+        <label>Not Available</label>
+    </customValue>
+    <customValue>
+        <fullName>Not Called</fullName>
+        <default>false</default>
+        <label>Not Called</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Details Confirmed</fullName>
+        <default>false</default>
+        <label>Payment Details Confirmed</label>
+    </customValue>
+    <customValue>
+        <fullName>Payment Details Updated</fullName>
+        <default>false</default>
+        <label>Payment Details Updated</label>
+    </customValue>
+    <customValue>
+        <fullName>Reactivate</fullName>
+        <default>false</default>
+        <label>Reactivate</label>
+    </customValue>
+    <customValue>
+        <fullName>Record Suppressed</fullName>
+        <default>false</default>
+        <label>Record Suppressed</label>
+    </customValue>
+    <customValue>
+        <fullName>Refusal</fullName>
+        <default>false</default>
+        <label>Refusal</label>
+    </customValue>
+    <customValue>
+        <fullName>Refusal Vulnerable</fullName>
+        <default>false</default>
+        <label>Refusal Vulnerable</label>
+    </customValue>
+    <customValue>
+        <fullName>Signup</fullName>
+        <default>false</default>
+        <label>Signup</label>
+    </customValue>
+    <customValue>
+        <fullName>Voicemail Message Left</fullName>
+        <default>false</default>
+        <label>Voicemail Message Left</label>
+    </customValue>
+    <customValue>
+        <fullName>Upgrade</fullName>
+        <default>false</default>
+        <label>Upgrade</label>
+    </customValue>
+    <customValue>
+        <fullName>Pause Requested</fullName>
+        <default>false</default>
+        <label>Pause Requested</label>
+    </customValue>
+    <description>Result of telemarketing calls</description>
+    <masterLabel>Telemarketing Result</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

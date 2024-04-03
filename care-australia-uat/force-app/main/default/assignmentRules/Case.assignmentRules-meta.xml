@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>LWC Withdrawl</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>LWC_Admin</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Withdrawal</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <template>unfiled$public/LWC_Withdrawl</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

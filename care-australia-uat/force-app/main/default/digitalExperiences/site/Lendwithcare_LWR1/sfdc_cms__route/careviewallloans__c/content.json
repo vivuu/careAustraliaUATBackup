@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "All Loans",
+  "contentBody" : {
+    "activeViewId" : "careviewallloans_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-careviewallloans",
+    "urlPrefix" : "careviewallloans"
+  }
+}

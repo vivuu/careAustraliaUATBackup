@@ -1,0 +1,170 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Login",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"22bcb048-dca4-4e81-ab81-2eb423ef0c10\",\"columns\":[{\"UUID\":\"5ec02dbd-ddd2-4294-98dd-7847ea5ae3bf\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "center",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "1%"
+                  }
+                },
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"\",\"altText\":\"Lend with care\",\"contentKey\":\"\",\"contentType\":null}}",
+                "logoWidth" : 250
+              },
+              "customCssClasses" : "",
+              "definition" : "dxp_content_layout:siteLogo",
+              "id" : "7db0d095-82cb-45b7-b474-0ce3a7799713",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : ""
+                  }
+                },
+                "showHeader" : true,
+                "socialLoginHeader" : "Login/Register using Google or Facebook",
+                "useCommunityDomainSso" : true
+              },
+              "customCssClasses" : "ssoCustomHeader",
+              "definition" : "community_login:socialLogin",
+              "id" : "10fe3f27-b618-418b-9396-00189a45b94f",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "or",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-large\",\"headingTag\":\"h2\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "ebc6b9ab-3ea5-4205-93ef-3e051fd58605",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "1%"
+                  }
+                },
+                "forgotPasswordLabel" : "Forgot your password?",
+                "forgotPasswordUrl" : "/ForgotPassword",
+                "loginButtonLabel" : "Log In",
+                "passwordLabel" : "Password",
+                "selfRegisterLabel" : "Create Account?",
+                "selfRegisterUrl" : "/SelfRegister",
+                "startUrl" : "/caredashboard",
+                "usernameLabel" : "Username"
+              },
+              "customCssClasses" : "",
+              "definition" : "community_login:loginForm",
+              "id" : "19e447ef-432f-47ec-803f-47e1f633af4d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "2%"
+                  }
+                },
+                "richTextValue" : "<div style=\"text-align:center;\">\n    <a href=\"/\">Back to Homepage ❯</a>\n</div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "4ddaf2cd-1d69-40fe-85ad-b851f0b138c1",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "5%"
+                  }
+                },
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "large",
+                "text" : "© 2023 CARE Australia. ABN 46 003 380 890. All rights reserved.",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-medium\",\"headingTag\":\"h3\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "46d7eb20-878b-478e-8779-5aaeb825c570",
+              "type" : "component"
+            } ],
+            "id" : "5ec02dbd-ddd2-4294-98dd-7847ea5ae3bf",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "22bcb048-dca4-4e81-ab81-2eb423ef0c10",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "4d4fd559-d9ca-4b92-8fa1-4b37ff7dcf1f",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Login",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "c7c1c77c-e6c1-45a4-85d6-1a4257b782a3",
+          "type" : "component"
+        } ],
+        "id" : "98790c4f-65cd-421e-8e9c-a4f636fb973f",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "20792f06-56ee-4b13-9ac8-774212a7b96e",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "FZueqpjSyYKBajxddHVtfDUPUWJRrH",
+    "viewType" : "login-main"
+  }
+}

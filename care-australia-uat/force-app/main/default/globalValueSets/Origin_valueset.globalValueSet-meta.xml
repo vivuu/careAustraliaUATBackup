@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Acquisition Mailing</fullName>
+        <default>false</default>
+        <label>Acquisition Mailing</label>
+    </customValue>
+    <customValue>
+        <fullName>Appeal Response Coupon</fullName>
+        <default>false</default>
+        <label>Appeal Response Coupon</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Email</fullName>
+        <default>false</default>
+        <label>Inbound Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Inbound Phone call</fullName>
+        <default>false</default>
+        <label>Inbound Phone call</label>
+    </customValue>
+    <customValue>
+        <fullName>Letter</fullName>
+        <default>false</default>
+        <label>Letter</label>
+    </customValue>
+    <customValue>
+        <fullName>Online Will Platform</fullName>
+        <default>false</default>
+        <label>Online Will Platform</label>
+    </customValue>
+    <customValue>
+        <fullName>Outbound Telemarketing</fullName>
+        <default>false</default>
+        <label>Outbound Telemarketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Social Media</fullName>
+        <default>false</default>
+        <label>Social Media</label>
+    </customValue>
+    <customValue>
+        <fullName>Survey</fullName>
+        <default>false</default>
+        <label>Survey</label>
+    </customValue>
+    <customValue>
+        <fullName>Undisclosed</fullName>
+        <default>false</default>
+        <label>Undisclosed</label>
+    </customValue>
+    <customValue>
+        <fullName>Unsolicited</fullName>
+        <default>false</default>
+        <label>Unsolicited</label>
+    </customValue>
+    <customValue>
+        <fullName>Web Enquiry</fullName>
+        <default>false</default>
+        <label>Web Enquiry</label>
+    </customValue>
+    <description>Values for GiW Origin</description>
+    <masterLabel>Origin valueset</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

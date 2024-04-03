@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>CA Bequest Donation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Care Gift Layout</layout>
+        <sections>
+            <label></label>
+            <section>Additional Source Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fulfillment Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Donation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Campaign Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Estate Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA In-Kind Gift Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Major Gift Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Major Gift Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Matching Gift Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Recurring Donation Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Recurring Donation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Regular Gift Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Recurring Donation</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Estate Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Tribute Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>Gift_in_Kind</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Deliverable</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Bequest</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>CARE_Gift</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Spende eingegangen</description>
+        <label>Spende</label>
+        <name>Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Estate</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Fördergelder eingegangen</description>
+        <label>Fördergelder</label>
+        <name>Grant</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Als Sachspende eingegangene Waren oder Dienstleistungen</description>
+        <label>Sachgeschenk</label>
+        <name>InKindGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>LendWithCare</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Große Spende von einem Großspender</description>
+        <label>Großschenkung</label>
+        <name>MajorGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Zugewiesene Spende vom Arbeitgeber eines Spenders oder einer anderen Organisation</description>
+        <label>Zugewiesene Schenkung</label>
+        <name>MatchingGift</name>
+    </recordTypes>
+    <recordTypes>
+        <description>Ein Mitgliedschaft-Datensatztyp</description>
+        <label>Mitgliedschaft</label>
+        <name>Membership</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Recurring_Donation</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Regular_Gift</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Amount_not_less_than_0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CareGift_ClosedWon</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>PrimaryCampaignSource_IsActiveChild</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>PrimarySource_cannot_be_Parent_campaign</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Primary_Campaign_Source_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Primary_Source_Campaign_must_be_Active</name>
+    </validationRules>
+</CustomObjectTranslation>

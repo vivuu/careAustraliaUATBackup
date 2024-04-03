@@ -1,0 +1,90 @@
+<template>
+	<template if:false={noLoans}>
+		<div class="carouselCustom">
+			<div class="sliderCustom" style={sliderStyles}>
+				<template for:each={carouselItems} for:item="item" for:index="index">
+					<div key={item.id} class="slide">
+						<div class="slide-content">
+							<div class="ImageDiv" style={item.getcarbackImage}></div>
+							<!--<img src={item.imageUrl} alt={item.title} />-->
+							<div class="CarContent">
+								<h3 class="carTitle">{item.title}</h3>
+								<div class="locastions">
+									<div>
+										<svg xmlns="http://www.w3.org/2000/svg" style="margin: -5px 4px 0 0;" width="16"
+											height="16" fill="#002A3A" class="bi bi-geo-alt" viewBox="0 0 16 16">
+											<path
+												d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+											<path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+										</svg>
+									</div>
+									<div>
+										<p style="font-family: 'Helvetica Neue Bold Pro';font-size:14px;">
+											{item.location}</p>
+									</div>
+								</div>
+								<p class="carPara">{item.description}</p>
+								<button class="carButton">{item.Button}</button><br>
+								<a href={item.readMoreLink}
+									style="color:#002A3A;font-size:15px;line-height:16px;font-family:'Helvetica Neue Bold Pro';"><u>Read More</u> <span>&#10095;</span></a>
+							</div>
+							<div class="BottomDiv">
+								<div style="display:block;width:100%;">
+									<div class="progressBar">
+										<div class="progressBarInner" data-value={item.progress}></div>
+									</div>
+									<div
+										style="display:grid; grid-template-columns: auto auto; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+	
+										<template if:false={item.fullyFunded}>
+											<p
+												style="margin-top:5px;color:white;width:100%;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">
+												$ {item.Lent} Lent</p>
+											<p
+												style="margin-top:5px;color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">
+												$ {item.Published_Amount_AUD__c} Goal</p>
+										</template>
+										<template if:true={item.fullyFunded}>
+											<p
+												style="margin-top:5px;color:white;width:100%;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">
+											</p>
+											<p
+												style="margin-top:5px;color:white;display:flex;justify-content:right;font-family: 'Helvetica Neue Bold Pro';font-weight:800;font-size:12px;line-height:12px;">
+												$ {item.Published_Amount_AUD__c} Goal reached</p>
+										</template>
+									</div>
+								</div>
+								<!--<div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+					  <p style="color:white;">{item.Lent}</p>
+					  <p style="color:white;display:flex;justify-content:right;">{item.Goal}</p>
+					</div>-->
+	
+	
+							</div>
+						</div>
+					</div>
+				</template>
+			</div>
+	
+		</div>
+		<div style="display:flex;justify-content:center;margin:30px 0px 30px 0px;">
+			<div class="dots">
+				<!--<template if:true={displayPreviousButtom}>-->
+					<button class="NaviButton" style="background:none;margin-top:-17px"  onclick={previousSlide} >&#10094;</button>
+				<!--</template>-->
+				<template for:each={firstFourItems} for:item="item" for:index="index">
+					<span key={item.id} class="dotClass" data-index={index}></span>
+				</template>
+				<!--<template if:true={displayNextButtom}>-->
+					<button class="NaviButton" style="background:none;margin-top:-17px" onclick={nextSlide}>&#10095;</button>
+				<!--</template>-->
+			</div>
+		</div>
+	</template>
+	<template if:true={noLoans}>
+		<p style="text-align: center; font-size: 1.5rem; font-family: 'Helvetica Neue Bold Pro';padding-bottom:30px;">There are no loans</p>
+	</template>
+
+
+
+</template>

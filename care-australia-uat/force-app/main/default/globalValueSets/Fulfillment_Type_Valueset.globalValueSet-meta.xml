@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Standard Fullfillment</fullName>
+        <default>false</default>
+        <label>Standard Fullfillment</label>
+    </customValue>
+    <customValue>
+        <fullName>Premium Fullfillment</fullName>
+        <default>false</default>
+        <label>Premium Fullfillment</label>
+    </customValue>
+    <description>Types of Fullfillment</description>
+    <masterLabel>Fulfillment Type Valueset</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

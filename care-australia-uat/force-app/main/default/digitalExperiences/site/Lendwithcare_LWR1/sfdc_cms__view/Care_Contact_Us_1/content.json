@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Contact Us Today | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"b62d1630-db12-4c78-aaa3-5c5065dbfc67\",\"columns\":[{\"UUID\":\"22eb9615-f867-48d2-a5b5-6904df35367f\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "22eb9615-f867-48d2-a5b5-6904df35367f",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "b62d1630-db12-4c78-aaa3-5c5065dbfc67",
+          "type" : "component"
+        } ],
+        "id" : "5d9fcbe4-17fd-477f-a0ee-2ef6bb95b706",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "We're here to help. Have a question or need assistance? Our team is available via email or phone. Visit now to discover how you can make a lifechanging loan.",
+            "dxpStyle" : { },
+            "pageTitle" : "Contact Us Today | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "5fcec6b5-9688-4f36-99a8-50b5408f73fc",
+          "type" : "component"
+        } ],
+        "id" : "d7cd55d0-b0dc-4688-a6ae-03800e1647fc",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "9acfa128-e250-4b28-9f0b-0caf8f9aae4d",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "8ZgpscXfRmdkJFVmmcP2HdDuk5c7Pk",
+    "viewType" : "custom-care-contact-us"
+  }
+}

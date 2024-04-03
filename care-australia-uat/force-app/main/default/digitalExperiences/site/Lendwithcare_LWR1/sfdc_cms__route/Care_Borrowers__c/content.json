@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Borrower details",
+  "contentBody" : {
+    "activeViewId" : "Care_Borrowers_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-care-borrowers",
+    "urlPrefix" : "careborrowers"
+  }
+}

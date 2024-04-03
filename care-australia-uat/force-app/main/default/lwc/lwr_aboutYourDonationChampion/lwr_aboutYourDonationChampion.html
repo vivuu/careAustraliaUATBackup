@@ -1,0 +1,60 @@
+<template>
+	<div class="testOverflow">
+		
+			<div class="pad">
+				<lightning-layout class=" para3" multiple-rows="true" style="padding-top: 25px;">
+					<!-- slds-p-top_xx-large -->
+					<lightning-layout-item size="1"></lightning-layout-item>
+					<!--<template for:each={ntitles1} for:item="title"></template>key={title.white}{title.white}{title.yellow}-->
+						<lightning-layout-item size="10"  class="text-center slds-m-top_x-large">
+							<h3 class="section-heading1 section-heading-num ">
+								<span class="clr_navyblue">{val1}</span>&nbsp;<span class="clr_orange ">{val2}</span>
+							</h3>
+						</lightning-layout-item>
+					
+					<!--text-center -->
+					<template for:each={aboutdonationdescriptions} for:item="des">
+						<lightning-layout-item class="nums text-center  slds-m-top_xx-large" size="12" key={des.title}
+							large-device-size="3" medium-device-size="6" small-device-size="12">
+							<h4 class="clr_orange bynumber-head">{des.title}</h4>
+							<h4 class="bynumber-content slds-p-around_small"
+								style="font-family: 'Helvetica Neue Bold';font-size:20px;">
+                                <lightning-formatted-rich-text value={des.body}>
+                                </lightning-formatted-rich-text>
+								<!--Lorem ipsum dolor sit amet consec tetur adipi scing elit rhon cusmi sed in amet.-->
+							</h4>
+						</lightning-layout-item>
+					</template>
+
+					<!--<lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12"
+					class="nums text-center slds-m-top_xx-large">
+					<h4 class="clr_orange bynumber-head">1 in 5</h4>
+					<h4 class="bynumber-content slds-p-around_small" style="font-family: 'Helvetica Neue Bold';">Lorem
+						ipsum dolor sit amet consec tetur adipi scing elit rhon cusmi sed in amet.</h4>
+				</lightning-layout-item>
+				<lightning-layout-item style="padding-left: 1%; padding-right: 1%;" size="12" large-device-size="3"
+					medium-device-size="6" small-device-size="12" class="nums text-center slds-m-top_xx-large">
+					<h4 class="clr_orange bynumber-head">$3,500</h4>
+					<h4 class="bynumber-content slds-p-around_small" style="font-family: 'Helvetica Neue Bold';">Lorem
+						ipsum dolor sit amet consec tetur adipi scing elit rhon cusmi sed in amet.</h4>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" large-device-size="3" medium-device-size="6" small-device-size="12"
+					class="nums text-center slds-m-top_xx-large">
+					<h4 class="clr_orange bynumber-head">1 in 5</h4>
+					<h4 class="bynumber-content slds-p-around_small" style="font-family: 'Helvetica Neue Bold';">Lorem
+						ipsum dolor sit amet consec tetur adipi scing elit rhon cusmi sed in amet.</h4>
+				</lightning-layout-item>-->
+
+				</lightning-layout>
+				<lightning-layout multiple-rows="true" class="ImageMediaQuery">
+					<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+						medium-device-size="12" large-device-size="12" class="slds-align_absolute-center">
+						<img src={aboutdonationimage} width="700px">
+    </lightning-layout-item>
+				</lightning-layout>
+			</div>
+		
+
+	</div>
+
+</template>

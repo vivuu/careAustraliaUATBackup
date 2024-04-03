@@ -1,0 +1,125 @@
+<template>
+	<lightning-card variant="Narrow">
+		<div style="margin-left:10px">
+			<template if:true={isupdateloan}>
+				<div>
+					<p style=" font-size:18px;margin-left:10px"><b>Loan : {varLoanName}</b></p>
+
+					<lightning-button style="margin-left:69%" variant="brand" label="Save"
+						onclick={handleSave} disabled={isSaveButtonDisabled}>
+					</lightning-button>
+				</div>
+				<br>
+				<table class="slds-table slds-table_bordered slds-table_col-bordered" border="1"
+					style="width:80%; ">
+					<thead>
+						<tr style="height:5%;">
+							<th style="width:20%;text-align: center">S.No.</th>
+							<th style="text-align:center">Amount Due</th>
+							<th style="text-align:center">Due Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={items} for:item="repay" for:index="index">
+
+							<tr key={repay.Id} style="height:10%;" class="slds-text-align_center">
+								<td style="text-align:center">
+									<lightning-input type="text" name="Loan_Repayment_Number__c"
+										data-field="Loan_Repayment_Number__c" data-index={index}
+										data-id={repay.Id} value={repay.Loan_Repayment_Number__c} onchange={handleChange} readonly>
+									</lightning-input>
+								</td>
+								<td>
+									<lightning-input type="text" placeholder="Amount Due"
+										name="Amount_Due__c" data-field="Amount_Due__c" class="AmountDue"
+										data-index={index} data-id={repay.Id} value={repay.Amount_Due__c}
+										onchange={handleChange} required>
+									</lightning-input>
+								</td>
+								<td>
+									<lightning-input type="Date" placeholder="Due Date" name="Due_Date__c"
+										data-field="Due_Date__c" class="DueDate" data-index={index}
+										data-id={repay.Id} value={repay.Due_Date__c} onchange={handleChange}
+										required>
+									</lightning-input>
+								</td>
+							</tr>
+						</template>
+
+					</tbody>
+				</table>
+				<br>
+				<div style="margin-left:69%">
+					<lightning-button variant="brand" label="Save" onclick={handleSave}
+						disabled={isSaveButtonDisabled}>
+					</lightning-button>
+				</div>
+			</template>
+
+			<template if:true={iscreateloan}>
+				<div>
+					<p style=" font-size:18px;margin-left:10px"><b>Loan : {varLoanName}</b></p>
+
+					<lightning-button style="margin-left:69%" variant="brand" label="Save" onclick={handleSave}
+						disabled={isSaveButtonDisabled}>
+					</lightning-button>
+				</div>
+				<br>
+				<table class="slds-table slds-table_bordered slds-table_col-bordered" border="1" style="width:80%; ">
+					<thead>
+						<tr style="height:5%;">
+							<th style="width:20%;text-align: center">S.No.</th>
+							<!--<th scope="col">Loan</th>-->
+							<th style="text-align:center">Amount Due</th>
+							<th style="text-align:center">Due Date</th>
+						</tr>
+					</thead>
+					<tbody>
+						<template for:each={items} for:item="item" for:index="index">
+
+							<tr key={item.Id} style="height:10%;" class="slds-text-align_center">
+								<td style="text-align:center">
+									<lightning-input type="text" name="Loan_Repayment_Number__c"
+										data-field="Loan_Repayment_Number__c" data-index={index} data-id={item.Id}
+										value={item.Loan_Repayment_Number__c} onchange={handleChange} readonly>
+									</lightning-input>
+								</td>
+								<!--<td>
+									<lightning-input type="text" value={varLoanName} readonly></lightning-input>
+									</td>-->
+								<td>
+									<lightning-input type="text" placeholder="Amount Due" name="Amount_Due__c"
+										data-field="Amount_Due__c" class="AmountDue" data-index={index}
+										data-id={item.Id} value={item.Amount_Due__c} onchange={handleChange}
+										disabled={isFieldsDisabled} required>
+									</lightning-input>
+								</td>
+								<td>
+									<lightning-input type="Date" placeholder="Due Date" name="Due_Date__c"
+										data-field="Due_Date__c" class="DueDate" data-index={index} data-id={item.Id}
+										value={item.Due_Date__c} onchange={handleChange} disabled={isFieldsDisabled}
+										required>
+									</lightning-input>
+								</td>
+							</tr>
+						</template>
+					</tbody>
+				</table>
+				<br>
+				<div style="margin-left:69%">
+					<!--<lightning-button variant="brand-outline" label="Cancel" onclick={handleCancel}></lightning-button>
+			&nbsp;-->
+					<lightning-button variant="brand" label="Save" onclick={handleSave}
+						disabled={isSaveButtonDisabled}>
+					</lightning-button>
+				</div>
+			</template>
+		</div>
+
+	</lightning-card>
+	<!--<footer class="slds-modal__footer slds-m-top_large" style="background-color: Porcelain;">
+		<lightning-button class="slds-m-top_small slds-m-left_x-small" variant="brand" label="Save" onclick={handleSave}
+			disabled={isSaveButtonDisabled}>
+		</lightning-button>
+	</footer>-->
+</template>

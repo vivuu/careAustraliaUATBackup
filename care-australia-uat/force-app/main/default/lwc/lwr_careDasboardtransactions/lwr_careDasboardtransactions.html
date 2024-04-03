@@ -1,0 +1,357 @@
+<template>
+    <lightning-spinner if:true={spin}></lightning-spinner>
+    <div class="headers">
+       <!--<img src={banner} alt="banner">-->
+       <c-lwr_care-nav-bar></c-lwr_care-nav-bar>
+       <lightning-layout multiple-rows class="slds-p-bottom_xx-large pad">
+          <lightning-layout-item size="12" class="slds-p-around_small" small-device-size="6" medium-device-size="6"
+             large-device-size="3">
+             <a href={dashboardLink}
+                style="color:white;font-family: 'Helvetica Neue Bold';">&#60; <u>Dashboard</u></a>
+          </lightning-layout-item>
+          <lightning-layout-item size="12" class="slds-p-horizontal_small" small-device-size="12" medium-device-size="12"
+             large-device-size="12">
+             <h3 class="section-heading center-align-text">Your <span style="color:#FEBE10">Transactions</span></h3>
+          </lightning-layout-item>
+          <!--<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+             large-device-size="12" class="slds-align_absolute-center">
+             <div class="button-container">
+                <button class="button classPills {Onselection}" data-type="All" onclick={handleButtonClick}>All</button>
+                <button class="button classPills {Onselection}" data-type="Topup" onclick={handleButtonClick}>Top
+                   up</button>
+                <button class="button classPills {Onselection}" data-type="Loan"
+                   onclick={handleButtonClick}>Loan</button>
+                <button class="button classPills {Onselection}" data-type="Repayment"
+                   onclick={handleButtonClick}>Repayment</button>
+                <button class="button classPills {Onselection}" data-type="Donation"
+                   onclick={handleButtonClick}>Donation</button>
+ 
+             </div>
+             <div style="display:grid">
+                <div class="button-containerMob">
+                <button class="button classPills {Onselection}" data-type="All" onclick={handleButtonClick}>All</button>
+                <button class="button classPills {Onselection}" data-type="Topup" onclick={handleButtonClick}>Top
+                   up</button>
+                <button class="button classPills {Onselection}" data-type="Loan"
+                   onclick={handleButtonClick}>Loan</button>
+                </div>
+                <div class="button-containerMob1">
+                <button class="button classPills {Onselection}" data-type="Repayment"
+                   onclick={handleButtonClick}>Repayment</button>
+                <button class="button classPills {Onselection}" data-type="Donation"
+                   onclick={handleButtonClick}>Donation</button>
+                </div>
+             </div>
+          </lightning-layout-item>-->
+          <lightning-layout-item size="12" class="slds-p-horizontal_small" small-device-size="12" medium-device-size="12"
+             large-device-size="12">
+             <div class="button-line">
+                <button class="button button-filter" onclick={openFilter}>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-funnel" viewBox="0 0 16 16" style="margin-top:-3px">
+                      <path
+                         d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                   </svg>
+                   <span>&nbsp;</span> Filter
+                </button>
+                <button class="button button-sort" onclick={openSort}>
+                   <svg class="slds-icon slds-icon-text-default slds-icon_x-small" aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-top:-3px">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 9l4 -4l4 4m-4 -4v14" />
+                      <path d="M21 15l-4 4l-4 -4m4 4v-14" />
+                   </svg>
+                   &nbsp; Sort
+                </button>
+             </div>
+          </lightning-layout-item>
+          <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6"
+             large-device-size="3">
+          </lightning-layout-item>
+       </lightning-layout>
+       <template if:true={isFilter}>
+          <div class="search-overlay">
+             <div class="search">
+                <div style="display:flex" class="slds-p-around_small">
+                   <div class="slds-float_left">
+                      <a onclick={closeFilterMenu} style="color:#002A3A;font-size:15px;">
+                         &#10094;
+                      </a>
+                   </div>
+                   <div class="slds-align_absolute-center ">
+                      <h3 class="popupTitle">Filter</h3>
+                   </div>
+                   <a onclick={resetFiltervalues} class="reset-button slds-float-right"
+                      style="font-size:16px;color:#002A3A">
+                      <u>Reset</u>
+                   </a>
+                </div>
+                <div class="box3">
+                </div>
+                <div class="loanType slds-p-around_medium">
+                   <h3 class="popupFilterTitle">Transaction Type</h3>
+                   <div style="justify-content: space-between;">
+                      <button class="catogory" data-type="All" data-id="All" name="All" onclick={handleFilterClick}>All</button>
+                      <button class="catogory" data-type="Loan" data-id="Loan" name="Loan" onclick={handleFilterClick}>Loan</button>
+                      <button class="catogory" data-type="Topup" data-id="Topup" name="Topup" onclick={handleFilterClick}>Top up</button>
+                      <button class="catogory" data-type="Repayment" data-id="Repayment" name="Repayment" onclick={handleFilterClick}>Repayment</button>
+                      <button class="catogory" data-type="Donation" data-id="Donation" name="Donation" onclick={handleFilterClick}>Donations</button>
+                   </div>
+                </div>
+                <div class="box3">
+                </div>
+                <div class="loanType slds-p-around_medium">
+                   <h3 class="popupFilterTitle">Transaction Amount</h3>
+                   <div class="container">
+                      <label class="labelDesign">From</label>
+                      <label class="labelDesign">To</label>
+                      <input class="ClassInputFields italic-placeholder" type="text" onchange={handleFromInputChange}
+                         placeholder="$" value={fromAmount}></input>
+                      <input value={toAmount} class="ClassInputFields italic-placeholder" type="text" onchange={handleToInputChange}
+                         placeholder="$"></input>
+                   </div>
+                </div>
+                <div class="box3">
+                </div>
+                <div class="loanType slds-p-around_medium">
+                   <h3 class="popupFilterTitle">Date range</h3>
+                   <div class="container">
+                      <label class="labelDesign">From</label>
+                      <label class="labelDesign">To</label>
+                      <input class="ClassInputFields italic-placeholder" value={fromDate} type="date" placeholder="DD-MM-YYYY"
+                         onchange={handleFromDateChange}></input>
+                      <input class="ClassInputFields italic-placeholder" value={toDate} type="date" placeholder="DD-MM-YYYY"
+                         onchange={handleToDateChange}></input>
+                   </div>
+                </div>
+                <div class="box3">
+                </div>
+                <div class="showmorebutton slds-p-around_medium">
+                   <button class="carButtonImpact1" style="border:none;width: -webkit-fill-available;"
+                      onclick={applyFilters}>
+                      Apply filters</button>
+                </div>
+             </div>
+          </div>
+       </template>
+       <template if:true={isSort}>
+          <div class="search-overlay">
+             <div class="search">
+                <div style="display:fex" class="slds-p-around_small">
+                   <div class="slds-float_left">
+                      <a onclick={closeSortMenu} style="color:#002A3A;font-size:15px;">
+                         &#10094;
+                      </a>
+                   </div>
+                   <div class="slds-align_absolute-center">
+                      <h3 class="popupTitle">Sort</h3>
+                   </div>
+                </div>
+                <div class="box3">
+                </div>
+                <div class="container">
+                   <h3 class="popupHeading">Most Recent</h3>
+                   <div class="radiobutton">
+                      <lightning-radio-group name="rad" style="display: flex; justify-content: right;"
+                         options={MostRecentradioOptions} value={sortValue} onchange={MostRecentChange}
+                         type="radio"></lightning-radio-group>
+                   </div>
+                </div>
+                <div class="container">
+                   <h3 class="popupHeading">Oldest</h3>
+                   <lightning-radio-group name="rad" style="display: flex;justify-content: right;"
+                      options={OldestradioOptions} value={sortValue} onchange={OldestChange}
+                      type="radio"></lightning-radio-group>
+                </div>
+                <div class="container">
+                   <h3 class="popupHeading">Highest - Lowest</h3>
+                   <lightning-radio-group name="rad" style="display: flex;justify-content: right;"
+                      options={HighestLowestradioOptions} value={sortValue} onchange={HighestLowestChange}
+                      type="radio"></lightning-radio-group>
+                </div>
+                <div class="container">
+                   <h3 class="popupHeading">Lowest - Highest</h3>
+                   <lightning-radio-group name="rad" style="display: flex;justify-content: right;"
+                      options={LowestHighestradioOptions} value={sortValue} onchange={LowestHighestChange}
+                      type="radio"></lightning-radio-group>
+                </div>
+                <lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+                   small-device-size="12" medium-device-size="12" large-device-size="12">
+                   <div class="showmorebutton">
+                      <button class="carButtonImpact1" style="border:none;" onclick={closeSortMenu}>Show sorted
+                         results</button>
+                   </div>
+                </lightning-layout-item>
+             </div>
+          </div>
+       </template>
+    </div>
+    <div class="para2 pad slds-p-top_small slds-p-bottom_small">
+ 
+       <template if:true={showTable}>
+          <table>
+                   <tr style="background-color:#472175;">
+                             <td style="font-family: 'Helvetica';
+                                                         padding: 15px;
+                                                         font-size: 16px;
+                                                         line-height: 19px;
+                                                         color: white;width: fit-content;text-align: center;"><p>Date</p></td>
+                             <td style="font-family: 'Helvetica';
+                                                         padding: 15px;
+                                                         font-size: 16px;
+                                                         line-height: 19px;
+                                                         color: white;width: fit-content;text-align: center;">Type</td>
+                                 <td style="font-family: 'Helvetica';
+                               font-size: 16px;
+                               line-height: 19px;
+                               color: white;width: fit-content;text-align: center;">
+                                     <div style="display: flex;align-items: center;">
+                                         <div style="flex: 1;">Amount</div>
+                                         <!--<div style="margin-left: 20px;">
+                                             <button disabled={transaction.disableDownloadButton}
+                                                 class={transaction.downloadButtonClass} title="Download"
+                                                 data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+                                                 style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                     stroke="currentColor" width="16" height="16">
+                                                     <path stroke-linecap="round" stroke-linejoin="round"
+                                                         stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+                                                 </svg>
+                                             </button>
+                                         </div>-->
+                                     </div>
+                                 </td>
+                                 <td style="font-family: 'Helvetica';
+                               font-size: 16px;
+                               line-height: 19px;
+                               color: white;text-align: center;">
+ 
+                                 </td>
+                         </tr>
+             <tbody>
+                <template for:each={transactions} for:item="transaction" for:index="index">
+                   <!--<tr key={transaction.Id}>
+                      <td style="font-family: 'Helvetica';
+                            padding: 15px;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #002A3A;width: 100px;text-align: center;">
+                            <div class="slds-grid slds-grid_align-center">
+                            <lightning-formatted-date-time
+                            value={transaction.Completed_Date__c} year="numeric" month="2-digit" day="2-digit"
+                            time-zone="UTC">
+                         </lightning-formatted-date-time></div></td>
+                      <td style="font-family: 'Helvetica';
+                             padding: 15px;
+                             font-size: 16px;
+                             line-height: 19px;
+                             color: #002A3A;width: 50px;text-align: center;"><div class="slds-grid slds-grid_align-center">{transaction.Type__c}</div></td>
+                      <td style="font-family: 'Helvetica';
+                             padding: 15px;
+                             font-size: 16px;
+                             line-height: 19px;
+                             color: #002A3A;width: 50px;text-align: end;">
+                             <div class="slds-grid slds-grid_align-end">{transaction.Amount__c}</div>
+                      </td>
+                      <td style="font-family: 'Helvetica';
+                            padding: 15px;
+                            font-size: 16px;
+                            line-height: 19px;
+                            color: #002A3A;width: 10%;text-align: center;">
+                                     <div style="display: flex;align-items: center;">
+                                         <div style="margin-left: 20px;">
+                            <button disabled={transaction.disableDownloadButton} class={transaction.downloadButtonClass}
+                               title="Download" data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+                               style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border: none;">
+                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                  stroke="currentColor" width="16" height="16">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                     d="M8 7l4-4m0 0l4 4m-4-4v18" />
+                               </svg>
+                            </button>
+                         </div>
+                                     </div>
+                      </td>
+                   </tr>-->
+                   <tr key={transaction.Id}>
+                                 <td style="font-family: 'Helvetica';
+                              padding: 15px;
+                              font-size: 16px;
+                              line-height: 19px;
+                              color: #002A3A;width: fit-content;text-align: center;"><lightning-formatted-date-time
+                                         value={transaction.Completed_Date__c} year="numeric" month="2-digit"
+                                         day="2-digit" time-zone="UTC">
+                                     </lightning-formatted-date-time></td>
+                                 <td style="font-family: 'Helvetica';
+                               padding: 15px;
+                               font-size: 16px;
+                               line-height: 19px;
+                               color: #002A3A;width: fit-content;text-align: center;">{transaction.Type__c}</td>
+                                 <td style="font-family: 'Helvetica';
+                               font-size: 16px;
+                               line-height: 19px;
+                               color: #002A3A;width: fit-content;text-align: center;">
+                                     <div style="display: flex;align-items: center;">
+                                         <div style="flex: 1;">${transaction.Amount__c}</div>
+                                         <!--<div style="margin-left: 20px;">
+                                             <button disabled={transaction.disableDownloadButton}
+                                                 class={transaction.downloadButtonClass} title="Download"
+                                                 data-transaction-id={transaction.Id} onclick={handleDownloadClick}
+                                                 style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                     stroke="currentColor" width="16" height="16">
+                                                     <path stroke-linecap="round" stroke-linejoin="round"
+                                                         stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+                                                 </svg>
+                                             </button>
+                                         </div>-->
+                                     </div>
+                                 </td>
+                                 <td style="font-family: 'Helvetica';
+                               font-size: 16px;
+                               line-height: 19px;
+                               color: #002A3A;text-align: center;">
+                                     <div style="display: flex;align-items: center;">
+                                         <div style="margin-left: 20px;">
+                                             <button disabled={transaction.disableDownloadButton}
+                                                 class={transaction.downloadButtonClass} title="Download"
+                                                 data-transaction-id={transaction.Id} onclick={handleDownload}
+                                                 style="width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; padding: 0; border-radius:8px; border: none;">
+                                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                     stroke="currentColor" width="16" height="16">
+                                                     <path stroke-linecap="round" stroke-linejoin="round"
+                                                         stroke-width="2" d="M8 7l4-4m0 0l4 4m-4-4v18" />
+                                                 </svg>
+                                             </button>
+                                         </div>
+                                     </div>
+                                 </td>
+                             </tr>
+                
+                </template>
+             </tbody>
+          </table>
+       </template>
+       <template if:false={showTable}>
+          <div class="slds-text-color_weak slds-m-around_medium" style="text-align: center; font-size: 2rem; font-weight: bold;">
+             No transactions found.
+          </div>
+       </template>
+       <!-- <a href="#" class="date" style="color:#002A3A;font-family: 'Helvetica Neue Regular';font-weight:100;font-size:16px;line-height:19px;">02/04/2023</a>
+            <a href="#" class="contribution" style="color:#002A3A;font-family: 'Helvetica Neue Regular';font-weight:100;font-size:16px;line-height:19px;">contribution</a>
+            <a href="#" class="price" style="color:#002A3A;font-family: 'Helvetica Neue Bold';font-weight:800;font-size:16px;line-height:19px;">-$25.00</a> -->
+    </div>
+ 
+    <!--Spinner Template-->
+    <template if:true={isLoading}>
+       <div class="slds-spinner_container">
+          <div role="status" class="slds-spinner slds-spinner_medium">
+             <span class="slds-assistive-text">Loading</span>
+             <div class="slds-spinner__dot-a"></div>
+             <div class="slds-spinner__dot-b"></div>
+          </div>
+       </div>
+    </template>
+ 
+ </template>

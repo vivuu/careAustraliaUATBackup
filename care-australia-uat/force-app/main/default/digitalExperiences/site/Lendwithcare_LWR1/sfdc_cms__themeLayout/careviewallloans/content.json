@@ -1,0 +1,107 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "careviewallloans",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"a3781359-056d-403a-8851-dbf7dc2279ac\",\"columns\":[{\"UUID\":\"69561722-51b0-40f7-980a-8f6931d90826\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "69561722-51b0-40f7-980a-8f6931d90826",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "a3781359-056d-403a-8851-dbf7dc2279ac",
+          "type" : "component"
+        } ],
+        "id" : "c4d78022-538e-4ad1-8f25-4cd4b70ba3bc",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"444e2c3d-0b7a-45d1-9176-7477a0a269b0\",\"columns\":[{\"UUID\":\"0d8a6987-d679-4eae-8dbb-07bcb10a50dd\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "0d8a6987-d679-4eae-8dbb-07bcb10a50dd",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "444e2c3d-0b7a-45d1-9176-7477a0a269b0",
+          "type" : "component"
+        } ],
+        "id" : "b2ac2140-434e-4326-b2e6-58a02496659a",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careViewAllLoans",
+          "id" : "ea7a9794-ea56-470c-9195-1fee5d80e7a2",
+          "type" : "component"
+        } ],
+        "id" : "c7cf2ec5-02a0-4568-9446-e9aa108cc922",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "id" : "e4a022e4-6167-4e3e-932e-8ef5d59942b1",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "c8ce15db-a699-40b5-9397-f36f92ec6e06",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "51dd7130-b17f-4f36-8129-973790ec79c9",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "2175c0ff-a9a2-42c0-8d99-4aa42b1cde24",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "5a4dd998-2854-4388-ae6a-40c21d810124",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "5c352b1b-8d4a-40e1-9313-fc621bfa06db",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "20922fb4-e99e-4c17-97db-68ba03366964",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "e9130a57-4e5d-42f6-a6f0-63f25aeb3895",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "4670a1fa-da9e-462f-80fe-67497a8a2b1b",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "8db2d135-73b9-4f98-ae73-df48d29f88d4",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themecareviewallloans",
+      "id" : "d4651763-7544-4dd5-b486-28d399cf994a",
+      "type" : "component"
+    }
+  }
+}

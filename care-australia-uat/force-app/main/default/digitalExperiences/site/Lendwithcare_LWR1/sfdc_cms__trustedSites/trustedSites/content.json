@@ -1,0 +1,71 @@
+{
+  "type" : "sfdc_cms__trustedSites",
+  "title" : "trustedSites",
+  "contentBody" : {
+    "trustedSites" : [ {
+      "isActive" : true,
+      "source" : "https://stats.g.doubleclick.net",
+      "sourceName" : "stats.g.doubleclick.net"
+    }, {
+      "isActive" : true,
+      "source" : "https://static.woopra.com/js/w.js",
+      "sourceName" : "static.woopra.com"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.woopra.com/track/ce/",
+      "sourceName" : "www.woopra.com"
+    }, {
+      "isActive" : true,
+      "source" : "https://careaustralia--uat.sandbox.my.site.com/",
+      "sourceName" : "Salesforce"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.googletagmanager.com",
+      "sourceName" : "GoogleTagManager"
+    }, {
+      "isActive" : true,
+      "source" : "https://test.lwc.org.au",
+      "sourceName" : "LWR Domain"
+    }, {
+      "isActive" : true,
+      "source" : "https://tags.srv.stackadapt.com",
+      "sourceName" : "TrackingCodeStackAdapt"
+    }, {
+      "isActive" : true,
+      "source" : "https://analytics.google.com",
+      "sourceName" : "GoogleAnalytics"
+    }, {
+      "isActive" : true,
+      "source" : "https://client.crisp.chat/",
+      "sourceName" : "Crisp Chat"
+    }, {
+      "isActive" : true,
+      "source" : "https://*.googletagmanager.com",
+      "sourceName" : "*.googletagmanager.com"
+    }, {
+      "isActive" : true,
+      "source" : "https://connect.facebook.net/en_US/fbevents.js",
+      "sourceName" : "Facebook events"
+    }, {
+      "isActive" : true,
+      "source" : "https://www.google.com.au/ads/ga-audiences/",
+      "sourceName" : "Google Analtics Audience"
+    }, {
+      "isActive" : true,
+      "source" : "https://image.crisp.chat",
+      "sourceName" : "Crisp Chat images"
+    }, {
+      "isActive" : true,
+      "source" : "https://careaustralia.ladesk.com",
+      "sourceName" : "ladesk chat"
+    }, {
+      "isActive" : true,
+      "source" : "https://2-vbus-sg.ladesk.com",
+      "sourceName" : "ladesk chat 2"
+    }, {
+      "isActive" : true,
+      "source" : "https://qvdt3feo.com/events.js",
+      "sourceName" : "Stackadapt"
+    } ]
+  }
+}

@@ -1,0 +1,143 @@
+<template>
+    <div class="relatedLoansSection">
+      <template if:true={errorTransaction}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-label="Meaningful description of the modal content"
+          class="slds-modal slds-fade-in-open">
+          <div ><!-- class="slds-modal__container" -->
+            <button style="max-width:75%;" class="closeBtn slds-button slds-button_icon slds-modal__close slds-button_icon-inverse slds-align_absolute-center" onclick={closeErrorPopup}>
+        
+        close
+        </button>
+            <div style="width:75%" class="slds-modal__content slds-p-around_medium slds-modal__content_headless slds-align_absolute-center" id="modal-content-id-1">
+              <p class="slds-align_absolute-center">{errorMessageOnTransaction}</p>
+            </div>
+      
+          </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open " role="presentation"></div>
+      </template>
+    <lightning-layout multiple-rows class="slds-m-top_large slds-m-bottom_xx-large pad">
+      
+          <lightning-layout-item size="12" class="slds-m-top_large slds-m-bottom_large" large-device-size="12" medium-device-size="12" small-device-size="12" >
+  
+              <h3 class="relatedLoans">{val1}<span class="clr_orange ">&nbsp;{val2}</span></h3>
+          </lightning-layout-item>
+
+          <template if:true={showRelatedLoans}>
+            <lightning-layout-item size="12">
+              <div class="carouselCustom">
+                <div class="sliderCustom" style={sliderStyles}>
+                    <template for:each={carouselItems} for:item="item" for:index="index">
+                        <div key={item.id} class="slide">
+                            <div class="slide-content">
+                  <div class="ImageDiv" style={item.imageUrl}></div>
+                       <div class="BottomDiv ">
+                    <div style="display:block;width:-webkit-fill-available;margin:0px 10px 0px 10px;">
+                    <div class="progressBar">
+                      <div class="progressBarInner" style={item.progressStyle}></div>
+                    </div>
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    
+                      <p style="color:white;width:%;font-size:12px;font-family:'Helvetica Neue Bold Pro';">${item.Lent} Lent</p>
+                      <p style="color:white;display:flex;justify-content:right;font-size:12px;font-family:'Helvetica Neue Bold Pro';">{item.Goal} Goal</p>
+                    
+                    </div>
+                    </div>            
+                  </div>
+                                <!--<img src={item.imageUrl} alt={item.title} />-->
+                  <div class="CarContent">
+                                <h3 style="height:50px;font-family:'Helvetica Neue Bold Pro;font-size:16px;" class="carTitle">{item.title}</h3>
+                    <div class="locastions">
+                  <div><svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 4px;" width="16" height="16" fill="#002A3A"
+                      class="bi bi-geo-alt" viewBox="0 0 16 16">
+                      <path
+                        d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                      <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg></div>
+                     <div> <p style="font-weight:800;margin-top:2px;font-family: 'Helvetica Neue Bold Pro';font-size:13px;">{item.location}</p></div>
+                    </div>
+                            <p style="height:70px;font-family:'Helvetica Neue Regular;font-size:12px;" class="carPara">{item.description}</p>
+                  <button class="carButton">{item.Button}</button><br>
+                  <a href={item.readMoreLink} style="color:#002A3A;font-weight:800;"><u>Read more&nbsp;></u></a>
+                  </div>
+                  
+                  
+                            
+                <div class="slds-grid slds-wrap" style="background-color:#F3F0ED;margin:0px 10px 0px 10px">
+                    <div class="slds-p-right_small slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                        <!-- <button class="Carouselvaluebottom slds-align_absolute-center">$25 <div class="dropdown-arrow"></div> -->
+                        <select disabled={item.disable} name="progress" class="custom-select Carouselvaluebottom slds-align_absolute-center" 
+                        onchange={handleChangeSelect} data-recordid={item.Id} data-id={index}  data-index={index}> <!-- data-id={item.Id} -->
+                            <template for:each={item.loanAmts} for:index="idx" for:item="curr">
+                                <option selected={curr.selected} data-idx1={index} data-idx2={idx} key={curr.label} value={curr.label} >${curr.label}</option>
+                            </template>
+                        </select>
+                    </div>
+                    <div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                        <!-- <button class="CarouselAddtocartButton " >
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                      viewBox="0 0 16 16">
+                  <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                </svg>
+                                      &nbsp; Add to cart</button> -->
+
+                        <template if:false={item.isButtonVisible}> <!-- if:true={addToCartButton} -->
+                            <button disabled={item.disable} class="CarouselAddtocartButton" data-recordid={item.Id} data-id={index} onclick={addToCart} >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                viewBox="0 0 16 16">
+                                <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                            </svg>
+                            &nbsp; Add to cart</button> <!-- {buttonMessage} -->
+                        </template>
+                        <template if:true={item.isButtonVisible}> <!-- if:true={checkOutButton} -->
+                            <button class="CarouselAddtocartButton" onclick={checkOutToCart}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                 viewBox="0 0 16 16">
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                                </svg>
+                                &nbsp; Checkout</button><!-- {buttonMessage} -->
+                        </template>
+                    </div>
+                </div>
+                        </div>
+              </div>
+                    </template>
+                </div>
+                <div style="display:flex;justify-content:center;margin-top:50px;">
+                    <!--<div class="dots">
+                        
+                    </div>-->
+
+                </div>
+            </div>
+            <div style="width:100%;display:flex;justify-content:center;"> 
+						<div class="dots">
+							<!-- style="margin-top:5px;margin-left:20px" -->
+							<template if:true={displayPreviousButtom}>
+								<button class="NaviButton" onclick={previousSlide} style="background:none;" >&#10094;</button>
+							</template>
+							<template for:each={carouselItems} for:item="item" for:index="index">
+								<span key={item.id} class="dotClass" onclick={handleDotClick} data-index={index} ></span>
+								<!--style="background: #7F949C;width: 5px;height: 12px;border-style: none;border-radius: 50px;margin:5px;"-->
+							</template>
+							<template if:true={displayNextButtom}>
+								<button class="NaviButton" onclick={nextSlide} style="background:none;" >&#10095;</button>
+							</template>
+						</div>
+            </div>
+            </lightning-layout-item>
+          </template>
+          <template if:false={showRelatedLoans}>
+            <p style="text-align: center; width: 100%; font-size: 1.5rem; font-weight: 500;">There are no Related Loans</p>
+          </template>
+          
+      
+    </lightning-layout>
+  </div>
+  <!-- <c-care-footer-dev></c-care-footer-dev> -->
+  <div class="sticky-wrapper">
+      <div><a onclick={scrolltoTop}><img src={BorrowerUpIcon} width="50px"></a></div>
+  </div>
+  
+
+</template>

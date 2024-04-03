@@ -1,0 +1,35 @@
+<!--
+  @description       : 
+  @author            : SUMEDH WASNIK
+  @group             : GERENT
+  @last modified on  : 01-24-2024
+  @last modified by  : SUMEDH WASNIK
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   01-24-2024   SUMEDH WASNIK   Initial Version
+-->
+<template>
+    <lightning-card>
+        <div class="slds-p-around_small">
+            <div class=" field">
+                <label style="font-size:16px;color:white">OTP<span style="color:red">*</span></label>
+                <lightning-input style="border-radius:4px; border-style:none;" class="otp" type="password"
+                    name="otp" value={confirmOTP} onchange={handleOtpVerification}></lightning-input>
+            </div>
+            <div class="slds-border_top">
+                <div class="slds-grid slds-wrap slds-gutters">
+                        <div class="slds-col slds-size_1-of-2">
+                            <div style="direction:ltr" class="slds-p-top_x-small">
+                                <button class="resendOTPButton" onclick={resendOTP} disabled={buttondisabled}>{resendOTPLabel}</button>
+                            </div>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <div style="direction:rtl" class="slds-p-top_x-small">
+                                <button class="submitbutton" onclick={VerifyOTP} disabled={buttondisabled}>Verify</button>
+                            </div>
+                        </div>
+                </div>                
+            </div>
+        </div>
+    </lightning-card>
+</template>

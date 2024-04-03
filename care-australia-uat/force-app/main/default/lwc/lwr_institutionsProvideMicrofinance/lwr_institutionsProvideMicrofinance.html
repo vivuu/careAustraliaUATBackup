@@ -1,0 +1,44 @@
+<template>
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	
+	<div class="pad">
+		<template if:true={para3section}>
+			<lightning-layout multiple-rows="true" class="paraPad"><!-- class="slds-p-left_x-large slds-p-right_x-large slds-p-bottom_x-large" -->
+	
+				<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6"
+					large-device-size="6" class="item1">
+				
+					<lightning-layout multiple-rows="true" >
+						<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+							large-device-size="12">
+							<h3 class="section-heading1">{val1} {val2}</h3><!--{para3section.title}-->
+						</lightning-layout-item>
+						<!--<template for:each={para3section.body} for:item="para3obj"></template>key={para3obj}{para3obj}-->
+							<lightning-layout-item  size="12" padding="around-small" small-device-size="12" medium-device-size="12"
+							large-device-size="12">
+								<h3 class="section-content">
+									<lightning-formatted-rich-text value={para3section.body}>
+									</lightning-formatted-rich-text>
+								</h3>
+							</lightning-layout-item>
+						
+					</lightning-layout>
+				
+				</lightning-layout-item>
+		
+				<lightning-layout-item size="12" padding="around-small" small-device-size="12" medium-device-size="6"
+					large-device-size="6" class="item2">	
+							
+					<div class="yt slds-p-top_medium">
+						<!-- <iframe class="youtubevideo slds-align_absolute-center" src={para3section.link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+						<iframe class="youtubevideo slds-align_absolute-center" src={youtubelink} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</div>
+				</lightning-layout-item>
+		
+			</lightning-layout>
+		</template>
+	
+	</div>
+
+	
+</template>

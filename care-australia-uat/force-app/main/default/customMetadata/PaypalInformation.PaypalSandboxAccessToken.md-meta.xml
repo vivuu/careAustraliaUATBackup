@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>PaypalSandboxAccessToken</label>
+    <protected>false</protected>
+    <values>
+        <field>ClientId__c</field>
+        <value xsi:type="xsd:string">AS_3IBpy93S3P8ci9BXTqwFKe1_n6hdAIdRfzLVKSKSsqv464ds8MgZk8qc_RBfBoanoYiuXUZunsXCO</value>
+    </values>
+    <values>
+        <field>ClientSecret__c</field>
+        <value xsi:type="xsd:string">EHKjDV0BQB_nPd5ryWK57frW1B_XYzKyI6nLMiZ-PG41qLdY37-ToF1HKuAijBG1YPXRGgDiCKlkVj52</value>
+    </values>
+    <values>
+        <field>ConfirmOrderUrl__c</field>
+        <value xsi:type="xsd:string">https://api.sandbox.paypal.com/v2/checkout/orders/</value>
+    </values>
+    <values>
+        <field>EndpointUrl__c</field>
+        <value xsi:type="xsd:string">https://api-m.sandbox.paypal.com/v1/oauth2/token</value>
+    </values>
+    <values>
+        <field>OrderExtra__c</field>
+        <value xsi:type="xsd:string">/capture</value>
+    </values>
+    <values>
+        <field>PaymentEndpoint__c</field>
+        <value xsi:type="xsd:string">https://api-m.sandbox.paypal.com/v2/checkout/orders</value>
+    </values>
+</CustomMetadata>

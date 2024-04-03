@@ -1,0 +1,799 @@
+<template>
+  <div class="navBar">
+<div class="logo slds-float_left">
+                <a href={navComponentLinks.HomePage}>
+                <img src={LenwithCareLogo} alt="logo" style="width:70px;margin:5px;"></a>
+</div>
+<div class="menuitems">
+<div class="custom-menu">
+  <a class="custom-label-color menuitemsInHome" style="">Lend &nbsp;</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16" style="color:white">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+  <div class="custom-menu-content">
+    <a href={navComponentLinks.ViewAllLoans}>View All Loans</a>
+    <a href={navComponentLinks.BecomeChangeChampion}>Become a Change Champion</a>
+  </div>
+</div>
+<div class="custom-menu">
+  <a class="custom-label-color menuitemsInHome" style="color:white">About &nbsp;</a>
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16" style="color:white">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 1 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+              </svg>
+  <div class="custom-menu-content">
+    <a  href={navComponentLinks.AboutUs}>About Lendwithcare</a>
+    <a href={navComponentLinks.OurImpact}>Impact</a>
+    <a href={navComponentLinks.CareHelpcentre}>Help Centre</a>
+    <a href={navComponentLinks.ContactUs}>Contact Us</a>
+  </div>
+</div>
+</div> 
+<div class="items slds-float_right">
+    <a  
+    aria-label="Menu" 
+    style="--color: #ffffff; --background-color: transparent;width: 20px;height:20px;margin:1px;" 
+    class="ast-builder-social-element ast-inline-flex ast-instagram footer-social-item HamBur"
+    onclick={openMenu}>
+    
+      <img src={ham}/>
+    </a>
+<template if:true={isMenuOpen}>
+    <div class="menu-overlay">
+      <div class="menu">
+        <div style="display:inline-flex">
+        <div class="slds-float_left">
+                <a href={navComponentLinks.HomePage}>
+                <img src={LenwithCareLogo} alt="logo" style="width:70px;margin-top:3px"></a>
+        </div>
+        <a  class="close-button" onclick={closeMenu}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15.854 14.854a.5.5 0 0 1 0 .708l-1.207 1.207a.5.5 0 0 1-.708 0L8 9.207l-6.939 6.94a.5.5 0 0 1-.708 0L.146 15.562a.5.5 0 0 1 0-.708L7.793 8 .146 1.146a.5.5 0 0 1 0-.708L1.354.232a.5.5 0 0 1 .708 0L8 6.793l6.939-6.94a.5.5 0 0 1 .708 0l1.207 1.207a.5.5 0 0 1 0 .708L8.207 8l6.94 6.939z"/>
+          </svg>
+        </a>
+        </div>
+        <div class="search-header">
+      
+        <input type="text" placeholder="  Enter a keyword to search" oninput={handleInputChange} 
+        style="background:white;width:100%;height:40px;border-radius:4px !important;border-style:solid;color:#002A3A;border-color:white"/>
+      
+    </div>
+       <ul class="menu-items">
+          <li>
+            <a href={navComponentLinks.ViewAllLoans} style="color:white">Lend now</a>
+          </li>
+          <li><a href={navComponentLinks.BecomeChangeChampion} style="color:white">Become a Change Champion</a></li>
+          <li><a href={navComponentLinks.OurImpact} style="color:white">Impact</a></li>
+          <li><a href={navComponentLinks.AboutUs} style="color:white">About Lendwithcare</a></li>
+          <li><a href={navComponentLinks.CareHelpcentre} style="color:white">Help Centre</a></li>
+          <li><a  onclick={openLoginOrDashboard} style="color:white">Your Dashboard</a></li>
+          </ul>
+      </div>
+    </div>
+  </template>
+    <a  
+    aria-label="Search" 
+
+    rel="noopener noreferrer" 
+    style="--color: #ffffff; --background-color: transparent;width: 20px;height:20px;" 
+    class="ast-builder-social-element ast-inline-flex ast-instagram footer-social-item"
+    onclick={SearchMenuOpen}>
+      <img src={MGlass} >
+    </a>
+<template if:true={isSearchMenuOpen}>
+<div class="search-overlay">
+  <div class="search">
+    <div style="display:flow-root">
+      <div class="slds-float_left">
+        <a href={navComponentLinks.HomePage}>
+        <img src={LenwithCareLogo} alt="logo" style="width:70px;margin:5px;"></a>
+      </div>
+      <a href="#" class="closes-button slds-float-right" onclick={closeSearchMenu}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M15.854 14.854a.5.5 0 0 1 0 .708l-1.207 1.207a.5.5 0 0 1-.708 0L8 9.207l-6.939 6.94a.5.5 0 0 1-.708 0L.146 15.562a.5.5 0 0 1 0-.708L7.793 8 .146 1.146a.5.5 0 0 1 0-.708L1.354.232a.5.5 0 0 1 .708 0L8 6.793l6.939-6.94a.5.5 0 0 1 .708 0l1.207 1.207a.5.5 0 0 1 0 .708L8.207 8l6.94 6.939z"/>
+        </svg>
+      </a>
+    </div>
+    <div>
+        <input type="text" value={searchTerm} placeholder="Enter a keyword to search" oninput={handleInputChange}  class="SearchText" onkeyup={handleKeyUp}/>
+        <template if:true={showErrorMessage}>
+          <p class="ErrorMessage">Please enter a Value</p>
+        </template>
+    </div>
+     <div class="showmorebutton">
+      <button class="carButtonImpact1 slds-align_absolute-center" style="border:none;" onclick={searchLoans}>Show results</button>
+    </div>
+  </div>
+</div>
+</template>
+    <a onclick={openLoginOrDashboard} aria-label="User" rel="noopener noreferrer"
+          style="--color: #FFFFFF; --background-color: transparent;width: 20px;height: 20px;"
+          class="ast-builder-social-element ast-inline-flex ast-instagram footer-social-item"
+          >
+          
+          <img src={UseAvatar}>
+          <p style="color:white;font-size:12px;" class="slds-align_absolute-center">{lenderBalanceAmountCart} </p>
+        </a>
+
+        <template if:true={loginPage}>
+          <c-care-login-page></c-care-login-page>
+        </template>
+    <a onclick={openCartPage}
+    aria-label="Wallet" 
+    rel="noopener noreferrer" 
+    style="--color: #ffffff; --background-color: transparent;width: 20px;height:20px" 
+    class="ast-builder-social-element ast-inline-flex ast-instagram footer-social-item">
+    
+    <img src={shopcart}>
+    <p style="color:white;font-size:12px;" class="slds-align_absolute-center">{amounttocart} </p>
+    </a>
+    <template if:true={violet}>
+    <button class="MenuButtonSmall" onclick={openViewAllloans}>Lend now</button>
+    </template>
+    <template if:true={yellow}>
+    <button class="MenuButtonSmallYellow" onclick={openViewAllloans}>Lend now</button>
+    </template>
+</div>
+  </div>
+  <template if:true={carecart}>
+<template if:true={CartModules}>
+<div class="search-overlay">   
+  <div class="searchCart">
+    <div style="display:flow-root;background-color:#002A3A;height:50px;">
+      <div class="slds-float_left" style="margin-top:16px;margin-left:10px;">
+        <a onclick={closeCartPage} style="color:white;">&#10094;</a>
+      </div>
+      <h3 class="slds-align_absolute-center" 
+      style="color:white;font-weight:800;font-size:16px;padding:5px;margin:9px">Checkout</h3>
+    </div>
+    <div style="padding-top:20px;padding-bottom:20px;background-color:#F3F0ED;">
+  <lightning-progress-indicator current-step={currentStep} type="base" variant="base">
+                      <lightning-progress-step label="Account" value="1" onclick={nextPage}>
+                      </lightning-progress-step>
+                      <lightning-progress-step label="Cart" value="2" onclick={nextPage}>
+                      </lightning-progress-step>
+                      <lightning-progress-step label="Payment" value="3" onclick={nextPage}>
+                      </lightning-progress-step>
+                       <lightning-progress-step label="Details" value="4" onclick={nextPage}>
+                      </lightning-progress-step>
+                      <lightning-progress-step label="Review" value="5" onclick={nextPage}>
+                      </lightning-progress-step>
+  </lightning-progress-indicator>
+    </div>
+    <lightning-spinner if:true={isLoading}></lightning-spinner>
+  <template if:true={secondPage}>
+    <div class="search-header">
+            <div class="content-title" style="display:grid;padding:10px">
+              <h3 class="CartHeading">Your Cart</h3>
+              <p class="CartParagraph" if:true={timerLoading}>Items will be reserved for {timeDisplayFormat} mins</p>
+
+            </div>
+		<template for:each={loanidfromparent} for:item="item" key={item.Id} for:index="index">
+			<div key={item.Id}>
+				<div class="cart-items">
+					<div class="closeButton">
+						<p style="float:right;padding:1px;margin:10px;font-size:18px;"><a onclick={removeCurrentLoan}
+								data-id={index}>&#10006;</a></p><!-- data-id={item.Id}-->
+					</div>
+					<div class="cart-title" style="display:flex;padding:20px">
+						<img src={AvatarImg} alt="profile" style="height:50px">
+						<div style="margin-left:15px;margin-right:15px">
+							<h3 class="LoanHeading">{item.Loan_Title__c}</h3>
+							<p class="LoanParagraph">{item.Loan_Type__c} | {item.Country__c}</p>
+						</div>
+					</div>
+					<h3 class="LendingH3">You are lending</h3>
+					<div
+						class="slds-col slds-small-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12 slds-align_absolute-center">
+						<div class="custom-combobox" style="padding: 10px;width: 100%">
+							<select name="progress" class="custom-select customCombo Carouselvaluebottom slds-align_absolute-center"
+		                  onchange={handleChangeSelect}
+		                  disabled={disabledButton}
+		                  data-item-id={item.Id} data-recordid={item.Id} data-id={index}
+		
+		                  data-index={index}><!-- value={item.selectedAmount} -->
+		                    <option value=0 >Select Amount</option>
+		                    <template for:each={item.fundingOptions} for:item="option">
+								                      <option key={option.value} value={option.value} selected={option.selected}>{option.label}</option>
+								                  </template>
+		                  </select>
+						</div>
+					</div>
+					<div class="progress-bar">
+						<div class="BottomDiv">
+							<div style="display:block;width:100%;">
+								<div class="progressBar">
+									<div class="progressBarInner1" data-value={item.progressBar}></div>
+								</div>
+								<div
+									style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+									<p
+										style="color:white;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold';margin-top: 5px;font-weight: 800;">
+										$ {item.Funded} Lent</p>
+									<p
+										style="color:white;display:flex;justify-content:right;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold';margin-top: 5px;font-weight: 800;">
+										$ {item.Published_Amount_AUD__c} Goal</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+		<template if:true={errorTransaction}>
+			<section role="dialog" tabindex="-1" aria-modal="true" aria-label="Meaningful description of the modal content"
+				class="slds-modal slds-fade-in-open">
+				<div class="slds-modal__container">
+					<button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" onclick={closeErrorPopup}>
+		
+		close
+		</button>
+					<div class="slds-modal__content slds-p-around_medium slds-modal__content_headless" id="modal-content-id-1">
+						<p>{errorMessageOnTransaction}</p>
+					</div>
+				</div>
+			</section>
+			<div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+		</template>
+		<template if:true={changeChampionTemplate}>
+			<div class="ClassVolDonation">
+				<div class="grid-containerVolDonation">
+					<div>
+						<h3 class="volHeading" style="font-size:16px">Change Champion four weekly Donation</h3>
+					</div>
+					<div><a onclick={closechangeChampionTemplate} class="slds-float_right">&#10006;</a></div>
+				</div>
+        <p class="CartParagraph" style="color:#002A3A;margin-top:10px;font-family: 'Helvetica Neue Bold';">  <!-- style="color:white;margin-top:10px" -->
+          <template for:each={nboxTitle} for:item="nt">
+			<template if:true={nt.changeColor}>
+				<span class="CartParagraph" key={nt.body} style="color:#FEBE10;margin-top:10px">{nt.body}</span>
+			</template>
+			<template if:false={nt.changeColor}>
+				<span class="CartParagraph" style="color:white;margin-top:10px" key={nt.body}>{nt.body}</span>
+			</template>
+		</template>
+        </p>
+				<div class="slds-align_absolute-center"
+					style="margin:10px 0px 10px 0px;background-color:white;display:inline-flex;border-radius:20px;width:100%;">
+					<button class="voldonaButtons" onclick={CC35}>{firstAmount}</button>
+					<button class="voldonaButtons" onclick={CC45}>{secondAmount}</button>
+					<button class="voldonaButtons" onclick={CC65}>{thirdAmount}</button>
+					<button class="voldonaButtons" onclick={CCother}>Other</button>
+				</div>
+				<template if:true={otherRDAmount}>
+					<lightning-input value={otherRDAmounts} type="number" variant="standard" name="name"
+						onchange={otherRDAmountChange} placeholder="$"></lightning-input>
+				</template>
+				<template if:true={errorOnRDAmount}>
+					<p class="VolPara"><span style="color:red">amount should be more than $ 10</span></p>
+				</template>
+        <template if:true={errorOnRDAmountNull}>
+					<p class="VolPara"><span style="color:red">Please select the amount for Change Champion four Weekly Donation</span></p>
+				</template>
+				<p class="CartParagraph"
+		style="color:#002A3A;margin-top:5px;font-family: 'Helvetica Neue Bold';font-size:14px;line-height:17px;">
+		<template for:each={changeChampionWindowBody} for:item="cc">
+			<template if:true={cc.changeColor}>
+				<span key={cc.body} class="CartParagraph" style="color:#FEBE10;margin-top:10px">
+					<lightning-formatted-rich-text value={cc.body}>
+					</lightning-formatted-rich-text>
+				</span>
+			</template> 
+			<template if:false={cc.changeColor}>
+				<span class="CartParagraph" style="color:white;margin-top:10px" key={cc.body}>
+					<lightning-formatted-rich-text value={cc.body}>
+					</lightning-formatted-rich-text>
+				</span>
+			</template>
+		</template>
+	</p>
+			</div>
+		</template>
+		<template if:true={voluntaryDonation}>
+			<div class="ClassVolDonation">
+        <div class="grid-containerVolDonation">
+          <div><h3 class="volHeading">Voluntary Donation</h3></div>
+          <div><a onclick={closeVoluntaryDonation} class="slds-float_right">&#10006;</a></div>
+        </div>
+				<lightning-combobox name="progress" value={defaultDonationPercentageValue} options={combobox2Options}
+					onchange={VoluntaryDonationChange}>
+				</lightning-combobox>
+				<template if:true={otherPercentage}>
+					<p class="VolPara">Other % value</p>
+					<lightning-input type="number" variant="standard" name="name" onchange={otherPercentageChangeOn} onblur={otherPercentageChange}
+						placeholder="%" value={otherPercentageValue}></lightning-input>
+				</template>
+				<template if:true={errorMessage}>
+					<p class="VolPara"><span style="color:red">Your donation should be between 0% and 100% of your cart amount</span></p>
+				</template>
+				<p class="VolPara">Your donation to support our poverty-fighting work around the world,&nbsp;<span><a onclick={gotoHelpCenter} style="color:white"><u>Learn more about donations.</u></a></span></p>
+			</div>
+		</template>
+		<template if:true={LenderTopup}>
+			<div class="ClassVolDonation">
+				<div style="display:flex;">
+					<div style="display:flex;width:100%">
+						<h3 class="volHeading">Top up</h3>
+						<div style="width:83%">
+							<a onclick={closeLenderTopup} class="slds-float_right">&#10006;</a>
+						</div>
+					</div>
+				</div>
+				<h3 class="volHeading">How much would you like to top up your account?</h3>
+				<lightning-input type="text" variant="standard" name="name" value={topUpAmount1}
+					onchange={lenderTopupAmountChangesOn} onblur={lenderTopupAmountChanges} placeholder="$" step="0.01"></lightning-input>
+				<template if:true={errorMessageTopup}>
+					<p class="VolPara"><span style="color:red">amount should be more than $2</span></p>
+				</template>
+				<template if:true={errorMessageTopupNull}>
+					<p class="VolPara"><span style="color:red">Please Login to continue</span></p>
+				</template>
+				<template if:true={errorMessageTopupkKYCPending}>
+					<p class="VolPara">
+						<span style="color:red">Topping up your lender balance will go over the maximum limit of $4999. 
+Please reduce the top-up amount or <a onclick={gotoContactUsPage} style="color:white;text-decoration: underline;"> <u> contact us</u></a> to increase the limit.</span>
+					</p>
+				</template>		
+			</div>
+		</template>
+		<template if:true={supportOneMoreProject}>
+			<div class="">
+				<div class="cart-items">
+					<div class="cart-title" style="display:flex;padding:20px">
+						<img src={AvatarImg} alt="profile" style="height: 55px;">
+						<div style="margin-left:15px;margin-right:15px">
+							<h3 class="LoanHeadingnewStyle">Support one more project</h3>
+							<p class="LoanParagraphnewStyle">{BorrowerFirstName} is missing just $ {missingAmount} ! Be the
+								person to complete their loan today.</p>
+						</div>		
+					</div>
+					<lightning-layout multiple-rows>
+						<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+							small-device-size="6" medium-device-size="6" large-device-size="6">
+							<button class="custombuttomwithdraw" onclick={addLeastAmountToTotal}>Add to cart</button>
+						</lightning-layout-item>
+						<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+							small-device-size="6" medium-device-size="6" large-device-size="6">
+							<button class="LearnMoreButton" >Learn more</button>
+						</lightning-layout-item>		
+					</lightning-layout>
+					<div class="progress-bar">
+						<div class="BottomDiv">
+							<div style="display:block;width:100%;">
+								<div class="progressBar">
+									<div class="progressBarInner1" data-value={progress}></div>
+								</div>
+								<div
+									style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%;padding-right:10px;padding-left:10px;">
+									<p
+										style="color:white;font-family:'Helvetica Neue Bold';font-size:12px;line-height:12px;margin-top: 5px;font-weight: 800;">
+										$ {FundedAmount} Lent</p>
+									<p
+										style="color:white;display:flex;justify-content:right;font-family:'Helvetica Neue Bold';font-size:12px;line-height:12px;margin-top: 5px;font-weight: 800;">
+										$ {GoalAmount} Goal</p>
+								</div>
+							</div>
+						</div>		
+					</div>
+				</div>
+			</div>
+		</template>
+    <lightning-layout multiple-rows>
+      <div class="grid-containerdisplaytotal">
+        <div><h3 style="font-size:24px;color:#002A3A;font-weight:800;font-family:'Helvetica Neue Bold';line-height:32px;float:left;">Total</h3></div>
+        <div><h3 style="font-size:24px;color:#002A3A;font-weight:800;font-family:'Helvetica Neue Bold';line-height:32px;float:right;">$ {testTotal}</h3></div>
+      </div>
+          <template if:true={amountZero}>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+            medium-device-size="12" large-device-size="12">
+            <p class="VolPara"><span style="color:red">Add something to cart to continue</span></p>
+            </lightning-layout-item>
+          </template>
+			<template if:true={OpenCCRedirectMessage}>
+				<div class="search-overlayPopup">
+					<div class="searchPopup">
+						<div style="display:flow-root">
+							<a class="closes-button slds-float-right" onclick={CloseCCRedirectMessage}>
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
+									viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="M15.854 14.854a.5.5 0 0 1 0 .708l-1.207 1.207a.5.5 0 0 1-.708 0L8 9.207l-6.939 6.94a.5.5 0 0 1-.708 0L.146 15.562a.5.5 0 0 1 0-.708L7.793 8 .146 1.146a.5.5 0 0 1 0-.708L1.354.232a.5.5 0 0 1 .708 0L8 6.793l6.939-6.94a.5.5 0 0 1 .708 0l1.207 1.207a.5.5 0 0 1 0 .708L8.207 8l6.94 6.939z" />
+								</svg>
+							</a>
+						</div>
+						<div class="search-header " style="padding:5px;">
+							<p class="slds-align_absolute-center" style="font-family:'Helvetica Neue Bold Pro';">Would you like to
+								become a change champion</p>
+							<div class="promptButtons" style="padding:5px;padding-left:19px;">
+								<button class="custombuttomwithdrawCC" style="margin-right: 15px;" onclick={ok}>Yes</button>
+								<button class="custombuttomwithdrawCC" onclick={cancel}>No</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</template>
+            <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+            medium-device-size="12" large-device-size="12">
+              <button class="custombuttomwithdraw" style="width: -webkit-fill-available;" disabled={canContinue} onclick={gotoSecondPage}>Continue</button>
+            </lightning-layout-item>
+          </lightning-layout>
+  </div>
+  </template>
+  <lightning-spinner if:true={isLoading}></lightning-spinner>
+  <template if:true={firstPage}>
+  <template if:true={guestCheckout}>
+    <div class="search-header">
+      <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+        medium-device-size="12" large-device-size="12" >
+          <h3 class="CartHeading">Checkout as guest</h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+        medium-device-size="12" large-device-size="12">
+          <h3 class="CartParagraph" style="margin-top: -15px;font-size:16px;line-height:16px;font-family:'Helvetica Neue Regular';font-weight:100;"><a onclick={handleCheckoutBack} style="color:#002A3A"><u> &lt;&lt; Back </u></a></h3>
+        </lightning-layout-item>
+        <div class="para2" style="width:100%">
+        <div class="form-container">
+          <template if:true={showGuestError}>
+            <p style="margin: 20px;color: red;font-size: 16px;font-weight: bold;">Fill required details</p>
+          </template>
+          <div class="field">
+            <label class="classFieldLabel">First name</label>
+            <input class="ClassInputFields italic-placeholder" value={guestFName} data-value="FirstName" type="text" onchange={handleInputChangeGuest} placeholder="&nbsp; eg: jane"></input>
+          </div>
+          <div class="field">
+            <label class="classFieldLabel">Last name</label>
+            <input class="ClassInputFields italic-placeholder" value={guestLName} data-value="LastName" type="text" onchange={handleInputChangeGuest} placeholder="&nbsp; eg: smith" ></input>
+          </div>
+          <div class="field">
+            <label class="classFieldLabel">Email</label>
+            <input class="ClassInputFields italic-placeholder" value={guestEmail} data-value="Email" type="text" onchange={handleInputChangeGuest} placeholder="&nbsp; eg: janesmith@gmail.com" ></input>
+          </div>
+        </div>
+      </div>
+      </lightning-layout>
+      <div style="display:inline-flex;margin: 0px 10px 10px 20px;">
+      <input type="checkbox" checked={termCheck} onchange={handleInputChangeGuest} data-value="Terms" variant="standard" name="name" ></input>
+      <p style="padding-left:10px;font-size:12px;line-height:14px;font-family:'Helvetica Neue Regular'">I agree to the Terms & Conditions as set out by CARE Australia and agree to this transaction being treated as a one off donation.</p>
+      </div>
+        <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available;" onclick={gotoCartSecondPage}>Checkout as guest</button>
+      </div>
+  </template>
+  <template if:true={checkOutasGuest}>
+     <lightning-layout multiple-rows>
+      <lightning-layout-item size="12" style="margin: 10px 20px 30px;padding: 0px;" small-device-size="12" 
+      medium-device-size="12" large-device-size="12" >
+        <h3 class="CartHeading">Sign in</h3>
+      </lightning-layout-item>
+    </lightning-layout>
+    <button class="custombuttomwithdrawCASign" style="width: -webkit-fill-available; text-align: center;" data-value="SignIn" onclick={handleSignIn} >Sign in / Create an Account </button>
+    <p style="margin-left: 10px;font-size:16px;line-height:16px;font-family:'Helvetica Neue Regular';margin: 0px 20px 30px; cursor: pointer;" ><u data-value="Forgot" onclick={handleSignIn}>Forgot your password?</u></p>
+    <hr style="margin:10px 20px;">
+    <!--<template if:false={changeChampionTemplate}>
+      <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available; margin:30px 20px; text-align: center;" onclick={handleCheckoutGuest}>Checkout as guest</button>
+    </template>-->
+  </template>
+  </template>
+  <template if:true={thirdPage}>
+    <div class="search-header">
+      <lightning-layout multiple-rows >
+        <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+        medium-device-size="12" large-device-size="12" >
+          <h3 class="CartHeadingnew" style="margin-top:-18px;padding-left: 5px;">Select a payment method</h3>
+        </lightning-layout-item>
+        <lightning-layout multiple-rows style="margin:10px">
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+        <div class="grid-containerusePaymentTB">
+          <div>
+            <template if:true={haveLoaninCart}><p class="choosepaymentMethodvalues">Loans & Donation Amount</p></template>
+          </div>
+          <div>
+            <template if:true={haveLoaninCart}><p class="choosepaymentMethodvalues">${loanAndRdAmount}</p></template>
+          </div>
+          <div>
+            <template if:true={LenderTopup}><p class="choosepaymentMethodvalues">Topup Amount</p></template>
+          </div>
+          <div>
+            <template if:true={LenderTopup}><p class="choosepaymentMethodvalues">${topUpAmount}</p></template>
+          </div>
+          <div>
+            <template if:true={changeChampionTemplate}><p class="choosepaymentMethodvalues">Change Champion Amount</p></template>
+          </div>
+          <div>
+            <template if:true={changeChampionTemplate}><p class="choosepaymentMethodvalues">${rdAmount}</p></template>
+          </div>
+        </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="12" 
+        medium-device-size="12" large-device-size="12" >
+          
+          <div style="display:flex;">
+            <lightning-input type="checkbox" onchange={onCoverTransactionCost} value={showCoverTransactionCost} data-element="checkbox" checked={showCoverTransactionCost}> </lightning-input>
+            <div class="grid-containerusePaymentTB">
+              <p class="choosepaymentMethodvalues" style="color:#002A3A;font-size:16px;line-height:16px;font-family:'Helvetica Neue Regular';padding-top:2px;">Cover Transaction Costs</p>
+              <p class="choosepaymentMethodvalues">${coverTransactionCost}</p>
+            </div>
+          </div>
+          
+          <!--div class="grid-containerusePaymentTB">
+            <div><p class="choosepaymentMethodvalues"><lightning-input type="checkbox" onchange={onCoverTransactionCost} value={showCoverTransactionCost} checked> </lightning-input></p></div>
+            <div><p class="choosepaymentMethodvalues">Cover Transaction Costs</p></div>
+            <div><p class="choosepaymentMethodvalues">${coverTransactionCost}</p></div>
+          </div--> 
+        </lightning-layout-item>
+        <lightning-layout-item if:true={haveLenderBalance} size="12" small-device-size="12" 
+        medium-device-size="12" large-device-size="12" class="slds-p-top_x-large slds-p-bottom_x-large slds-p-left_small slds-p-right_small">
+          <div style="display:flex;">
+            <lightning-input type="checkbox" onchange={onUseLenderbalance} value={lenderBalanceSelected} checked={lenderBalanceSelected}> </lightning-input>
+            <p style="color:#002A3A;font-size:16px;line-height:16px;font-family:'Helvetica Neue Regular';padding-top:2px;">Use Lender Balance ${lenderBalanceAmount}</p>
+          </div> <!-- margin-bottom:30px; -->
+        </lightning-layout-item>
+
+          <lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+            <div class="grid-containerusePaymentTB">
+              <div>
+                <template if:true={isRemainingBalance}>
+                  <p class="choosepaymentMethodvalues">Amount remaining to pay</p>
+                </template>
+              </div>
+              <div>
+                <template if:true={isRemainingBalance}>
+                  <p class="choosepaymentMethodvalues">${remainingBalanceAmount}</p>
+                </template>
+              </div>
+              <div>
+                <template if:true={isprocessingAmount}>
+                  <p class="choosepaymentMethodvalues">Processing Amount</p>
+                </template>
+              </div>
+              <div>
+                <template if:true={isprocessingAmount}>
+                  <p class="choosepaymentMethodvalues">${processingAmount}</p>
+                </template>
+              </div>
+            </div>
+          </lightning-layout-item>
+        </lightning-layout>
+        <div class="grid-containerChoosePayment">
+          <div>
+            <template if:true={showCreditCard}> <button class="PillsCardButtons" onclick={ifCardPayment} disabled={disabledButton}>Card</button> </template>
+          </div>
+          <div>
+            <template if:true={showPaypal}> <button class="PillsCardButtons" onclick={ifPaypalPayment} disabled={disabledButton}><i>PayPal</i></button> </template>
+          </div>
+        </div>
+        <div class="grid-containerChoosePaymentAppGoo">
+          <div>
+            <template if:true={showGooglePay}>
+              <c-stripe-payment-component payment-type="GooglePay" constant-contact-id={constantContactId}
+                contactid={contactid} amount={finalTransactionAmount} vf-page-domain={vfPageDomain}
+                onloading={handleStripePaymentComponentLoading} onpay={handleStripePay}></c-stripe-payment-component>
+            </template>
+          </div>
+          <div>
+            <template if:true={showApplePay}>
+              <button class="PillsCardButtons1" disabled={disabledButton}><img src={Apple} alt="Apple Logo" width="16px" style="margin-top:-2px" />&nbsp;&nbsp; Apple Pay</button>
+            </template>
+          </div>
+        </div>
+      </lightning-layout>
+      <lightning-layout multiple-rows style="margin:-25px 10px 10px 10px">
+      <button class="custombuttomwithdrawPaynow" if:true={LenderbalanceChecked} style="width: -webkit-fill-available;font-size:16px;font-weight:800;margin-top:30px;" onclick={gotoFourthPage}>Continue</button>
+      </lightning-layout>
+      <template if:true={cardPayment}>
+        <c-stripe-payment-component payment-type="CreditCard" constant-contact-id={constantContactId} contactid={contactid} vf-page-domain={vfPageDomain} create-token-for-rd={createTokenForRd} onloading={handleStripePaymentComponentLoading} oncontinue={gotoFourthPage}></c-stripe-payment-component>
+      </template>
+      <template if:true={paypalPayment}>
+        <div class="para2" style="margin:10px">
+          <div class="form-container">
+            <h3 style="font-size:14px;line-height:19px;font-weight:800;font-family: 'Helvetica Neue Bold';color:#002A3A;">Login to: <i>PayPal</i></h3>
+        
+            <div class="field">
+              <label class="classFieldLabel">Email address or phone number</label>
+              <input class="ClassInputFields" type="text" onchange={handleInputChange} ></input>
+            </div>
+        
+            <div class="field">
+              <label class="classFieldLabel">Password</label>
+              <input class="ClassInputFields" type="text" onchange={handleInputChange} ></input>
+            </div>
+        
+          </div>
+      
+        </div>
+        <div style="margin: -10px 20px 20px 20px;">
+          <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available;font-size:16px;font-weight:800" onclick={gotoFourthPage}>Continue</button>
+        </div>
+      </template>
+    </div>
+  </template>
+
+
+  <template if:true={fourthPage}>
+    <div class="search-header">
+    <div class="para2" style="padding:10px">
+      <div class="form-container">
+        
+        <div if:false={noPostcode} class="field">
+          <label class="classFieldLabel">Postcode</label>
+          <input class="ClassInputFields" type="text" onchange={handlePostcodeChange} ></input>
+        </div>
+    
+        <div if:false={noMobilePhone} class="field">
+          <label class="classFieldLabel">Mobile</label>
+          <input class="ClassInputFields" type="text" onchange={handleMObileChange} ></input>
+        </div>
+    
+      </div>
+    
+    </div>
+    <div style="margin: -10px 20px 20px 20px;">
+      <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available;font-size:16px;font-weight:800" onclick={gotoFifthPage}>Continue</button>
+    </div>
+    </div>
+  </template>
+  <lightning-spinner if:true={isLoading}></lightning-spinner>
+  <template if:true={fifthPage}>
+    <div if:true={paymentError} class="slds-notify slds-notify_alert slds-alert_error" role="alert">
+      <span class="slds-assistive-text">error</span>
+      <h2>{paymentError}</h2>
+    </div>
+    <div class="search-header" ><!-- style="padding:0px 20px" -->
+      <h3 class="CartHeadingnew" style="padding-left:10px;">Review and complete</h3>
+      <h3 style="font-weight:800;color:#002A3A;padding:10px;font-size:16px;font-family:'Helvetica Neue Bold';line-height:24px;">Cart</h3>
+      <div style="margin:10px;background-color:#F3F0ED;border-radius:8px;">
+        <div style="padding:10px">
+          <p style="font-weight:800;font-size:16px;font-family:'Helvetica Neue Bold';line-height:16px;padding-left:5px;">{totalNoOfCartItems} Items</p>
+          <div style="display:block;">
+            <template for:each={loanidfromparent} for:item="item" for:index="index">  <!-- cartItems -->
+              <div  key={item.Id}>  <!-- class="slds-p-left_small" -->
+              <div class="grid-container">
+                <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >{item.Loan_Title__c}</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ {item.selectedAmount}</p>
+                </div>
+              </div>
+                  <!-- <br> -->
+              </div>  
+              
+            </template>
+            <template if:true={voluntaryDonation}>
+              <div class="grid-container">
+              <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >Voluntary Donation</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ {totalLoansAndDonation}</p>
+                </div>
+              </div>
+                
+            </template>
+            <template if:true={showCoverTransactionCost}>
+              <div class="grid-container">
+              <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >Cover Transaction Costs</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ {coverTransactionCost}</p>
+                </div>
+              </div>
+                
+            </template>
+            <template if:true={lenderBalanceSelected}>
+              <div class="grid-container">
+              <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >Lender Balance</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ -{lenderBalanceAmount}</p>
+                </div>
+              </div>
+                
+            </template>
+            <template if:true={changeChampionTemplate}>
+              <div class="grid-container">
+              <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >Change champion Amount</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ {AddedChangeChampionAmount}</p>
+                </div>
+              </div>
+                
+            </template>
+            <template if:true={LenderTopup}>
+              <div class="grid-container">
+              <div class="slds-float_left">
+                  <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >Topup</p>
+                </div>
+                <div class="slds-float_right" style="display: flex;justify-content: right;">
+                <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;" >$ {AddedLenderTopup}</p>
+                </div>
+              </div>
+                
+            </template>
+          </div>
+        </div>
+        <hr style="margin:5px">
+        <div style="padding:0px 10px 30px 10px">
+            <div class="slds-float_left">
+              <h3 style="font-weight:800;font-size:22px;font-family:'Helvetica Neue Bold';line-height:30px;">Total</h3>
+            </div>
+            <div class="slds-float_right">
+              <h3 style="font-weight:800;font-size:22px;font-family:'Helvetica Neue Bold';line-height:30px;">$ {processingAmount}</h3><!-- totalLoansOnly -->
+            </div>
+        </div>   
+      </div>
+
+      <h3 style="font-weight:800;color:#002A3A;margin:10px;font-size:16px;font-family:'Helvetica Neue Bold';line-height:24px;padding-top: 15px;">Your Information</h3>
+
+      <div class="yourInformation">
+        <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;">{lenderName}</p>
+        <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:5px;">{lenderEmail}</p>
+      </div>
+
+      <h3 style="font-weight:800;color:#002A3A;margin:10px;font-size:16px;font-family:'Helvetica Neue Bold';line-height:24px;padding-top: 15px;">Payment detail</h3>
+
+      <div class="paymentDetails">
+        <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;">Pay by {payByMethod}</p>
+        <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:5px;">{paymentDetails}</p>
+      </div>
+      <template if:true={noItemsInCart}>
+        <p style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:16px;color:red;padding-left:10px;">Your cart is empty</p>
+      </template>
+      <template if:true={cardPayment}>
+        <button class="custombuttomwithdrawPaynow" style="width: -webkit-fill-available;font-size:16px;font-weight:800;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:30px;" onclick={gotoThankYouPayNow} disabled={payButtonDisabled}>Pay now</button>
+      </template>
+      <template if:true={LenderbalanceChecked}>
+        <button class="custombuttomwithdrawPaynow" style="width: -webkit-fill-available;font-size:16px;font-weight:800;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:30px;" onclick={gotoThankYouPayNow} disabled={payButtonDisabled}>Pay now</button>
+      </template>
+      <template if:true={googlePayment}>
+        <button class="custombuttomwithdrawPaynow" style="width: -webkit-fill-available;font-size:16px;font-weight:800;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:30px;" onclick={gotoThankYouPayNow} disabled={payButtonDisabled}>Pay now</button>
+      </template>
+       <template if:true={paypalPButton}>
+        <button class="custombuttomwithdrawPaynow" style="width: -webkit-fill-available;font-size:16px;font-weight:800;font-family:'Helvetica Neue Regular';line-height:16px;margin-top:30px;border-radius:4px;" onclick={getPaymentLink} disabled={payButtonDisabled}>Pay now</button>
+      </template>
+    </div>
+  </template>
+
+  </div>
+
+</div>
+</template>
+
+<template if:true={ThankYouAfterPayNow}>
+    <div class="search-overlay"> <!--style={searchBg}-->
+    <div class="search">	
+      <div style="padding: 10px 10px 10px 10px;">
+          <h3 style="font-size:16px;font-family:'Helvetica Neue Regular';line-height:22px;">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h3>
+          <button class="custombuttomwithdraw" style="width: -webkit-fill-available;margin-top:20px;font-size:16px;font-family:'Helvetica Neue Bold';line-height:16px;font-weight:800;" onclick={CloseThankYouAfterPayNow}>Email</button>
+      </div>
+      </div>
+    </div>
+  </template>
+
+  <template if:true={OpenThankyouPageWithNavBar}>
+    
+<div class="search-overlay"> <!--style={searchBg}-->
+  <div class="search" style="background:transparent linear-gradient(205deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;">
+      <c-custom-nav></c-custom-nav>
+      <lightning-spinner if:true={isLoading}></lightning-spinner>
+      <div style="margin:10px">
+        <h3 class="CartHeadingforthankyou">Thank you for your <span style="color:#FEBE10">contribution</span></h3>
+              <p class="CartParagraphforthankyou" style="">An email will be sent containing information of your loan. Your contribution details will also be available in your user profile. If you have any questions regarding your donation feel free to email us at <a href="#" style="color:#FEBE10"><u>info@care.org.au</u></a></p>
+              <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available;margin-top:20px" onclick={OpenDashboardPage} disabled={canMoveFromSixthPage}>&#x1F464;&nbsp; Go to dashboard</button>
+              <template if:false={contactChampion}>
+                <template if:false={changeChampionTemplate}>
+                  <hr style="margin:4px">
+                  <p class="CartParagraphforthankyou">You can help ensure the continuation of Lendwithcare for years to come by becoming a Lendwithcare Change Champion and making a regular monthly donation.</p>
+                  <button class="custombuttomwithdrawCA" style="width: -webkit-fill-available;margin-top:20px" onclick={OpenHomePage} disabled={canMoveFromSixthPage}>Become a Change Champion today</button>
+                </template>
+              </template>
+      </div>
+  </div>
+</div>
+</template>
+    
+</template>
+</template>

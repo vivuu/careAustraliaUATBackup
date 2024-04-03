@@ -1,0 +1,450 @@
+/* Start  */
+  h3{
+    margin: 0;
+  }
+  a{
+  text-decoration: none;
+  outline: none;
+  }
+  a:hover, a:focus {
+  color: #373e18;
+  }
+  .headers{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .navss{
+    z-index: 5;
+    position: inherit;
+  }
+  .sticky-nav{
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+  }
+  .grid-container > div {
+    background-color: none;
+    height: 535px;
+  }
+  .ImgBannerClass1{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    left: 0;
+  }
+  .BannerImageClass3{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 300px; /* Set the height of the container to your desired height */
+  }
+  .BottomBannerImgae{
+    margin-top: auto;
+  }
+
+  .custombuttom{
+    margin-top: 15px;
+    background-color: rgb(47, 13, 116);
+    border-style: none;
+    color: white;
+    font-family: 'Helvetica Neue Bold Pro';
+    box-shadow: none;
+  }
+  .custombuttom:hover{
+    background-color: rgb(47, 13, 116);
+    border-style: none;
+  }
+  .Image {
+    position: absolute;
+    width: auto; /* Adjust the width as needed */
+    height: auto; /* Adjust the height as needed */
+    transition: transform 3s linear;
+    margin-top: -300px;
+    margin-left: -100px;
+  }
+  button {
+    background: #FEBE10;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    border-radius: 4px;
+    padding: 12px 0px;
+    width: 380px;
+    font-family: 'Sketchetik Fill Bold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #163B54;
+  }
+  .work-section-meta {
+    font-family: 'Helvetica Neue Bold Pro';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin: 0px;
+  }
+  /* End  */
+  @media only screen and (max-width: 600px) {
+    .grid-container {
+        display: none;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .bannerHeading{
+        padding: 105px 175px 175px 125px;
+        display: grid;
+        margin-left: -110px;
+        font-size: 70px;
+        position: absolute;
+        z-index: 4;
+    }
+    .section-heading-Banner {
+        font-family: 'Sketchetik Fill Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 50px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+    .custombuttom{
+        display: none;
+    }
+    .pad{
+        padding-left: 0;
+        padding-right: 0;   
+    }
+    .SmallHeading{
+        font-family: 'Helvetica Neue Bold Pro';
+        font-size: 16px;
+          line-height: 22px;
+        text-align: center;
+        display: none; 
+    }
+    .smallHeading-text{
+      padding: 10px 40px 40px 15px;
+      margin-top: 330px;
+      width: 75%;
+      z-index: 4;
+      position: absolute;
+    }
+    .ImagesMob{
+        display: flex;
+        position: absolute;
+        z-index: 3;
+        left: 34px;
+        width: 93%;
+    }
+    
+  }
+  .violet{
+    color:#472175;
+  }
+  @media only screen and (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .bannerHeading{
+        padding: 150px;
+        display: grid;
+        margin-left: -50px;
+        position: absolute;
+        z-index: 4;
+    }
+    .section-heading-Banner {
+        font-family: 'Sketchetik Fill Bold';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 50px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+    .SmallHeading1{
+        display: none;
+    }
+    .headers1{
+        display: block;
+    }
+    .pad{
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0px 0px 0px 0px;
+    }
+    .SmallHeading{
+        font-family: 'Helvetica Neue Bold Pro';
+        font-size: 38px;
+          line-height: 42px;
+          text-align: center;
+          /* margin: 40px; */
+          padding: 90px;
+    }
+    .ImagesMob{
+        display: none;
+        position: absolute;
+        z-index: 3;
+    }
+    
+  }
+  @media only screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .bannerHeading{
+        display: grid;
+        position: absolute;
+        z-index: 4;
+        padding: 0px;;
+        left:80px;
+        top: 140px;
+    }
+    .section-heading-Banner {
+        font-family: 'Sketchetik Fill Bold';
+        font-style: normal;
+        font-size: 65px;
+        line-height: 66px;
+        color: #FFFFFF;
+    }
+    .custombuttom{
+        margin-top: 15px;
+        background-color: rgb(47, 13, 116);
+        border-style: none;
+        color: white;
+        font-family: 'Helvetica Neue Bold Pro';
+        width: 200px;
+    }
+    .SmallHeading1{
+        display: none;
+    }
+    .custombuttom1{
+        display: none;
+    }
+    .headers1{
+        display: block;
+    }
+    .pad{
+        padding-left: 0;
+        padding-right: 0;
+        margin: 20px 0px 0px 0px;
+    }
+    .SmallHeading{
+        font-family: 'Helvetica Neue Bold Pro';
+        font-size: 38px;
+        line-height: 42px;
+        text-align: center;
+        /* margin: 40px; */
+        padding: 50px 90px;
+    }
+    .ImagesMob{
+        display: none;
+    }
+    .no-visibility{
+      visibility: hidden;
+    }
+    .header-img-2{
+      width: 12%;
+      position: absolute;
+      top: 15px;
+      left: 185px;
+    }
+    .header-img-3{
+      position: relative;
+      margin-bottom: 40px;
+      left: 50px;
+    }
+    .header-img-4{
+      position: absolute;
+      right: 15px;
+      width: 38%;
+    }
+  }
+  @media only screen and (min-width: 992px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .bannerHeading{
+        padding: 0px;
+        display: grid;
+        position: absolute;
+        margin-left: 0px;;
+        z-index: 4;
+        top: 170px;
+        left: 80px;
+    }
+    .section-heading-Banner {
+        font-family: 'Sketchetik Fill Bold';
+        font-style: normal;
+        font-size: 101px;
+        line-height: 94px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    .SmallHeading1{
+        display: none;
+    }
+    .custombuttom1{
+        display: none;
+    }
+    .headers1{
+        display: block;
+    }
+    .pad{
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: 20px 0px 0px 0px;
+    }
+    .SmallHeading{
+        font-family: 'Helvetica Neue Bold Pro';
+        font-size: 38px;
+        line-height: 42px;
+        text-align: center;
+        /* margin: 40px; */
+        padding: 90px;
+    }
+    .ImagesMob{
+        display: none;
+    }
+    .header-img-3{
+      position: relative;
+      left: 290px;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .bannerHeading{
+        padding: 0px;
+        display: grid;
+        position: absolute;
+        margin-left: 0px;;
+        z-index: 4;
+        top: 170px;
+        left: 80px;
+    }
+    .section-heading-Banner {
+        font-family: 'Sketchetik Fill Bold';
+        font-style: normal;
+        font-size: 101px;
+        line-height: 94px;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+    .SmallHeading1{
+        display: none;
+    }
+    .headers1{
+        display: block;
+    }
+    .pad{
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: 20px 0px 0px 0px;
+    }
+    .SmallHeading{
+        font-family: 'Helvetica Neue Bold Pro';
+        font-size: 38px;
+        line-height: 42px;
+        text-align: center;
+        /* margin: 40px; */
+        padding: 90px;
+    }
+    .ImagesMob{
+        display: none;
+    }
+    .header-img-3{
+      position: relative;
+      left: 290px;
+    }
+  }
+
+  @media screen and (max-width: 1018px) {
+    button {
+        margin-top: 1%;
+        width: 100%;
+    }   
+  }
+  @media screen and (min-width:1019px) and (max-width: 1532px) {
+    button { 
+        margin-top: 1%;
+        width: 200px;
+    }
+    .header-img-3{
+      position: relative;
+      left: 290px;
+    }
+    .bannerHeading{
+        padding: 0px;
+        display: grid;
+        position: absolute;
+        margin-left: 0px;;
+        z-index: 4;
+        top: 170px;
+        left: 80px;
+    }
+  }
+  @media only screen and (min-width: 1500px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        background-color: none;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+    }
+    .headers1{
+        display: block;
+    }
+    .ImagesMob{
+        display: none;
+    }
+    .bannerHeading{
+        padding: 0px;
+        display: grid;
+        position: absolute;
+        margin-left: 0px;;
+        z-index: 4;
+        top: 170px;
+        left: 80px;
+    }
+    .header-img-3{
+      position: relative;
+      left: 290px;
+    }
+  }
+
+  .box-shadow0{
+    box-shadow: none;
+  }

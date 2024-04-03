@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <decisions>
+        <name>Check_AccountType_Equals_Corporate_Or_Foundation</name>
+        <label>Check AccountType Equals Corporate Or Foundation</label>
+        <locationX>584</locationX>
+        <locationY>371</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Equals_Corporate</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Corporate</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Donor_Level_to_Corporate</targetReference>
+            </connector>
+            <label>Equals Corporate</label>
+        </rules>
+        <rules>
+            <name>Equals_Foundation</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Foundation</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Donor_Level_to_Trust_And_Foundation</targetReference>
+            </connector>
+            <label>Equals Foundation</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Update FY Donor Level - Account {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update FY Donor Level - Account</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Donor_Level_to_Corporate</name>
+        <label>Update Donor Level to Corporate</label>
+        <locationX>320</locationX>
+        <locationY>479</locationY>
+        <inputAssignments>
+            <field>FY_Donor_Level__c</field>
+            <value>
+                <stringValue>Corporate</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Donor_Level_to_Trust_And_Foundation</name>
+        <label>Update Donor Level to Trust And Foundation</label>
+        <locationX>848</locationX>
+        <locationY>479</locationY>
+        <inputAssignments>
+            <field>FY_Donor_Level__c</field>
+            <value>
+                <stringValue>Trust &amp; Foundation</stringValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>458</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Check_AccountType_Equals_Corporate_Or_Foundation</targetReference>
+        </connector>
+        <filterFormula>OR(ISNEW(),ISCHANGED({!$Record.Type}))</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>1</fullName>
+        <default>false</default>
+        <label>1 Success Stories</label>
+    </customValue>
+    <customValue>
+        <fullName>2</fullName>
+        <default>false</default>
+        <label>2 Inner City Professionals</label>
+    </customValue>
+    <customValue>
+        <fullName>3</fullName>
+        <default>false</default>
+        <label>3 Suburban Families</label>
+    </customValue>
+    <customValue>
+        <fullName>4</fullName>
+        <default>false</default>
+        <label>4 Urban Change</label>
+    </customValue>
+    <customValue>
+        <fullName>5</fullName>
+        <default>false</default>
+        <label>5 Blue Collar Families</label>
+    </customValue>
+    <customValue>
+        <fullName>6</fullName>
+        <default>false</default>
+        <label>6 Student Communities</label>
+    </customValue>
+    <customValue>
+        <fullName>7</fullName>
+        <default>false</default>
+        <label>7 New Arrivals</label>
+    </customValue>
+    <customValue>
+        <fullName>8</fullName>
+        <default>false</default>
+        <label>8 Urban Survivors</label>
+    </customValue>
+    <customValue>
+        <fullName>9</fullName>
+        <default>false</default>
+        <label>9 City Seniors</label>
+    </customValue>
+    <customValue>
+        <fullName>10</fullName>
+        <default>false</default>
+        <label>10 Small Towns &amp; Beyond</label>
+    </customValue>
+    <customValue>
+        <fullName>11</fullName>
+        <default>false</default>
+        <label>11 Regional Centres</label>
+    </customValue>
+    <customValue>
+        <fullName>12</fullName>
+        <default>false</default>
+        <label>12 Farming Heartland</label>
+    </customValue>
+    <customValue>
+        <fullName>13</fullName>
+        <default>false</default>
+        <label>13 Country Battlers</label>
+    </customValue>
+    <description>Created for Landscape Group field under Contact</description>
+    <masterLabel>ContactLandscapeGroup</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

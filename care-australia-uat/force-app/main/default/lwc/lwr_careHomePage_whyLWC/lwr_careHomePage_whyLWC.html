@@ -1,0 +1,33 @@
+<template>
+    <!-- why lwc starts here -->
+    <lightning-layout class="slds-p-top_xx-large slds-p-bottom_xx-large whylwc pad"  multiple-rows="true">
+      
+        <lightning-layout-item size="12" class="WhyLwcHeading">
+            <h3 class="section-heading section-heading-num WhyLwcHeading"><span class="clr_navyblue">{val1} </span><span class="clr_orange ">{val2}</span></h3>
+        </lightning-layout-item>
+
+
+        <template for:each={whyLWCLists} for:item="whyLwc">
+            <lightning-layout-item key={whyLwc.img} size="12" small-device-size="12"
+            medium-device-size="12" large-device-size="6" class="slds-p-top_large" >
+                <div class="grid-whycontainer">
+                <div><img class="CheckImage" src={whyLwc.img} style="margin-top:5px"></div>
+                <div><h4 class="bynumber-content" style="color:#E4761E;font-size:22px;line-height:28px;font-family:'Sketchetik Fill Bold';">{whyLwc.title}</h4></div>
+                <div></div>
+                <div><h4 class="bynumber-content">
+                     <lightning-formatted-rich-text value={whyLwc.body}>
+					</lightning-formatted-rich-text>
+                    </h4></div>
+                </div>
+            </lightning-layout-item>
+        </template>
+        <template if:true={btn1}>
+            
+            <lightning-layout-item size="12" class="WhyLwcHeading slds-p-bottom_x-large slds-p-top_x-large slds-align_absolute-center">
+                <button type="button" class="btnnew" onclick={openViewAllloans}>{btn1.title}</button>
+            </lightning-layout-item>
+        </template>
+      
+    </lightning-layout>
+    <!-- why lwc ends here -->
+</template>

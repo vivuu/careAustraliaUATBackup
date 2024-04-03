@@ -1,0 +1,63 @@
+.testi{
+      background: transparent linear-gradient(213deg, #E4761E 0%, #FEBE10 100%) 0% 0% no-repeat padding-box;
+      min-height: 600px; 
+  }
+  a{
+      //font-family: "Raleway",sans-serif;
+      text-decoration: none;
+      outline: none;
+  }
+  a:hover, a:focus {
+      color: #373e18;
+  }
+  
+  @media only screen and (min-width: 300px) and (max-width: 400px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:730px;
+  }
+  }
+  
+  @media only screen and (min-width: 401px) and (max-width: 500px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:900px;
+  }
+  }
+  @media only screen and (min-width: 501px) and (max-width: 600px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:1050px;
+  }
+  }
+  @media only screen and (min-width: 601px) and (max-width: 700px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:1320px;
+  }
+  }
+  @media only screen and (min-width: 701px) and (max-width: 1199px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:350px;
+  }
+  }
+  @media only screen and (min-width: 1200px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:550px;
+  }
+  }
+  @media only screen and (min-width: 1500px){
+  .BackgroundTestimonialImage{
+    background-size: cover;
+    background-repeat: no-repeat;
+    Height:750px;
+  }
+  }

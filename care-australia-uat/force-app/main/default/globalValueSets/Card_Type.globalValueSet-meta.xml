@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Visa</fullName>
+        <default>false</default>
+        <label>Visa</label>
+    </customValue>
+    <customValue>
+        <fullName>Mastercard</fullName>
+        <default>false</default>
+        <label>Mastercard</label>
+    </customValue>
+    <customValue>
+        <fullName>Amex</fullName>
+        <default>false</default>
+        <label>Amex</label>
+    </customValue>
+    <customValue>
+        <fullName>Diners</fullName>
+        <default>false</default>
+        <label>Diners</label>
+    </customValue>
+    <customValue>
+        <fullName>American Express</fullName>
+        <default>false</default>
+        <label>American Express</label>
+    </customValue>
+    <description>Created for Card Type Payment and Recurring Donation</description>
+    <masterLabel>Card Type</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

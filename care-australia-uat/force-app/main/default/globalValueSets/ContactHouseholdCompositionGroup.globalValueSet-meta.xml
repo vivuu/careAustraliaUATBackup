@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>2 PERSON</fullName>
+        <default>false</default>
+        <label>2 PERSON</label>
+    </customValue>
+    <customValue>
+        <fullName>EXTFAM</fullName>
+        <default>false</default>
+        <label>EXTFAM</label>
+    </customValue>
+    <customValue>
+        <fullName>FAMCHLD</fullName>
+        <default>false</default>
+        <label>FAMCHLD</label>
+    </customValue>
+    <customValue>
+        <fullName>GROUP</fullName>
+        <default>false</default>
+        <label>GROUP</label>
+    </customValue>
+    <customValue>
+        <fullName>MARRIED</fullName>
+        <default>false</default>
+        <label>MARRIED</label>
+    </customValue>
+    <customValue>
+        <fullName>SINGLE</fullName>
+        <default>false</default>
+        <label>SINGLE</label>
+    </customValue>
+    <description>Household Composition Group provides a description of the makeup of a household, leveraging information about the residents and their relationships to define the dynamics and size of the household. They are into the following:-2PERSON:2 adult occupants-EXTFAM:&gt;2 adult occupants with 1 or 2 surnames-FAMCHLD:2 adult occupants and likely to be children in household-GROUP:&gt;2 adults with more than two surnames-MARRIED:1 male &amp; 1 female occupant with same surname-SINGLE:1 occupant</description>
+    <masterLabel>ContactHouseholdCompositionGroup</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

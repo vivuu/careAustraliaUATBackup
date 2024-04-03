@@ -1,0 +1,150 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "About Microfinancing",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"318c5155-8bb9-4415-a145-d348d70cb459\",\"columns\":[{\"UUID\":\"1b8574de-84e7-4dc0-9de5-774c2e6ed54d\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "dxpStyle" : { },
+                "richTextValue" : "<div style=\"text-align: center; padding: 50px; background-color: orange;\">\n        <h1>Hello, Background Color!</h1>\n        <p>This is a simple example with inline styles.</p>\n    </div>"
+              },
+              "definition" : "community_builder:htmlEditor",
+              "id" : "31aeea98-3507-415b-b2fc-cf974d6a4f91",
+              "type" : "component"
+            } ],
+            "id" : "1b8574de-84e7-4dc0-9de5-774c2e6ed54d",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "318c5155-8bb9-4415-a145-d348d70cb459",
+          "type" : "component"
+        } ],
+        "id" : "32c52b32-23ae-4930-a753-d5d54f2d3e94",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"c1e6a960-dc26-461d-8d1f-93dbb8885f2d\",\"columns\":[{\"UUID\":\"73ffb9d8-7f03-4be1-b68e-fafa62025910\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "73ffb9d8-7f03-4be1-b68e-fafa62025910",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "c1e6a960-dc26-461d-8d1f-93dbb8885f2d",
+          "type" : "component"
+        } ],
+        "id" : "902ffab1-4d1b-46bf-b978-c9dbfe1500a0",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careAboutUsMicrofinancingHeader",
+          "id" : "61e1125c-931d-41e2-8aff-2c0c5e5d52b8",
+          "type" : "component"
+        } ],
+        "id" : "ddb5cd12-7dd7-45a2-aad7-bac646b69dc8",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_microfinanceAimedAt",
+          "id" : "8bfb9ae0-f3fe-46e3-9c9f-0d583d143ffe",
+          "type" : "component"
+        } ],
+        "id" : "21eb1288-958c-4508-982c-4b613c51d417",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_institutionsProvideMicrofinance",
+          "id" : "eac34d26-ff56-46d2-8485-7da1657486e8",
+          "type" : "component"
+        } ],
+        "id" : "d8e60ad6-4542-4b8b-a90d-9ab10526d199",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_whoDoesCAREAustraliaWorkWith",
+          "id" : "43cb5887-a8e1-4582-862b-de4d5b499326",
+          "type" : "component"
+        } ],
+        "id" : "7285c973-a245-4f63-94fa-65d71a513033",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "b84a02eb-7c4d-40ba-873a-98229995f50b",
+          "type" : "component"
+        } ],
+        "id" : "68fe12b4-f018-4b68-b4d8-eb0d757a6443",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "5a560116-b97f-4510-8e61-59d5d7dd5286",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "3ad478f0-d87a-4b40-9b14-9d085d5d4c19",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "7469c6fb-fff8-43b2-81df-a9291f048e9b",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "5c7527da-8d95-4588-a368-aebc5eeea4fb",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "9ad3a823-90ab-4bf2-a816-815d69ea2a76",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "eda2dc83-1ad8-4579-888d-1910dd754f36",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeAboutMicrofinancing",
+      "id" : "de6e62f2-ca92-4415-ab8f-87c60e02c39e",
+      "type" : "component"
+    }
+  }
+}

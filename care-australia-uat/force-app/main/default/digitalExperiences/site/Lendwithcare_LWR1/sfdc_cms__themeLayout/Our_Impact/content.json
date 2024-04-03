@@ -1,0 +1,148 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Our Impact",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"9188ab28-a29d-49d5-b01e-41916972f202\",\"columns\":[{\"UUID\":\"c91a4227-06f0-4d04-8b6f-28fec2ec32eb\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "c91a4227-06f0-4d04-8b6f-28fec2ec32eb",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "9188ab28-a29d-49d5-b01e-41916972f202",
+          "type" : "component"
+        } ],
+        "id" : "126e75ae-59de-4e14-a7e1-47dbbf658088",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"a1809af7-71e3-4dbf-9c94-02c2cf0d970b\",\"columns\":[{\"UUID\":\"8a16fe58-d4ef-47c4-b31f-b0d71f21c61a\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "8a16fe58-d4ef-47c4-b31f-b0d71f21c61a",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "a1809af7-71e3-4dbf-9c94-02c2cf0d970b",
+          "type" : "component"
+        } ],
+        "id" : "61b730cc-f4c4-45c2-8a31-b08afa43f59f",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careOurImpactHeader",
+          "id" : "8916caed-b04e-47ed-9105-94c768be4f52",
+          "type" : "component"
+        } ],
+        "id" : "0157cfe2-6b05-46af-ba41-d1b3bf515894",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careOurImpactEmpowerment",
+          "id" : "02dc5b87-7504-4f23-b1d2-fb62f821396e",
+          "type" : "component"
+        } ],
+        "id" : "16024115-f579-48c4-b248-1cf8e93cc1a8",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careOurImpactYourImpact",
+          "id" : "86d1c0cf-cfa6-43a2-9233-6f6fa9540c47",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careOurImpactHowWeApproached",
+          "id" : "f2ee2866-1651-44d3-a059-88e6103ced4b",
+          "type" : "component"
+        } ],
+        "id" : "443ae523-dac7-4243-a28b-6322325ec095",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careOurImpactTheEvidence",
+          "id" : "21f7cc6e-65c7-4047-8496-a57b3acd395e",
+          "type" : "component"
+        } ],
+        "id" : "ea81f886-a4c3-4829-a3d5-ae47ccd2a623",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "2c6210c4-2759-4482-9210-798c1da94fbc",
+          "type" : "component"
+        } ],
+        "id" : "af151666-ce8e-433a-b2ca-d92894eb0876",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "9d3126f5-b989-441e-b9d9-c5e4ebaa7093",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "74020e9c-f5d7-4666-a440-6fe538a4326e",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "457e1e00-7eb5-4e9f-a961-5f607a68370d",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "ca44ef98-8981-4c98-b733-7744d5f7af37",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "9ffff5a0-e61e-4951-bf32-e8ce60be01bd",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "a171af0c-79fa-4412-8df6-878fbdca5f81",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeOurImpact",
+      "id" : "9ee42878-4dba-4d8c-b71f-24c31e85e5fd",
+      "type" : "component"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<template>
+    <div if:true={creditPaymentType}>
+        <lightning-layout multiple-rows style="margin:20px 20px 0;">
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6" class="slds-p-top_small slds-p-bottom_small">
+              <div style="display:inline-flex">
+                <img src={AmericanExpress} alt="AmericanExp Logo" width="46px" />
+                <img src={CCard} alt="CardCC Logo" width="46px" style="margin-left:5px;margin-right:5px;"/>
+                <img src={VisaCard} alt="CardVisa Logo" width="46px" />
+              </div>
+              <p style="font-size:14px;line-height:19px;font-weight:800;font-family: 'Helvetica Neue Bold';color:#002A3A;">Secured by: <img src={StripeImage} alt="StripeCard Logo" width="40px" style="margin-top:-2px" /></p>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6" large-device-size="6" padding="horizontal-small">
+              <div class="custom-box"></div>
+            </lightning-layout-item>
+          </lightning-layout>
+        <div style="margin:0 10px 0 10px;">
+            <iframe src={iframeURL}></iframe>
+         </div>
+     </div>
+    <div if:true={googlePaymentType}>
+      <iframe 
+        style="height: 70px;"
+        src={iframeURL}
+        allow="payment"
+      ></iframe>
+    </div>
+</template>

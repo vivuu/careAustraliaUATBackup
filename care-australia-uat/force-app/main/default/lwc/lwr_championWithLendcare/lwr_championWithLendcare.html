@@ -1,0 +1,51 @@
+<template>
+    <div class="para22Design pad">
+			<lightning-layout multiple-rows="true" class="slds-m-top_x-large">
+				<!-- class="slds-m-around_large slds-m-top_x-large" -->
+				<!--<template for:each={ntitles2} for:item="title"></template>key={title.white}{title.white}{title.yellow}-->
+					<lightning-layout-item size="12"  small-device-size="12" medium-device-size="12"
+						large-device-size="12" class="slds-m-top_x-large">
+						<!-- padding="around-small" -->
+						<h3 class="section-heading1">{val1}&nbsp;
+							<span style="color:#E4761E">{val2}</span></h3>
+					</lightning-layout-item>
+				
+    			<!-- <template for:each={championwithlendcareBody} for:item="body">
+					<lightning-layout-item key={body} size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+						class="slds-m-top_small">
+						<h3 class="section-content">
+							{body}
+						</h3>
+					</lightning-layout-item>
+				</template> -->
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+					class="slds-m-top_small">
+					<!-- padding="around-small" -->
+					<h3 class="section-content">
+						<lightning-formatted-rich-text value={championwithlendcareBody}>
+						</lightning-formatted-rich-text>
+					</h3>
+				</lightning-layout-item>
+				<lightning-layout-item size="12" small-device-size="12" 
+				medium-device-size="12" large-device-size="12" class="slds-align-absolute_center slds-p-top_large slds-p-bottom_small">
+					<div class="slds-align_absolute-center">
+						<div class="classwidth">
+							<!-- <c-become-Change-Champion-Box innercurrencybg="#F3F0ED"></c-become-Change-Champion-Box> -->
+							<c-lwr_become-Change-Champion-Box innercurrencybg="#F3F0ED"></c-lwr_become-Change-Champion-Box>
+						</div>
+					</div>
+				</lightning-layout-item>
+
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12"
+					class="slds-m-top_medium slds-m-bottom_medium">
+					<!-- padding="around-small" -->
+					<h3 class="section-content2 slds-align_absolute-center padds MarginBottomStyle">
+						<lightning-formatted-rich-text
+							value={nbottom}
+						></lightning-formatted-rich-text>
+					</h3>
+				</lightning-layout-item>
+			</lightning-layout>
+    </div>
+
+</template>

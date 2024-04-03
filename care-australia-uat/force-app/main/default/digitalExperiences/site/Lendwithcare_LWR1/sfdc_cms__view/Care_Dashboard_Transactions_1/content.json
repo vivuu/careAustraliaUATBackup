@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Care Dashboard Transactions",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"6a4cbd44-2e17-4170-a2cb-71bd38212309\",\"columns\":[{\"UUID\":\"77cc428a-acd6-4adc-82ea-4d510dc97147\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "77cc428a-acd6-4adc-82ea-4d510dc97147",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "6a4cbd44-2e17-4170-a2cb-71bd38212309",
+          "type" : "component"
+        } ],
+        "id" : "b4a9c69f-a4d0-48a9-9ebd-6e4ea942183f",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Care Dashboard Transactions",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "ddb347bd-97e1-4b78-9eb5-311207a0eb78",
+          "type" : "component"
+        } ],
+        "id" : "e8552689-0e65-4731-9efc-75954f5a9b0c",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "db67d6d9-465e-45a0-9edb-516345907a55",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "e7UtNMaS0Q2NDp8z9cChfY9PKN5F6I",
+    "viewType" : "custom-care-dashboard-transactions"
+  }
+}

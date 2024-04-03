@@ -1,0 +1,33 @@
+<template>
+    <div class="allignleftCenter">
+<div class="slds-is-relative container">
+    <template for:each={slidesData} for:item="slide">
+        <div class={slide.cardClasses} key={slide.image}>
+            
+        <div>
+            <img src={slide.image} width="400" height="400" style="border-radius:3px"/>
+            <!--<h3 class="slds-text-heading_large" style="color:black">{slide.heading}</h3>
+            <div style="display:inline-flex;margin-top:30px"><img src={slide.image} />
+            <div class="slds-text-heading_small" style="margin-top:15px;margin-left:10px;color:black">{slide.description}</div></div>-->
+                          <!--<div class="ImageDiv" style={getcarbackImage}></div>-->
+              
+							<!--<img src={item.imageUrl} alt={item.title} />-->
+
+        </div>
+        <!--<div class="slideNumbers">{slide.slideIndex}/{slidesData.length}</div>-->
+        
+    </div>
+    </template>
+
+    
+	<div class="slds-p-top_small" style="width:100%;display:inline-flex;">
+		<div><a class="prev" onclick={backSlide}>&#10094;</a></div>
+		<div style="display:flex;width:100%;justify-content:center;margin-top:5px;"><template for:each={slidesData} for:item="slide">
+				<span class= {slide.dotClasses} data-id={slide.slideIndex} key={slide.slideIndex} onclick={currentSlide}></span>
+			</template></div>
+		<div><a class="next" onclick={forwardSlide}>&#10095;</a></div>
+	</div>
+
+</div>
+</div>
+</template>

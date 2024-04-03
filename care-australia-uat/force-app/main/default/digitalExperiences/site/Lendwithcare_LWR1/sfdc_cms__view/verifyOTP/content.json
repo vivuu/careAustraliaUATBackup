@@ -1,0 +1,159 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "verifyOTP",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"518b5c10-aca0-4756-8572-d74d86e0c72d\",\"columns\":[{\"UUID\":\"609cc15e-8813-47a8-bbf9-a2d57aa68308\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"4\",\"seedComponents\":[]},{\"UUID\":\"d5572e3c-0168-4be2-9e7a-117c15d7c526\",\"columnName\":\"Column 2\",\"columnKey\":\"e31fc\",\"columnWidth\":\"4\",\"seedComponents\":[]},{\"UUID\":\"33759ec2-794c-4b93-89ea-c517f18ce28b\",\"columnName\":\"Column 3\",\"columnKey\":\"dd000\",\"columnWidth\":\"4\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "609cc15e-8813-47a8-bbf9-a2d57aa68308",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "center",
+                "fit" : "contain",
+                "height" : 350,
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"/sfsites/c/cms/delivery/media/MCQI73RVDH4JGSJPTQRUWSNAXCDA\",\"altText\":\"\",\"contentKey\":\"MCQI73RVDH4JGSJPTQRUWSNAXCDA\",\"contentType\":null}}",
+                "overlayColor" : "",
+                "position" : "center center",
+                "width" : 40
+              },
+              "definition" : "dxp_base:image",
+              "id" : "0d081cad-fcf9-461b-b332-a57159d5eaba",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "2%",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "4%"
+                  }
+                },
+                "richTextValue" : "<p style=\"text-align: center;\">For secure login, please confirm the OTP send to you email.</p>"
+              },
+              "definition" : "community_builder:richTextEditor",
+              "id" : "4681a152-66d4-4869-9e95-7af45041665d",
+              "type" : "component"
+            }, {
+              "attributes" : {
+                "LoginNavURL" : "https://test.lwc.org.au",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "2%",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "2%"
+                  }
+                },
+                "logoutURL" : "https://test.lwc.org.au/secur/logout.jsp",
+                "otpLength" : 6,
+                "resendOTPErrorMsg" : "You have exceeded the max limit for wrong OTP. Please try again after some time.",
+                "resendOTPLabel" : "Resend OTP",
+                "verifyOTPPagePath" : "https://test.lwc.org.au/verifyOTP"
+              },
+              "definition" : "c:lwr_verifyOTP",
+              "id" : "e1f6d8a3-064a-45e8-9838-ac10abf404d6",
+              "type" : "component"
+            } ],
+            "id" : "d5572e3c-0168-4be2-9e7a-117c15d7c526",
+            "name" : "e31fc",
+            "title" : "Column 2",
+            "type" : "region"
+          }, {
+            "id" : "33759ec2-794c-4b93-89ea-c517f18ce28b",
+            "name" : "dd000",
+            "title" : "Column 3",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "518b5c10-aca0-4756-8572-d74d86e0c72d",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"0e546e26-f0c0-4882-a9de-3ebe0db17104\",\"columns\":[{\"UUID\":\"1cdb7bbb-b2f8-42d2-bf4b-2191f286879b\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "2%",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "10%"
+                  }
+                },
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "none",
+                "text" : "© 2023 CARE Australia. ABN 46 003 380 890. All rights reserved.",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{\"bold\":true}",
+                "textDisplayInfo" : "{\"textStyle\":\"heading-small\",\"headingTag\":\"h4\"}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "454ffa35-8f30-4a1a-8b2c-74ba4c934eb8",
+              "type" : "component"
+            } ],
+            "id" : "1cdb7bbb-b2f8-42d2-bf4b-2191f286879b",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "0e546e26-f0c0-4882-a9de-3ebe0db17104",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "0e2f3a82-d0d5-439e-80e2-8aaace8f3c23",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "verifyOTP",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "eb7feaa4-93db-4035-852d-595151f843f5",
+          "type" : "component"
+        } ],
+        "id" : "78b1d372-243b-4452-a9d3-176a8fffc6e8",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "d9078689-c297-4733-b930-84943bd23e0e",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "FZueqpjSyYKBajxddHVtfDUPUWJRrH",
+    "viewType" : "custom-verify-o-t-p"
+  }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Email</fullName>
+        <default>false</default>
+        <label>Email</label>
+    </customValue>
+    <customValue>
+        <fullName>Direct Mail</fullName>
+        <default>false</default>
+        <label>Direct Mail</label>
+    </customValue>
+    <customValue>
+        <fullName>SMS</fullName>
+        <default>false</default>
+        <label>SMS</label>
+    </customValue>
+    <customValue>
+        <fullName>Telemarketing</fullName>
+        <default>false</default>
+        <label>Telemarketing</label>
+    </customValue>
+    <masterLabel>Campaign Channel</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

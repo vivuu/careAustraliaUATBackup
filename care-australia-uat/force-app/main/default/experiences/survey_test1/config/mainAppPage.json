@@ -1,0 +1,12 @@
+{
+  "cmsSettings" : { },
+  "currentThemeId" : "9589686f-0bc0-4bf7-97d4-e2a76b618ed1",
+  "favIconAssetRef" : null,
+  "headMarkup" : "<meta charset=\"UTF-8\" />\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n<title>TEST survey</title>\n\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/styles.css?{ versionKey }\" />\n\n\n<!-- webruntime-branding-shared stylesheets -->\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/salesforce-lightning-design-system.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-site-spacing-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-styling-hooks.min.css?{ versionKey }\" />\n<link rel=\"stylesheet\" href=\"{ basePath }/assets/styles/dxp-slds-extensions.min.css?{ versionKey }\" />\n\n\n<!-- webruntime-branding-shared stylesheets -->",
+  "id" : "0898f39e-c1f2-46af-be21-9733bb1abc6a",
+  "isLockerServiceEnabled" : true,
+  "isRelaxedCSPLevel" : false,
+  "label" : "main",
+  "templateName" : "talon-template-byo",
+  "type" : "appPage"
+}

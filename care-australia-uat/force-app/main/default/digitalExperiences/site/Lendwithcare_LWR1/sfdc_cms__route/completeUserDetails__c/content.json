@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "completeUserDetails",
+  "contentBody" : {
+    "activeViewId" : "completeUserDetails",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-completeuserdetails",
+    "urlPrefix" : "completeuserdetails"
+  }
+}

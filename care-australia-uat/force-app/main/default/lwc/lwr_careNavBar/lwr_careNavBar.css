@@ -1,0 +1,2031 @@
+@font-face {
+    font-family: 'Sketchetik Fill Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/fontSk.woff') format('woff');   
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Regular';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  
+  @font-face {
+    font-family: 'Helvetica Oblique';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  
+  @font-face {
+    font-family: 'Helvetica Neue Bold';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+    
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Bold Pro';
+    src: url('/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueProBold.woff') format('woff');
+    
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+    padding: 4px;
+  }
+  a{
+    text-decoration: none !important;
+  }
+  a:hover{
+    text-decoration: underline !important;
+  }
+  .checkbox-container {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #002A3A;
+      position: relative;
+      margin-right: 2px;
+      margin-top: 3px;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+     
+  }
+  
+  .checkbox-container input[type="checkbox"] {
+      display: none;
+  }
+  
+  .checkbox-container label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; 
+      border: none;
+      border-radius: 2px; 
+      cursor: pointer;
+      outline-style: none;
+  }
+  
+  .checkbox-container input[type="checkbox"]:focus + label {
+      outline: none;
+      box-shadow: 0 0 0 2px transparent;
+  }
+  .checkbox-container input[type="checkbox"]:checked + label {
+      background-color: #002A3A; 
+      border-color: #002A3A; 
+  }
+  
+  .checkbox-container label::after {
+      content: "\2714";
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 8px;
+      color: #fff; 
+      transition: transform 0.3s;
+      outline-style: none;
+      
+  }
+  
+  .checkbox-container input[type="checkbox"]:checked + label::after {
+      transform: translate(-50%, -50%) scale(1);
+  }
+  
+  
+  .checkbox-container1 {
+      width: 30px;
+      height: 16px;
+      border: 2px solid #002A3A;
+      position: relative;
+      margin-right: 2px;
+      margin-top: 3px;
+      border-radius: 4px;
+      display: inline-block;
+      vertical-align: middle;
+     
+  }
+  
+  .checkbox-container1 input[type="checkbox"] {
+      display: none;
+  }
+  
+  .checkbox-container1 label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff; 
+      border: none;
+      border-radius: 2px; 
+      cursor: pointer;
+      outline-style: none;
+  }
+  
+  .checkbox-container1 input[type="checkbox"]:focus + label {
+      outline: none;
+      box-shadow: 0 0 0 2px transparent;
+  }
+  .checkbox-container1 input[type="checkbox"]:checked + label {
+      background-color: #002A3A; 
+      border-color: #002A3A; 
+  }
+  
+  .checkbox-container1 label::after {
+      content: "\2714";
+      position: absolute;
+      top: 50%;
+      left: 50%; 
+      transform: translate(-50%, -50%) scale(0);
+      font-size: 8px;
+      color: #fff; 
+      transition: transform 0.3s;
+      outline-style: none;
+      
+  }
+  
+  .checkbox-container1 input[type="checkbox"]:checked + label::after {
+      transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .custom-accordion-section {
+      border: none;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      background-color: #F3F0ED;
+      max-width: 700px;
+  }
+  
+  .custom-accordion-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      line-height: 21px;
+      color: #002A3A;
+      font-family: 'Sketchetik Fill Bold';
+      margin-top: 5px;
+  }
+  
+  .arrow-icon {
+      font-size: 18px;
+      font-weight: bold;
+      width: 24px; /* Adjust width as needed */
+      display: inline-block;
+      text-align: center;
+  }
+  
+  .custom-accordion-section-content{
+    margin-top: 10px;
+      font-size: 14px;
+      line-height: 19px;
+      color: #002A3A;
+      font-family: 'Helvetica Neue Regular';
+  }
+  
+  
+  .box{
+    height: 2px;
+    width: 100%;
+    background-color: #002A3A;
+    margin-bottom: 10px;
+  }
+  
+  .custom-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 2px solid #000; /* Set the default border color for the checkbox */
+      border-radius: 4px; /* Optional: Add rounded corners */
+      cursor: pointer;
+  }
+  
+  .checkbox {
+      width: 100%;
+      height: 100%;
+  }
+  
+  .checked {
+      background-color: #000; /* Set the background color when the checkbox is checked */
+  }
+  
+  
+  
+  
+  /* Style the custom checkbox */
+  input[type="checkbox"] {
+      position: relative;
+      display: inline-block;
+      width: 15px;
+      height: 29px;
+      background-color: #fff; /* Set the default background color for the checkbox */
+      border: 2px solid #000; /* Set the default border color for the checkbox */
+      border-radius: 4px; /* Optional: Add rounded corners */
+  }
+  
+  /* Style the checked state of the custom checkbox */
+  input[type="checkbox"]:checked {
+      background-color: #002A3A;
+      fill:#002A3A; /* Set the background color when the checkbox is checked */
+  }
+  
+  
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 25px;
+    
+    padding:15px 20px;
+    border-radius:8px;
+  }
+  
+  .customCombo{
+    width: 100%;
+      padding: 10px 7px 5px 7px;
+      border-style: none;
+      border-radius: 7px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      font-size: 16px;
+      line-height: 21px;
+      background: white;
+  }
+  /* navbar */
+  .navBar{
+      display: flex;
+      height: 75px;
+      z-index: 20;
+  }
+  .menuitems{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      font-family: 'Sketchetik Fill Bold';
+      font-size: 16px;
+  }
+  .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.854);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+      backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  .search {
+    background: linear-gradient(205.75deg, #422371 0%, #163B54 100%);
+    padding: 20px;
+    width: 400px;
+  }
+  .searchCart {
+    background: white;
+    //padding: 20px;
+    width: 400px;
+    z-index:20;
+  }
+  
+  .slds-float_left {
+    float: left;
+    margin-right: 10px;
+  }
+  
+  .closes-button {
+    color: #ffffff;
+    float: right;
+  }
+  
+  .search-header {
+    margin: 20px 0px 20px 0px;
+    background: #ffffff;
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    margin-right: 5px;
+  }
+  
+  .search-label {
+    font-size: 14px;
+  }
+  
+  .search1-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+  }
+  
+  .search-items li {
+    padding: 10px;
+  }
+  
+  .search-items a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+  }
+  .testi{
+     background: transparent linear-gradient(213deg, #E4761E 0%, #FEBE10 100%) 0% 0% no-repeat padding-box; 
+  }
+  .headers{
+  height: 80vh;
+  width: 100%;
+  background: transparent linear-gradient(213deg, #E4761E 0%, #FEBE10 100%) 0% 0% no-repeat padding-box;
+  align-items: center;
+  
+  }
+  .violet{
+      color:rgb(47, 13, 116);
+  }
+  .whylwc{
+      background-color: antiquewhite;
+  }
+  .logo{
+      margin-left: 10px;
+      margin-top: 10px;
+      height: 50px;
+      width: 50%;
+      
+  }
+  .lend{
+      height:20px;
+      width: auto;
+      color: white;
+      font-size: large;
+  }
+  .withcare{
+      height: 20px;
+      width: auto;
+      color: white;
+      font-size: large;
+  }
+  .items{
+      color: white;
+      width: 20%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 0px 20px 190px;
+  }
+  .custom-label-color .slds-button__label {
+      color: white;
+      font-family: 'Sketchetik Fill Bold';
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .browse-project-detail
+    {
+      text-align: center;
+    }
+    .whylwch3{
+      text-align: left;
+    }
+  .whylwch4{
+    padding-left: 16px;
+  }
+  .menuitems{
+  display: none;
+  }
+  /*.whylwc{
+    padding-left: 65px;
+  }*/
+  .CheckImage{
+    height: 50px;
+    align-self: center;
+    //padding-left: 100px;
+  }
+  .reviewer-name, .reviewer-position {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: italic;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 100%;
+      color: #FFFFFF;
+  }
+  .testimonial-content {
+      padding:30px;
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 39px;
+      color: #FFFFFF;
+      text-align: left;
+  }
+  .single-testimonial {
+          text-align: center !important;
+          padding-top: 45px;
+      }
+  .demo-container {
+    margin: auto;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 100%;
+  }
+  .CarMobile{
+    margin:0;
+  }
+  .CarMobile1{
+    margin:0;
+    margin-top: -50px;
+  }
+  .carousel__item {
+    display: inline-flex;
+    vertical-align: top;
+    white-space: normal;
+    flex: 0 0 auto;
+    width: calc(100% / 1);
+  }
+  .rt-container{
+    display: block;
+  }
+  .section-heading {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+      color: #FFFFFF;
+      text-align: left;
+      //display: grid;
+      //margin-left: -9px;
+  }
+  .SmallHeading{
+    font-family: 'Helvetica';
+    font-size: 16px;
+      line-height: 22px;
+    text-align: center;
+    display: none;
+  
+  }
+  .HamBur{
+    display: flex;
+  }
+  .bannerHeading{
+    padding: 175px;
+    display: grid;
+    margin-left: -110px;
+    font-size: 70px;
+  }
+  .custombuttom{
+    display: none;
+  }
+  .MenuButtonSmall{
+    padding: 0px;
+      font-size: 11px;
+      width: 35%;
+      background-color: rgb(47, 13, 116);
+      color: white;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .MenuButtonSmallYellow{
+      padding: 0px;
+      font-size: 11px;
+      width: 35%;
+      background-color: #FEBE10;
+      color: #002A3A;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .imgDiv{
+    display: block;
+  }
+  .carouselImpact {
+      position: relative;
+      overflow: hidden;
+      margin: -60px 10px 10px 10px;
+  }
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+      width: 300%;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: hidden;
+      margin: 10px 10px 10px 10px;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 300%;
+  }
+  }
+  @media only screen and (min-width: 600px) {
+    .browse-project-detail{
+      text-align: center;
+    }
+    .whylwch3{
+      text-align: left;
+    }
+    .whylwch4{
+    padding-left: 16px;
+  }
+    .section-heading {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+      color: #FFFFFF;
+      text-align: left;
+      //display: grid;
+      //margin-left: -9px;
+  }
+  .menuitems{
+  display: none;
+  }
+  /*.whylwc{
+    padding-left: 65px;
+  }*/
+  .reviewer-name, .reviewer-position {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: italic;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 100%;
+      color: #FFFFFF;
+  }
+  .testimonial-content {
+     
+      padding: 30px;
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 39px;
+      color: #FFFFFF;
+      text-align: left;
+  }
+  .CheckImage{
+    height: 50px;
+    align-self: center;
+    //padding-left: 100px;
+  }
+  .single-testimonial {
+          text-align: center !important;
+          padding-top: 100px;
+      }
+    .demo-container {
+    margin: auto;
+    overflow: hidden;
+    padding: 0px;
+    position: relative;
+    width: 80%;
+  }
+  .HamBur{
+    display: flex;
+  }
+  .bannerHeading{
+    padding: 150px;
+    display: grid;
+    margin-left: -50px;
+  }
+  .MenuButtonSmall{
+    padding: 0px;
+      font-size: 11px;
+      width: 35%;
+      background-color: rgb(47, 13, 116);
+      color: white;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .MenuButtonSmallYellow{
+      padding: 0px;
+      font-size: 11px;
+      width: 35%;
+      background-color: #FEBE10;
+      color: #002A3A;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .imgDiv{
+    display: block;
+  }
+   .carouselImpact {
+      position: relative;
+      overflow: hidden;
+      margin: -60px 10px 10px 10px;
+  }
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+      width: 300%;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: hidden;
+      margin: 10px 10px 10px 10px;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 300%;
+  }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .menuitems{
+    visibility: hidden;
+    width: 15%;
+    float: left;
+    margin: 0px;
+    pad: 0px;
+    display: block;
+  }
+  .whylwch3{
+      text-align: left;
+    }
+  .whylwch4{
+    padding-left: 16px;
+  }
+  /*.section-heading {
+      font-family: 'Sketchetik Fill Bold', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 40px;
+      line-height: 50px;
+      color: #FFFFFF;
+      //display: grid;
+      //margin-left: -9px;
+  }*/
+  .HamBur{
+    display: flex;
+  }
+  .menuitems{
+    display: none;
+  }
+  .bannerHeading{
+    padding: 150px;
+    display: grid;
+    margin-left: 50px;
+  }
+  .SmallHeading1{
+    display: none;
+  }
+  .custombuttom1{
+    display: none;
+  }
+  .SmallHeading{
+    font-family: 'Helvetica';
+    font-size: 38px;
+      line-height: 42px;
+      text-align: center;
+      /* margin: 40px; */
+      padding: 90px;
+  }
+  .MenuButtonSmall{
+    padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: rgb(47, 13, 116);
+      color: white;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .MenuButtonSmallYellow{
+      padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: #FEBE10;
+      color: #002A3A;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .imgDiv{
+    display: block;
+  }
+  .carouselImpact {
+      position: relative;
+      overflow: hidden;
+      margin: -60px 60px 60px 60px;
+  }
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: hidden;
+      margin: 60px 60px 60px 60px;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  }
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+  .menuitems{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      font-family: 'Sketchetik Fill Bold';
+      font-size: 16px;
+  }
+  .imgDiv{
+    display: inline-flex;
+  }
+  .section-heading {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-size: 55px;
+      line-height: 50px;
+      color: #FFFFFF;
+      font-weight: bold;
+  }
+  .HamBur{
+    display: none;
+  }
+  .bannerHeading{
+    padding: 150px;
+    display: grid;
+    margin-left: 50px;
+  }
+  .SmallHeading1{
+    display: none;
+  }
+  .SmallHeading{
+    font-family: 'Helvetica';
+    font-size: 38px;
+      line-height: 42px;
+      text-align: center;
+      /* margin: 40px; */
+      padding: 90px;
+  }
+  .custombuttom1{
+    display: none;
+  }
+  .MenuButtonSmall{
+    padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: rgb(47, 13, 116);
+      color: white;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .MenuButtonSmallYellow{
+      padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: #FEBE10;
+      color: #002A3A;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .carouselImpact {
+      position: relative;
+      overflow: hidden;
+      margin: -60px 60px 60px 60px;
+  }
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: hidden;
+      margin: 60px 60px 60px 60px;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  }
+  @media only screen and (min-width: 1200px) {
+  .menuitems{
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      align-items: center;
+      font-family: 'Sketchetik Fill Bold';
+      font-size: 16px;
+  }
+  .HamBur{
+    display: none;
+  }
+  .bannerHeading{
+    padding: 150px;
+    display: grid;
+    margin-left: 50px;
+  }
+  .SmallHeading1{
+    display: none;
+  }
+  .SmallHeading{
+    font-family: 'Helvetica';
+    font-size: 38px;
+      line-height: 42px;
+      text-align: center;
+      /* margin: 40px; */
+      padding: 90px;
+      font-weight: bold;
+  }
+  .MenuButtonSmall{
+    padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: rgb(47, 13, 116);
+      color: white;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .MenuButtonSmallYellow{
+      padding: 0px;
+      font-size: 11px;
+      width: 25%;
+      background-color: #FEBE10;
+      color: #002A3A;
+      border-style: none;
+      height: 27px;
+      border-radius: 2px;
+      font-family: 'Helvetica Neue Bold Pro';
+  }
+  .section-heading {
+      font-family: 'Sketchetik Fill Bold';
+      font-style: normal;
+      font-size: 55px;
+      line-height: 50px;
+      color: #FFFFFF;
+      font-weight: bold;
+  }
+  .imgDiv{
+    display: flex;
+  }
+  .bynumber-content1{
+    margin-left: 15px;
+  }
+  .carouselImpact {
+      position: relative;
+      overflow: hidden;
+      margin: -60px 60px 60px 60px;
+  }
+  .sliderImpact {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  .carouselCustom {
+      position: relative;
+      overflow: hidden;
+      margin: 60px 60px 60px 60px;
+  }
+  .sliderCustom {
+      display: flex;
+      transition: transform 0.5s;
+      width: 100%;
+  }
+  
+  }
+  
+  .custom-menu {
+      position: relative;
+      display: inline-block;
+      margin: 0px 20px 20px 20px;
+    }
+  
+    .custom-menu-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      width: max-content;
+    }
+  
+    .custom-menu-content a {
+      color: Orange;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Helvetica Neue Regular';
+      font-size: 18px;
+      line-height: 20px;
+    }
+  
+      .custom-menu-content a:hover {
+      color: Orange;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      font-family: 'Helvetica Neue Regular';
+      font-size: 18px;
+      line-height: 20px;
+    }
+  
+    .custom-menu:hover .custom-menu-content {
+      display: block;
+    }
+    /*HamBurger - Starts*/
+  
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: inline-grid;
+    z-index: 2;
+  }
+  
+  .menu {
+    background: linear-gradient(205.75deg, #422371 0%, #163B54 100%);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .menu-items li {
+    padding: 5px 0;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close-button svg {
+    fill: #cccccc;
+    width: 16px;
+    height: 16px;
+  }
+  .close-button :hover{
+    background-color: none;
+    background: none;
+  }
+  
+  /*HamBurger - Ends*/
+  
+  /* care cart css starts header*/
+  p {
+    font-family: 'Helvetica';
+  }
+  a {
+    font-family: 'Helvetica';
+  }
+  h3 {
+    font-family: 'Sketchetik Fill Bold';
+  }
+  .search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 8;
+    overflow-y: scroll;
+  }
+    .italic-placeholder::placeholder {
+          font-style: italic;
+          color: #002A3A;
+      }
+  .search {
+    /*background: linear-gradient(205.75deg, #422371 0%, #163B54 100%);*/
+    padding: 20px;
+    width: 400px;
+  }
+  .searchCart {
+    width: 400px;
+    height: calc(100% - 48px);
+    z-index:20;
+  }
+  .search-header {
+    margin: 20px 0px 20px 0px;
+    background: #ffffff;
+    border-radius: 4px;
+  }
+  
+  .search-button {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-icon {
+    margin-right: 5px;
+  }
+  
+  .search-label {
+    font-size: 14px;
+  }
+  
+  .search1-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+  }
+  
+  .search-items li {
+    padding: 10px;
+  }
+  
+  .search-items a {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+  }
+  .progressBar{
+      background:#F3F0ED;
+  }
+  .cart-items{
+      background:#F3F0ED;
+        margin: 10px;
+      border-radius: 8px;
+  }
+  .progress-bar{
+      background: #472175;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  .BottomDiv {
+    background-color: #422371;
+    margin: 0;
+    height: 60px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .progressBar {
+    width: auto;
+    height: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0.5px;
+  }
+  .progressBarInner {
+    height: 50%;
+    border-radius: 5px;
+    width: 50%; 
+    margin: 2.5px;
+  }
+  .progressBarInner1 {
+    height: 50%;
+    border-radius: 5px;
+    margin: 2.5px;
+  }
+  .custombuttomwithdraw{
+    font-size: 16px;
+    line-height: 16px;
+      padding: 10px;
+      background-color: #FEBE10;
+      border-style: none;
+      color: #002A3A;
+      font-family: 'Helvetica Neue Bold Pro';
+      width: 100%;
+      border-radius: 4px;
+  }
+  .custombuttomwithdraw:hover{
+    font-size: 16px;
+    line-height: 16px;
+      padding:12px 10px 8px 10px;
+      background-color: #472175;
+      border-style: none;
+      color: #ffffff;
+      font-family: 'Helvetica Neue Bold Pro';
+      width: 100%;
+      border-radius: 4px;
+  }
+  .custom-box{
+    border-radius: 20px;
+  }
+  .custombuttomwithdrawCC{
+    font-size: 16px;
+    line-height: 16px;
+      padding: 10px;
+      background-color: #FEBE10;
+      border-style: none;
+      color: #002A3A;
+      font-family: 'Helvetica Neue Bold Pro';
+      width: 169px;
+      border-radius: 4px;
+  }
+  .custombuttomwithdrawCC:hover{
+    font-size: 16px;
+    line-height: 16px;
+      padding: 10px;
+      background-color: #472175;
+      border-style: none;
+      color: #ffffff;
+      font-family: 'Helvetica Neue Bold Pro';
+      width: 169px;
+      border-radius: 4px;
+  }
+  
+  
+  
+  
+  .progress-indicator {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .step.active {
+    background-color: #0070d2;
+    color: #ffffff;
+  }
+  .CartHeading{
+    font-size: 28px;
+    color: #002A3A;
+    font-weight: 800;
+    line-height: 28px;
+    font-family: 'Sketchetik Fill Bold';
+  }
+  .CartHeadingnew{
+    font-size: 16px;
+    color: #002A3A;
+    font-weight: 800;
+    line-height: 28px;
+    //margin-left: 10px;
+  }
+  .CartParagraph{
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    margin-top: 10px;
+  }
+  .closeButton{
+    top: 0;
+  }
+  .LoanHeading{
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 800;
+    color: #002A3A;
+    font-family: 'Sketchetik Fill Bold';
+  }
+  .LoanHeadingnewStyle{
+    font-size: 16px;
+    line-height: 20px;
+    color: #002A3A;
+    font-family: 'Helvetica Neue Bold Pro';
+  }
+  .LoanParagraph{
+    font-size: 12px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #002A3A;
+    margin-top: 5px;
+  }
+  .LoanParagraphnewStyle{
+    font-size: 12px;
+    line-height: 15px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #002A3A; 
+    margin-top: 5px;
+  }
+  .LendingH3{
+    margin-left:20px;
+    color:#002A3A;
+    font-size:12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue Bold Pro';
+  }
+  .ClassVolDonation{
+    background: transparent linear-gradient(245deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+  }
+  .VolPara{
+    color: white;
+    font-size: 12px;
+    line-height: 15px;
+    font-family: 'Helvetica Neue Bold Pro';
+    margin-top: 10px;
+  }
+  .volHeading{
+    font-size: 16px;
+    line-height: 21px;
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: 800;
+    color: white;
+  }
+  .LearnMoreButton {
+    width: auto;
+      padding: 10px 30px 10px 30px;
+      background-color: #002A3A;
+      border-radius: 2px;
+      border-style: none;
+        font-size: 16px;
+    line-height: 16px;
+     font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+  }
+  .custombuttomwithdraw{
+     width: auto;
+      padding: 12px 30px 8px 30px;
+      background-color: #FEBE10;
+      border-radius: 2px;
+      border-style: none;
+        font-size: 16px;
+    line-height: 16px;
+     font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+  }
+  
+  .custombuttomwithdrawCASign{
+    padding: 12px;
+  background-color: #FEBE10;
+  border-radius: 4px;
+  border-style: none;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Helvetica Neue Bold Pro';
+  color: #002A3A;
+  margin: 10px 20px 10px 20px;
+  }
+  .custombuttomwithdrawCASign:hover{
+    padding: 12px;
+  background-color: #FEBE10;
+  border-radius: 4px;
+  border-style: none;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: 'Helvetica Neue Bold Pro';
+  color: #002A3A;
+  margin: 10px 20px 10px 20px;
+  }
+  .custombuttomwithdrawPaynow{
+        padding: 12px;
+      background-color: #FEBE10;
+      width: 95%;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px;
+      border-radius:4px;
+  }
+  .custombuttomwithdrawPaynow:hover{
+        padding: 12px;
+      background-color: #472175;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      margin: 10px;
+      width: 95%;
+  }
+  
+  .custombuttomwithdrawCA{
+        padding: 12px;
+      background-color: #FEBE10;
+      
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 10px 10px 10px;
+      border-radius:4px;
+  }
+  .custombuttomwithdrawCA:hover{
+        padding: 12px;
+      background-color: #472175;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      margin: 10px 10px 10px 10px;
+  }
+  .custombuttomwithdrawCAUpdated{
+        padding: 12px;
+      background-color: #F3F0ED;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 10px 10px 0px;
+  }
+  .custombuttomwithdrawCAUpdatednew{
+        padding: 12px;
+      background-color: #FEBE10;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 10px 10px 0px;
+  }
+  .custombuttomwithdrawCAUpdated:hover{
+        padding: 12px;
+      background-color: #FEBE10;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 10px 10px 0px;
+  }
+  .custombuttomwithdrawCAGuest:hover{
+        padding: 12px;
+      background-color: #FEBE10;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 20px 10px 20px;
+  }
+  .custombuttomwithdrawCAGuest{
+      padding: 12px;
+      background-color: #FEBE10;
+      border-radius: 4px;
+      border-style: none;
+      font-size: 16px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      margin: 10px 20px 10px 20px;
+  }
+  .field {
+    display: grid;
+    margin: 20px ;
+  }
+  .classFieldLabel{
+    font-size: 16px;
+    line-height: 21px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color:#002A3A;
+    margin-bottom: 10px;
+  }
+  .ClassInputFields{
+    width: 100%;
+      height: 40px;
+      border-radius: 4px;
+      border-color: #002A3A;
+      color:#002A3A;
+      border-style: solid;
+      border-width: 2px;
+      font-family: 'Helvetica Oblique';
+      font-size: 16px;
+      line-height: 21px;
+  }
+  .PillsCardButtons{
+      padding: 12px 0px 8px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width:100%;
+  }
+  .PillsCardButtons:hover{
+      padding: 12px 0px 8px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width:100%;
+  }
+  
+  .yourInformation{
+    margin: 10px;
+    background-color: #F3F0ED;
+    padding: 10px;
+    border-radius:8px;
+  }
+  .paymentDetails{
+    margin: 10px;
+    background-color: #F3F0ED;
+    padding: 10px;
+    border-radius:8px;
+  }
+  
+  .voldonaButtons{
+      background-color: transparent;
+      color: #002A3A;
+      padding: 10px 20px 10px 20px;
+      border-radius: 20px;
+      border-style: none;
+      margin: 2px;
+      font-size: 12px;
+      font-weight: 800;
+  }
+  
+  .voldonaButtons:hover{
+    background-color: #472175;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    border-style: none;
+    margin: 2px;
+    font-size: 12px;
+    font-weight: 800;
+  }
+  .removeOverflow{
+    overflow: hidden;
+  }
+  .CartHeadingforthankyou{
+    color:white;
+    font-family: 'Sketchetik Fill Bold';
+    font-size: 40px;
+    line-height:40px;
+  }
+  .CartParagraphforthankyou{
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 24px;
+    color:white;
+    margin-top:30px;
+  }
+  .menuitemsInHome{
+    color:white;
+    font-size:18px;
+    line-height:40px;
+    font-family:'Helvetica Neue Regular';
+  }
+  .carButtonImpact1{
+      border: none;
+      font-size: 12px;
+      padding: 7px 7px 4px 7px;
+      width: 50%;
+      background: #FEBE10;
+      margin-top: 10px;
+      color: #002A3A;
+      font-family: 'Helvetica Neue Bold Pro';
+      border-radius: 4px;
+   }
+   .ErrorMessage{
+     color: red;
+     font-family: 'Helvetica Neue Bold Pro';
+     margin-top: 5px;
+    margin-bottom: -10px;
+   }
+   .SearchText::placeholder {
+          font-family: 'Helvetica Neue Bold Pro';
+          padding-top: 10px;
+      }
+    
+    .SearchText{
+      color:#002A3A;
+      background:white;
+      width:100%;
+      height:40px;
+      border-radius:5px;
+      border-block:none;
+      margin-top:10px;
+      font-family: 'Helvetica Neue Bold Pro';
+    }
+  
+    .catogory{
+      background: none;
+      border-radius: 20px;
+      width: auto;
+      font-size:12px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      padding: 5px 10px 2.5px 10px;
+      margin: 5px 5px 10px 0px;
+      color: #002A3A;
+      border-style: solid;
+      min-width: 110px;
+      
+      border-width: 1px;
+      border-color: #002A3A;
+  }
+  .catogory:hover{
+      background-color: #FEBE10;
+      border-radius: 20px;
+      width: auto;
+      font-size:12px;
+      line-height: 16px;
+      font-family: 'Helvetica Neue Bold Pro';
+      padding: 5px 10px 2.5px 10px;
+      margin: 5px 5px 10px 0px;
+      color: #002A3A;
+      border-style: solid;
+      min-width: 110px;
+      
+      border-width: 1px;
+      border-color: #FEBE10;
+  }
+  .selected {
+      background-color: #472175;
+      color: white;
+  }
+  .choosepaymentMethodvalues {
+    color:#002A3A;
+    margin-left:10px;
+    font-size:16px;
+    line-height:16px;
+    font-family:'Helvetica Neue Regular';
+  }
+  
+  .grid-containerusePaymentTB{
+    display: grid;
+    grid-template-columns: 250px auto;
+    gap: 10px 20px;
+  }
+  
+  @media only screen and (min-width: 300px) and (max-width: 410px){
+    .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+      margin-top:-10px;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+      margin-top:-10px;
+  }
+  
+    .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+   .items{
+      color: white;
+      width: 45%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 0px 20px 0px;
+  }
+  .menuitems{
+      visibility: hidden;
+      margin: 0px;
+      width: 25%;
+      padding: 0px;
+      float: left;
+      display: block;
+  }
+  .logo{
+      margin-left: 10px;
+      margin-top: 10px;
+      height: 50px;
+      width: 30%;
+      
+  }
+  }
+  
+  @media only screen and (min-width: 411px) and (max-width: 600px){
+  
+      .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+      margin-top:-10px;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+      margin-top:-10px;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+  .items{
+      color: white;
+      width: 35%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 10px 20px 0px;
+  }
+  .menuitems{
+      visibility: hidden;
+      margin: 0px;
+      width: 15%;
+      padding: 0px;
+      float: left;
+      display: block;
+  }
+  }
+  @media only screen and (min-width: 601px) and (max-width: 767px){
+      .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+  }
+  .displayTotal{
+      display: contents;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+  .items{
+      color: white;
+      width: 25%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 10px 20px 0px;
+      float: right;
+  }
+  .menuitems{
+      visibility: hidden;
+      margin: 0px;
+      width: 25%;
+      padding: 0px;
+      float: left;
+      display: block;
+  }
+  }
+  @media only screen and (min-width: 768px) and (max-width: 991px){
+      .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+  }
+  .displayTotal{
+      display: contents;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+  .image2{
+    position: absolute;
+    left: 100px;
+  }
+  }
+  @media only screen and (min-width: 992px){
+
+      .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+  }
+  .displayTotal{
+      display: contents;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+  .items{
+      color: white;
+      width: 20%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 0px 20px 190px;
+  }
+  }
+  @media only screen and (min-width: 1200px){
+        .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+  }
+  .displayTotal{
+      display: contents;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 10px 20px;
+      width:100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+      width:-webkit-fill-available;
+    padding: 10px;
+  }
+  .items{
+      color: white;
+      width: 20%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 0px 20px 190px;
+  }
+  }
+  @media only screen and (min-width: 1480px){
+        .PillsCardButtons1{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #F3F0ED;
+      font-size: 16px;
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: #002A3A;
+      width: -webkit-fill-available;
+  }
+  .PillsCardButtons1:hover{
+      padding: 10px 0px 10px 0px;
+      border-radius: 30px;
+      border-style: none;
+      background-color: #002A3A;
+      font-size: 16px;  
+      line-height: 20px;
+      font-family: 'Helvetica Neue Bold Pro';
+      color: white;
+      width: -webkit-fill-available;
+  }
+  .displayTotal{
+      display: contents;
+  }
+  .grid-containerVolDonation{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+  }
+  .grid-containerChoosePayment{
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 10px 20px;
+    width: 100%;
+    padding: 10px;
+  }
+  .grid-containerChoosePaymentAppGoo{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+      width: -webkit-fill-available;
+    padding: 10px;
+  }
+  .items{
+      color: white;
+      width: 20%;
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      margin: 10px 0px 20px 190px;
+  }
+  }
+  
+  .grid-containerdisplaytotal{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 20px;
+    margin: 0px 10px 0px 10px;
+    width: 100%;
+  }

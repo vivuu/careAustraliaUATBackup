@@ -1,0 +1,25 @@
+<template>
+    <!-- About us -->
+    <div style="background-color:white;">
+    <lightning-layout class="pad addpadding" multiple-rows="true">
+    
+        
+        <lightning-layout-item size="12" class="aboutUsHeading">
+            <h3 class="section-heading section-heading-num aboutUsHeading"><span class="clr_navyblue">{val1} </span><span class="clr_orange ">{val2}</span></h3>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="aboutUsHeading">
+            <p style="color:#002A3A" class="work-section-metas aboutUsHeading">
+                 <lightning-formatted-rich-text value={aboutUsText}>
+					</lightning-formatted-rich-text></p>
+
+        </lightning-layout-item>
+        <lightning-layout-item size="12" class="aboutUsHeading  slds-p-bottom_xx-large">
+            <template if:true={btn}>
+                <button type="button" class="btnFindoutMore" onclick={openAboutLWCpage}>{btn.label}</button>
+            </template>
+        </lightning-layout-item>
+
+    </lightning-layout>
+    <!-- about us end here -->
+    </div>
+</template>

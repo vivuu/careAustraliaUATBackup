@@ -1,0 +1,38 @@
+<template>
+    <div class="para2 pad">
+			<lightning-layout multiple-rows="true" style="padding-top: 20px;">
+				<!-- class="slds-m-around_large" -->
+				<!--<template for:each={ntitles} for:item="title"></template>key={title.white}{title.white}{title.yellow}-->
+					<lightning-layout-item size="12"  small-device-size="12" medium-device-size="12"
+						large-device-size="12" class="slds-m-top_x-large">
+						<div class="changeChampions">
+							<h3 class="section-heading1">{val1}&nbsp;
+							<span style="color:#E4761E">{val2}</span></h3>
+							<!--<h3 class="section-heading1" style="color:#E4761E">{val2}</h3>-->
+						</div>
+					</lightning-layout-item>
+				
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+					<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+						medium-device-size="12" large-device-size="12">
+						<h3 class="section-content">
+                            <lightning-formatted-rich-text value={whyweneedBody}>
+                            </lightning-formatted-rich-text>
+						</h3>
+					</lightning-layout-item>
+					<!--<lightning-layout-item size="12" padding="around-small" small-device-size="12"
+						medium-device-size="12" large-device-size="12">
+						<h3 class="section-content">You can help ensure the continuation of Lendwithcare for years to
+							come by becoming a Lendwithcare Change Champion and making a regular monthly donation.</h3>
+					</lightning-layout-item>-->
+				</lightning-layout-item>
+
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="6" large-device-size="6">
+					<lightning-layout-item size="12">
+						<img src={whyweneedimage} alt="textileMachine" style="border-radius:10px;" class="MarginLeftforMobile">
+            </lightning-layout-item>
+					</lightning-layout-item>
+			</lightning-layout>
+		</div>
+
+</template>

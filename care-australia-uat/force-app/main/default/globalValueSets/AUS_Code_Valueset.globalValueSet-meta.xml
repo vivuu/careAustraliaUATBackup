@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>AUS773</fullName>
+        <default>false</default>
+        <label>AUS773</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS774</fullName>
+        <default>false</default>
+        <label>AUS774</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS775</fullName>
+        <default>false</default>
+        <label>AUS775</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS776</fullName>
+        <default>false</default>
+        <label>AUS776</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS779</fullName>
+        <default>false</default>
+        <label>AUS779</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS780</fullName>
+        <default>false</default>
+        <label>AUS780</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS781</fullName>
+        <default>false</default>
+        <label>AUS781</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS782</fullName>
+        <default>false</default>
+        <label>AUS782</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS783</fullName>
+        <default>false</default>
+        <label>AUS783</label>
+    </customValue>
+    <customValue>
+        <fullName>AUS787</fullName>
+        <default>false</default>
+        <label>AUS787</label>
+    </customValue>
+    <description>AUS Code Valueset</description>
+    <masterLabel>AUS Code Valueset</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

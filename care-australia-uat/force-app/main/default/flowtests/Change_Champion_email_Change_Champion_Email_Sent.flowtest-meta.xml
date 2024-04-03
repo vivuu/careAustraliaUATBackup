@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Change_Champion_email</flowApiName>
+    <label>Change Champion Email Sent</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Auto_Upgrade_Amount__c&quot;:0,&quot;Auto_Upgrade_Percentage__c&quot;:0,&quot;Card_Number_Masked__c&quot;:&quot;************4242&quot;,&quot;Card_Token__c&quot;:&quot;k3Oq1WWP1nBVr7hR&quot;,&quot;Card_Type__c&quot;:&quot;Visa&quot;,&quot;CurrencyIsoCode&quot;:&quot;AUD&quot;,&quot;Donor_Email__c&quot;:&quot;charlier.arn@gmail.com&quot;,&quot;Failed_Consecutive_Opportunities__c&quot;:0,&quot;Last_Payment_Result__c&quot;:&quot;Not Processed&quot;,&quot;Name&quot;:&quot;Tom Buy $26 - Recurring&quot;,&quot;OwnerId&quot;:&quot;0059800000F8Fn4AAF&quot;,&quot;Payment_Gateway__c&quot;:&quot;Stripe&quot;,&quot;Travel_Trip__c&quot;:false,&quot;npe03__Amount__c&quot;:26,&quot;npe03__Contact__c&quot;:&quot;00398000004HftoAAC&quot;,&quot;npe03__Date_Established__c&quot;:&quot;2023-10-23&quot;,&quot;npe03__Installment_Period__c&quot;:&quot;Weekly&quot;,&quot;npe03__Last_Payment_Date__c&quot;:&quot;2023-10-23&quot;,&quot;npe03__Next_Payment_Date__c&quot;:&quot;2023-11-20&quot;,&quot;npe03__Open_Ended_Status__c&quot;:&quot;None&quot;,&quot;npe03__Organization__c&quot;:&quot;00198000006RQHCAA4&quot;,&quot;npe03__Paid_Amount__c&quot;:26,&quot;npe03__Recurring_Donation_Campaign__c&quot;:&quot;701980000009tL7AAI&quot;,&quot;npe03__Total_Paid_Installments__c&quot;:1,&quot;npsp__Always_Use_Last_Day_Of_Month__c&quot;:false,&quot;npsp__CardExpirationMonth__c&quot;:&quot;4&quot;,&quot;npsp__CardExpirationYear__c&quot;:&quot;2024&quot;,&quot;npsp__CardLast4__c&quot;:&quot;4242&quot;,&quot;npsp__ClosedReason__c&quot;:&quot;Waiting for Payment details&quot;,&quot;npsp__CurrentYearValue__c&quot;:234,&quot;npsp__DisableFirstInstallment__c&quot;:false,&quot;npsp__InstallmentFrequency__c&quot;:4,&quot;npsp__NextYearValue__c&quot;:364,&quot;npsp__PaymentMethod__c&quot;:&quot;Credit Card&quot;,&quot;npsp__RecurringType__c&quot;:&quot;Open&quot;,&quot;npsp__StartDate__c&quot;:&quot;2023-10-23&quot;,&quot;npsp__Status__c&quot;:&quot;Active&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Change_Champion_Welcome_Email</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

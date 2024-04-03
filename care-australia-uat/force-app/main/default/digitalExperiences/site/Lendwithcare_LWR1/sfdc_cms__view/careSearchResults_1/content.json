@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Lendwithcare - Search",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"99757bbe-dd49-41df-980a-ad44de9b65ea\",\"columns\":[{\"UUID\":\"174b4a4b-e8b4-4f34-82d7-40beaa7fbd76\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "174b4a4b-e8b4-4f34-82d7-40beaa7fbd76",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "99757bbe-dd49-41df-980a-ad44de9b65ea",
+          "type" : "component"
+        } ],
+        "id" : "92f549c3-038d-43c8-8581-cadc2d072836",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Lendwithcare - Search",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "0d71fffb-9a3d-4879-8356-bae81c450562",
+          "type" : "component"
+        } ],
+        "id" : "e9d282af-3a2c-4468-b41f-ef6e9e1fe9c3",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "de4ddda1-a35b-4570-a4eb-0f6616c24236",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "0HTk8bAhKEX7ZJKnKQWvRBT01yumpC",
+    "viewType" : "custom-caresearchresults"
+  }
+}

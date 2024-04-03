@@ -1,0 +1,33 @@
+<template>
+    <div class='wrapper'>
+        <div class="slds-float_left">
+                 <div id="variants" class="slds-p-vertical_x-small slds-grid slds-grid_vertical-align-center">                                
+    <lightning-icon icon-name="custom:custom56" alternative-text="Info!" class="slds-col"
+    title="info variant small" size="large"> </lightning-icon>
+    <div class="slds-p-left_xx-small">
+        <p><b><lightning-formatted-text class="slds-form-element__label slds-col slds-text-heading_medium" value='{nameField}'></lightning-formatted-text></b></p>
+        <p><lightning-formatted-text class="slds-form-element__label slds-col title slds-text-heading_small" value="Loan"></lightning-formatted-text></p>
+    </div>
+    
+    
+ </div>
+        </div>
+
+             
+             <template if:true={proposalStatus}>
+                 <div class="slds-clearfix">
+                    <div class="slds-float_right  slds-p-top_medium">
+                    <c-banner-buttons></c-banner-buttons>
+                    </div>
+                </div>
+            </template>
+        
+            <template if:false={proposalStatus}>
+                 <div class="slds-clearfix">
+                    
+                </div>
+            </template>
+            
+    
+    </div>
+  </template>

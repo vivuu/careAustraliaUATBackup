@@ -1,0 +1,55 @@
+<!--
+  @description       : 
+  @author            : SUMEDH WASNIK
+  @group             : GERENT
+  @last modified on  : 02-07-2024
+  @last modified by  : SUMEDH WASNIK
+  Modifications Log
+  Ver   Date         Author          Modification
+  1.0   02-07-2024   SUMEDH WASNIK   Initial Version
+-->
+<template>
+    <lightning-spinner if:true={isLoading}></lightning-spinner>
+    <div class="search-header">
+        <div class="para2" style="padding:10px">
+          <div class="form-container">
+
+            <div if:false={noPostcode} class="field">
+              <label class="classFieldLabel"><span class="slds-m-right_xx-small" style="color: red;">*</span>Postcode</label>
+              <input class="ClassInputFields" type="text" value={newMailingPostCode} onchange={handlePostcodeChange}></input>
+              <p if:true={showPostcodeErrorMsg} class="slds-m-top_small" style="font-size: 16px;line-height: 21px;font-family: 'Helvetica Neue Bold Pro';color:red;margin-bottom: 10px;">{postcodeErrorMsg}</p>
+
+            </div>
+
+            <div if:false={noMobilePhone} class="field">
+              <label class="classFieldLabel"><span class="slds-m-right_xx-small" style="color: red;">*</span>Mobile</label>
+              <input class="ClassInputFields" value={newMobilePhone} type="text" onchange={handleMobileChange}></input>
+              <p if:true={showMobileErrorMsg} class="slds-m-top_small" style="font-size: 16px;line-height: 21px;font-family: 'Helvetica Neue Bold Pro';color:red;margin-bottom: 10px;">{mobileErrorMsg}</p>
+
+            </div>
+
+            <div if:false={noTermsAndCondition} class="field">
+
+              <div style="display:inline-flex">
+                <span class="slds-m-right_xx-small" style="color: red;">*</span><input style="width: 15px;height: 15px;" type='checkbox' class="checkbox" onchange={handleTermsAndConditionChange} checked={termsAndConditionValue}></input>
+                <!-- <label class="classFieldLabel" style="margin-left:10px"> Terms and Conditions </label> -->
+                <label class="classFieldLabel " style="font-size:14px;color:white;margin-left:10px"> <span
+                  style="color:red">*</span> I
+              have read and agree to the <a style="font-size:14px;color:white" href={openTCpdfDoc}
+                  target="_blank"> <u>Terms of Use</u></a><span> and </span>
+              <a style="font-size:14px;color:white" href={openPrivPolicy} target="_blank"> <u>Privacy
+                      Policy</u></a></label>
+              </div>
+              <p if:true={showTermsAndConditionErrorMsg} style="font-size: 16px;line-height: 21px;font-family: 'Helvetica Neue Bold Pro';color:red;margin-bottom: 10px;">Please accept the Terms and Conditons.</p>
+            </div>
+
+          </div>
+
+        </div>
+        <div style="margin: -10px 20px 20px 20px;">
+          <button class="custombuttomwithdrawCA"
+            style="width: -webkit-fill-available;font-size:16px;font-weight:800"
+            onclick={gotoFifthPage}>Continue</button>
+        </div>
+      </div>
+</template>

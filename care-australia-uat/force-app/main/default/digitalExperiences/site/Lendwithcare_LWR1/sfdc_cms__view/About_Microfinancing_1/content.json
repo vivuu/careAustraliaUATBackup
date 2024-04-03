@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "What is Microfinance | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"6a4e3c94-a898-408f-9518-24296b924153\",\"columns\":[{\"UUID\":\"12e18477-152c-4632-b26d-ac6ca256c3f3\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "12e18477-152c-4632-b26d-ac6ca256c3f3",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "6a4e3c94-a898-408f-9518-24296b924153",
+          "type" : "component"
+        } ],
+        "id" : "25e907f5-34e9-44e5-93da-90bdf2d09837",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Discover microfinance's transformative power, providing small loans to empower low-income communities. Learn about CARE Australia's trusted partnerships.",
+            "dxpStyle" : { },
+            "pageTitle" : "What is Microfinance | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "e45affc6-cc0e-45b8-8ef8-010adad2edd0",
+          "type" : "component"
+        } ],
+        "id" : "0ebe9aa7-0f83-4fb9-b60d-fd88c08f8052",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "6038bf56-5338-4e64-80f6-28c79fcfe35f",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "8Vqanrxvcm4fbcReuD3KHGzLZg6X4S",
+    "viewType" : "custom-about-microfinancing"
+  }
+}

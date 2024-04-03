@@ -1,0 +1,113 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Care All Loan Schedules",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"744d2cfa-0eb4-47e2-b2dd-429780c430fd\",\"columns\":[{\"UUID\":\"1cb62e1a-8d36-4896-802f-f8ee370d85f1\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "1cb62e1a-8d36-4896-802f-f8ee370d85f1",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "744d2cfa-0eb4-47e2-b2dd-429780c430fd",
+          "type" : "component"
+        } ],
+        "id" : "deaafc12-ea67-48e6-889f-4c96f6662095",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"df9fbd0d-89c9-4797-b428-bbbede8530f2\",\"columns\":[{\"UUID\":\"5e730bc3-b032-4757-9420-b6473c802952\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "5e730bc3-b032-4757-9420-b6473c802952",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "df9fbd0d-89c9-4797-b428-bbbede8530f2",
+          "type" : "component"
+        } ],
+        "id" : "290b4b68-40de-4b42-95c0-498fb185fae0",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careAllLoanSchedules",
+          "id" : "653950b4-fb57-4dcd-8fe6-1a10303dd04f",
+          "type" : "component"
+        } ],
+        "id" : "4e32ae17-2e2a-410e-9131-11c1e7aab212",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : { },
+          "definition" : "c:lwr_careFooter",
+          "id" : "d535219b-6338-4e10-98e7-2ff78919e93a",
+          "type" : "component"
+        } ],
+        "id" : "7d59ef00-18ad-4643-9444-6ef2f16fa32a",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "4de21da1-5f1b-4176-81dd-bb545ebe55a4",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "e585add5-3a99-4964-91a0-ecd2fcb2f2b8",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "b88f8d16-9726-4b29-8801-f29e726e5b94",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "3abeb440-ff08-434f-919a-fd3488ae9426",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "81560a94-608f-4a11-9375-cfea80b673ee",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "896f1f72-1887-407f-9710-e2481a125e69",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "9e80deaf-6aa5-46c3-bd66-40766e9368b1",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "07cacb3b-206e-4c03-a73c-e2df06923a0b",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "2e20ee89-f24b-4696-be49-edfc5592cc59",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeCareAllLoanSchedules",
+      "id" : "506d34ce-4d6c-4401-9016-5be9a2ab96eb",
+      "type" : "component"
+    }
+  }
+}

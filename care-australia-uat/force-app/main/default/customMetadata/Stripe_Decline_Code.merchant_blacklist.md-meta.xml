@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>merchant_blacklist</label>
+    <protected>false</protected>
+    <values>
+        <field>DESCRIPTION__c</field>
+        <value xsi:type="xsd:string">The payment was declined because it matches a value on the Stripe userâ€™s block list.</value>
+    </values>
+    <values>
+        <field>NEXT_STEPS__c</field>
+        <value xsi:type="xsd:string">Donâ€™t report more detailed information to your customer. Instead, present as you would the generic_decline described above.</value>
+    </values>
+    <values>
+        <field>PAYMENT_RESULT__c</field>
+        <value xsi:type="xsd:string">Fail Hard</value>
+    </values>
+</CustomMetadata>

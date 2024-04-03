@@ -1,0 +1,167 @@
+<template>
+    <lightning-spinner if:true={spin}></lightning-spinner>
+    <div class="headers">
+  
+      <!--<img src={banner} alt="banner">-->
+  
+      <c-lwr_care-nav-bar></c-lwr_care-nav-bar>
+  
+      <lightning-layout multiple-rows="true" class="pad">
+  
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+          large-device-size="6" class="item1">
+  
+  
+          <div class="bannerHeading" style="display:block">
+  
+            <lightning-layout multiple-rows="true" style="color:white">
+  
+              <lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+                large-device-size="12" class="slds-p-bottom_x-large">
+                <h3 style="display:inline" class="section-heading"> {val1} {val2}</h3><!--{htitle}-->
+              </lightning-layout-item>
+  
+              <lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+                large-device-size="12">
+                <h3 class="section-content">
+                  <lightning-formatted-rich-text
+                   value={newsAndUpdatesBody}></lightning-formatted-rich-text>
+                </h3>
+              </lightning-layout-item>
+  
+            </lightning-layout>
+  
+          </div>
+  
+  
+          <lightning-layout-item size="12"  small-device-size="12" medium-device-size="12"
+            large-device-size="12">
+            <div class="button-line FilterButtons">
+              <button onclick={openFilter} class="button button-filter">
+                <svg class="slds-icon slds-icon-text-default slds-icon_x-small customIcon" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z" />
+                </svg>
+  
+                Filter
+              </button>
+              <button onclick={handleSort} class="button button-sort">
+                <svg class="slds-icon slds-icon-text-default slds-icon_x-small customIcon" aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path d="M3 9l4 -4l4 4m-4 -4v14" />
+                  <path d="M21 15l-4 4l-4 -4m4 4v-14" />
+                </svg>
+                Sort
+              </button>
+            </div>
+          </lightning-layout-item>
+        </lightning-layout-item>
+  
+        <lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+          large-device-size="6" class="item2 slds-p-bottom_small slds-align_absolute-center">
+  
+         <div class="item22"> <img src={desktopimageBack} class="BannerImageWidth"></div>
+  
+        </lightning-layout-item>
+  
+      </lightning-layout>
+    </div>
+    <div class="pad">
+      <lightning-layout class="slds-p-top_xx-large" multiple-rows="true">
+        <template for:each={filteredRecords} for:item="item" for:index="index">
+          <lightning-layout-item size="12" key={item.id} small-device-size="12"
+            medium-device-size="6" large-device-size="4">
+            <div class="custom-box">
+              <div class="slide-content">
+                <div class="HeadImageImpact" style="min-height:215px;width:100%;">
+                  <!-- <img width="100%" src={item.img} style="border-radius: 8px;height:215px;" > -->
+                  <img width="100%" src={item.img} style="border-radius: 8px;height:215px;object-fit:cover;" >
+                </div>
+                <div class="CarContentImpact">
+                  <h3 class="carTitleImpact">{item.title}</h3>
+                  <div class="locastionsImpact">
+                    <div> <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: 3px;" width="16" height="16"
+                        fill="#002A3A" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path
+                          d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                      </svg></div>
+                    <div>
+                      <p
+                        style="font-family: 'Helvetica Neue Bold Pro';font-size:12px;line-height:16px;color:#002A3A;margin:7px 0px 0px 2px;">
+                        {item.location}</p>
+                    </div>
+                  </div>
+                  <p class="carParaImpact"><lightning-formatted-rich-text
+                    value={item.body}></lightning-formatted-rich-text></p>
+                  <!-- <div class="slds-align_absolute-center">
+                        <a href={item.buttonlink}>
+                                          <button class="carButtonImpact">{item.button}</button></a>
+                      </div> -->
+                  <div style=" text-align: center;">
+                    <a href={item.buttonlink} target="_self">
+                      <button class="carButtonImpact">
+                        {item.button}
+                      </button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </lightning-layout-item>
+        </template>
+        <template if:true={noRecords}>
+          <p style="width:100%;text-align: center; font-size: 1.5rem; font-weight: 500;">There are no News And Updates</p>
+        </template>
+      </lightning-layout>
+    </div>
+    <template if:true={isFilter}>
+      <div class="search-overlay">
+        <div class="search">
+          <div style="display:flex" class="slds-p-around_small">
+            <div class="slds-float_left">
+              <a onclick={closeFilterMenu}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="black" class="bi bi-chevron-left"
+                  viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                </svg>
+              </a>
+            </div>
+            <div class="slds-align_absolute-center ">
+              <h3 class="popupTitle">Filter</h3>
+            </div>
+            <a onclick={resetFilter} class="reset-button slds-float-right" style="font-size:16px;color:#002A3A">
+              <u>Reset</u>
+            </a>
+          </div>
+          <div class="box3">
+          </div>
+          <div class="loanType slds-p-around_medium">
+  
+            <h3 class="popupHeading">Category</h3>
+            
+            <div style="justify-content: space-between;">
+              <template for:each={categories} for:item="category">
+                <button key={category} class="catogory" name={category}
+                  onclick={handleButtonClick}>{category}</button>
+              </template>
+            </div>
+          </div>
+          <div class="box3">
+          </div>
+          <div class="showmorebutton slds-p-around_medium">
+            <button class="carButtonImpact1" style="border:none;" onclick={getFilteredLoans}>
+  
+              Show {NoOfLoans} results</button>
+          </div>
+  
+  
+  
+  
+        </div>
+      </div>
+    </template>
+  </template>

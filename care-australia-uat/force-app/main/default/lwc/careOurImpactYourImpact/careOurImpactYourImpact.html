@@ -1,0 +1,159 @@
+<template>
+   
+<!--<div class="yourImpact pad slds-p-top_x-large">
+	<div class="grid-containerLayout">
+		<div>
+			<div class="yourimpact">
+				<div style="width:100%">
+					<h3 class="section-headings" style="margin:0px 40px 40px 0px;float:left;">{val1}</h3>
+				</div>
+				<div class="chartback">
+					<div>
+						<h3 class="slds-align_absolute-center" 
+							style="float:left;font-weight:800;margin-top:20px;font-family: 'Helvetica Neue Bold Pro';font-size:16px;line-height:20px;color:#002A3A;width:100%;display:flex;justify-content:center;margin-bottom:10px;">
+							Types of loans funded
+						</h3>
+					</div>
+					<div class="slds-align_absolute-center" style="display:grid">
+						<div class="slds-align_absolute-center">
+							<c-donut-chart contactid={contactid}></c-donut-chart>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="DirectionClass">
+			<div class=" slds-align_absolute-left">
+				<h3 class="headingcar">Breakdown</h3>
+			</div>
+			<div class="carouselImpact">
+				<div class="sliderImpact" style={sliderStylesImpact}>
+					<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+						<div key={item.id} class="slide">
+							<div class="slide-content">
+								<div class="CarContentImpact">
+									<h3 class="carTitleImpact">{item.title}</h3>
+	
+									<p class="carParaImpact">{item.description}</p>
+								</div>
+							</div>
+						</div>
+					</template>
+				</div>
+			</div>
+			<div style="display:flex;justify-content:center">
+				<div class="dots">
+					<button class="NaviButton" style="background:none;margin-top:-18px"  onclick={previousSlideImpact} >&#10094;</button>
+					<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+						<span key={item.id} class="dotClass" onclick={handleDotClickImpact} data-index={index}></span>
+					</template>
+					<button class="NaviButton" style="background:none;margin-top:-18px" onclick={nextSlideImpact}>&#10095;</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>-->
+
+<div class="grid-containerLayout pad" style="margin-bottom:70px">
+		<div>
+			<div class="yourimpact ">
+				<div style="width:100%" class="">
+					<h3 class="section-headings" style="margin:0px 40px 40px 0px;float:left;">{val1} {val2}</h3>
+				</div>
+				<div class="chartback">
+					<div>
+						<h3 class="ChartTypeLoans">
+							Types of loans funded
+						</h3>
+					</div>
+					<div class="slds-align_absolute-center" style="display:grid">
+						<div class="slds-align_absolute-center" style="padding-bottom:20px;">
+							<c-donut-chart contactid={contactid}></c-donut-chart>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="OnlyShowInDesktop" style="width:100%">
+				<h3 class="section-headings">
+				</h3>
+			</div>
+			<!-- Row 1 -->
+			<lightning-layout multiple-rows class="OnlyShowInDesktop MobBreakdown slds-p-top_xx-large">
+				<lightning-layout-item size="12" small-device-size="12" medium-device-size="12" large-device-size="12">
+					<h3 class="StyleBreakdown">
+						Breakdown
+					</h3>
+				</lightning-layout-item>
+			
+			</lightning-layout>
+			
+			<!-- Row 2 -->
+			<lightning-layout multiple-rows class="OnlyShowInDesktop ">
+				<div class="grid-containerDashB">
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{TotalLoans}</h3>
+						<p class="carParaImpact" style="padding-top:10px;">Number of loans
+						</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">
+							{Totalamountlent}
+							<span style="font-size:12px;color:#E4761E">
+																			<!--.00-->
+																		</span>
+						</h3>
+						<p class="carParaImpact">Total amount lent</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{JobsCreated}</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">Jobs created</p>
+					</div>
+					<div class="CarContentImpact">
+						<h3 class="carTitleImpact">{Peoplehelped}</h3>
+						<p class="carParaImpact" style="font-family: 'Helvetica Neue Bold Pro';">People helped</p>
+					</div>
+				</div>
+
+			</lightning-layout>
+			
+			<div class="Onlyshowinmobile">
+									<div class="headingcar">
+										<h3 class="StyleBreakdown">
+											Breakdown</h3>
+									</div>
+				<div class="carouselImpact">
+
+					<div class="sliderImpact" style={sliderStylesImpact}>
+						<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+							<div key={item.id} class="slides">
+								<div class="slide-content">
+									<div class="CarContentImpact">
+										<h3 class="carTitleImpact">{item.title}</h3>
+										<p class="carParaImpact">{item.description}</p>
+									</div>
+								</div>
+							</div>
+						</template>
+					</div>
+
+				</div>
+				<div style="display:flex;justify-content:center;margin-top:20px;">
+					<div class="dots">
+						<button class="NaviButton" style="background:none;margin-top:-18px"
+															onclick={previousSlideImpact}>&#10094;</button>
+						<template for:each={carouselItemsImpact} for:item="item" for:index="index">
+							<span key={item.id} class="dotClass" onclick={handleDotClickImpact}
+																data-index={index}></span>
+						</template>
+						<button class="NaviButton" style="background:none;margin-top:-18px"
+															onclick={nextSlideImpact}>&#10095;	</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</template>

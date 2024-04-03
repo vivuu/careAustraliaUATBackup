@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Microfinance News and Updates | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"00e6ec7c-0e4a-4553-8216-98a2037a9861\",\"columns\":[{\"UUID\":\"b1af5292-8d18-470f-a31f-8b69c9f13343\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "b1af5292-8d18-470f-a31f-8b69c9f13343",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "00e6ec7c-0e4a-4553-8216-98a2037a9861",
+          "type" : "component"
+        } ],
+        "id" : "4323be01-fe4b-48f9-af17-97f413daebcb",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Stay informed about the incredible world of Lendwithcare and the inspiring stories of borrowers your lifechanging loans support.",
+            "dxpStyle" : { },
+            "pageTitle" : "Microfinance News and Updates | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "2c6d7d10-8466-48fa-b34d-9456247e9789",
+          "type" : "component"
+        } ],
+        "id" : "1ffff0c7-a400-4cc7-b210-aac6c1841a95",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "181bef0d-8e67-4509-9517-89155f65aed9",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "QYYwq2prARwyVhqmFjsnb8djOzpkQM",
+    "viewType" : "custom-care-blog-post"
+  }
+}

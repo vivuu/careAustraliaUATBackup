@@ -1,0 +1,44 @@
+<template>
+	<lightning-spinner if:true={spinner}></lightning-spinner>
+	<div class="headers">
+
+		<!--<img src={banner} alt="banner">-->
+
+		<c-care-nav-bar></c-care-nav-bar>
+
+		<!--<lightning-layout multiple-rows="true">
+			<lightning-layout-item size="12" small-device-size="12" 
+			medium-device-size="12" large-device-size="6" class="pad item1">
+				<div class=" bannerHeading" style="padding-right: 10px;">
+					<h3 class="section-heading"> {val1} </h3>
+					<h3 class="section-content slds-m-bottom_x-large">
+						<lightning-formatted-rich-text value={impactbody}>
+						</lightning-formatted-rich-text>
+					</h3>
+				</div>			
+			</lightning-layout-item>
+			<lightning-layout-item size="12" small-device-size="12" medium-device-size="12"
+				large-device-size="6" class="item2">
+				
+					<img src={backgroundImage} class="StyleBannerImage">
+    			
+			</lightning-layout-item>
+		</lightning-layout>-->
+
+		<div class="grid-ContainerHeader pad">
+			<div class="item1">
+				<div class=" bannerHeading">
+					<h3 class="section-heading"> {val1} {val2}</h3>
+					<h3 class="section-content slds-m-bottom_x-large">
+						<lightning-formatted-rich-text value={impactbody}>
+						</lightning-formatted-rich-text>
+					</h3>
+				</div>
+			</div>
+			<div class="slds-align_absolute-center item2">
+				<img src={backgroundImage} class="StyleBannerImage">
+			</div>
+		</div>
+
+	</div>
+</template>

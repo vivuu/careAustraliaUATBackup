@@ -1,0 +1,58 @@
+<template>
+	<lightning-layout multiple-rows>
+		<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+			small-device-size="12" medium-device-size="12" large-device-size="12">
+
+			<div>
+				<h2 class="title">Repayment Scheduler Processor</h2>
+				<h3 class="sectiontitle">Please Upload a CSV file to process the Repayment Process.</h3>
+
+				<p class="secPara" style="margin-top:10px">The file should use CSV UTF-8 compatible version only.</p>
+				<p class="secPara">Repayment Schedule: ID in CSV should match exactly with Salesforce Id of Repayment
+					Schedule.
+				</p>
+			</div>
+
+		</lightning-layout-item>
+
+		<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+			small-device-size="12" medium-device-size="12" large-device-size="12">
+			<div class="slds-align_absolute-center">
+				<label for="fileInput">Upload file:</label>
+				<input type="file" id="fileInput" accept=".csv" onchange={handleFileClick}/>
+        </div>
+		</lightning-layout-item>
+		<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+			small-device-size="12" medium-device-size="12" large-device-size="12">
+			<div style="margin-right:100px">
+				<div class="slds-m-around_medium">
+					<button class="slds-button slds-button_brand" disabled={disabled} onclick={handleButtonClick}>
+        <span class="slds-p-horizontal_x-small">Read File</span>
+    </button>
+				</div>
+			</div>
+		</lightning-layout-item>
+	</lightning-layout>
+
+	<div if:true={showSpinner}>
+		<lightning-spinner alternative-text="Loading..." variant="brand">
+		</lightning-spinner>
+	</div>
+	<template if:true={showDatatable}>
+		<template if:true={showButton}>
+			<lightning-layout-item size="12" class="slds-align_absolute-center" padding="around-small"
+			small-device-size="12" medium-device-size="12" large-device-size="12">
+			<lightning-button label="Cancel" title="Cancel" onclick={handleCancel}></lightning-button>
+			<lightning-button label="Save" variant="brand" title="Save" onclick={handleSave}></lightning-button>
+			</lightning-layout-item>
+		</template>
+		<div style="width: 100%; height: 400px; overflow-x: scroll;overflow-y: scroll;">
+			<c-fsp_-repayment-custom-data-tabel key-field="id" data={repaymentList} hide-checkbox-column
+				show-row-number-column columns={columns} oncellchange={handleCellChange} onsave={handleSave}
+				oncancel={handleCancel} class="custom-data-table"></c-fsp_-repayment-custom-data-tabel>
+		</div>
+		<lightning-layout multiple-rows>
+		</lightning-layout>
+
+	</template>
+</template>

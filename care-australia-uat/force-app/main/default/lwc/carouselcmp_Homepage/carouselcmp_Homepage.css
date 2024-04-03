@@ -1,0 +1,3342 @@
+@font-face {
+  font-family: 'Helvetica Oblique';
+  src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Regular';
+  src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Sketchetik Fill Bold';
+  src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/font.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold Pro';
+  src: url('/s/sfsites/c/resource/SiteFonts/SiteFonts/HelveticaNeueProBold.woff') format('woff');
+
+}
+
+.custombuttomwithdraw:hover {
+  border-style: solid;
+  border: white;
+  color: white;
+}
+
+.donateMessage {
+  font-family: 'Helvetica Neue Regular';
+  font-size: 16px;
+  line-height: 21px;
+  color: #002A3A;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+
+.header {
+  background: transparent linear-gradient(245deg, #472175 0%, #002A3A 100%) 0% 0% no-repeat padding-box;
+}
+
+.italic-placeholder::placeholder {
+  font-style: italic;
+  color: #002A3A;
+}
+
+.field {
+  display: grid;
+  margin: 20px 0px 20px 0px;
+}
+
+.classFieldLabel {
+  font-size: 16px;
+  line-height: 21px;
+  font-family: 'Helvetica Neue Bold Pro';
+  color: #002A3A;
+  margin-bottom: 10px;
+}
+
+.ClassInputFields {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border-color: #163B5480;
+  border-width: 2px;
+  font-family: 'Helvetica Oblique';
+  font-size: 16px;
+  line-height: 21px;
+}
+
+/*h1{
+    font-size: 60px;
+    font-family: 'Helvetica';
+}
+p {
+  font-family: 'Helvetica';
+}
+ a {
+   font-family: 'Helvetica';
+ }
+
+ h3 {
+   font-family: 'Helvetica';
+ }
+ h2 {
+   font-family: 'Helvetica';
+ }*/
+
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.search {
+  background: #ffffff;
+  width: 400px;
+}
+
+.yourloanheading {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 45px;
+  color: #0c0761;
+  font-family: 'Sketchetik Fill Bold';
+}
+
+.notifications {
+  height: 10vh;
+}
+
+.profilepic {
+  margin: 20px 20px 20px 20px;
+}
+
+.message1 {
+  margin: 20px 20px 20px 20px;
+}
+
+.message2 {
+  margin-top: 20px;
+}
+
+.notify {
+  text-align: center;
+}
+
+.yourprojects {
+  height: auto;
+  background-color: #F3F0ED;
+}
+
+.box {
+  background-color: #F3F0ED;
+}
+
+.yourtransaction {
+  background-color: #F3F0ED;
+  padding: 20px;
+}
+
+/* navbar */
+.navBar {
+  display: flex;
+  height: 60px;
+  background-color: rgb(50, 47, 122);
+}
+
+.menuitems {
+  display: flex;
+  justify-content: space-around;
+}
+
+.testi {
+  background: transparent linear-gradient(213deg, #E4761E 0%, #FEBE10 100%) 0% 0% no-repeat padding-box;
+}
+
+.headers {
+  height: 80vh;
+  width: 100%;
+  background: transparent linear-gradient(213deg, #E4761E 0%, #FEBE10 100%) 0% 0% no-repeat padding-box;
+  align-items: center;
+
+}
+
+.violet {
+  color: rgb(47, 13, 116);
+}
+
+.whylwc {
+  background-color: antiquewhite;
+}
+
+.logo {
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 20px;
+  width: 50%;
+
+}
+
+.lend {
+  height: 20px;
+  width: auto;
+  color: white;
+  font-size: large;
+}
+
+.withcare {
+  height: 20px;
+  width: auto;
+  color: white;
+  font-size: large;
+}
+
+.items {
+  color: white;
+  width: 50%;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+/* navbar ends here*/
+
+
+
+.section-headings {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 45px;
+  font-family: 'Sketchetik Fill Bold';
+  color: #002A3A;
+}
+
+.section-heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 40px;
+  color: #FFFFFF;
+}
+
+.clr_gold {
+  color: #FEBE10;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.bodyBackground {
+  background: linear-gradient(205.75deg, #422371 0%, #163B54 100%);
+}
+
+.howItWorkSection {
+  color: white;
+}
+
+.col {
+  flex: 1 0 0%;
+}
+
+.work-section-head {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.work-section-meta {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin: 0px;
+}
+
+.browse-project {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 30px 50px;
+  margin: 50px 0px;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.browse-project-detail {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #163B54;
+  margin-top: 1%;
+}
+
+
+.btn {
+  --bs-btn-padding-x: 0.75rem;
+  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-font-family: 'Helvetica Neue Bold Pro';
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 400;
+  --bs-btn-line-height: 1.5;
+  --bs-btn-color: #212529;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-width: 1px;
+  --bs-btn-border-color: transparent;
+  --bs-btn-border-radius: 0.375rem;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+  --bs-btn-disabled-opacity: 0.65;
+  --bs-btn-focus-box-shadow: 0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5);
+  display: inline-block;
+
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  user-select: none;
+  border: var(--bs-btn-border-width) solid var(--bs-btn-border-color);
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+button:hover {
+  background: #422371;
+}
+
+.section-discription {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  margin-top: 2%;
+}
+
+.clr_navyblue {
+  color: #163B54;
+}
+
+.clr_orange {
+  color: #E4761E;
+}
+
+@media screen and (max-width: 1018px) {
+  button {
+    margin-top: 1%;
+    width: 100%;
+  }
+
+  .impact-section-heading {
+    text-align: left !important;
+  }
+
+  .bynumber-head {
+    /* font-size: 27px !important; */
+    padding: 1% 2% 2% 0;
+  }
+
+  .bynumber-content {
+    font-size: 27px !important;
+    padding: 1% 2% 2% 0;
+    font-weight: 600;
+  }
+
+  .section-heading-num {
+    text-align: left !important;
+    padding: 1% 2% 2% 0;
+  }
+
+  .nums {
+    padding: 0 9% !important;
+  }
+
+  .single-testimonial {
+    text-align: left !important;
+  }
+}
+
+@media screen and (min-width:1019px) and (max-width: 1532px) {
+  button {
+    margin-top: 1%;
+    width: 200px;
+  }
+
+  .bynumber-head {
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 41px;
+    text-align: left !important;
+  }
+
+  .bynumber-content {
+    text-align: left !important;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    color: #163B54;
+    margin: 0px;
+  }
+
+  .single-testimonial {
+    width: 500px !important;
+    text-align: center;
+    margin: auto;
+    margin-top: 80px;
+    padding-bottom: 15%;
+  }
+
+  .testimonial-content {
+    padding-top: 15%;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 39px;
+    color: #FFFFFF;
+  }
+
+  .reviewer-name,
+  .reviewer-position {
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+
+  .me-2 {
+    margin-right: 0.5rem !important;
+  }
+
+  .reviewer-position {
+    font-family: 'Helvetica';
+    font-style: italic;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 100%;
+    color: #FFFFFF;
+  }
+}
+
+
+
+/* footer starts here */
+.logo {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 30%;
+}
+
+.lend {
+  height: 20px;
+  width: auto;
+  color: white;
+  font-size: large;
+}
+
+.withcare {
+  height: 20px;
+  width: auto;
+  color: white;
+  font-size: large;
+}
+
+.footer1 {
+  background-color: rgb(50, 47, 122);
+
+}
+
+.social {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.logos {
+  display: flex;
+}
+
+.links {
+  color: white;
+  margin-left: 20px;
+}
+
+.flags {
+  align-items: center;
+  height: 70px;
+  width: 100px;
+  margin-left: 20px;
+}
+
+.para {
+  text-align: center;
+  color: #ffffff;
+}
+
+.infos {
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.careLogo {
+  margin-left: 20px;
+}
+
+.li {
+  display: inline-flex;
+}
+
+/* footer ends here */
+
+/* carousel starts here*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.carousel {
+  min-width: 900px;
+  max-width: 1236px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 48px;
+  padding-right: 48px;
+  position: relative;
+}
+
+.carousel__activator {
+  display: none;
+}
+
+.carousel__controls {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 16px;
+  left: 16px;
+  bottom: 0;
+}
+
+.carousel__controls:first-of-type {
+  justify-content: flex-end;
+}
+
+.carousel__controls:last-of-type {
+  justify-content: flex-start;
+}
+
+.carousel__control {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  color: #3d414a;
+  border-radius: 100%;
+  box-shadow: 0 2px 10px 0 rgba(33, 34, 36, 0.3);
+  font-size: 24px;
+  height: 48px;
+  justify-content: center;
+  transition: 0.3s all;
+  width: 48px;
+  z-index: 1;
+}
+
+.carousel__control:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.carousel__activator:nth-of-type(1):checked~.carousel__controls:nth-of-type(1) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(1):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.carousel__activator:nth-of-type(2):checked~.carousel__controls:nth-of-type(2) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(2):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+.carousel__activator:nth-of-type(3):checked~.carousel__controls:nth-of-type(3) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(3):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+}
+
+.carousel__activator:nth-of-type(4):checked~.carousel__controls:nth-of-type(4) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(4):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+
+.carousel__activator:nth-of-type(5):checked~.carousel__controls:nth-of-type(5) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(5):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-400%);
+  transform: translateX(-400%);
+}
+
+.carousel__activator:nth-of-type(6):checked~.carousel__controls:nth-of-type(6) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(6):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-500%);
+  transform: translateX(-500%);
+}
+
+.carousel__activator:nth-of-type(7):checked~.carousel__controls:nth-of-type(7) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(7):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-600%);
+  transform: translateX(-600%);
+}
+
+.carousel__activator:nth-of-type(8):checked~.carousel__controls:nth-of-type(8) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(8):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-700%);
+  transform: translateX(-700%);
+}
+
+.carousel__activator:nth-of-type(9):checked~.carousel__controls:nth-of-type(9) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(9):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-800%);
+  transform: translateX(-800%);
+}
+
+.carousel__activator:nth-of-type(10):checked~.carousel__controls:nth-of-type(10) {
+  display: flex;
+}
+
+.carousel__activator:nth-of-type(10):checked~.carousel__screen .carousel__track {
+  -webkit-transform: translateX(-900%);
+  transform: translateX(-900%);
+}
+
+.carousel__screen {
+  overflow: hidden;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.carousel__track {
+  font-size: 0;
+  transition: all 0.3s ease 0s;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel__item {
+  display: inline-flex;
+  padding-left: 16px;
+  padding-right: 16px;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.carousel__item--desktop-in-1 {
+  width: 100%;
+}
+
+.carousel__item--desktop-in-2 {
+  width: 50%;
+}
+
+.carousel__item--desktop-in-3 {
+  width: 33.3333333333%;
+}
+
+.carousel__item--desktop-in-4 {
+  width: 25%;
+}
+
+.carousel__item--desktop-in-5 {
+  width: 20%;
+}
+
+
+
+.demo-content {
+  color: #fff;
+  display: flex;
+  font-family: 'Helvetica';
+  font-weight: 100;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+  font-size: 56px;
+  height: 250px;
+  width: 100%;
+}
+
+.carousel__item:nth-child(1) .demo-content {
+  background-color: #216485;
+}
+
+.carousel__item:nth-child(2) .demo-content {
+  background-color: #3692b6;
+}
+
+.carousel__item:nth-child(3) .demo-content {
+  background-color: #6fccc9;
+}
+
+.carousel__item:nth-child(4) .demo-content {
+  background-color: #a6e3cf;
+}
+
+.carousel__item:nth-child(5) .demo-content {
+  background-color: #aff0be;
+}
+
+.carousel__item:nth-child(6) .demo-content {
+  background-color: #527059;
+}
+
+.carousel__item:nth-child(7) .demo-content {
+  background-color: #243127;
+}
+
+@media screen and (max-width: 1023px) {
+  .carousel {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carousel__activator:nth-of-type(n):checked~.carousel__controls:nth-of-type(n) {
+    display: none;
+  }
+
+  .carousel__activator:nth-of-type(n):checked~.carousel__screen .carousel__track {
+    -webkit-transform: none;
+    transform: none;
+  }
+
+  .carousel__screen {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .carousel__track {
+    overflow-x: auto;
+    width: auto;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .carousel__item--tablet-in-1 {
+    width: 90%;
+  }
+
+  .carousel__item--tablet-in-2 {
+    width: 45%;
+  }
+
+  .carousel__item--tablet-in-3 {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .carousel__track {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .carousel__item--mobile-in-1 {
+    width: 90%;
+  }
+
+  .carousel__item--mobile-in-2 {
+    width: 45%;
+  }
+
+  .carousel__item--mobile-in-3 {
+    width: 30%;
+  }
+}
+
+/* ******************************************************
+	Author URI: https://frontendscript.com
+	Demo Purpose Only - May not require to add.
+	font-family: 'Work Sans', sans-serif;
+*********************************************************/
+
+/*@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900');*/
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+article,
+header,
+section,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+body {
+  background: #f0e190 none repeat scroll 0 0;
+  color: #222;
+  font-family: 'Helvetica';
+  font-size: 100%;
+  line-height: 24px;
+  margin: 0;
+  padding: 0;
+
+}
+
+a {
+  font-family: 'Helvetica';
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #373e18;
+}
+
+section {
+  float: left;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
+}
+
+h2 {
+  color: #1a0e0e;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+h2 span {
+  display: block;
+  padding: 0;
+  font-size: 18px;
+  opacity: 0.7;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.float-right {
+  float: right;
+}
+
+/* ******************************************************
+	Header
+*********************************************************/
+
+.ScriptTop {
+  background: #fff none repeat scroll 0 0;
+  float: left;
+  font-size: 0.69em;
+  font-weight: 600;
+  line-height: 2.2;
+  padding: 12px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+/* To Navigation Style 1*/
+.ScriptTop ul {
+  margin: 24px 0;
+  padding: 0;
+  text-align: left;
+}
+
+.ScriptTop li {
+  list-style: none;
+  display: inline-block;
+}
+
+.ScriptTop li a {
+  background: #6a4aed none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px 18px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.ScriptTop li a:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* Header*/
+.ScriptHeader {
+  float: left;
+  width: 100%;
+  padding-top: 3em;
+}
+
+.rt-heading {
+  text-align: center;
+  padding-bottom: 10px;
+  margin: 0 auto;
+}
+
+.ScriptHeader h1 {
+  color: #e4bb0d;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  line-height: normal;
+
+}
+
+.ScriptHeader h2 {
+  color: #726943;
+  font-size: 20px;
+  font-weight: 400;
+  margin: 5px 0 0;
+  line-height: normal;
+
+}
+
+.ScriptHeader h1 span {
+  display: block;
+  padding: 0;
+  font-size: 22px;
+  opacity: 0.7;
+  margin-top: 5px;
+
+}
+
+.ScriptHeader span {
+  display: block;
+  padding: 0;
+  font-size: 22px;
+  opacity: 0.7;
+  margin-top: 5px;
+}
+
+
+
+
+/* ******************************************************
+	Live Demo
+*********************************************************/
+
+
+
+
+
+/* ******************************************************
+	Responsive Grids
+*********************************************************/
+
+.rt-container {
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.rt-row:before,
+.rt-row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.rt-row:after {
+  clear: both;
+}
+
+[class^="col-rt-"] {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  padding: 0 15px;
+  min-height: 1px;
+  position: relative;
+}
+
+
+@media (min-width: 768px) {
+  .rt-container {
+    width: 750px;
+  }
+
+  [class^="col-rt-"] {
+    float: left;
+    width: 49.9999999999%;
+  }
+
+  .col-rt-6,
+  .col-rt-12 {
+    width: 100%;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .rt-container {
+    width: 1170px;
+  }
+
+  .col-rt-1 {
+    width: 16.6%;
+  }
+
+  .col-rt-2 {
+    width: 30.33%;
+  }
+
+  .col-rt-3 {
+    width: 50%;
+  }
+
+  .col-rt-4 {
+    width: 67.664%;
+  }
+
+  .col-rt-5 {
+    width: 83.33%;
+  }
+
+
+}
+
+@media only screen and (min-width:240px) and (max-width: 768px) {
+
+  .ScriptTop h1,
+  .ScriptTop ul {
+    text-align: center;
+  }
+
+  .ScriptTop h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+
+  .ScriptTop ul {
+    margin-top: 12px;
+  }
+
+  .ScriptHeader h1,
+  .ScriptHeader h2,
+  .scriptnav ul {
+    text-align: center;
+  }
+
+  .scriptnav ul {
+    margin-top: 12px;
+  }
+
+  .float-right {
+    float: none;
+  }
+
+}
+
+/* carousel ends here */
+
+.proContainer {
+  position: relative;
+}
+
+.UpdateButton {
+  background: #F3F0ED;
+  padding: 15px;
+  border-radius: 10px;
+  display: inline-flex;
+  width: 100%;
+  margin: 10px 10px 10px 0px;
+}
+
+
+.custom-box {
+  font-size: 16px;
+  font-weight: 800;
+  background: #472175;
+  width: 29px;
+  height: 30px;
+  padding: 4px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  color: white;
+}
+
+.yourimpact1 {
+  background: #F3F0ED;
+  margin: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px 20px;
+  padding: 10px;
+}
+
+.grid-container1 {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 120px auto;
+  gap: 20px;
+  padding: 10px;
+}
+
+.grid-element {
+  text-align: left;
+  font-size: 30px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+
+
+ 
+
+  .carPArPoints {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    border-width: 1px;
+    border-color: #FEBE10;
+    width: auto;
+    margin-bottom: 150px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: auto;
+    margin-bottom: 150px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    max-width: 500px;
+  }
+
+  .pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item1 {
+    order: 2;
+  }
+
+  .item2 {
+    order: 1;
+  }
+
+  .image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 115px;
+    height: 120px
+  }
+
+  .image2 {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  .Usernames {
+    display: flex;
+    justify-content: right;
+  }
+
+  .UpdateDivs {
+    display: block;
+    max-width: 500px;
+    max-width: 500px;
+  }
+
+  .yourimpact {
+    display: block;
+    width: 100%;
+  }
+
+  .chartback {
+    display: grid;
+    background: #F3F0ED;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  .carouselImpact {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+
+  .carouselImpactBreak {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+
+  .carouselCustom {
+    position: relative;
+    overflow: scroll;
+  }
+
+  .sliderCustom {
+    display: flex;
+    transition: transform 0.5s;
+    width: 300%;
+  }
+
+  .MobSizes {
+    margin-left: 0px;
+  }
+
+  .H3headsMob {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: white;
+    margin-top: 20px;
+  }
+
+  .H3headsMob1 {
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Sketchetik Fill Bold';
+    color: white;
+  }
+
+  .MobValues {
+    margin-top: 20px;
+    width: 35%;
+  }
+
+  .Mobupdatesvalues {
+    margin-top: 100px;
+    display: none;
+  }
+
+  .MobBreakdown {
+    margin-top: 0px;
+  }
+
+  .displaygridsys {
+    display: block;
+    width: 100%;
+  }
+
+  .styletransactionmodule {
+    background-color: white;
+    border-radius: 30px;
+    width: auto;
+    padding: 0px;
+  }
+
+  .displayupdates {
+    display: block;
+    padding: 40px;
+    margin-top: -150px;
+  }
+
+  .BannerButtons {
+    display: grid;
+    margin-bottom: 150px;
+    margin-top: 0px;
+  }
+
+  .OnlyShowInDesktop {
+    display: none;
+  }
+
+  .OnlyShowInDesktopAccount {
+    display: none;
+  }
+
+  .Onlyshowinmobile {
+    display: block;
+  }
+
+  .PillsButtonEnd {
+    display: flex;
+    background: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: -webkit-fill-available;
+  }
+
+  .PillsButtonEnd:hover {
+    display: flex;
+    background: #472175;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: -webkit-fill-available;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+
+  .carPArPoints {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: auto;
+    min-width: auto;
+    min-height: auto;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 150px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 150px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+  }
+
+  .pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item1 {
+    order: 2;
+  }
+
+  .item2 {
+    order: 1;
+  }
+
+  .Usernames {
+    display: flex;
+    justify-content: right;
+  }
+
+  .UpdateDivs {
+    display: block;
+    max-width: 500px;
+  }
+
+  .yourimpact {
+    display: block;
+    width: 100%;
+  }
+
+  .chartback {
+    display: grid;
+    background: #F3F0ED;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+  }
+
+  .carouselImpact {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpact {
+    display: flex;
+    transition: transform 0.5s;
+    width: 300%;
+    margin-bottom: 40px;
+  }
+
+  .carouselImpactBreak {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpactBreak {
+    display: flex;
+    transition: transform 0.5s;
+    width: 300%;
+    margin-bottom: 40px;
+  }
+
+  .carouselCustom {
+    position: relative;
+    overflow: scroll;
+  }
+
+  .sliderCustom {
+    display: flex;
+    transition: transform 0.5s;
+    width: 300%;
+  }
+
+  .MobSizes {
+    margin-left: 0px;
+  }
+
+  .H3headsMob {
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: white;
+
+
+    margin-top: 20px;
+  }
+
+  .H3headsMob1 {
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Sketchetik Fill Bold';
+    color: white;
+    font-weight: 800;
+  }
+
+  .MobValues {
+    margin-top: 20px;
+    width: 35%;
+  }
+
+  .Mobupdatesvalues {
+    margin-top: 100px;
+    display: none;
+  }
+
+  .MobBreakdown {
+    margin-top: 0px;
+  }
+
+  .displaygridsys {
+    display: block;
+    width: 100%;
+  }
+
+  .styletransactionmodule {
+    background-color: white;
+    border-radius: 30px;
+    width: auto;
+    padding: 0px;
+  }
+
+  .displayupdates {
+    display: block;
+    padding: 40px;
+    margin-top: -150px;
+  }
+
+  .BannerButtons {
+    display: grid;
+    margin-bottom: 150px;
+    margin-top: 0px;
+  }
+
+  .OnlyShowInDesktop {
+    display: none;
+  }
+
+  .Onlyshowinmobile {
+    display: block;
+  }
+
+  .OnlyShowInDesktopAccount {
+    display: none;
+  }
+
+  .PillsButtonEnd {
+    display: flex;
+    background: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: -webkit-fill-available;
+  }
+
+  .PillsButtonEnd:hover {
+    display: flex;
+    background: #472175;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: -webkit-fill-available;
+  }
+
+  .image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 115px;
+    height: 120px
+  }
+
+  .image2 {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 37px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .MoneyAvailable {
+    background: #F3F0ED;
+    margin: 10px;
+    height: 250px;
+  }
+
+  .TextStyle {
+    padding-left: 25px;
+    padding-top: 130px;
+    text-align: left;
+  }
+
+
+  .carPArPoints {
+    font-size: 24px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 10px;
+    line-height: 12px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: fit-content;
+    min-width: 145px;
+    min-height: 125px;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 100px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 100px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+  }
+
+  .pad {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .item1 {
+    order: 1;
+  }
+
+  .item2 {
+    order: 2;
+  }
+
+  .Usernames {
+    display: flex;
+    justify-content: left;
+  }
+
+  .UpdateDivs {
+    display: block;
+    max-width: 500px;
+  }
+
+  .yourimpact {
+    display: block;
+    width: 100%;
+  }
+
+  .chartback {
+    display: grid;
+    background: #F3F0ED;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 80%;
+  }
+
+  .carouselImpact {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpact {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselImpactBreak {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpactBreak {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselCustom {
+    position: relative;
+    overflow: scroll;
+  }
+
+  .sliderCustom {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+  }
+
+  .MobSizes {
+    display: block;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .H3headsMob {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Helvetica Neue Bold Pro';
+
+  }
+
+  .H3headsMob1 {
+    color: white;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: 800;
+  }
+
+  .Mobupdatesvalues {
+    margin-top: 0px;
+    display: block;
+  }
+
+  .MobValues {
+    margin-top: -125px;
+  }
+
+  .MobBreakdown {
+    margin-top: 25px;
+  }
+
+  .displaygridsys {
+    display: block;
+    width: 50%;
+  }
+
+  .styletransactionmodule {
+    background-color: white;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 0px;
+  }
+
+  .displayupdates {
+    display: none;
+  }
+
+  .BannerButtons {
+    display: grid;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+
+  .OnlyShowInDesktop {
+    display: flex;
+  }
+
+  .Onlyshowinmobile {
+    display: none;
+  }
+
+  .OnlyShowInDesktopAccount {
+    display: block;
+  }
+
+  .PillsButtonEnd {
+    display: flex;
+    background: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+
+  .PillsButtonEnd:hover {
+    display: flex;
+    background: #472175;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+
+  .image1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 115px;
+    height: 120px
+  }
+
+  .image2 {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 45px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .MoneyAvailable {
+    background: #F3F0ED;
+    margin: 10px;
+    height: 350px;
+  }
+
+  .TextStyle {
+    padding-left: 25px;
+    padding-top: 205px;
+    text-align: left;
+  }
+
+
+  .carPArPoints {
+    font-size: 29px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: 100%;
+    min-width: auto;
+    min-height: 160px;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+  }
+
+  .pad {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .item1 {
+    order: 1;
+  }
+
+  .item2 {
+    order: 2;
+  }
+
+  .image1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 115px;
+    height: 120px
+  }
+
+  .image2 {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  .Usernames {
+    display: flex;
+    justify-content: left;
+  }
+
+  .UpdateDivs {
+    display: block;
+    max-width: 500px;
+  }
+
+  .yourimpact {
+    display: block;
+    width: 100%;
+  }
+
+  .chartback {
+    display: grid;
+    background: #F3F0ED;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 80%;
+  }
+
+  .carouselImpact {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpact {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselImpactBreak {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpactBreak {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselCustom {
+    position: relative;
+    overflow: scroll;
+  }
+
+  .sliderCustom {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+  }
+
+  .MobSizes {
+    display: block;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .H3headsMob {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Helvetica Neue Bold Pro';
+
+  }
+
+  .H3headsMob1 {
+    color: white;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: 800;
+  }
+
+  .Mobupdatesvalues {
+    margin-top: 0px;
+    display: block;
+  }
+
+  .MobValues {
+    margin-top: -125px;
+  }
+
+  .MobBreakdown {
+    margin-top: 25px;
+  }
+
+  .displaygridsys {
+    display: block;
+    width: 50%;
+  }
+
+  .styletransactionmodule {
+    background-color: white;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 0px;
+  }
+
+  .displayupdates {
+    display: none;
+  }
+
+  .BannerButtons {
+    display: grid;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+
+  .OnlyShowInDesktop {
+    display: flex;
+  }
+
+  .Onlyshowinmobile {
+    display: none;
+  }
+
+  .OnlyShowInDesktopAccount {
+    display: block;
+  }
+
+  .PillsButtonEnd {
+    display: flex;
+    background: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+
+  .PillsButtonEnd:hover {
+    display: flex;
+    background: #472175;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 45px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .MoneyAvailable {
+    background: #F3F0ED;
+    margin: 10px;
+    height: 350px;
+  }
+
+  .TextStyle {
+    padding-left: 25px;
+    padding-top: 205px;
+    text-align: left;
+  }
+
+
+  .carPArPoints {
+    font-size: 29px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: 100%;
+    min-width: auto;
+    min-height: 135px;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+  }
+
+  .pad {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  .item1 {
+    order: 1;
+  }
+
+  .item2 {
+    order: 2;
+  }
+
+  .image1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 115px;
+    height: 120px
+  }
+
+  .image2 {
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+  }
+
+  .Usernames {
+    display: flex;
+    justify-content: left;
+  }
+
+  .UpdateDivs {
+    display: block;
+    max-width: 500px;
+  }
+
+  .yourimpact {
+    display: block;
+    width: 100%;
+  }
+
+  .chartback {
+    display: grid;
+    background: #F3F0ED;
+    border-radius: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 80%;
+  }
+
+  .carouselImpact {
+    position: relative;
+    overflow: hidden;
+    margin: 60px 60px 60px 60px;
+  }
+
+  .sliderImpact {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselImpactBreak {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sliderImpactBreak {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .carouselCustom {
+    position: relative;
+    overflow: scroll;
+  }
+
+  .sliderCustom {
+    display: flex;
+    transition: transform 0.5s;
+    width: 100%;
+  }
+
+  .MobSizes {
+    display: block;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+
+  .H3headsMob {
+    color: white;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Helvetica Neue Bold Pro';
+
+  }
+
+  .H3headsMob1 {
+    color: white;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: 'Sketchetik Fill Bold';
+    font-weight: 800;
+  }
+
+  .Mobupdatesvalues {
+    margin-top: 0px;
+    display: block;
+  }
+
+  .MobValues {
+    margin-top: -125px;
+  }
+
+  .MobBreakdown {
+    margin-top: 25px;
+  }
+
+  .displaygridsys {
+    display: block;
+    width: 50%;
+  }
+
+  .styletransactionmodule {
+    background-color: white;
+    border-radius: 30px;
+    width: fit-content;
+    padding: 0px;
+  }
+
+  .displayupdates {
+    display: none;
+  }
+
+  .BannerButtons {
+    display: grid;
+    margin-bottom: 50px;
+    margin-top: 0px;
+  }
+
+  .OnlyShowInDesktop {
+    display: flex;
+  }
+
+  .Onlyshowinmobile {
+    display: none;
+  }
+
+  .OnlyShowInDesktopAccount {
+    display: block;
+  }
+
+  .PillsButtonEnd {
+    display: flex;
+    background: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+
+  .PillsButtonEnd:hover {
+    display: flex;
+    background: #472175;
+    color: white;
+    justify-content: center;
+    border: none;
+    font-size: 21px;
+    line-height: 17px;
+    font-family: 'Helvetica Neue Bold Pro';
+    width: 533px;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .section-headingsAccSett {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 45px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #002A3A;
+  }
+
+  .withdraw {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .Donate {
+    background: #F3F0ED;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .TopUpAcc {
+    background: #F3F0ED;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Helvetica Neue Bold Pro';
+    font-size: 22px;
+    line-height: 18px;
+  }
+
+  .MoneyAvailable {
+    background: #F3F0ED;
+    margin: 10px;
+    height: 350px;
+  }
+
+  .TextStyle {
+    padding-left: 25px;
+    padding-top: 255px;
+    text-align: left;
+  }
+
+
+  .carPArPoints {
+    font-size: 29px;
+    line-height: 34px;
+    font-family: 'Sketchetik Fill Bold';
+    color: #E4761E;
+  }
+
+  .custom-box1 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #472175;
+
+  }
+
+  .custom-box2 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #5C8F39;
+  }
+
+  .custom-box3 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #E4761E;
+  }
+
+  .custom-box4 {
+    font-size: 20px;
+    line-height: 27px;
+    font-family: 'Helvetica Neue Bold Pro';
+    color: #AC381E;
+  }
+
+  .CarContentImpact {
+    margin: 15px;
+    background-color: #F3F0ED;
+    padding: 15px;
+    width: 100%;
+    min-width: auto;
+    min-height: 135px;
+  }
+
+  .UpdateButtonMakAnotherloan {
+    background: #FEBE10;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    color: #002A3A;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+  }
+
+  .UpdateButtonMakAnotherloan:hover {
+    background: #472175;
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 40px;
+    border-color: white;
+    border-width: 1px;
+    color: white;
+    font-size: 22px;
+    line-height: 18px;
+    font-family: 'Helvetica Neue Bold Pro';
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+  }
+}
+
+/*Carousel Starts*/
+.sliderImpact {
+  display: flex;
+  transition: transform 0.5s;
+  margin-bottom: 40px;
+}
+
+.sliderImpactBreak {
+  display: flex;
+  transition: transform 0.5s;
+  margin-bottom: 40px;
+}
+
+.slide {
+  flex: 0 0 calc(1128px / 4);
+  /* Adjust the percentage value based on the number of visible cards */
+  min-width: calc(1128px / 4);
+  /* Adjust the percentage value based on the number of visible cards */
+  border-radius: 5px;
+  padding-right: 10px;
+}
+
+.slides {
+  flex: 0 0 calc(100% / 4);
+  /* Adjust the percentage value based on the number of visible cards */
+  min-width: calc(100% / 4);
+  /* Adjust the percentage value based on the number of visible cards */
+  background-color: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.prev,
+.next {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.dots {
+  display: inline;
+  justify-content: center;
+}
+
+.dots button {
+  width: 22px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background-color: #333;
+}
+
+.HeadImageImpact {
+  height: 150px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.CarContentImpactBreak {
+  margin: 15px;
+}
+
+
+.locastionsImpact {
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+
+
+.headingcar {
+  margin: 30px;
+  font-size: 46px;
+  color: #002A3A;
+}
+
+/*Carousel Ends*/
+
+.CarButtons {
+    background: none;
+    border-radius: 20px;
+    width: auto;
+    font-size:12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue Bold Pro';
+    padding: 5px 10px 2.5px 10px;
+    margin: 5px 5px 10px 0px;
+    color: #002A3A;
+    border-style: solid;
+    min-width: 110px;
+    border-width: 1px;
+    border-color: #002A3A;
+}
+
+.CarButtons:hover {
+    background-color: #FEBE10;
+    border-radius: 20px;
+    width: auto;
+    font-size:12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue Bold Pro';
+    padding: 5px 10px 2.5px 10px;
+    margin: 5px 5px 10px 0px;
+    color: #002A3A;
+    border-style: solid;
+    min-width: 110px;
+    border-width: 1px;
+    border-color: #FEBE10;
+}
+
+.ImageDiv {
+  background-color: #422371;
+  margin: 0;
+  top: 0;
+  height: 100px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.BottomDiv {
+  background-color: #422371;
+  margin: 0;
+  height: 60px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.locastions {
+  display: inline-flex;
+  margin-bottom: 10px;
+}
+
+.carButton {
+    background: none;
+    border-radius: 20px;
+    width: auto;
+    font-size:12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue Bold Pro';
+    padding: 5px 10px 2.5px 10px;
+    margin: 5px 5px 10px 0px;
+    color: #002A3A;
+    border-style: solid;
+    min-width: 110px;
+    border-width: 1px;
+    border-color: #002A3A;
+}
+
+.carButton:hover {
+    background-color: #FEBE10;
+    border-radius: 20px;
+    width: auto;
+    font-size:12px;
+    line-height: 16px;
+    font-family: 'Helvetica Neue Bold Pro';
+    padding: 5px 10px 2.5px 10px;
+    margin: 5px 5px 10px 0px;
+    color: #002A3A;
+    border-style: solid;
+    min-width: 110px;
+    border-width: 1px;
+    border-color: #FEBE10;
+}
+
+.CarContent {
+  margin: 15px;
+}
+
+.carTitle {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'Sketchetik Fill Bold';
+  font-weight: 800;
+  margin-bottom: 10px;
+  height: 50px;
+}
+
+.carPara {
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue Regular';
+  font-size: 14px;
+  line-height: 18px;
+  height: 50px;
+}
+
+.progressBar {
+  width: auto;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 0.5px;
+  margin-right: 10px;
+}
+
+.shoppingCart {
+  margin-right: 10px;
+  color: #ffffff;
+  width: 24px;
+}
+
+.progressBarInner {
+  height: 50%;
+  background-color: #ffd700;
+  border-radius: 5px;
+  width: 98%;
+  margin: 2.5px;
+}
+
+.MoneyAvailableMobile {
+  background: #F3F0ED;
+  margin: 10px;
+}
+
+.TextStyleMobile {
+  padding: 25px;
+  text-align: left;
+}
+
+.LinkStyle {
+  padding: 10px;
+  color: #002A3A;
+  font-weight: 800;
+}
+
+.withdrawMobile {
+  background: #F3F0ED;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  font-family: 'Helvetica Neue Bold Pro';
+
+}
+
+.Acc {
+  width: 80%;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  display: block;
+}
+
+.PillsButton {
+  display: flex;
+  background: white;
+  justify-content: center;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: 'Helvetica Neue Bold Pro';
+  padding: 5px 15px 5px 15px;
+  width: fit-content;
+}
+
+.PillsButton.selected {
+  display: flex;
+  background: #472175;
+  justify-content: center;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: 'Helvetica Neue Bold Pro';
+  padding: 5px 15px 5px 15px;
+  width: fit-content;
+}
+
+.PillsButton:hover {
+  display: flex;
+  background: #472175;
+  justify-content: center;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 20px;
+  line-height: 27px;
+  font-family: 'Helvetica Neue Bold Pro';
+  padding: 5px 15px 5px 15px;
+  width: fit-content;
+}
+
+.widthstyle {
+  width: auto;
+  margin: 2px;
+}
+
+.backloanscolor {
+  background-color: #F3F0ED;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.dotClass {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #7F949C;
+  margin: 0 5px;
+  display: inline-block;
+}
+
+.dotClass.active {
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgb(31, 33, 34);
+  margin: 0 5px;
+  display: inline-block;
+}
+
+/*.dots dotClass.active {
+  background-color: #333;
+}*/
+
+.dots .NaviButton {
+  width: 22px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.dots button {
+  width: 22px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.dots button:hover {
+  width: 22px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: #bbb;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background-color: #333;
+}
+
+.custom-select {
+  width: auto;
+  /* Adjust the width as needed */
+  padding: 8px;
+  border: none;
+  font-family: 'Helvetica Neue Bold Pro';
+  font-size: 22px;
+  line-height: 28px;
+  background-color: white;
+
+  color: #002A3A;
+
+}
+
+.custom-combobox {
+  //border: 2px solid #002A3A; /* Adjust the color and width as needed */
+  border-radius: 4px;
+  padding: 4px;
+  display: inline-block;
+  width: 50%;
+}
+
+.decimal {
+  color: #E4761E;
+  font-size: 29px;
+  line-height: 34px;
+  font-family: 'Sketchetik Fill Bold';
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+}
+
+.container button {
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 20px;
+  width: 100%;
+}
+
+.container button.slds-align_absolute-center {
+  background-color: white;
+}
+
+.container svg {
+  fill: black;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+
+
+.AmountValues {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  /* Grey background color for even rows */
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+  /* White background color for odd rows */
+}
+
+.tableHeadings {
+  font-family: 'Helvetica';
+  padding: 15px;
+  font-size: 16px;
+  line-height: 19px;
+  color: white;
+}
+
+.tableHeadingsContent {
+  font-family: 'Helvetica';
+  padding: 15px;
+  font-size: 16px;
+  line-height: 19px;
+  color: #002A3A;
+}
+
+.tableTitle {
+  background: #472175;
+  border-radius: 4px;
+  display: flex;
+  color: white;
+}
+
+.tableTitleContent {
+  background: #FFFFFF;
+  border-radius: 4px;
+  display: flex;
+  color: #002A3A;
+}
+
+.tableTitleContentSecond {
+  background: transparent;
+  border-radius: 4px;
+  display: flex;
+  color: #002A3A;
+}
+.slide-content{
+  background-color: white;
+}
+.carouselCustom::-webkit-scrollbar {
+    width: 0.1rem;
+    background-color: transparent;
+}
+.carouselCustom::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}

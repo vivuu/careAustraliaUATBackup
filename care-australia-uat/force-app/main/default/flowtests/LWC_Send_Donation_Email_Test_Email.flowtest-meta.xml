@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>LWC_Send_Donation_Email</flowApiName>
+    <label>Test Email</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;Added_To_Cart__c&quot;:false,&quot;Buffer_Repaid__c&quot;:false,&quot;Completed_Date__c&quot;:&quot;2023-10-23T01:27:00.000Z&quot;,&quot;CurrencyIsoCode&quot;:&quot;AUD&quot;,&quot;Opportunity__c&quot;:&quot;00698000003ahBNAAY&quot;,&quot;OwnerId&quot;:&quot;0059800000F6WSyAAN&quot;,&quot;Status__c&quot;:&quot;Held&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Thank_You</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>

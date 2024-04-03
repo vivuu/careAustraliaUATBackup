@@ -1,0 +1,139 @@
+<template>
+  <!-- <c-care-nav-bar onfromnavbar={fromNavBar}
+    carecart={checkout} loanidfromparent={loanIdsToChild} amounttocart={amountAddedToCart} loanids={loanIdsToCart}
+    ondelete={handleDelete}></c-care-nav-bar> -->
+    <template if:true={errorTransaction}>
+      <section role="dialog" tabindex="-1" aria-modal="true" aria-label="Meaningful description of the modal content"
+        class="slds-modal slds-fade-in-open">
+        <div ><!-- class="slds-modal__container" -->
+          <button style="max-width:75%;" class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse slds-align_absolute-center" onclick={closeErrorPopup}>
+      
+      close
+      </button>
+          <div style="width:75%" class="slds-modal__content slds-p-around_medium slds-modal__content_headless slds-align_absolute-center" id="modal-content-id-1">
+            <p class="slds-align_absolute-center">{errorMessageOnTransaction}</p>
+          </div>
+    
+        </div>
+      </section>
+      <div class="slds-backdrop slds-backdrop_open " role="presentation"></div>
+    </template>
+    
+  <lightning-layout class="slds-p-top_xx-large slds-p-bottom_xx-large pad" multiple-rows="true">
+    <lightning-layout-item size="12" class="ourLoansHeadings">
+      <h3 class="slds-p-bottom_large section-heading section-heading-num ourLoansHeadings">
+        <span class="clr_navyblue">{val1} </span><span class="clr_orange ">{val2}</span>
+      </h3>
+    </lightning-layout-item>
+
+    <lightning-layout-item size="12" >
+        <template if:true={showLoans}>
+            <div class="carouselCustom">
+              <div class="sliderCustom" style={sliderStyles}>
+                <template for:each={carouselItems} for:item="item" for:index="index">
+                  <div key={item.id} class="slides">
+                    <div class="slide-content">
+                      <div class="ImageDiv" style={item.style}></div>
+                      <div class="BottomDiv">
+                        <div class="slds-align_absolute-center" style="display:block;width:100%;padding-top:15px;">
+                          <div class="progressBar">
+                            <div class="progressBarInner" style={item.progress}></div>
+                          </div>
+                          <div style="display:flex;">
+                            <p
+                              style="margin-left:10px;color:white;width:55%;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';margin-top:7.5px">
+                              ${item.amountFunded} Lent</p>
+                            <p
+                              style="margin-right:10px;margin-top:7.5px;color:white;font-size:12px;line-height:12px;font-family:'Helvetica Neue Bold Pro';width:50%;display:flex;justify-content:right;">
+                              {item.publishedAmount} Goal</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!--<img src={item.imageUrl} alt={item.title} />-->
+                      <div class="CarContent">
+                        <div style="max-height:84px;">
+                        <h3 class="carTitle">{item.title}</h3>
+                        <div class="locastions">
+                          <div><svg xmlns="http://www.w3.org/2000/svg" style="margin: -5px 4px 0 0" width="16" height="16"
+                              fill="#002A3A" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                              <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
+                              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg></div>
+                          <div>
+                            <p style="color: #002A3A;font-family:'Helvetica Neue Bold Pro';font-size:12px;line-height:16px;margin-top: 5px;min-height: 61px;">
+                              {item.location}</p>
+                          </div>
+                        </div>
+                        </div>
+                        <p class="carPara">{item.description}</p>
+                        
+                        <div style="padding-bottom:5px;">
+                        <button class="carButton">{item.Button}</button>
+                        </div>
+                        <a href={item.readMoreLink} style="color:#002A3A;font-family:'Helvetica Neue Bold Pro';font-size:15px;line-height:16px;padding-left:2px;"><u>Read
+                            More ></u></a>
+                            <div class="slds-grid slds-wrap" style="background-color:#F3F0ED;"><!--margin:0px 10px 0px 10px-->
+                        <div class="slds-p-right_small slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                          <div class="custom-combobox">
+                                <select disabled={item.disable} name="progress" class="custom-select Carouselvaluebottom slds-align_absolute-center" 
+                                onchange={handleChangeSelect} value="25" data-recordid={item.Id} data-id={index}  data-index={index}> <!-- data-id={item.Id} -->
+                                  <template for:each={item.loanAmounts} for:index="idx" for:item="curr">
+                                    <option  selected={curr.selected} data-idx1={index} data-idx2={idx} key={curr.label} value={curr.label} >${curr.label}</option>
+                                  </template>
+                                </select>
+                              </div>
+                        </div>
+                        <div class="slds-col slds-small-size_6-of-12 slds-medium-size_6-of-12 slds-large-size_6-of-12">
+                          <template if:false={item.isButtonVisible}> <!-- if:true={addToCartButton} -->
+                      <button disabled={item.disable} class="CarouselAddtocartButton" data-recordid={item.Id} data-id={index} onclick={addToCart} >
+                                        <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                        viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                  </svg>-->
+                            <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>          &nbsp; Add to cart</button> <!-- {buttonMessage} -->
+                      </template>
+            
+                       <template if:true={item.isButtonVisible}> <!-- if:true={checkOutButton} -->
+                      <button class="CarouselAddtocartButton" onclick={checkOutToCart}>
+                                        <!--<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart2"
+                                        viewBox="0 0 16 16">
+                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
+                  </svg>-->
+                                    <img style="height: 17.4px;width: 17.65px;margin-top: -2px;" src={cartIcon}>    &nbsp; Checkout</button><!-- {buttonMessage} -->
+                       </template>
+                      
+                        </div>
+                        <!--<button class="CarouselAddtocartButton" if:false={item.isButtonVisible} onclick={handleButtonClick} data-recordid={item.Id} data-id={index}> add to cart</button>
+                        <button class="CarouselAddtocartButton" if:true={item.isButtonVisible} onclick={handleButtonClick1}> checkout </button>-->
+                      </div>
+                      </div>
+
+                      
+                    </div>
+                  </div>
+                </template>
+              </div>
+
+            </div>
+						<div style="display:flex;justify-content:center;margin-top:50px;">
+							<div class="dots">
+							<!--	<template if:true={displayPreviousButtom}>-->
+									<button class="NaviButton" style="background:none;margin-top:-17px" onclick={previousSlide}>&#10094;</button>
+								<!--	</template>-->
+								<template for:each={firstFourItems} for:item="item" for:index="index">
+									<span key={item.id} class="dotClass" onclick={handleDotClick} data-index={index}></span>
+								</template>
+								<!--	<template if:true={displayNextButtom}>-->
+									<button class="NaviButton" style="background:none;margin-top:-17px" onclick={nextSlide}>&#10095;</button>
+									<!--</template>-->
+							</div>
+						
+						</div>
+        </template>
+        <template if:false={showLoans}>
+          <p style="text-align: center; font-size: 1.5rem; font-weight: 500;">Our loans</p>
+        </template>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

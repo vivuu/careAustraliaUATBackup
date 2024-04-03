@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label></label>
+        <name>Create_New_Contact</name>
+    </fieldSets>
+    <layouts>
+        <layout>Borrower Layout</layout>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Contact Layout</layout>
+        <sections>
+            <label></label>
+            <section>Bequest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Interest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relationship Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Legacy Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments and Audiences</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Soft Credit Total</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Contact Layout_Prod</layout>
+        <sections>
+            <label></label>
+            <section>Bequest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Interest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relationship Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Legacy Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments and Audiences</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Soft Credit Total</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Customer Layout</layout>
+        <sections>
+            <label></label>
+            <section>Bequest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Compliance Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Interest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relationship Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Legacy Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lender Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments and Audiences</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Soft Credit Total</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact Lightning Layout</layout>
+        <sections>
+            <label>Détails du contact</label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label>Informations sur les dons</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Totaux des dons</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Household Donation Info</section>
+        </sections>
+        <sections>
+            <label>Informations sur l’adhésion</label>
+            <section>Membership Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Soft Credit Total</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSP Layout</layout>
+        <sections>
+            <label></label>
+            <section>CA LOAN PORTFOLIO INFO</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>COMPLIANCE &amp; REPORTING</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>FSP Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lender Layout</layout>
+        <sections>
+            <label></label>
+            <section>Compliance Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Lender Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments and Audiences</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>NewDonation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>NewInKind</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>NewMajorGift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>NewMembership</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_CARE_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Case</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_One_Off_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Open_Recurring_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>TopUp</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Communication_Preference</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Preferred_Communications</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Public_Engagement_Details</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Withdrawal</name>
+    </quickActions>
+    <recordTypes>
+        <label></label>
+        <name>Borrower</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Customer</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>FSP_Staff</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Contact_Preferred_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Contact_Preferred_Phone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Call_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Email_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Mail_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_SMS_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPName</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffBirthdate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffBorrower_type</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffCountry</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffDescription</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffDisability</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffFSPClient_ID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffFirstName</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSPStaffGender</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>FSP_Account_Name_is_not_editable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Home_Phone_should_be_10_digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mobile_Should_be_10_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Other_phone_should_be_10_digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Phone_Should_be_10_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Primary_Relationship_Manager_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Secondary_Relationship_Manager</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Work_Phone_should_be_10_digits</name>
+    </validationRules>
+</CustomObjectTranslation>

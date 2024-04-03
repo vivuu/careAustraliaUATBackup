@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "careDashboard",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"8467ac2c-c8e6-4ffd-a756-bd8c2bb3e270\",\"columns\":[{\"UUID\":\"6b1e0a8e-9e8f-4721-8028-4e48e8e9c618\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "6b1e0a8e-9e8f-4721-8028-4e48e8e9c618",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "8467ac2c-c8e6-4ffd-a756-bd8c2bb3e270",
+          "type" : "component"
+        } ],
+        "id" : "222d1f3a-df8b-4d38-a4c5-7805ab4b7825",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"f654b569-2392-4c3e-a988-a9cd922ea307\",\"columns\":[{\"UUID\":\"e9f30909-a4f3-455c-b4ae-e3babc655d5e\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "e9f30909-a4f3-455c-b4ae-e3babc655d5e",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f654b569-2392-4c3e-a988-a9cd922ea307",
+          "type" : "component"
+        } ],
+        "id" : "b2ead904-a3a1-4cf8-b049-c8a954178a33",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careDashboard",
+          "id" : "966635b7-bacc-4fdf-8986-b457fa665780",
+          "type" : "component"
+        } ],
+        "id" : "fe16fe86-6217-4013-8439-8e24f1f831c8",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "cec1597e-999c-4898-bc75-b9e58eefb216",
+          "type" : "component"
+        } ],
+        "id" : "611ab75d-848d-43fa-8a22-59de6fff8e6d",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "73e9ca8f-9304-4b00-b5b2-badaa2bdfba3",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "da206691-1146-4f8e-b71a-93f7123e4c82",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "69a07f38-4644-4db4-8df0-a486467e46a3",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "19ab46c5-3560-42d5-a528-ec2af0a217e4",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "b5372e3b-8f42-4c0b-96e5-375adbc16b57",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "e182021c-3be9-4eb9-9b3d-b676a01ac921",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "15d1fa6a-d237-417a-acde-a35adfcba092",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "3fe4ffa0-aab9-4583-962d-87fc12b07227",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "22008076-71c8-45a7-8e0f-a59293415133",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeCareDashboard",
+      "id" : "09eab2ee-861a-47db-abdf-baec31d9b66a",
+      "type" : "component"
+    }
+  }
+}

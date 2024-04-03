@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "About Microfinancing",
+  "contentBody" : {
+    "activeViewId" : "About_Microfinancing_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-about-microfinancing",
+    "urlPrefix" : "aboutmicrofinancing"
+  }
+}

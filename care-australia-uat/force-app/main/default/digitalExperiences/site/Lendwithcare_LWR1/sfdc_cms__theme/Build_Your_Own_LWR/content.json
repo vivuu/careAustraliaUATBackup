@@ -1,0 +1,72 @@
+{
+  "type" : "sfdc_cms__theme",
+  "title" : "Build Your Own (LWR)",
+  "contentBody" : {
+    "activeBrandingSetId" : "Build_Your_Own_LWR",
+    "definitionName" : "byo",
+    "layouts" : [ {
+      "layoutId" : "Homepage",
+      "layoutType" : "bFmvmBufBXvuyF0ZtqZwBjUDCt8rIX"
+    }, {
+      "layoutId" : "Care_All_Loan_Schedules",
+      "layoutType" : "ZpV8WtSD2bKNVk7YU8MBELk6q3NCv3"
+    }, {
+      "layoutId" : "Login_Themed_Pages",
+      "layoutType" : "FZueqpjSyYKBajxddHVtfDUPUWJRrH"
+    }, {
+      "layoutId" : "careviewallloans",
+      "layoutType" : "ce7tG5o5Mv9CvcnCYGMqaEnr6MBDxj"
+    }, {
+      "layoutId" : "About_Us",
+      "layoutType" : "NDoevIBRNZm02ZR26OSfSLM1QZP73w"
+    }, {
+      "layoutId" : "Care_Contact_Us",
+      "layoutType" : "8ZgpscXfRmdkJFVmmcP2HdDuk5c7Pk"
+    }, {
+      "layoutId" : "dashboardwithdraw",
+      "layoutType" : "3DeWADFBv1zhDNwRPsjdYin9MIOXDT"
+    }, {
+      "layoutId" : "Care_Borrowers",
+      "layoutType" : "PgVyXMuQcOjeEVd4nVkMI3RDQW6MYG"
+    }, {
+      "layoutId" : "News_and_Updates",
+      "layoutType" : "W8T4a7UsBCjTcs4g4ZlycjcTDwVEvm"
+    }, {
+      "layoutId" : "careDashboard",
+      "layoutType" : "RVhjIvhX7NQE8SnrVt1nwetNazYYuY"
+    }, {
+      "layoutId" : "snaThemeLayout",
+      "layoutType" : "ServiceNotAvailable"
+    }, {
+      "layoutId" : "scopedHeaderAndFooter",
+      "layoutType" : "Inner"
+    }, {
+      "layoutId" : "careSearchResults",
+      "layoutType" : "0HTk8bAhKEX7ZJKnKQWvRBT01yumpC"
+    }, {
+      "layoutId" : "A1",
+      "layoutType" : "cQ2ppZpguWQoDqcV37SamqRO3fOL2x"
+    }, {
+      "layoutId" : "Our_Impact",
+      "layoutType" : "YxpEJvTQP2p3D32xQFV2zY86eNGbiW"
+    }, {
+      "layoutId" : "About_Microfinancing",
+      "layoutType" : "8Vqanrxvcm4fbcReuD3KHGzLZg6X4S"
+    }, {
+      "layoutId" : "Help_Centre",
+      "layoutType" : "TmyHk7AgMsoizF4JA94lEzfZaj0ovw"
+    }, {
+      "layoutId" : "Become_A_Change_Champion",
+      "layoutType" : "0cQHCr72XEnrzXasaghpO8BxKydq8v"
+    }, {
+      "layoutId" : "Care_Blog_Post",
+      "layoutType" : "QYYwq2prARwyVhqmFjsnb8djOzpkQM"
+    }, {
+      "layoutId" : "Care_Dashboard_Transactions",
+      "layoutType" : "e7UtNMaS0Q2NDp8z9cChfY9PKN5F6I"
+    }, {
+      "layoutId" : "HomePage_1",
+      "layoutType" : "934udEjhI3NcGokHgaNUWu9JQS23YI"
+    } ]
+  }
+}

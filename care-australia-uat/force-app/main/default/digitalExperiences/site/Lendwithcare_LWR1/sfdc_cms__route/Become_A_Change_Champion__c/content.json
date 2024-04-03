@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Become A Change Champion",
+  "contentBody" : {
+    "activeViewId" : "Become_A_Change_Champion_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-become-a-change-champion",
+    "urlPrefix" : "carebecomechangechampion"
+  }
+}

@@ -1,0 +1,215 @@
+<template> 
+    <lightning-spinner alternative-text="Loading" variant="brand" if:true={isSpinnerActive} ></lightning-spinner>      
+    <lightning-card  variant="Narrow"  title="Gift Entry / Batch Processing" icon-name="standard:scan_card">
+        <div class="slds-container_fluid slds-var-p-around_medium">
+            <div class="slds-grid slds-gutters slds-var-p-around_small">
+                <div class="slds-col">
+                    <lightning-combobox
+                    name="donationType"
+                    label="Donation Type"
+                    value={donationTypeValue}
+                    placeholder="Select Donation Type"
+                    options={donationTypeOptions}
+                    onchange={handleChange} disabled={isBathGiftEntyDisable}></lightning-combobox>
+                </div> 
+                
+
+                <div class="slds-col">
+                    <lightning-input type="number"  disabled={isBathGiftEntyDisable}  name="expectedCountOfGifts" label="Expected Count Of Gifts" value={countOfGifts} onchange={handleChange} max="20" message-when-range-overflow="Maximum allowed number is 20."></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input type="number"   formatter="currency" step=".01" name="expectedTotalAmount" label="Expected Total Batch Amount" onchange={handleChange} value={expectedTotalAmount}></lightning-input>
+                </div>
+                <div class="slds-col">
+                    <lightning-input type="number" read-only="readonly"  disabled={isBathGiftEntyDisable}  label="Total Amount" formatter="currency" step=".01" name="totalamount" value={totalRowAmount}></lightning-input>
+                </div>
+                        
+            </div>        
+            <div class="slds-grid slds-gutters slds-border_bottom slds-var-p-around_small">
+                <div class="slds-col">
+                    <h2 class="slds-text-title_caps slds-text-heading_large">Default Values for Customers</h2>
+                </div>                    
+            </div>
+
+            <div class="slds-grid slds-gutters slds-var-p-around_small">
+                <div class="slds-col">
+                    <lightning-input type="date"  disabled={isBathGiftEntyDisable} name="donationDate" label="Donation Date" onchange={handledefCustFieldChange}></lightning-input>
+                </div>                            
+                <div class="slds-col">
+                                        
+                    <lightning-input label="Campaign" type="text" if:true={isBathGiftEntyDisable}  value={defaultCustomerValues.campaignName} disabled={isBathGiftEntyDisable}> </lightning-input> 
+                   
+                    <c-stripe-custom-lookup label="Campaign"  if:false={isBathGiftEntyDisable} placeholder="Search..." s-object-api-name="Campaign" onlookupupdate={handleLookupEvent} unique-identifier="campaign"></c-stripe-custom-lookup>
+                    <!-- <lightning-input type="text" name="campaign" label="Campaign"  onchange={handledefCustFieldChange}></lightning-input> -->
+                </div>
+                <div class="slds-col">
+                    <lightning-input type="number" disabled={isBathGiftEntyDisable} label="Default Amount" formatter="currency" step=".01" onchange={handledefCustFieldChange} name="amount"></lightning-input>
+                </div>  
+                                
+            </div>
+    
+            <div class="slds-grid slds-gutters slds-var-p-around_small">
+                <div class="slds-col">
+                    <lightning-button disabled={isBathGiftEntyDisable} variant="brand" label="Proceed" title="Proceed" onclick={handleProceed}></lightning-button>
+                    <lightning-button variant="brand" label="Add New Customer" title="Add New Customer" onclick={OpenAddCustomerModal} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+    
+            <div class="slds-grid slds-gutters slds-var-p-around_small">
+                <div class="slds-col">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Customer">Customer</div>
+                                </th>
+                                <th class="" scope="col" if:true={isRecurringDonationVisible}>
+                                    <div class="slds-truncate" title="Recurring Donation">Recurring Donation</div>
+                                </th>
+                                <th class="" scope="col" if:false={isRecurringDonationVisible}>
+                                    <div class="slds-truncate" title="Donation Date">Donation Date</div>
+                                </th>
+                                <th class="" scope="col" if:false={isRecurringDonationVisible}>
+                                    <div class="slds-truncate" title="Campaign">Campaign</div>
+                                </th>
+                                <th class="" scope="col" if:false={isRecurringDonationVisible}>
+                                    <div class="slds-truncate" title="Amount">Amount</div>
+                                </th>
+                                
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Action">Action</div>
+                                </th>
+                                <th class="" scope="col">
+                                    <div class="slds-truncate" title="Authorized Card">Authorized Card</div>
+                                </th>
+                                
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <template for:each={giftrow} for:item="row" for:index="index">
+                                <tr class={row.defaultClass} key={row.serialNo}>
+                                    
+                                    <th data-label="Customer" scope="row" class="customLookupThTd">
+                                        <c-stripe-custom-lookup label="" placeholder="Search..." s-object-api-name="Contact" onlookupupdate={handleLookupEvent} unique-identifier={row.contactIdentifier}></c-stripe-custom-lookup>
+                                    </th>
+                                    <th data-label="Recurring Donation" scope="row" if:true={isRecurringDonationVisible} class="customLookupThTd">
+                                        <template if:true={row.contactId}>
+                                            <c-stripe-custom-lookup label="" placeholder="Search..." s-object-api-name="npe03__Recurring_Donation__c" onlookupupdate={handleLookupEvent}  unique-identifier={row.recurringIdentifier} filter={row.contactRd}></c-stripe-custom-lookup>
+                                        </template>
+                                        <template if:false={row.contactId}>
+                                            Please select customer
+                                        </template>
+                                        
+                                    </th>
+                                    <td if:false={isRecurringDonationVisible} data-label="Donation Date">
+                                        <lightning-input type="date" name="donationDate" variant="label-hidden" data-index={index} onchange={handleRowChange} value={row.donationDate}></lightning-input>
+                                    </td>
+                                    <td if:false={isRecurringDonationVisible} data-label="Campaign" class="customLookupThTd">
+                                        <c-stripe-custom-lookup label="" placeholder="Search..." s-object-api-name="Campaign" onlookupupdate={handleLookupEvent} default-record-id={row.campaignId} unique-identifier={row.campaignIdentifier}></c-stripe-custom-lookup>
+                                    </td>
+                                    <td if:false={isRecurringDonationVisible} data-label="Amount">
+                                        <lightning-input type="number" name="amount"  variant="label-hidden"  formatter="currency" step=".01" data-index={index} onchange={handleRowChange} value={row.amount}></lightning-input>
+                                    </td>
+                                         
+                                    <td data-label="Credit Card Payment" class="customLookupThTd">
+                                        <div class="slds-truncate" style="overflow: inherit;" title="Card Payment">
+                                            <lightning-button if:true={row.contactId} variant="brand" label="Authorize card" title="Authorize card" onclick={OpenCreditCardModal} class="slds-m-left_x-small font-10" data-index={index} disabled={row.fingerprint}></lightning-button>
+                                            <lightning-button variant="brand" label="Remove" title="Remove" onclick={handleRemoveRow} class="slds-m-left_x-small font-10" data-index={index}></lightning-button>
+                                        </div>
+                                    </td>
+                                    <td data-label="Authorized Card">
+                                        <lightning-input type="text" name="authCard"  variant="label-hidden" data-index={index} value={row.authCard} read-only="true"></lightning-input>
+                                    </td>
+                                    
+                                </tr> 
+                            </template>
+                            
+                        </tbody> 
+                                            
+                        
+                    </table>
+                </div>
+            </div>
+
+            <div class="slds-grid slds-gutters slds-var-p-around_small" if:true={isAddRowVisible}>
+                <div class="slds-col">
+                    <lightning-button variant="brand" label="Add Row" title="Add Row" onclick={handleAddRow}></lightning-button>
+                    <lightning-button variant="brand" label="Save Payments" title="Save Payments" onclick={handleProcessAllPayment} class="slds-m-left_x-small"></lightning-button>
+                    <lightning-button variant="brand" label="Clear All" title="Clear All" onclick={handleClearAll} class="slds-m-left_x-small"></lightning-button>
+                </div>
+            </div>
+    </div>
+    </lightning-card>  
+
+    <template if:true={isAddCustomerPopup}>
+        
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+        <lightning-spinner alternative-text="Loading" variant="brand" if:true={isSpinnerActive} ></lightning-spinner>
+        <div class="slds-modal__container">            
+        <div class="slds-modal__header">
+            <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Add Customer</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <div class="slds-form">
+                <lightning-input type="text" name="firstName" label="First Name" class="slds-var-m-around_x-small" value={newCustomerValues.firstName} onchange={handleNewCustFieldChange}></lightning-input> 
+                <lightning-input type="text" name="lastName" label="Last Name" class="slds-var-m-around_x-small"  value={newCustomerValues.lastName}  onchange={handleNewCustFieldChange}></lightning-input> 
+                <lightning-input type="email" name="email" label="Personal Email" class="slds-var-m-around_x-small"  value={newCustomerValues.email}  onchange={handleNewCustFieldChange}></lightning-input> 
+                
+                <lightning-input type="phone" name="phone" label="Phone" class="slds-var-m-around_x-small"  value={newCustomerValues.phone} onchange={handleNewCustFieldChange}></lightning-input>
+                
+                <lightning-input type="text" name="MailingStreet" label="Mailing Street" class="slds-var-m-around_x-small"  value={newCustomerValues.MailingStreet} onchange={handleNewCustFieldChange}></lightning-input>
+                <lightning-input type="text" name="MailingCity" label="Mailing City" class="slds-var-m-around_x-small"  value={newCustomerValues.MailingCity} onchange={handleNewCustFieldChange}></lightning-input>
+                <lightning-input type="text" name="MailingState" label="Mailing State" class="slds-var-m-around_x-small"  value={newCustomerValues.MailingState} onchange={handleNewCustFieldChange}></lightning-input>
+                <lightning-input type="text" name="MailingCountry" label="Mailing Country" class="slds-var-m-around_x-small"  value={newCustomerValues.MailingCountry} onchange={handleNewCustFieldChange}></lightning-input>
+                <lightning-input type="text" name="MailingPostalCode" label="Mailing PostalCode" class="slds-var-m-around_x-small"  value={newCustomerValues.MailingPostalCode} onchange={handleNewCustFieldChange}></lightning-input>            
+            </div>
+        </div>
+        <div class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handlePopUpCancel}>Cancel</button>
+            <button class="slds-button slds-button_brand"  onclick={handleAddCustomer}>Add Customer</button>
+        </div>
+    </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+
+    <template if:true={isCreditCardPopup}>
+    <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open">
+        <lightning-spinner alternative-text="Loading" variant="brand" if:true={isSpinnerActive} ></lightning-spinner>
+        <div class="slds-modal__container">                
+            <div class="slds-modal__header">
+                <h1 id="modal-heading-02" class="slds-modal__title slds-hyphenate">Credit Card Payment</h1>
+            </div>
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                <!--<div class="slds-form">
+                    <lightning-input type="text" name="creditCardNumber" label="Card Number" class="slds-var-m-around_x-small" onchange={handleChange}></lightning-input> 
+                    <div class="slds-grid">                        
+                        <div class="slds-col">
+                            <lightning-input type="text" name="expiryMonth" label="Expiry Month [02]" class="slds-var-m-around_x-small" onchange={handleChange}  max-length="2"></lightning-input>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-input type="text" name="expiryYear" label="Expiry Year [2020]" class="slds-var-m-around_x-small" onchange={handleChange}  max-length="4"></lightning-input>
+                        </div>
+                    </div>
+                                                 
+                </div>-->
+                <iframe
+                src={url}
+                height={height}
+                width={width}
+                referrerpolicy={referrerPolicy}
+                sandbox="allow-same-origin allow-scripts allow-popups allow-forms"
+                title="iFrame"
+                ></iframe>
+            </div>
+            <div class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick={handlePopUpCancel}>Cancel</button>
+                <!-- <button class="slds-button slds-button_brand" onclick={handleProcessCard}>Process</button> -->
+            </div>
+        </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

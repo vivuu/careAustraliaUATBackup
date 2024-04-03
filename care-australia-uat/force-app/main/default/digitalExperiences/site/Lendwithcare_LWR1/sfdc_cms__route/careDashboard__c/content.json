@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Dashboard",
+  "contentBody" : {
+    "activeViewId" : "careDashboard_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "RequiresLogin",
+    "routeType" : "custom-caredashboard",
+    "urlPrefix" : "caredashboard"
+  }
+}

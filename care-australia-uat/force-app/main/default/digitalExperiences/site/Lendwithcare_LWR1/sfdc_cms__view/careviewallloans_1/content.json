@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Lifechanging Microfinance Loans | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"180c61c4-623f-44e8-b87b-8f12069a7a4e\",\"columns\":[{\"UUID\":\"06917f69-3f59-4e35-aed9-aeb0e598b795\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "06917f69-3f59-4e35-aed9-aeb0e598b795",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "180c61c4-623f-44e8-b87b-8f12069a7a4e",
+          "type" : "component"
+        } ],
+        "id" : "2e26b018-7a85-4c27-b4fc-0968d9f4e1e3",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "A loan can change a life. Explore microfinance loans today, and discover impactful stories of borrowers and how your support creates lasting change. ",
+            "dxpStyle" : { },
+            "pageTitle" : "Lifechanging Microfinance Loans | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "3bdddeb7-daf1-491e-a95c-82a69aa1081b",
+          "type" : "component"
+        } ],
+        "id" : "931a62ff-6b22-432d-b518-3a9cbd976746",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "7f92d2c2-c72e-4407-8329-cb8eda68b092",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "ce7tG5o5Mv9CvcnCYGMqaEnr6MBDxj",
+    "viewType" : "custom-careviewallloans"
+  }
+}

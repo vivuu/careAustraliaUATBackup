@@ -1,0 +1,35 @@
+<template>
+	<!-- <c-google-analysis></c-google-analysis>
+    <c-woopra-analytics></c-woopra-analytics> -->
+	<lightning-spinner if:true={spin}></lightning-spinner>
+
+	<template if:true={whataresection}>
+		<div class="para4 pad">
+
+			<div class="grid-container" style="padding-top:25px;padding-bottom:25px;">
+			
+				<div class="item1">
+					<h3 class="section-heading1">{val1} {val2}</h3>
+		
+					<h3 class="section-content" style="padding-top: 20px;">
+								<lightning-formatted-rich-text value={whataresection.body}>
+								</lightning-formatted-rich-text>
+
+							</h3>
+					<div class="buttonAllign slds-p-top_x-large">
+						<a href={whataresection.buttonlink} target="_self">
+								<button class="MoreMicrofinance">{whataresection.button}</button></a>	
+					<!--<button onclick={handleonclickButton} class="MoreMicrofinance">Become a Change Champion</button>-->
+					</div>
+				</div>
+
+
+				<div class="item2">
+				<img src={whataresection.image} alt="para3img" style="border-radius:10px;">
+												</div>
+			</div>
+			
+		</div>
+	</template>
+
+</template>

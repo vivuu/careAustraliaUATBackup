@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BlacklistedConsumer xmlns="http://soap.sforce.com/2006/04/metadata">
+    <blockedByApiWhitelisting>false</blockedByApiWhitelisting>
+    <consumerKey>3MVG9i1HRpGLXp.qDslNsp5YdGWL48fX_qFUnGmqBMZHbAc0UahKuxt27CS6cy.x3zRUp0fg2vw_VhoITV51H</consumerKey>
+    <consumerName>Hevo Data Inc</consumerName>
+    <masterLabel>BlacklistedConsumer62265519953314</masterLabel>
+</BlacklistedConsumer>

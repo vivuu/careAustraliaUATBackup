@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <decisions>
+        <name>NUll_check</name>
+        <label>NUll check</label>
+        <locationX>182</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>OTP</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Not_NUll</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Verify_Otp</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>123</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Finish</targetReference>
+            </connector>
+            <label>Not NUll</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <interviewLabel>Test OTP {!$Flow.CurrentDateTime}</interviewLabel>
+    <isAdditionalPermissionRequiredToRun>true</isAdditionalPermissionRequiredToRun>
+    <label>Test OTP</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Finish</name>
+        <label>Finish</label>
+        <locationX>50</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>OTP</name>
+        <label>OTP</label>
+        <locationX>182</locationX>
+        <locationY>134</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>NUll_check</targetReference>
+        </connector>
+        <fields>
+            <name>Verify_Otp</name>
+            <dataType>String</dataType>
+            <fieldText>Verify Otp</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>OTP</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+</Flow>

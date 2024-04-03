@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata">
+    <connectedApp>cadmus_core__PDF_Butler_APAC1</connectedApp>
+    <description>For the visibility of component to users who have connected app access in permission sets</description>
+    <isLicensed>false</isLicensed>
+    <label>PDF Butler Component Visible Permission</label>
+</CustomPermission>

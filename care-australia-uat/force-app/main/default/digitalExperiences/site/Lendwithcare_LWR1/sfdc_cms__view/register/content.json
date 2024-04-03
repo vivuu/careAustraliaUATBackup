@@ -1,0 +1,141 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Register",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : {
+              "margin" : {
+                "bottom" : "",
+                "left" : "",
+                "right" : "",
+                "top" : ""
+              }
+            },
+            "sectionConfig" : "{\"UUID\":\"adbf0933-9ae2-4f77-b4f9-3404be6e20ff\",\"columns\":[{\"UUID\":\"cc0c2ea1-73a6-4da8-9435-3006ca89bf1c\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "alignment" : "center",
+                "imageInfo" : "{\"imageInfoV1\":{\"url\":\"\",\"altText\":\"Lend With care\",\"contentKey\":\"\",\"contentType\":null}}",
+                "logoWidth" : 250
+              },
+              "definition" : "dxp_content_layout:siteLogo",
+              "id" : "2c230a38-7212-4422-bd3e-3fd8abdd3436",
+              "type" : "component"
+            } ],
+            "id" : "cc0c2ea1-73a6-4da8-9435-3006ca89bf1c",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "adbf0933-9ae2-4f77-b4f9-3404be6e20ff",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"e30a323a-5819-47a9-b63b-6747fba49117\",\"columns\":[{\"UUID\":\"7ac3c551-1bba-4257-be8a-4aca80f9f775\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : { },
+              "definition" : "c:lwr_selfRegistration_cmp",
+              "id" : "8f4f391a-0d43-4f6b-8f6c-e665408146d1",
+              "type" : "component"
+            } ],
+            "id" : "7ac3c551-1bba-4257-be8a-4aca80f9f775",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "e30a323a-5819-47a9-b63b-6747fba49117",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        }, {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "1440px",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"5c171bbc-5e83-43c3-9c9e-2b8ecfa51b03\",\"columns\":[{\"UUID\":\"dc284230-b935-4002-b530-4dbb60487620\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "children" : [ {
+              "attributes" : {
+                "backgroundColor" : "",
+                "dxpStyle" : {
+                  "margin" : {
+                    "bottom" : "2%",
+                    "left" : "",
+                    "right" : "",
+                    "top" : "10%"
+                  }
+                },
+                "isLinkable" : false,
+                "linkAssistiveText" : "",
+                "paddingHorizontal" : "none",
+                "paddingVertical" : "x-large",
+                "text" : "© 2023 CARE Australia. ABN 46 003 380 890. All rights reserved.",
+                "textAlign" : "center",
+                "textColor" : "rgb(255, 255, 255)",
+                "textDecoration" : "{}",
+                "textDisplayInfo" : "{}"
+              },
+              "definition" : "dxp_base:textBlock",
+              "id" : "d9c4c348-cab0-4d27-b937-9c3404f8ed5d",
+              "type" : "component"
+            } ],
+            "id" : "dc284230-b935-4002-b530-4dbb60487620",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "5c171bbc-5e83-43c3-9c9e-2b8ecfa51b03",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "410fe93e-ce0f-44cb-944c-a674faa4c3bb",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "dxpStyle" : { },
+            "pageTitle" : "Register",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "c1b57e65-ccb4-4dba-b2a4-7a9e79480899",
+          "type" : "component"
+        } ],
+        "id" : "8db7a386-b863-4d0b-badc-e4a1d48680a0",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "c3c1b88b-c8a8-4689-beb4-b41b9acb7439",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "FZueqpjSyYKBajxddHVtfDUPUWJRrH",
+    "viewType" : "self-register"
+  }
+}

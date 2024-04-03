@@ -1,0 +1,70 @@
+<template>
+
+  
+    <div class="loanScheduleSection">
+      <lightning-layout class="slds-p-top_large slds-p-bottom_xx-large pad" multiple-rows="true">
+          
+        <lightning-layout-item class="slds-p-top_large slds-p-bottom_large" size="12" large-device-size="12" medium-device-size="12" small-device-size="12">
+            <h3 class="loanSchedule" >{val1}<span class="clr_orange ">&nbsp;{val2}</span></h3>
+        </lightning-layout-item>
+        <template if:true={showRepaySchedules}>
+            <lightning-layout-item size="12" >
+                
+                <!--<div class="slds-grid tableTitle">
+                  <div class="slds-col slds-align_absolute-center">
+                    <h3 class="tableHeadings">Date</h3>
+                  </div>
+                  <div class="slds-col slds-align_absolute-center">
+                    <div class="vertical-line"></div>
+                    <h3 class="tableHeadings">Expected repayments</h3>
+                    
+                  </div>
+                  <div class="slds-col slds-align_absolute-center">
+                    <div class="vertical-line"></div>
+                    <h3 class="tableHeadings">Actual repayments Date</h3>
+                  </div>
+                </div>-->
+                <div class="slds-grid tableTitleContentPurple">
+								<lightning-layout-item size="4" class=" slds-align_absolute-center">
+									<h3 class="tableHeadingsContentPurple">Date</h3>
+								</lightning-layout-item>
+								<lightning-layout-item size="4" class=" slds-align_absolute-center">
+									<h3 class="tableHeadingsContentPurple">Expected Repayments</h3>
+								
+								</lightning-layout-item>
+								<lightning-layout-item size="4" class=" slds-align_absolute-center">
+									<h3 class="tableHeadingsContentPurple">Actual Repayment Date</h3>
+								</lightning-layout-item>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" class="slds-p-top_small">
+            <template for:each={repaymentSchedules} for:item="repay">
+                <div key={repay.dueDate} class={repay.classes}>
+                  <lightning-layout-item size="4" class=" slds-align_absolute-center">
+                    <h3 class="tableHeadingsContent">{repay.dueDate}</h3>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="4" class=" slds-align_absolute-center">
+                    <h3 class="tableHeadingsContent">${repay.expectedAmount}</h3>
+                    
+                  </lightning-layout-item>
+                  <lightning-layout-item size="4" class=" slds-align_absolute-center">
+                    <h3 class="tableHeadingsContent">{repay.repayDate}</h3>
+                  </lightning-layout-item>
+                </div>
+              </template>
+            </lightning-layout-item>
+            <template if:true={showMore}>
+              <lightning-layout-item size="12" class="slds-p-top_small">
+                <button class="moreButton" onclick={handleViewMoreTransaction}>View more transactions</button>
+              </lightning-layout-item>
+            </template>
+        </template>
+        <template if:false={showRepaySchedules}>
+          <lightning-layout-item size="12">
+            <p style="text-align: center; font-size: 1.5rem; font-weight: 500;">There are no Loan schedules</p>
+          </lightning-layout-item>
+        </template>
+    </lightning-layout>
+    </div>
+    
+    </template>

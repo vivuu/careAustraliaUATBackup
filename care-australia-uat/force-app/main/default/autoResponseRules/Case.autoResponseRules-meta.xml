@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Email-Acknowledgement on Case Creation</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>info@care.org.au</senderEmail>
+            <senderName>Emma Latham</senderName>
+            <template>unfiled$public/Default_Case_AutoResponse_1681379806639</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>info@care.org.au</senderEmail>
+            <senderName>CARE Australia</senderName>
+            <template>unfiled$public/Default_Case_AutoResponse_1681379806639</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

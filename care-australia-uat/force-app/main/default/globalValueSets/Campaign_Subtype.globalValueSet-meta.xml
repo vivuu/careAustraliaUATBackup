@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>General</fullName>
+        <default>false</default>
+        <label>General</label>
+    </customValue>
+    <customValue>
+        <fullName>Cash Appeals</fullName>
+        <default>false</default>
+        <label>Cash Appeals</label>
+    </customValue>
+    <customValue>
+        <fullName>Emergencies</fullName>
+        <default>false</default>
+        <label>Emergencies</label>
+    </customValue>
+    <customValue>
+        <fullName>Events</fullName>
+        <default>false</default>
+        <label>Events</label>
+    </customValue>
+    <customValue>
+        <fullName>Care Gifts</fullName>
+        <default>false</default>
+        <label>Care Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Supporter Care</fullName>
+        <default>false</default>
+        <label>Supporter Care</label>
+    </customValue>
+    <customValue>
+        <fullName>Regular Giving</fullName>
+        <default>false</default>
+        <label>Regular Giving</label>
+    </customValue>
+    <customValue>
+        <fullName>Gift In Wills (Bequest)</fullName>
+        <default>false</default>
+        <label>Gift In Wills (Bequest)</label>
+    </customValue>
+    <customValue>
+        <fullName>Trusts &amp; Foundations</fullName>
+        <default>false</default>
+        <label>Trusts &amp; Foundations</label>
+    </customValue>
+    <customValue>
+        <fullName>Major Gifts</fullName>
+        <default>false</default>
+        <label>Major Gifts</label>
+    </customValue>
+    <customValue>
+        <fullName>Corporates</fullName>
+        <default>false</default>
+        <label>Corporates</label>
+    </customValue>
+    <customValue>
+        <fullName>Community Fundraising</fullName>
+        <default>false</default>
+        <label>Community Fundraising</label>
+    </customValue>
+    <customValue>
+        <fullName>Survey</fullName>
+        <default>false</default>
+        <label>Survey</label>
+    </customValue>
+    <customValue>
+        <fullName>Quiz</fullName>
+        <default>false</default>
+        <label>Quiz</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Petition</fullName>
+        <default>false</default>
+        <label>Petition</label>
+    </customValue>
+    <customValue>
+        <fullName>Email-To-Target</fullName>
+        <default>false</default>
+        <label>Email-To-Target</label>
+    </customValue>
+    <customValue>
+        <fullName>Advocacy</fullName>
+        <default>false</default>
+        <label>Advocacy</label>
+    </customValue>
+    <customValue>
+        <fullName>Microfinance</fullName>
+        <default>false</default>
+        <label>Microfinance</label>
+    </customValue>
+    <description>Values for Campaign Subtype</description>
+    <masterLabel>Campaign Subtype</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

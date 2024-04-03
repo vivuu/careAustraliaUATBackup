@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Help Centre | Micro Loans FAQs | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"f58fd073-a9b0-4b92-b2ce-d145ebc1be98\",\"columns\":[{\"UUID\":\"3c5abd90-0ad1-4f00-91f1-34e5edeca8a1\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "3c5abd90-0ad1-4f00-91f1-34e5edeca8a1",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "f58fd073-a9b0-4b92-b2ce-d145ebc1be98",
+          "type" : "component"
+        } ],
+        "id" : "8b6735c6-bc1e-484b-8075-866b51f5973b",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Frequently asked questions about Lendwithcare's loan process, repayment details, and the impact your support creates. Make a difference by lending and empowering communities.",
+            "dxpStyle" : { },
+            "pageTitle" : "Help Centre | Micro Loans FAQs | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "4e9296f1-e66a-47b8-9ee9-10192e2e0e55",
+          "type" : "component"
+        } ],
+        "id" : "f2d4d86f-5123-4ab4-9d95-92aecf299c76",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "9eca6ecf-5a9f-45ea-9985-c4bff917bc3b",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "TmyHk7AgMsoizF4JA94lEzfZaj0ovw",
+    "viewType" : "custom-help-centre"
+  }
+}

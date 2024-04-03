@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Checkout_config</label>
+    <protected>false</protected>
+    <values>
+        <field>Allow_Apple_Pay__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Allow_Credit_Card__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Allow_Google_Pay__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Allow_Paypal__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Constant_Contact_Id__c</field>
+        <value xsi:type="xsd:string">00398000004IH36AAG</value>
+    </values>
+    <values>
+        <field>Donation_Campaign__c</field>
+        <value xsi:type="xsd:string">MF23Gen</value>
+    </values>
+    <values>
+        <field>Donation_Product_Name__c</field>
+        <value xsi:type="xsd:string">Lend With Care Donation</value>
+    </values>
+    <values>
+        <field>LWC_domain__c</field>
+        <value xsi:type="xsd:string">https://test.lwc.org.au</value>
+    </values>
+    <values>
+        <field>Lend_With_Care_Campaign__c</field>
+        <value xsi:type="xsd:string">MF23Cart</value>
+    </values>
+    <values>
+        <field>Loan_Product_Name__c</field>
+        <value xsi:type="xsd:string">Lend With Care Loan</value>
+    </values>
+    <values>
+        <field>RD_Campaign__c</field>
+        <value xsi:type="xsd:string">MF23Champions</value>
+    </values>
+    <values>
+        <field>Recurring_Donation_Sync_Time__c</field>
+        <value xsi:type="xsd:double">2.0</value>
+    </values>
+    <values>
+        <field>Stripe_Publish_Key__c</field>
+        <value xsi:type="xsd:string">pk_test_51LIkLGGGWgtqSxG4cRH6iYe1YhS3yFvRtDiJWV6p3bn0yW7frcQy9E4wWH3EkrTaK3WCEpaV9AkzCSwWhPANh4nd00zdRikbTT</value>
+    </values>
+    <values>
+        <field>Topup_Product_Name__c</field>
+        <value xsi:type="xsd:string">Lend With Care Top-Up</value>
+    </values>
+    <values>
+        <field>VF_page_domain__c</field>
+        <value xsi:type="xsd:string">https://careaustralia--uat.sandbox.my.salesforce-sites.com</value>
+    </values>
+</CustomMetadata>

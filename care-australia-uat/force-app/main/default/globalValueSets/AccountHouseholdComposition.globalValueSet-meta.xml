@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>2 PERSON</fullName>
+        <default>false</default>
+        <label>2 PERSON</label>
+    </customValue>
+    <customValue>
+        <fullName>EXTFAM</fullName>
+        <default>false</default>
+        <label>EXTFAM</label>
+    </customValue>
+    <customValue>
+        <fullName>FAMCHLD</fullName>
+        <default>false</default>
+        <label>FAMCHLD</label>
+    </customValue>
+    <customValue>
+        <fullName>GROUP</fullName>
+        <default>false</default>
+        <label>GROUP</label>
+    </customValue>
+    <customValue>
+        <fullName>MARRIED</fullName>
+        <default>false</default>
+        <label>MARRIED</label>
+    </customValue>
+    <customValue>
+        <fullName>SINGLE</fullName>
+        <default>false</default>
+        <label>SINGLE</label>
+    </customValue>
+    <description>Created for Household composition group field under Account</description>
+    <masterLabel>AccountHouseholdComposition</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

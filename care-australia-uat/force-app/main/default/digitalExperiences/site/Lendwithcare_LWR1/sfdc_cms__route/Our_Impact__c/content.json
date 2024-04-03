@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Our Impact",
+  "contentBody" : {
+    "activeViewId" : "Our_Impact_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-our-impact",
+    "urlPrefix" : "ourimpact"
+  }
+}

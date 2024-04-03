@@ -1,0 +1,52 @@
+.dummy{
+	color : black;
+}
+
+.slds-card{
+	display: inherit;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 400px){
+	.donut{
+		display: block;
+	width: 240px !important;
+	}
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px){
+.donut{
+	display: block;
+	width: 410px !important;
+}
+}
+@media only screen and (min-width: 601px){
+.donut{
+	display: block;
+	width: 460px !important;
+}
+}
+@media only screen and (min-width: 768px){
+.donut{
+	display: block;
+	width: 365px !important;
+}
+}
+@media only screen and (min-width: 992px){
+.donut{
+	display: block;
+	width: 390px !important;
+}
+}
+@media only screen and (min-width: 1200px){
+.donut{
+	display: block;
+	width: 480px !important;
+}
+}
+@media only screen and (min-width: 1480px){
+.donut{
+	display: block;
+	width: 625px !important;
+	height: 320px !important;
+}
+}

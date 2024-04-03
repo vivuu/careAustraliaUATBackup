@@ -1,0 +1,78 @@
+<template>
+     <lightning-button label="Cancel Loan" onclick={showModalCancel}></lightning-button>&nbsp;
+     <lightning-button label="Edit Loan for Approval" onclick={showModalEdit}></lightning-button>&nbsp;
+    <lightning-button label="Submit Proposal for Approval" onclick={showModalSubmit}></lightning-button>
+        
+   <template if:true={isShowModalCancel}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBoxCancel}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Cancel Loan</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+            <lightning-flow class="flowModal" onstatuschange={handleStatusChange}>
+            </lightning-flow>
+          </div>
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+ <template if:true={isShowModalEdit}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-02" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBoxEdit}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate">Edit Loan Proposal</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+            <lightning-flow class="flowModal" onstatuschange={handleStatusChange}>
+            </lightning-flow>
+          </div>
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+ <template if:true={isShowModalSubmit}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-03" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+       <div class="slds-modal__container">
+        <!-- modal header start -->
+          <header class="slds-modal__header">
+             <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={hideModalBoxSubmit}>
+                <lightning-icon icon-name="utility:close"
+                   alternative-text="close"
+                   variant="inverse"
+                   size="small" ></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+             </button>
+             <h2 id="modal-heading-03" class="slds-text-heading_medium slds-hyphenate">Submit Loan Proposal for Approval</h2>
+          </header>
+      
+          <!-- modal body start -->
+          <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-3">
+            <lightning-flow class="flowModal" onstatuschange={handleStatusChange}>
+            </lightning-flow>
+          </div>
+       </div>
+    </section>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+ </template>
+</template>

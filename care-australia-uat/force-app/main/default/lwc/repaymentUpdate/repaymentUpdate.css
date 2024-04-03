@@ -1,0 +1,33 @@
+.readMeButton{
+	margin-top: 0px;
+	padding: 0px;
+	
+}
+.title{
+  font-family: Helvetica;
+  font-size: 18px;
+  line-height: 28px;
+  color: #002A3A;
+  margin-bottom:15px;
+}
+.sectiontitle{
+	font-family: Helvetica;
+  font-size: 16px;
+  line-height: 22px;
+  color: #002A3A;
+}
+.secPara{
+	font-family: Helvetica;
+  font-size: 14px;
+  line-height: 18px;
+  color: #002A3A;
+}
+.editable-cell {
+    background-color: #ffeeba; /* Change this to your desired background color */
+    /* Add any other styling you want */
+}
+/* Add background color to non-editable rows */
+.non-editable-row {
+    background-color:green; /* Change this to your desired background color */
+    /* Add any other styling you want */
+}

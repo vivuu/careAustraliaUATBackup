@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Borrower Layout  (FSP)</layout>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Bequest Account Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relationship Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Household Layout</layout>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA Organization Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Interest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments And Audiences</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>CA PAF Layout</layout>
+        <sections>
+            <label></label>
+            <section>Account Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Interest Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Key Relation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Segments And Audiences</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>FSP Layout</layout>
+        <sections>
+            <label></label>
+            <section>Borrower Info</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Overall Performance</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Performance</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Household Lightning Layout</layout>
+        <sections>
+            <label>Adresse</label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label>Informations sur les dons</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Totaux des dons</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label>Champs</label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Informations sur l’adhésion</label>
+            <section>Membership Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Organization Lightning Layout</layout>
+        <sections>
+            <label>Adresse</label>
+            <section>Address</section>
+        </sections>
+        <sections>
+            <label>Informations sur les dons</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Totaux des dons</label>
+            <section>Donation Totals</section>
+        </sections>
+        <sections>
+            <label>Champs</label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label>Informations sur l’octroi de subvention</label>
+            <section>Grantmaking Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Matching Gift Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur l’adhésion</label>
+            <section>Membership Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>New_CARE_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Estate_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Grant</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_In_Kind_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Major_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Matching_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Membership</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_One_Off_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Recurring_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Communication_Preference</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Preferred_Communications</name>
+    </quickActions>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Bequest</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Estate</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>FSP</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>FSP_Borrower</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>HH_Account</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Organization</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Alternate_Email_Validation_rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Check_Acronym_for_FSP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Call_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Email_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_Mail_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Do_Not_SMS_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mobile_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Phone_should_be_of_10_digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Primary_Relationship_Manager_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Secondary_Relationship_Manager</name>
+    </validationRules>
+</CustomObjectTranslation>

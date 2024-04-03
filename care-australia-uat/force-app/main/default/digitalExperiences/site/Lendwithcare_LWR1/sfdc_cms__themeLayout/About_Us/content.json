@@ -1,0 +1,141 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "About Us",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"e263abcb-12a8-4a40-8a52-b2b4e142d09c\",\"columns\":[{\"UUID\":\"7ebfc2c3-ec54-4549-9dec-c688f0c11d55\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "7ebfc2c3-ec54-4549-9dec-c688f0c11d55",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "e263abcb-12a8-4a40-8a52-b2b4e142d09c",
+          "type" : "component"
+        } ],
+        "id" : "3e637923-d093-4478-99f6-39988563d09c",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"df634558-95fb-4475-a7f5-389727b858f4\",\"columns\":[{\"UUID\":\"29b70ba0-445b-47d9-8159-78737f8b9fd3\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "29b70ba0-445b-47d9-8159-78737f8b9fd3",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "df634558-95fb-4475-a7f5-389727b858f4",
+          "type" : "component"
+        } ],
+        "id" : "5a10a719-b0cd-4084-891e-e7f0b673117b",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careAboutUsHeader",
+          "id" : "b4f4e160-9c5c-412f-80cb-70dc58031482",
+          "type" : "component"
+        } ],
+        "id" : "2c10164f-8403-4846-bda8-91cd18336450",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careAboutUsCareAustrailia",
+          "id" : "c0299d3e-bdc0-4cc9-a484-8d1c5fb8b238",
+          "type" : "component"
+        } ],
+        "id" : "6a0cedb8-856e-4062-a996-6e8076bf63c0",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careAboutUsCareExpertise",
+          "id" : "8bfabc16-0a0b-435e-82e5-028ca48cc2fd",
+          "type" : "component"
+        } ],
+        "id" : "3ba3dcc8-a5c1-49ee-ae3d-72f6ea1555ed",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careAboutUsCareVillageLoan",
+          "id" : "c5af0de2-8c43-478a-a255-c15ecece1753",
+          "type" : "component"
+        } ],
+        "id" : "e298e9a0-4d1e-491b-b401-fafdd415dffa",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "2b35ac45-70fe-44d5-8762-6604ee27b30a",
+          "type" : "component"
+        } ],
+        "id" : "0dfdcf26-0f61-48bb-87f8-29dc898960e7",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "37a19adf-9b65-4ce2-ba6e-8f4787be20b7",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "ec5b689a-b766-4fe2-9cef-6d8ea61a271a",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "87ab92c0-68a1-450f-bcc3-7262453f7911",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "c068f2e0-0185-494a-8d6e-d71118c43e8a",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "23435a72-3866-405b-a321-5330f8f5aa61",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "91af1b45-0ce0-4c94-a20c-79b1f655dabf",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeAboutUs",
+      "id" : "5aed546b-442b-482d-bda8-e31936690922",
+      "type" : "component"
+    }
+  }
+}

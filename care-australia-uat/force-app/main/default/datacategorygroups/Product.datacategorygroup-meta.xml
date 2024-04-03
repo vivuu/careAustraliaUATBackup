@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Appeals</label>
+            <name>Appeals</name>
+        </dataCategory>
+        <dataCategory>
+            <label>CAREGifts</label>
+            <name>CAREGifts</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Recurring Donations</label>
+            <name>Recurring_Donations</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Reports</label>
+            <name>Reports</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Dashboards</label>
+            <name>Dashboards</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Projects</label>
+            <name>Projects</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Emergencies</label>
+            <name>Emergencies</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Major Donors</label>
+            <name>Major_Donors</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Mid Value Donors</label>
+            <name>Mid_Value_Donors</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Gifts in Wills</label>
+            <name>Gifts_in_Wills</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Supporter Care</label>
+            <name>Supporter_Care</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Influencers</label>
+            <name>Influencers</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Digital</label>
+            <name>Digital</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Donations</label>
+            <name>Donations</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

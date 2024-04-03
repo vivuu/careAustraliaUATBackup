@@ -1,0 +1,54 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "Microfinance News and Updates | Lendwithcare Australia",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"fdee731a-0e41-4529-99b1-120b24b06835\",\"columns\":[{\"UUID\":\"163d5edf-bbf3-4909-b9c3-4e168655913d\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"12\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "163d5edf-bbf3-4909-b9c3-4e168655913d",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "fdee731a-0e41-4529-99b1-120b24b06835",
+          "type" : "component"
+        } ],
+        "id" : "1394ef69-8d81-4f7e-b5f1-f9978c3ca5f0",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "Stay informed about the incredible world of Lendwithcare and the inspiring stories of borrowers your lifechanging loans support. ",
+            "dxpStyle" : { },
+            "pageTitle" : "Microfinance News and Updates | Lendwithcare Australia",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "457fd6bf-c485-4a3c-9f86-ba60bbd67e84",
+          "type" : "component"
+        } ],
+        "id" : "80f107dd-b859-4f65-98c0-ed03a36d797f",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "35406407-9332-48e5-8cf5-ce1766ee52df",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "W8T4a7UsBCjTcs4g4ZlycjcTDwVEvm",
+    "viewType" : "custom-news-and-updates"
+  }
+}

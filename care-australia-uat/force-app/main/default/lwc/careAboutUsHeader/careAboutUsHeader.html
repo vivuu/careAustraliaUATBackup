@@ -1,0 +1,38 @@
+<template>
+	<!-- <c-google-analysis></c-google-analysis>
+    <c-woopra-analytics></c-woopra-analytics> -->
+	<lightning-spinner if:true={spin}></lightning-spinner>
+	<div class="headers">
+
+		<!--<img src={banner} alt="banner">-->
+
+		<c-care-nav-bar></c-care-nav-bar>
+	<div class="pad">
+		<div class="grid-container" style="padding-top:25px">
+			
+				<div class="item1">
+					<h3 style="display:inline" class="section-heading">
+									{val1}<span style="color:#FEBE10"> {val2}</span></h3>
+		
+					<h3 class="section-content" style="color:white;padding-top: 20px;">
+									<lightning-formatted-rich-text value={aboutlendwithcarebody}>
+									</lightning-formatted-rich-text>
+								</h3>
+				</div>
+
+
+				<div class="item2 slds-align_absolute-center">
+				<img src={backgroundImage} style="max-width: 450px;" class="imgMinWidth">
+												</div>
+			</div>
+
+	</div>
+
+		
+
+
+	</div>
+
+
+
+</template>

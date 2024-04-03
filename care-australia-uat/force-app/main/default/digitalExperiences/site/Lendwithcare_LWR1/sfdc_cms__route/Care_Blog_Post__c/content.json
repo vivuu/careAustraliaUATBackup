@@ -1,0 +1,11 @@
+{
+  "type" : "sfdc_cms__route",
+  "title" : "Blog Posts",
+  "contentBody" : {
+    "activeViewId" : "Care_Blog_Post_1",
+    "configurationTags" : [ ],
+    "pageAccess" : "UseParent",
+    "routeType" : "custom-care-blog-post",
+    "urlPrefix" : "careblogpost"
+  }
+}

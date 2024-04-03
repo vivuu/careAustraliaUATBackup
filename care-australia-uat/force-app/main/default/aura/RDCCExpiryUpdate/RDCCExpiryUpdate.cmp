@@ -1,0 +1,41 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="RDCCExpiryUpdateController" access="global" >
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="month" type="String"/>
+    <aura:attribute name="year" type="String"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true" />
+    <aura:attribute name="recurringDonation" type="SObject" /> 
+    <aura:attribute name="initMethodCompleted" type="Boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.initMethodCompleted}">
+        <lightning:card  >
+            <header class="slds-media slds-media_center slds-has-flexi-truncate newHeader">
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <span style="margin-left: 30%;">Update Credit Card Expiry</span>
+                    </h2>
+                </div>
+            </header>
+            <div>
+                <lightning:input aura:id="month" label="Card Expiration Month" onblur="{!c.handleMonthBlur}" message-when-range-underflow="Month value always between 1 and 12" value="{!v.month}"/>
+                <lightning:input aura:id="year" label="Card Expiration Year"  onblur="{!c.handleYearBlur}" value="{!v.year}"/>
+            </div>
+               
+                <footer class="slds-modal__footer slds-m-top_small">
+                    <lightning:button label="Cancel" onclick="{!c.handleClose}"/>
+                    <lightning:button label="Update Expiry" variant="brand" onclick="{!c.handleSuccess}"/> 
+                </footer>
+        </lightning:card>
+    </aura:if>
+    <!--loading spinner start-->
+    <aura:if isTrue="{!v.showSpinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading...</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <!-- Loading spinner end--> 
+</aura:component>

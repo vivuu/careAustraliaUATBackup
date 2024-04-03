@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+	<targets>
+		<target>lightningCommunity__Page</target>
+		<target>lightningCommunity__Default</target>
+		<target>lightningCommunity__Page_Layout</target>
+		<target>lightningCommunity__Theme_Layout</target>
+	</targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="LoginNavURL" label="URL to navigate after OTP verification" type="String" required="true"/>
+            <property name="resendOTPErrorMsg" label="OTP limit exceed error msg" type="String" required="true"/>
+            <property name="logoutURL" label="Logout URL" type="String" required="true"/>
+            <property name="resendOTPLabel" label="Resend OTP Button Label" type="String" required="true"/>
+            <property name="otpLength" label="Length Of OTP" type="Integer" default="6" required="true"/>
+            <property name="verifyOTPPagePath" label="OTP Verify Page Path" type="String" required="true"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

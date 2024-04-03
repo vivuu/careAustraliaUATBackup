@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>CA PCP Lead Layout</layout>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>PCP Lead Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>PCP Lead Information 2</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Lead Layout</layout>
+        <sections>
+            <label></label>
+            <section>Contact Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Volunteer Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Newsletter</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>PCP_Lead</name>
+    </recordTypes>
+    <recordTypes>
+        <description></description>
+        <label></label>
+        <name>Standard_Lead</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Lead_Preferred_Email</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Lead_Preferred_Phone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Mobile_Should_be_10_Digits</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Work_Phone_should_be_10_digits</name>
+    </validationRules>
+</CustomObjectTranslation>

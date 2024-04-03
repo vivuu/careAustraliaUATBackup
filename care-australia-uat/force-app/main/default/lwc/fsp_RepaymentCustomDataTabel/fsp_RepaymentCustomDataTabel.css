@@ -1,0 +1,7 @@
+.dummy{
+	color : black;
+}
+.dt-outer-container{
+  overflow-y: scroll;
+  overflow-x: scroll;
+}

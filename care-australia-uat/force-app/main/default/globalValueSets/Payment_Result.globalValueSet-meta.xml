@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Not Processed</fullName>
+        <default>true</default>
+        <label>Not Processed</label>
+    </customValue>
+    <customValue>
+        <fullName>Processing</fullName>
+        <default>false</default>
+        <label>Processing</label>
+    </customValue>
+    <customValue>
+        <fullName>Success</fullName>
+        <default>false</default>
+        <label>Success</label>
+    </customValue>
+    <customValue>
+        <fullName>Fail Hard</fullName>
+        <default>false</default>
+        <label>Fail Hard</label>
+    </customValue>
+    <customValue>
+        <fullName>Fail Soft</fullName>
+        <default>false</default>
+        <label>Fail Soft</label>
+    </customValue>
+    <customValue>
+        <fullName>ERROR</fullName>
+        <default>false</default>
+        <label>ERROR</label>
+    </customValue>
+    <description>Payment Result Values for Payment Records</description>
+    <masterLabel>Payment Result</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

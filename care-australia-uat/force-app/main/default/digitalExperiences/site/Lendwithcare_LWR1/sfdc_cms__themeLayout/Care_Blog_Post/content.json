@@ -1,0 +1,117 @@
+{
+  "type" : "sfdc_cms__themeLayout",
+  "title" : "Care Blog Post",
+  "contentBody" : {
+    "component" : {
+      "attributes" : { },
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"16766f6b-7216-49fc-905c-e3e4d38df16a\",\"columns\":[{\"UUID\":\"40ec95c2-1092-4feb-a6a4-1e77984f8be1\",\"columnName\":\"Column 1\",\"columnKey\":\"headerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "40ec95c2-1092-4feb-a6a4-1e77984f8be1",
+            "name" : "headerSection",
+            "title" : "Theme Header",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "16766f6b-7216-49fc-905c-e3e4d38df16a",
+          "type" : "component"
+        } ],
+        "id" : "bd70d79c-9375-4dd4-abb3-b27de49a1cf0",
+        "name" : "header",
+        "title" : "Theme Header",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "dxpStyle" : { },
+            "sectionConfig" : "{\"UUID\":\"ef126f89-8949-4a6d-8bd6-375109ec2bee\",\"columns\":[{\"UUID\":\"cfadc7ad-e0b6-41dc-9603-9254f95c1773\",\"columnName\":\"Column 1\",\"columnKey\":\"footerSection\",\"columnWidth\":\"12\",\"seedComponents\":null}]}"
+          },
+          "children" : [ {
+            "id" : "cfadc7ad-e0b6-41dc-9603-9254f95c1773",
+            "name" : "footerSection",
+            "title" : "Theme Footer",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "ef126f89-8949-4a6d-8bd6-375109ec2bee",
+          "type" : "component"
+        } ],
+        "id" : "4032ed10-7187-4f1c-af36-ff19ace55fad",
+        "name" : "footer",
+        "title" : "Theme Footer",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careBlogPost",
+          "id" : "f629ebbe-1d79-4ec5-aeed-283a538b84db",
+          "type" : "component"
+        } ],
+        "id" : "a78a63d6-88b7-44b3-9afa-3f9e675a81bc",
+        "name" : "region1",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "dxpStyle" : { }
+          },
+          "definition" : "c:lwr_careFooter",
+          "id" : "3ccfc448-a372-4cf6-bf02-617cf48ca36e",
+          "type" : "component"
+        } ],
+        "id" : "76a1b700-a948-40e2-9953-7b050dd57f5f",
+        "name" : "region2",
+        "type" : "region"
+      }, {
+        "id" : "c02c0bf4-1926-4b87-986b-708b82a235f9",
+        "name" : "region3",
+        "type" : "region"
+      }, {
+        "id" : "f5896515-e429-46eb-ba50-6a26c4c91c27",
+        "name" : "region4",
+        "type" : "region"
+      }, {
+        "id" : "3e79fb8b-5a47-40e1-bfc4-e37b6c26e974",
+        "name" : "region5",
+        "type" : "region"
+      }, {
+        "id" : "342e4374-c741-42c0-8d60-c04e0d139da0",
+        "name" : "region6",
+        "type" : "region"
+      }, {
+        "id" : "1fdbf8e6-6346-47be-8544-e9bc3de32f4b",
+        "name" : "region7",
+        "type" : "region"
+      }, {
+        "id" : "02c2e157-6bcd-420a-9503-466c5859cbee",
+        "name" : "region8",
+        "type" : "region"
+      }, {
+        "id" : "b5cb2248-5b44-49df-be8d-86a8ecbf3ad3",
+        "name" : "region9",
+        "type" : "region"
+      }, {
+        "id" : "7c631613-d056-41c8-a575-f580fff6df53",
+        "name" : "region10",
+        "type" : "region"
+      }, {
+        "id" : "96858be1-8306-409d-91f9-30e1d5d56014",
+        "name" : "default",
+        "type" : "region"
+      } ],
+      "definition" : "c:themeCareBlogPost",
+      "id" : "35caa407-0909-4e03-b02b-51ca41bc65b2",
+      "type" : "component"
+    }
+  }
+}

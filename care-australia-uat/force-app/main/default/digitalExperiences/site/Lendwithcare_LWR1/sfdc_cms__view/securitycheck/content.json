@@ -1,0 +1,75 @@
+{
+  "type" : "sfdc_cms__view",
+  "title" : "securitycheck",
+  "contentBody" : {
+    "component" : {
+      "children" : [ {
+        "children" : [ {
+          "attributes" : {
+            "backgroundImageConfig" : "",
+            "backgroundImageOverlay" : "rgba(0,0,0,0)",
+            "componentSpacerSize" : "",
+            "maxContentWidth" : "",
+            "sectionColumnGutterWidth" : "",
+            "sectionConfig" : "{\"UUID\":\"cfb69da8-2071-4bb5-8d20-eea48caded9c\",\"columns\":[{\"UUID\":\"07772156-b609-499e-a12e-6d07d37d3df1\",\"columnName\":\"Column 1\",\"columnKey\":\"col1\",\"columnWidth\":\"1\",\"seedComponents\":[]},{\"UUID\":\"33aa2ae6-592d-4e4b-8fc8-690dae383305\",\"columnName\":\"Column 2\",\"columnKey\":\"a07d3\",\"columnWidth\":\"10\",\"seedComponents\":[]},{\"UUID\":\"7fbbcc59-af60-4c26-bc79-489e719c2768\",\"columnName\":\"Column 3\",\"columnKey\":\"cd3ae\",\"columnWidth\":\"1\",\"seedComponents\":[]}]}"
+          },
+          "children" : [ {
+            "id" : "07772156-b609-499e-a12e-6d07d37d3df1",
+            "name" : "col1",
+            "title" : "Column 1",
+            "type" : "region"
+          }, {
+            "children" : [ {
+              "attributes" : {
+                "flowArguments" : "[{\"label\":\"LoginFlow_UserId\",\"dataType\":\"String\",\"supportsRecordId\":false,\"inputType\":\"text\",\"name\":\"LoginFlow_UserId\",\"type\":\"String\",\"value\":\"{!User.userId}\"}]",
+                "flowName" : "{\"flowName\":\"Login_OTP_Based_Flow\",\"flowLabel\":\"Login: OTP Based Flow\"}"
+              },
+              "definition" : "dxp_flow:flow",
+              "id" : "c0558060-f0fc-491e-bbc2-e1369d5cd0b7",
+              "type" : "component"
+            } ],
+            "id" : "33aa2ae6-592d-4e4b-8fc8-690dae383305",
+            "name" : "a07d3",
+            "title" : "Column 2",
+            "type" : "region"
+          }, {
+            "id" : "7fbbcc59-af60-4c26-bc79-489e719c2768",
+            "name" : "cd3ae",
+            "title" : "Column 3",
+            "type" : "region"
+          } ],
+          "definition" : "community_layout:section",
+          "id" : "cfb69da8-2071-4bb5-8d20-eea48caded9c",
+          "scopedBrandingSetId" : "Login",
+          "type" : "component"
+        } ],
+        "id" : "5686c57c-53fd-4df9-b191-6612a8ead718",
+        "name" : "content",
+        "title" : "Content",
+        "type" : "region"
+      }, {
+        "children" : [ {
+          "attributes" : {
+            "customHeadTags" : "",
+            "description" : "",
+            "pageTitle" : "securitycheck",
+            "recordId" : "{!recordId}"
+          },
+          "definition" : "community_builder:seoAssistant",
+          "id" : "dcddafd4-ed2a-420c-819f-2eeff58cce5e",
+          "type" : "component"
+        } ],
+        "id" : "d7310e26-f73e-4873-a8fa-e83905edbdcc",
+        "name" : "sfdcHiddenRegion",
+        "title" : "sfdcHiddenRegion",
+        "type" : "region"
+      } ],
+      "definition" : "community_layout:sldsFlexibleLayout",
+      "id" : "0567258a-428d-4049-9fe0-f00ac889923b",
+      "type" : "component"
+    },
+    "dataProviders" : [ ],
+    "themeLayoutType" : "Inner",
+    "viewType" : "custom-securitycheck"
+  }
+}

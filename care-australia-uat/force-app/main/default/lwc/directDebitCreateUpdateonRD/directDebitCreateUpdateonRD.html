@@ -1,0 +1,45 @@
+<template>
+
+    <div class="spinner">
+    <template if:true={isLoading}>
+    <lightning-spinner alternative-text="Loading" variant="brand" size="large">
+    </lightning-spinner>
+    </template>
+    </div>
+    <template if:true={recordId}>
+    <lightning-card> 
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_12-of-12 slds-text-heading_large slds-align_absolute-center slds-p-horizontal--medium slds-m-bottom--medium" > 
+                    Update Direct Debit Details
+            </div>
+            <div class="slds-col slds-size_12-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-input type="text" label="BSB Number" placeholder="Enter here" onchange={handleChangeBSBNumber} required></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-input type="text" label="Account Number" placeholder="type here..." onchange={handleChangeAccountNumber} required></lightning-input>
+            </div>
+            
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <!-- Old Reges: [A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}$ -->
+                <lightning-input type="text" lass="validate" label="Payee Email" placeholder="type here..." onchange={handleChangePayeeEmail} pattern="[A-Za-z0-9._-]+@[a-z0-9-]+\.[a-z]{2,}\.{0,1}[a-z]{1,2}$" message-when-pattern-mismatch="Please enter a valid email" required></lightning-input>
+            </div>
+            
+            <!-- <div class="slds-col slds-size_12-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-input type="text" label="Payee Name" placeholder="type here..." onchange={handleChangePayeeName} required></lightning-input>
+            </div> -->
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-input type="text" label="Payee Name" placeholder="type here..." onchange={handleChangePayeeName} required></lightning-input>
+            </div>
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-input type="text" label="Financial Institution" placeholder="type here..." onchange={handleChangeFI}></lightning-input>
+            </div>
+        
+            <div class="slds-col slds-size_12-of-12 slds-align_absolute-center slds-p-horizontal--medium slds-m-bottom--medium">
+                <lightning-button variant="brand-outline" label="Cancel" title="Cancel" onclick={closeQuickAction} class="slds-var-m-right_x-small"></lightning-button>
+                <lightning-button variant="Brand" label="Submit" title="Successful action" onclick={OnSubmit} class="slds-var-m-right_x-small"></lightning-button>
+            </div>
+        </div>
+    </lightning-card>
+    </template>
+    </template>
