@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Sketchetik Fill Bold';
+  src: url(../resource/SiteFonts/SiteFonts/fontSk.woff) format('woff');
+  
+}
+@font-face {
+  font-family: 'Helvetica Neue Regular';
+  src: url(../resource/SiteFonts/SiteFonts/HelveticaNeueCyr-Roman.woff) format('woff');
+  
+}
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url(../resource/SiteFonts/SiteFonts/font.woff) format('woff');
+  
+}
+.siteforceCptBody .cHeaderWrapper{
+    display:none;
+}
+.siteforceCptBody .siteforceContentArea{
+    margin-top:-10px;
+    padding:0;
+    margin-left:-3px;
+}
+.salesforceIdentityLoginBody2 {
+  background: linear-gradient(205.75deg, #422371 0%, #163B54 100%) !important;
+}
+.salesforceIdentitySocialLogin2 .or:before{
+  display:none;  
+}
+.salesforceIdentitySocialLogin2 .or:after{
+   display:none;    
+}
+.salesforceIdentitySocialLogin2 .or{
+     color: #FFFFFF!important;
+    font-size:14px !important;
+}
+.siteforceCptBody .siteforceContentArea{
+    background-color:white;
+}
+:root { --dxp-c-section-columns-max-width: 1170px; }

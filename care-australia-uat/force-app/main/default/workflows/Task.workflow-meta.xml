@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Task_Due_Date_Remainder</fullName>
+        <description>Task Due Date Remainder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>info@care.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Task_Due_Remainder</template>
+    </alerts>
+    <alerts>
+        <fullName>Task_Email_Reminder</fullName>
+        <description>Task Email Reminder</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderAddress>info@care.org.au</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>unfiled$public/Task_Email_Reminder</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Set_Task_Due_date</fullName>
+        <description>Set Task Due date TO 90 days from today</description>
+        <field>ReminderDateTime</field>
+        <formula>NOW()+90</formula>
+        <name>Set Task Due date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Default due date</fullName>
+        <actions>
+            <name>Set_Task_Due_date</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Workflow to set default due date 90 days from today.</description>
+        <formula>ISBLANK( ActivityDate )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>Task Due Remainder</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.IsReminderSet</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <description>To send email to the user when the task date is due</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+        <workflowTimeTriggers>
+            <actions>
+                <name>Task_Due_Date_Remainder</name>
+                <type>Alert</type>
+            </actions>
+            <offsetFromField>Task.ReminderDateTime</offsetFromField>
+            <timeLength>0</timeLength>
+            <workflowTimeTriggerUnit>Days</workflowTimeTriggerUnit>
+        </workflowTimeTriggers>
+    </rules>
+</Workflow>
