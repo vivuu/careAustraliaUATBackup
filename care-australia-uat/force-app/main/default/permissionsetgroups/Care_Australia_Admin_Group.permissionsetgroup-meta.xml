@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Care Australia Admin Group</label>
+    <permissionSets>Bequest_Permission_set</permissionSets>
+    <permissionSets>CA_Relationship_Manager_Permissions</permissionSets>
+    <permissionSets>Care_Australia_CRM_Admin_User</permissionSets>
+    <permissionSets>Care_Australia_CRM_User</permissionSets>
+    <permissionSets>Drag_and_Drop_Content</permissionSets>
+    <permissionSets>Gift_Entry</permissionSets>
+    <permissionSets>Gift_Entry_Recommended</permissionSets>
+    <permissionSets>HIC_ShopifySync__Shopify_Made_Easy_Configuration</permissionSets>
+    <permissionSets>HIC_ShopifySync__Shopify_Made_Easy_Modify_All</permissionSets>
+    <permissionSets>HIC_ShopifySync__Shopify_Made_Easy_View_All</permissionSets>
+    <permissionSets>Manage_Audit_Fields</permissionSets>
+    <permissionSets>Marketing_User</permissionSets>
+    <permissionSets>NPSP_Data_Import</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

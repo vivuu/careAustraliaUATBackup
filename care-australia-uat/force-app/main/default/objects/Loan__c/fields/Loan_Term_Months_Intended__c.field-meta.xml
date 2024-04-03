@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan_Term_Months_Intended__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(Loan_Schedule__c, &apos;Monthly&apos;), IF(Year(Loan_Maturity_Date__c)-Year(First_Repayment_Due_Date__c)=0, (Month(Loan_Maturity_Date__c) - Month(First_Repayment_Due_Date__c))+1, (((Year(Loan_Maturity_Date__c)-Year(First_Repayment_Due_Date__c))*12)+Month(Loan_Maturity_Date__c))-Month(First_Repayment_Due_Date__c)+1), 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Loan Term (Months)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

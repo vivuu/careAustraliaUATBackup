@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PAR30_calculation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Full name of this field is Are restructured loans included in the PAR30 calculation?</description>
+    <externalId>false</externalId>
+    <label>Restructured Loans in PAR30 Calculation</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

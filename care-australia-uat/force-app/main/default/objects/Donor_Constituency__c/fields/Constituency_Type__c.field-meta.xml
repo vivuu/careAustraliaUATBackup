@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Constituency_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Constituency Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>CARE Board Member</fullName>
+                <default>false</default>
+                <label>CARE Board Member</label>
+            </value>
+            <value>
+                <fullName>CARE Staff</fullName>
+                <default>false</default>
+                <label>CARE Staff</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>GIW</fullName>
+                <default>false</default>
+                <label>GIW</label>
+            </value>
+            <value>
+                <fullName>Major Donor</fullName>
+                <default>false</default>
+                <label>Major Donor</label>
+            </value>
+            <value>
+                <fullName>Middle Donor</fullName>
+                <default>false</default>
+                <label>Middle Donor</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Regular Giver</fullName>
+                <default>false</default>
+                <label>Regular Giver</label>
+            </value>
+            <value>
+                <fullName>Trust &amp; Foundation</fullName>
+                <default>false</default>
+                <label>Trust &amp; Foundation</label>
+            </value>
+            <value>
+                <fullName>Workplace Giver</fullName>
+                <default>false</default>
+                <label>Workplace Giver</label>
+            </value>
+            <value>
+                <fullName>Workplace Giving Org</fullName>
+                <default>false</default>
+                <label>Workplace Giving Org</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

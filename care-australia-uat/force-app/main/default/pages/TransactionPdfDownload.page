@@ -1,0 +1,3 @@
+<apex:page renderAs="pdf" controller="CareHomePageCtrl" applyHtmlTag="false" showHeader="false" cache="true" readOnly="true">
+    <apex:outputText value="{!hBody}" escape="false" />
+</apex:page>

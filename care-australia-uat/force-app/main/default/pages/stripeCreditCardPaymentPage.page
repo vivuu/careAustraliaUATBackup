@@ -1,0 +1,145 @@
+<apex:page controller="StripeProcessPaymentPageController" showHeader="false" sidebar="false">
+    <apex:includeLightning />
+    <apex:includeScript value="https://js.stripe.com/v3/"/> 
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+    <script type="text/javascript">
+    
+    window.onload = function() {
+        var stripe = Stripe('{!stripePublishKey}');
+        var elements = stripe.elements();
+        
+        // Create an instance of the card UI component
+        var card = elements.create('card', {
+            style: {
+                base: {
+                    iconColor: '#666EE8',
+                    color: '#31325F',
+                    fontFamily: 'Helvetica Neue Bold',
+                    fontSize: '18px',
+                }
+            },
+            classes: {
+                base: 'stripe-card-element',
+            },
+            hidePostalCode: true
+        });
+        card.mount('#card-element');
+        
+        card.on('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+        
+        function stripeTokenHandler(token, rdToken) {
+            console.log(token);
+            console.log(rdToken);
+            window.parent.postMessage({token: token, rdToken: rdToken}, '{!lwcDomain}');
+        }        
+        
+        function createToken() {
+            var displayError = document.getElementById('card-errors');
+            displayError.textContent = '';
+            
+            const isVerifiedId = '{!isVerifiedId}';
+            const createTokenForRd = '{!createTokenForRd}';
+            
+            if(isVerifiedId === 'true') {
+                stripe.createToken(card, {
+                    name: document.getElementById('card-holdername').value
+                }).then(function(result) {
+                    if (result.error) {
+                        // Inform the user if there was an error
+                        var errorElement = document.getElementById('card-errors');
+                        errorElement.textContent = result.error.message;
+                    } else {
+                        // Send the token to your server
+                        if(createTokenForRd === 'true') {
+                            stripe.createToken(card, {
+                                name: document.getElementById('card-holdername').value
+                            }).then(function(result2) {
+                                if (result2.error) {
+                                    // Inform the user if there was an error
+                                    var errorElement = document.getElementById('card-errors');
+                                    errorElement.textContent = result2.error.message;
+                                } else {
+                                    stripeTokenHandler(result.token, result2.token);
+                                }
+                            });
+                        } else {
+                            stripeTokenHandler(result.token, null);
+                        }
+                    }
+                });
+            } else {
+                alert('The user is not verified');
+            }
+        };
+        
+        // Create a token when the form is submitted.
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            createToken();
+        });
+        
+        window.parent.postMessage({isLoading: false}, '{!lwcDomain}');
+    }    
+    </script>
+    
+    <style>
+        .continueButton{
+        width: -webkit-fill-available;
+        font-size:16px;
+        font-weight:800;
+        margin-top: 5px;
+        background-color:#FEBE10;
+        border-radius:4px;
+        border-style:none;
+        height:41px;
+        color: #002A3A;
+        }
+         .continueButton:hover{
+        width: -webkit-fill-available;
+        font-size:16px;
+        font-weight:800;
+        margin-top: 5px;
+        background-color:#472175;
+        border-radius:4px;
+        border-style:none;
+        height:41px;
+        color: #ffffff;
+        }
+    </style>
+    
+    <form method="post" id="payment-form">
+        <div style="display: grid; margin: 10px;">
+            <label style="font-size: 18px;
+            line-height: 21px;
+            font-family: 'Helvetica Neue Bold';
+            color:#002A3A;
+            margin: 10px 0px 10px 0px;">Cardholders name</label>
+            <input style="margin: 10px 0px 10px 0px;
+            height: 25px;
+            border-radius: 2px;
+            border-color: #163B5480;
+            font-family: 'Helvetica Neue Bold';
+            font-size: 18px;
+            line-height: 21px;" type="text" id="card-holdername" required="true"/>
+        </div>
+    
+        <div style="margin: 10px" id="card-element">
+            <!-- a Stripe Element will be inserted here. -->
+        </div>
+        
+        <!-- Used to display form errors -->
+        <div id="card-errors" role="alert"></div>
+        
+        <div style="margin: 10px 10px;">
+            <input class="continueButton" style="" type="submit" value="Continue" />
+        </div>
+    </form>
+</apex:page>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Group permission set for admins</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Care Australia CRM Admin_G</label>
+    <permissionSets>Bequest_Permission_set</permissionSets>
+    <permissionSets>CA_Relationship_Manager_Permissions</permissionSets>
+    <permissionSets>Care_Australia_CRM_Admin_User</permissionSets>
+    <permissionSets>Care_Australia_CRM_User</permissionSets>
+    <permissionSets>Gift_Entry</permissionSets>
+    <permissionSets>Gift_Entry_Recommended</permissionSets>
+    <permissionSets>PDF_Butler_Admin_Locals</permissionSets>
+    <permissionSets>Survey</permissionSets>
+    <permissionSets>cadmus_core__PDF_Butler_Admin</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

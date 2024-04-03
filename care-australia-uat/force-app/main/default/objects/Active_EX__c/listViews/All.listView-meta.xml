@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>SFConstituentId__c</columns>
+    <columns>FullName__c</columns>
+    <columns>OpportunityName__c</columns>
+    <columns>FYDonorLevel__c</columns>
+    <columns>PaymentDate__c</columns>
+    <columns>PaymentAmount__c</columns>
+    <columns>AUSCode__c</columns>
+    <columns>IN__c</columns>
+    <columns>Date_at_export__c</columns>
+    <columns>Time_Period__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Gift Entry</label>
+    <tabSettings>
+        <tab>npsp__Batch_Gift_Entry</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+    <tabSettings>
+        <tab>npsp__GE_Gift_Entry</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
+</PermissionSet>

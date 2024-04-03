@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>old value: https://careaustralia--sflabs-cms-ct.vf.force.com</description>
+    <disableProtocolSecurity>false</disableProtocolSecurity>
+    <isActive>true</isActive>
+    <url>https://careaustralia--uat--sflabs-cms-ct.vf.force.com</url>
+</RemoteSiteSetting>

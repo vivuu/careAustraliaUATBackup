@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>end_date_less_than_start_date</fullName>
+    <active>true</active>
+    <description>Constituency End Date can&apos;t before Start Date</description>
+    <errorConditionFormula>AND(End_Date__c &lt;  Start_Date__c, $Setup.Disable_Validations__c.DisableForAllObjects__c = FALSE,$Setup.Disable_Validations__c.Disable_For_DonorConstituency__c = FALSE)</errorConditionFormula>
+    <errorDisplayField>End_Date__c</errorDisplayField>
+    <errorMessage>End Date must be greater than Start Date</errorMessage>
+</ValidationRule>

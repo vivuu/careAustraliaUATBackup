@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Financial_Covenants__c</fullName>
+    <description>Three descriptions are given in micro finance excel sheet. 
+Operational Self Sufficiency ratio (Operating revenue /Financial expense + Loan-loss provision expense + Operating expense) of greater than 90% as per the last financial statements.
+Risk Coverage Ratio must be more than 75% at all times (Risk Coverage Ratio is defined as Impairment Loss Allowance/PAR 30 + Restructured loan portfolio).
+Capital Adequacy ratio (Total Regulatory Capital/Total Assets) at no less than 10%.</description>
+    <externalId>false</externalId>
+    <label>Other Financial Covenants</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

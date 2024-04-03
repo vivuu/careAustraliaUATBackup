@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Contact Page Guidance - Affiliations</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>More About Affiliations</actionButtonLabel>
+        <actionButtonLink>https://sforce.co/3r03Qeg</actionButtonLink>
+        <body>&lt;p&gt;Track how your constituents are connected with other organizations by using Affiliations.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;To create your first Affiliation, click &lt;b&gt;New Affiliation&lt;/b&gt; and fill in details. When you’re done, click &lt;b&gt;Save&lt;/b&gt;. &lt;/p&gt;</body>
+        <customApplication>Nonprofit_Success_Pack</customApplication>
+        <delayDays>1</delayDays>
+        <description>Prompt for new admins to detail how to create a new affiliation</description>
+        <displayType>DockedComposer</displayType>
+        <header>NPSP How-To Tips</header>
+        <isPublished>true</isPublished>
+        <masterLabel>Contact Page Guidance - Affiliations</masterLabel>
+        <publishedDate>2021-03-31</publishedDate>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2021-03-04</startDate>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <timesToDisplay>5</timesToDisplay>
+        <title>Create an Organization Affiliation</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://play.vidyard.com/sgaoihroSRrNeYPag1BXCQ</videoLink>
+    </promptVersions>
+</Prompt>

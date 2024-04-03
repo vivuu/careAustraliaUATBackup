@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Default - Cases</name>
+    <queueMembers>
+        <users>
+            <user>amit.goyal@gerent.com</user>
+            <user>emma.farrant@care.org.au</user>
+            <user>emma.latham@care.org.au</user>
+            <user>gavin.mcdonnell@care.org.au</user>
+            <user>janice.ooi@care.org.au</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

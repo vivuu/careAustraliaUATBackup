@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Under_Review_Care_Reviewers</fullName>
+    <columns>NAME</columns>
+    <columns>FSP_Loan_ID__c</columns>
+    <columns>Loan_Principal_Disbursed__c</columns>
+    <columns>Loan_Principal_Disbursed_USD__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Published_Date__c</columns>
+    <columns>Funded__c</columns>
+    <columns>Funded_Date__c</columns>
+    <columns>Loan_Proposal_Status__c</columns>
+    <columns>Cumulative_Amount_Received_To_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Loan_Proposal_Status__c</field>
+        <operation>equals</operation>
+        <value>Under Review</value>
+    </filters>
+    <label>Under Review - Care Reviewers</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,95 @@
+<apex:page controller="MakePaymentController" action="{!initVFP}" lightningStylesheets="true" >
+    
+    <apex:stylesheet value="{!$Resource.MakePaymentCSS}" />
+    <script src="{!URLFOR($Resource.bambora, 'customcheckout.js')}"/>
+    <script src="{!$Resource.MakePaymentJS}"/>
+        
+    <apex:slds />
+<apex:form >
+		<apex:actionFunction name="makePayment" action="{!makePayment}" reRender="renderTarget">
+			<apex:param id="bamorasSTT" name="stt" value="" /> 
+            <apex:param id="payeeName" name="payeeName" value="" />
+        </apex:actionFunction>
+		<div class="slds-scope">
+			<div id="spinner" class="slds-spinner_container slds-is-relative slds-hide">
+				<div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand"> <span class="slds-assistive-text">Loading</span>
+					<div class="slds-spinner__dot-a"></div>
+					<div class="slds-spinner__dot-b"></div>
+				</div>
+			</div>
+		</div>
+	</apex:form>
+	<div id="ccform" class="container slds-card">
+         <div class="slds-media__body slds-float_right" style="padding: 2%;font-size: medium;font-weight: 600;">
+             <p>Amount : &#36;{!paymentAmount}</p> 
+              </div>
+             <div style="margin-top:2%;">
+		<form id="checkout-form"> 
+            <span class="required">*</span>
+			<div id="card-number"></div>
+			<label for="card-number" id="card-number-error"></label> <span class="required">*</span>
+			<!-- <div id="card-cvv"></div>
+			<label for="card-cvv" id="card-cvv-error"></label> <span class="required">*</span> -->
+			<div id="card-expiry"></div>
+			<label for="card-expiry" id="card-expiry-error"></label>
+            <div id="payee-name">
+            <input type="text" id="payeeName" name="Payee Name" placeholder="Payee Name" />
+            </div><br></br>
+			<input id="pay-button" type="submit" class="slds-button slds-button_brand" value="Make Payment" disabled="true" />
+			<div id="feedback"></div>
+		</form>
+                </div>
+	</div>
+	<apex:outputPanel id="renderTarget">
+		<apex:outputPanel rendered="{!showSuccessMessage}">
+                
+                <div class="slds-card">
+                  <div class="slds-card__header slds-grid">
+                    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                      
+                    </header>
+                  </div>
+                  <div class="slds-card__body slds-card__body_inner" >
+                                <div class="successMsg"> {!statusMessage} </div>
+                                </div>
+                  <div class="slds-card__footer">
+                <span><b>Please do not refresh the page or click the 'close' or 'Back' button of your browser.</b></span>
+                  </div>
+                </div>
+		</apex:outputPanel>
+                
+		<script>
+		if({!showSuccessMessage}  == true) {
+             console.log({!showSuccessMessage});
+			document.getElementById("ccform").style.display = "none";
+			document.getElementById('spinner').className += ' slds-hide';
+            setTimeout(function(){ 
+            	window.top.location = "/" + recordId; 
+        	}, 5000);
+            
+			
+		}else if({!showErrorMessage}  == true){
+             console.log({!showErrorMessage});
+            //document.getElementById("ccform").style.display = "none";
+            document.getElementById('spinner').className += ' slds-hide';
+            customCheckoutController.showErrorFeedback( '{!statusMessage}');
+            }
+            
+		</script>
+	</apex:outputPanel>
+	<script type="text/javascript">
+	var customCheckout = customcheckout();
+	var isCardNumberComplete = false;
+	var isCVVComplete = false;
+	var isExpiryComplete = false;
+	var merchantGUID;
+	var recordId = '{!JSENCODE(recordId)}';
+	if('{!merchantGUID}' != '') {
+		merchantGUID = '{!merchantGUID}';
+		customCheckoutController.init();
+	} else {
+		console.log('Merchat GUID not found!!!!!!!!!!');
+	}
+
+	</script>
+</apex:page>

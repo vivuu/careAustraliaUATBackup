@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Contact Page Guidance</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>Add/Remove Contacts</actionButtonLabel>
+        <actionButtonLink>https://sforce.co/3novyyX</actionButtonLink>
+        <body>&lt;p&gt;Create your first Contact:&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Select ‘New’ and fill in Contact details. Leave account name blank. Once done, click Save.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Congratulations! You’ve just created your first Contact, and NPSP automatically created an associated Household Account for you. &lt;/p&gt;</body>
+        <customApplication>Nonprofit_Success_Pack</customApplication>
+        <delayDays>1</delayDays>
+        <description>Prompt for new Admins to detail how to create a new Contact and Household Account</description>
+        <displayType>DockedComposer</displayType>
+        <header>NPSP How To Tips</header>
+        <isPublished>true</isPublished>
+        <masterLabel>Contact Page Guidance</masterLabel>
+        <publishedDate>2021-03-31</publishedDate>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2020-10-28</startDate>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <timesToDisplay>5</timesToDisplay>
+        <title>Create a Contact</title>
+        <uiFormulaRule>
+            <criteria>
+                <leftValue>{!$User.Profile.Key}</leftValue>
+                <operator>EQUAL</operator>
+                <rightValue>Admin</rightValue>
+            </criteria>
+        </uiFormulaRule>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>SpecificProfiles</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://play.vidyard.com/xSm2roSAinfDZYAAAnnbQ3</videoLink>
+    </promptVersions>
+</Prompt>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSP__c</fullName>
+    <externalId>false</externalId>
+    <label>FSP</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>FSP Monthly Settlements</relationshipLabel>
+    <relationshipName>FSP_Monthly_Settlements</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

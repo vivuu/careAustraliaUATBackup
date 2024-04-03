@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Effective_LWC_Interest_Rate_EIR__c</fullName>
+    <description>Full Name of this field is Average Effective Interest Rate (EIR) charged on Lendwithcare loans (only)
+Average annual interest rate on gross loan portfolio disbursed through the Lendwithcare program (only), calculated by incorporating the effects of compounding, insurance, fees, and cash collateral.</description>
+    <externalId>false</externalId>
+    <label>Average Effective LWC Interest Rate(EIR)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

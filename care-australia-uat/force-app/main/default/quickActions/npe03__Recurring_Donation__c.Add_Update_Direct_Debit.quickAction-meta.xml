@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Card_Number_Masked__c</field>
+        <formula>(&quot; &quot;)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Card_Token__c</field>
+        <formula>(&quot; &quot;)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>npsp__CardExpirationMonth__c</field>
+        <formula>(&quot; &quot;)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>npsp__CardExpirationYear__c</field>
+        <formula>(&quot; &quot;)</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>npsp__PaymentMethod__c</field>
+        <literalValue>Direct Debit</literalValue>
+    </fieldOverrides>
+    <label>Add/Update Direct Debit</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Account_Number__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Financial_Institution__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Account_BSB__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Payee_Name__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <successMessage>Direct Debit details Successfully updated.</successMessage>
+    <type>Update</type>
+</QuickAction>

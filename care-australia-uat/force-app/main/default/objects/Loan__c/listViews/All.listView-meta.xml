@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Loan_Title__c</columns>
+    <columns>FSP__c</columns>
+    <columns>FSP_Loan_ID__c</columns>
+    <columns>Loan_Principal_Disbursed__c</columns>
+    <columns>Loan_Principal_Disbursed_USD__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Published_Date__c</columns>
+    <columns>Funded__c</columns>
+    <columns>Funded_Date__c</columns>
+    <columns>Loan_Proposal_Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>Username</identityMapping>
+    <issuer>https://accounts.google.com/o/saml2?idpid=C00w0muba</issuer>
+    <loginUrl>https://accounts.google.com/o/saml2/idp?idpid=C00w0muba</loginUrl>
+    <name>Google Workspace_UAT</name>
+    <oauthTokenEndpoint>https://careaustralia--uat.sandbox.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P19800000001vh</requestSigningCertId>
+    <salesforceLoginUrl>https://careaustralia--uat.sandbox.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://careaustralia--uat.sandbox.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>true</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDdDCCAlygAwIBAgIGAY0uLuuKMA0GCSqGSIb3DQEBCwUAMHsxFDASBgNVBAoTC0dvb2dsZSBJbmMuMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MQ8wDQYDVQQDEwZHb29nbGUxGDAWBgNVBAsTD0dvb2dsZSBGb3IgV29yazELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEwHhcNMjQwMTIxMjI0MDQyWhcNMjkwMTE5MjI0MDQyWjB7MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEPMA0GA1UEAxMGR29vZ2xlMRgwFgYDVQQLEw9Hb29nbGUgRm9yIFdvcmsxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvP9KMDBcy4z4YETblOdKLA98FX5mHyo3GPlonJV9SRJuJklWsoT1xRWOS4KADC9CwOdOYAPGAId47ZgItnkAmwGER+9rDwMljB2evj7XU3MTxNmsjyw1IOKQ9XTudcEC8mvYGAeYRFcrC6ypfvl4IjtyHARMT4hpM0BvqwBM0YnOMWu8p9zxWf83IMD8BfPFP4MU03zlU+1/xFoSDXL2SSGkG/x6rJH/6HnLxNOHQe7vM09xOsxUfR1A4FQmTBvNscwKWtkpspt8jRev2S7L+DPyW8KSECID2/WaQYoMHBiyRyL1FQaf2mO58t7dpv8ndqxSeSlBokIqIsU05h5nAwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQA/I8IKHWVSvk/yKogHwVSabKmG17EeLw9x0yBd7pOuMQr0ULBzFqGdrTv/92uRKcUPziK7p5+ulA7DD5uguvbdndVmMnWXwnyWwGwzTuphh4DjTghHp3m/bXHPZiqxWHdQ/49k6aNnYmdWAbcj1pWz/L1D6cAWcgNB7ZRLuFY9qYS+S0/K+DJip6Gh6pB/2OYS4eG/8euCBZaVef+AmdhaEHqvL+/KveSmqMKzHJkmMjatR+fsd8ikxvTQznSGSmLGl80PU4FwIh2D0H/KCUjxD1l4sFxkjr5kI9jhXBWL1kmnKx3tjDvKEmO0Jl1NVM9pyfhSQnbxr6yS3yYQ6z3U</validationCert>
+</SamlSsoConfig>

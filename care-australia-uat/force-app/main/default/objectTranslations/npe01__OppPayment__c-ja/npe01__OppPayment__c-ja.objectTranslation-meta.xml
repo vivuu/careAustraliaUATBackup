@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>支払</value>
+    </caseValues>
+    <layouts>
+        <layout>CA Payment Layout</layout>
+        <sections>
+            <label></label>
+            <section>Card and Account Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Other Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Refund Information</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>支払番号</nameFieldLabel>
+    <quickActions>
+        <label></label>
+        <name>Credit_Card_Payment</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Refund</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Stripe_Credit_Card_Payment</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Adjustment_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Chargeback_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Chargeback_Reference_Number_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Check_if_Payment_is_Paid</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Payment_Amount_not_less_than_0</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Refund_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Refund_Reference_Number_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Unpaid_Validation_on_Adjustment</name>
+    </validationRules>
+</CustomObjectTranslation>

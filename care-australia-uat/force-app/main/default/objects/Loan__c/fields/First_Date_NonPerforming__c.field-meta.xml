@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Date_NonPerforming__c</fullName>
+    <description>date Is nonperforming ticked. Cannot be updated if &quot;is Nonperforming&quot; gets unticked and ticked again</description>
+    <externalId>false</externalId>
+    <label>First Date NonPerforming</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

@@ -1,0 +1,23 @@
+<apex:page >
+<flow:interview name="Login_OTP_Based_Flow">
+    <apex:param name="LoginFlow_UserId" value="{!$User.Id}"></apex:param>
+     <apex:param name="LoginFlow_Platform" value="Browser"></apex:param>
+    </flow:interview>     -->
+    <!--<head>
+          <apex:includeLightning />  
+    </head>
+
+    <body class="slds-scope">
+    <div  id="LightningCompContainer" />
+     
+<script>/*
+        $Lightning.use("c:LoginFlow_AuraApp", function() {
+            $Lightning.createComponent("c:LoginFlow_AuraCmp", { },
+            "LightningCompContainer",
+            function(cmp) {
+                console.log('Component created');
+            });
+        }); */
+    </script>
+    </body> -->
+</apex:page>

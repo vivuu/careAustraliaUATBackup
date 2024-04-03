@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NonperformingLoanOptionsOther</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISPICKVAL(Non_performing_loan_options__c , &quot;Comment&quot;),
+  ISBLANK(Non_performing_loan_options_other__c)
+)</errorConditionFormula>
+    <errorDisplayField>Non_performing_loan_options_other__c</errorDisplayField>
+    <errorMessage>Complete this field.</errorMessage>
+</ValidationRule>

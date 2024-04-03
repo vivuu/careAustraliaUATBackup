@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Average_Effective_Interest_Rate_EIR__c</fullName>
+    <description>full name of this field is,
+Average annual interest rate on gross loan portfolio including all loans, i.e. Lendwithcare and non-Lendwithcare, calculated by incorporating the effects of compounding, insurance, fees, and cash collateral.</description>
+    <externalId>false</externalId>
+    <label>Average Effective Interest Rate (EIR)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

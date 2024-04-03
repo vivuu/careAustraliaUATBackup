@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Compact_Layout</fullName>
+    <fields>Name</fields>
+    <fields>Year__c</fields>
+    <fields>No_Second_Gift__c</fields>
+    <fields>Second_Gift_Received_after_365_Days__c</fields>
+    <fields>Gave_Second_Gift_from_DPP__c</fields>
+    <fields>Gave_Second_Gift_from_benchmarking__c</fields>
+    <fields>Benchmarking_International__c</fields>
+    <fields>Benchmarking_All_Sectors__c</fields>
+    <fields>Type__c</fields>
+    <fields>FY_Year__c</fields>
+    <label>Custom Compact Layout</label>
+</CompactLayout>

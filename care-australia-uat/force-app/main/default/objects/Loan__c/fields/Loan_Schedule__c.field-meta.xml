@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loan_Schedule__c</fullName>
+    <description>Monthly: One repayment made per month
+End of term: One repayment made at the end of the loan term
+Irregular: Any other repayment schedule</description>
+    <externalId>false</externalId>
+    <label>Loan Schedule</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>End of Term</fullName>
+                <default>false</default>
+                <label>End of Term</label>
+            </value>
+            <value>
+                <fullName>Irregular</fullName>
+                <default>false</default>
+                <label>Irregular</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

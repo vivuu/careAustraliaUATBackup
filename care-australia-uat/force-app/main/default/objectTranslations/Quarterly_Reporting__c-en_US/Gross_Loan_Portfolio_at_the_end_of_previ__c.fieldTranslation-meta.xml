@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Gross_Loan_Portfolio_at_the_end_of_previ__c</name>
+</CustomFieldTranslation>

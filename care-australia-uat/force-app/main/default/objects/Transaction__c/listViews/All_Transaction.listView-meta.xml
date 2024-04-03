@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Transaction</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>Type__c</columns>
+    <columns>Amount__c</columns>
+    <columns>Completed_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Buffer_Repaid__c</columns>
+    <columns>Lender__c</columns>
+    <columns>Loan__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Opportunity2__c</columns>
+    <columns>Transaction_Fee__c</columns>
+    <columns>isTopupOnly__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Transaction</label>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

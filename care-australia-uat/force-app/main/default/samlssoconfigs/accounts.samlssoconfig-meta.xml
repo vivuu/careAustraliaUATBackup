@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>FederationId</identityMapping>
+    <issuer>https://accounts.google.com/o/saml2?idpid=C00w0muba</issuer>
+    <loginUrl>https://accounts.google.com/o/saml2/idp?idpid=C00w0muba</loginUrl>
+    <name>Google Workspace</name>
+    <oauthTokenEndpoint>https://careaustralia--uat.sandbox.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>true</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P19800000001vh</requestSigningCertId>
+    <salesforceLoginUrl>https://careaustralia--uat.sandbox.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://careaustralia.my.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <useConfigRequestMethod>true</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>false</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIDdDCCAlygAwIBAgIGAWkI7Ka1MA0GCSqGSIb3DQEBCwUAMHsxFDASBgNVBAoTC0dvb2dsZSBJ
+bmMuMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MQ8wDQYDVQQDEwZHb29nbGUxGDAWBgNVBAsTD0dv
+b2dsZSBGb3IgV29yazELMAkGA1UEBhMCVVMxEzARBgNVBAgTCkNhbGlmb3JuaWEwHhcNMTkwMjIw
+MDMyMjAwWhcNMjQwMjE5MDMyMjAwWjB7MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEWMBQGA1UEBxMN
+TW91bnRhaW4gVmlldzEPMA0GA1UEAxMGR29vZ2xlMRgwFgYDVQQLEw9Hb29nbGUgRm9yIFdvcmsx
+CzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+MIIBCgKCAQEA0aVcRaQtxBH7pSR160HVrnddeVakuarLq+KR+m581qa/F50+tklyEooDs35lwUR5
+7SIIuhVuroR5N0JSoyGiY8LKz+djsUAJIltP/HQf0vnRWsY1MUZ6Yveo0q7MAQy2qSfFFYt8LVCF
+h1tUYk91glj7f1M3VOBFU8ZFT2ONaTMt1Q29gw2ylpFLKGmujdiFMY5UPLyy+rlKQAYx5nld977U
+QQO/Ze/qTMcT16Qg80G1/ER1ZTav2Sx+LKDZjkRxNP8UO4TcsjMoilWSisA9Ts47RoqHnq/XnDkJ
+Cq0YkaWw8TwYIytGmHauoQjq/JUFSD6bKs8JoCyr3XQso575mQIDAQABMA0GCSqGSIb3DQEBCwUA
+A4IBAQC1IhHx+rmP3Wfb6oK7m4MT9ZZvhoR6G94XNHTxqmYeMB0d57/eoi2XRzJMf78tUSv4raiX
+CEtkn+GZ+DmcMw4AxAb+jEP9+jsFfMXsdKNxlX1CZzIeVYLho0O+gimy8nm17IaRqxp4KIue8IE2
+H5fsOG/A85z4Xgqp9GpxNThxnIukc8oEQQtzUOYvfIWeHJOrgRDKRNZHIpHBI3seTMDRncWsirCN
+pTVw/jbDUOkQDoglHpDJMZ/Pllf+MPJMV4EggMJ3I8zph7gumYE6xNkiGf1xyseKLQ1DJAwaAJsv
+r62SyO8E5iCu5E9E5hqqXJZQAsI1HqufQfa67jo9ipMi</validationCert>
+</SamlSsoConfig>

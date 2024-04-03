@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>StartDate__c</columns>
+    <columns>DateResponded__c</columns>
+    <columns>DateSent__c</columns>
+    <columns>CampaignName__c</columns>
+    <columns>TotalSent__c</columns>
+    <columns>TotalUpgrade__c</columns>
+    <columns>Dataro__c</columns>
+    <columns>CampaignSuccessRate__c</columns>
+    <columns>AvgSuccessRate__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Records</label>
+</ListView>

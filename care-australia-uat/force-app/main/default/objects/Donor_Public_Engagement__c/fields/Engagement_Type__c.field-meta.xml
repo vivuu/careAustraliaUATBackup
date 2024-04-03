@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Engagement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Engagement Type</label>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ambassador</fullName>
+                <default>false</default>
+                <label>Ambassador</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Speaker</fullName>
+                <default>false</default>
+                <label>Speaker</label>
+            </value>
+            <value>
+                <fullName>Patron</fullName>
+                <default>false</default>
+                <label>Patron</label>
+            </value>
+            <value>
+                <fullName>Board of Directors</fullName>
+                <default>false</default>
+                <label>Board of Directors</label>
+            </value>
+            <value>
+                <fullName>Advisory Council</fullName>
+                <default>false</default>
+                <label>Advisory Council</label>
+            </value>
+            <value>
+                <fullName>Members of Parliament</fullName>
+                <default>false</default>
+                <label>Members of Parliament</label>
+            </value>
+            <value>
+                <fullName>DFAT Officials</fullName>
+                <default>false</default>
+                <label>DFAT Officials</label>
+            </value>
+            <value>
+                <fullName>ACFID Members</fullName>
+                <default>false</default>
+                <label>ACFID Members</label>
+            </value>
+            <value>
+                <fullName>Corporate Connections</fullName>
+                <default>false</default>
+                <label>Corporate Connections</label>
+            </value>
+            <value>
+                <fullName>Major Donors</fullName>
+                <default>false</default>
+                <label>Major Donors</label>
+            </value>
+            <value>
+                <fullName>Other Sector CEOs</fullName>
+                <default>false</default>
+                <label>Other Sector CEOs</label>
+            </value>
+            <value>
+                <fullName>Other Key Stakeholders</fullName>
+                <default>false</default>
+                <label>Other Key Stakeholders</label>
+            </value>
+            <value>
+                <fullName>Petition / Advocacy</fullName>
+                <default>false</default>
+                <label>Petition / Advocacy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

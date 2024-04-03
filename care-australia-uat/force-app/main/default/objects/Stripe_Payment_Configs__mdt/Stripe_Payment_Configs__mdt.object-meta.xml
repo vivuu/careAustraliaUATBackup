@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This metadata have the values of all the publish key and the domain required for the stripe payments.</description>
+    <label>Stripe Payment Config</label>
+    <pluralLabel>Stripe Payment Configs</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

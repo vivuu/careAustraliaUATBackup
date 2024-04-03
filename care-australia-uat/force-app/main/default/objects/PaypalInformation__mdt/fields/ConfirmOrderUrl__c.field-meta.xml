@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConfirmOrderUrl__c</fullName>
+    <description>Used for conforming the payment status</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>ConfirmOrderUrl</label>
+    <required>false</required>
+    <type>Url</type>
+</CustomField>

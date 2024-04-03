@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>isTopupOnly__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>To differentiate to topup transaction to help in calculate to rollup for lender balance</description>
+    <externalId>false</externalId>
+    <label>isTopupOnly</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

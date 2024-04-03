@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gross_Loan_Portfolio_at_the_end_of_previ__c</fullName>
+    <description>full name of this field is Gross Loan Portfolio at the end of previous year ,
+Outstanding principal balance of all of an FSP’s outstanding loans</description>
+    <externalId>false</externalId>
+    <label>Gross Loan Portfolio After Previous Year</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

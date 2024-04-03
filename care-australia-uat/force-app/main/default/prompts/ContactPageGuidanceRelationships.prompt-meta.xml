@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Prompt xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Contact Page Guidance - Relationships</masterLabel>
+    <promptVersions>
+        <actionButtonLabel>More About Relationships</actionButtonLabel>
+        <actionButtonLink>https://sforce.co/3qYIG00</actionButtonLink>
+        <body>&lt;p&gt;Relationships in NPSP connect one Contact to another and define the type of relationship (mother, sister, colleague, friend.) &lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;To create your first Relationship, click &lt;b&gt;New Relationship&lt;/b&gt; and fill in Relationship details. When you’re done, click &lt;b&gt;Save&lt;/b&gt;.&lt;/p&gt;</body>
+        <customApplication>Nonprofit_Success_Pack</customApplication>
+        <delayDays>1</delayDays>
+        <description>Prompt for new admins to detail how to create new relationships</description>
+        <displayType>DockedComposer</displayType>
+        <header>NPSP How-To Tips</header>
+        <isPublished>true</isPublished>
+        <masterLabel>Contact Page Guidance - Relationships</masterLabel>
+        <publishedDate>2021-03-31</publishedDate>
+        <shouldDisplayActionButton>true</shouldDisplayActionButton>
+        <shouldIgnoreGlobalDelay>true</shouldIgnoreGlobalDelay>
+        <startDate>2021-03-04</startDate>
+        <targetPageKey1>Contact</targetPageKey1>
+        <targetPageKey2>list</targetPageKey2>
+        <targetPageType>standard__objectPage</targetPageType>
+        <timesToDisplay>5</timesToDisplay>
+        <title>Create a Relationship</title>
+        <userAccess>Everyone</userAccess>
+        <userProfileAccess>Everyone</userProfileAccess>
+        <versionNumber>1</versionNumber>
+        <videoLink>https://play.vidyard.com/LZu2ajyDPcKvbsudeXva6E</videoLink>
+    </promptVersions>
+</Prompt>

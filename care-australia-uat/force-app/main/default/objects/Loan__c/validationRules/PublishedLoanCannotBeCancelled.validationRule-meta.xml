@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PublishedLoanCannotBeCancelled</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE( Loan_Proposal_Status__c ), &quot;Published&quot;),
+ ISPICKVAL(Loan_Proposal_Status__c, &quot;Cancelled&quot; )  
+)</errorConditionFormula>
+    <errorMessage>Published Loan cannot be cancelled.</errorMessage>
+</ValidationRule>

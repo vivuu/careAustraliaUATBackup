@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_ConsentProvide</fullName>
+    <active>true</active>
+    <errorConditionFormula>Consent_Provided__c &lt;&gt; true</errorConditionFormula>
+    <errorDisplayField>Consent_Provided__c</errorDisplayField>
+    <errorMessage>Please provide consent.</errorMessage>
+</ValidationRule>

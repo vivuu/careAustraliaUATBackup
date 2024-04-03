@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Gift in Kind to be processed as Payment from Opportunity</description>
+    <fieldOverrides>
+        <field>npe01__Paid__c</field>
+        <formula>true</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>npe01__Payment_Amount__c</field>
+        <formula>Opportunity.Amount</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>npe01__Payment_Date__c</field>
+        <formula>Opportunity.CloseDate</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Payment_Reference__c</field>
+        <formula>TEXT(Opportunity.Type)</formula>
+    </fieldOverrides>
+    <label>New In-Kind Payment</label>
+    <optionsCreateFeedItem>true</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>npe01__Opportunity__c</field>
+                <uiBehavior>Required</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>npe01__Paid__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>Payment_Reference__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+        <quickActionLayoutColumns>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>npe01__Payment_Date__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+            <quickActionLayoutItems>
+                <emptySpace>false</emptySpace>
+                <field>npe01__Payment_Amount__c</field>
+                <uiBehavior>Edit</uiBehavior>
+            </quickActionLayoutItems>
+        </quickActionLayoutColumns>
+    </quickActionLayout>
+    <successMessage>Gift in Kind Payment Successfully Created!!</successMessage>
+    <targetObject>npe01__OppPayment__c</targetObject>
+    <targetParentField>npe01__Opportunity__c</targetParentField>
+    <type>Create</type>
+</QuickAction>

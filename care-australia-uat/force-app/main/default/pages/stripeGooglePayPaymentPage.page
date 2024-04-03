@@ -1,0 +1,85 @@
+<apex:page controller="StripeProcessPaymentPageController" showHeader="false" sidebar="false">
+    <apex:includeLightning />
+    <apex:includeScript value="https://js.stripe.com/v3/"/>
+    <apex:includeScript value="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+    <script type="text/javascript">
+    window.onload = function() { 
+        var stripe = Stripe('{!stripePublishKey}');
+        
+        const appearance = {
+            variables: {
+                fontFamily: 'Helvetica Neue Bold',
+            }
+        };
+        const options = {
+            mode: 'payment',
+            amount: parseInt('{!amount}'),
+            currency: '{!currencyIsoCode}'.toLowerCase(),
+            paymentMethodCreation: 'manual',
+            appearance
+        };
+        
+        // Set up Stripe.js and Elements to use in checkout form
+        const elements = stripe.elements(options);
+        
+        // Create and mount the Express Checkout Element
+        const expressCheckoutElement = elements.create('expressCheckout', {
+            wallets: {
+                applePay: 'never'   
+            },
+            buttonType: {
+                googlePay: 'pay'   
+            }
+        });
+        
+        expressCheckoutElement.mount('#express-checkout-element');
+        
+        expressCheckoutElement.on('confirm', async (event) => {
+            console.log('confim event -> ', event);
+            const isVerifiedId = '{!isVerifiedId}';
+            
+            if(isVerifiedId === 'true') {
+                const {error: submitError} = await elements.submit();
+                if (submitError) {
+                    handleError(submitError);
+                    return;
+                }
+            
+                // Create a PaymentMethod using the details collected by the Express Checkout Element
+                const {error, paymentMethod} = await stripe.createPaymentMethod({
+                    elements
+                });
+                
+                if (error) {
+                    // This point is only reached if there's an immediate error when
+                    // confirming the payment. Show the error to your customer (for example, payment details incomplete)
+                    handleError(error);
+                    return;
+                }
+                    
+                console.log('paymentMethod -> ', paymentMethod);
+            
+                window.parent.postMessage({paymentMethod: paymentMethod}, '{!lwcDomain}');
+            } else {
+                alert('The user is not verified');
+            }
+        });
+            
+        function handleError(error) {
+            const messageContainer = document.querySelector('#error-message');
+            messageContainer.textContent = error.message;
+        }
+        
+        setTimeout(() => {
+            window.parent.postMessage({isLoading: false}, '{!lwcDomain}');
+        }, 5000);
+    }
+    </script>
+
+    <div style="width: 210px;" id="express-checkout-element">
+        <!-- Express Checkout Element will be inserted here -->
+    </div>
+    <div id="error-message">
+        <!-- Display error message to your customers here -->
+    </div>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisableForAllObjects__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is checked then validation rules on all objects will be deactivated.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is checked then validation rules on all objects will be deactivated.</inlineHelpText>
+    <label>Disable for all objects</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

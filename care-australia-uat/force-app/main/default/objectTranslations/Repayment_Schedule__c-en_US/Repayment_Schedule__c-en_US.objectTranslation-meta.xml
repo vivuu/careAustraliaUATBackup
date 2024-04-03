@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Repayment Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Repayment Schedules</value>
+    </caseValues>
+    <layouts>
+        <layout>Repayment Schedule Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Repayment Schedule Layout - FSP</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>CareLoanID</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>NonperformingLoanOptionsOther</name>
+    </validationRules>
+</CustomObjectTranslation>

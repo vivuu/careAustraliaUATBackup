@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DisableForOpportunity__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is checked then validation rules for Opportunity object will not be fired.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Checked then validation rules for opportunity object will not be fired.</inlineHelpText>
+    <label>Disable for Opportunity</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

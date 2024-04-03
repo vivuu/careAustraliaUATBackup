@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response_Code_Ref__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+OR( ISBLANK(TEXT(Merchant_Category__c )),
+ISBLANK( TEXT(Payment_Method__c )),
+ISBLANK(Response_Code__c)
+),
+NULL,
+SUBSTITUTE(TEXT(Merchant_Category__c)&amp;&quot;&quot;&amp;TEXT(Payment_Method__c)&amp;&quot;&quot;&amp;Response_Code__c,&quot; &quot;,&quot;&quot;)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Response Code Ref</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

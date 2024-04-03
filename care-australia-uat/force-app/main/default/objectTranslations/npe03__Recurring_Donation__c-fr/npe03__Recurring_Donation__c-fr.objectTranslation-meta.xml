@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Don récurrent</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dons récurrents</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>CA Enhanced Recurring Donations Layout</layout>
+        <sections>
+            <label></label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Donor Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Payment Information</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Statistics</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enhanced Recurring Donations Layout</layout>
+        <sections>
+            <label>Informations sur les dons</label>
+            <section>Donation Information</section>
+        </sections>
+        <sections>
+            <label>Informations sur le donateur</label>
+            <section>Donor Information</section>
+        </sections>
+        <sections>
+            <label>Statistiques</label>
+            <section>Statistics</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>Nom du don récurrent</nameFieldLabel>
+    <quickActions>
+        <label></label>
+        <name>Add_Credit_Card</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Add_Update_Credit_Card</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Add_Update_Direct_Debit</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Stripe_Add_Update_Credit_Card</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Stripe_Add_Update_Direct_Debit</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Credit_Card_Expiry</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Update_Payment_Details</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Allow_only_Active_Campaigns</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Auto_Upgrade_Value_Positive_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Credit_Card_Payment_Method</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Direct_Debit_Account_BSB_check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Direct_Debit_Account_Number_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Direct_Debit_Payment_Method</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>Required_Field_Checks</name>
+    </validationRules>
+</CustomObjectTranslation>
